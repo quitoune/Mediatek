@@ -1,0 +1,60 @@
+<nav>
+    <ul class="pagination justify-content-center">
+   	    {% if pagination.nbr_page > 0 %}
+            {% if pagination.page>1 %}
+                <li class="page-item">
+                	<a id="page-first" class="page-link" data-bloc="{{ bloc }}" href="{{ path(pagination.route, pagination.route_params|merge({'page': 1})) }}">
+                		<<
+                	</a>
+                </li>
+                <li class="page-item">
+                	<a id="page-previous" class="page-link" data-bloc="{{ bloc }}" href="{{ path(pagination.route, pagination.route_params|merge({'page': pagination.page-1})) }}">
+                		 < 
+                	</a>
+                </li>
+            {% endif %}
+            {#display p numbers only from p-4 to p+4 but don't go <1 or >nbr_page#}
+            {% for p in range(max(pagination.page-4, 1), 
+                min(pagination.page+4, pagination.nbr_page)) %}
+                <li class="page-item {% if p == pagination.page %} active{% endif %}">
+                	<a id="page-{{ p }}" class="page-link" data-bloc="{{ bloc }}" href="{{ path(pagination.route, pagination.route_params|merge({'page': p})) }}">
+                        {{ p }}
+                    </a>
+                </li>
+            {% endfor %}
+            {% if pagination.page<pagination.nbr_page %}
+            	<li class="page-item">
+            		<a id="page-next" class="page-link" data-bloc="{{ bloc }}" href="{{ path(pagination.route, pagination.route_params|merge({'page': pagination.page+1})) }}">
+            			>
+            		</a>
+            	</li>
+               	<li class="page-item">
+               		<a id="page-last" class="page-link" data-bloc="{{ bloc }}" href="{{ path(pagination.route, pagination.route_params|merge({'page': pagination.nbr_page})) }}">
+               			>>
+               		</a>
+               	</li>
+            {% endif %}
+        {% endif %}
+    </ul>
+</nav>
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			{% if pagination.nbr_page > 0 %}
+    	        $("a.page-link").click(function(){
+    	        	event.preventDefault();
+    	        	var bloc = $(this).data('bloc');
+    	    		
+    	    		$.ajax({
+    	    			method: 'GET',
+    	    			url: $(this).attr('href'),
+    	    		})
+    	    		.done(function(html) {
+    	    			$(bloc).html(html);
+    	    		});
+        	    });
+    	    {% endif %}
+		});
+    </script>
+{% endblock %}

@@ -1,0 +1,38 @@
+{
+	"Format-1": {
+        "setNom": "DVD",
+        "setObjet": 2
+    },
+    "Format-2": {
+        "setNom": "Itunes",
+        "setObjet": 2
+    },
+    "Format-3": {
+        "setNom": "Bluray",
+        "setObjet": 2
+    },
+    "Format-4": {
+        "setNom": "Bluray 3D",
+        "setObjet": 2
+    },
+    "Format-5": {
+        "setNom": "Bluray 4K",
+        "setObjet": 2
+    },
+    "Format-6": {
+        "setNom": "Broché",
+        "setObjet": 1
+    },
+    "Format-7": {
+        "setNom": "Poche",
+        "setObjet": 1
+    },
+    "Format-8": {
+        "setNom": "e-Book",
+        "setObjet": 1
+    },
+    "Format-9": {
+        "setNom": "Cartonné",
+        "setObjet": 1
+    }
+}

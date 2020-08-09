@@ -1,0 +1,130 @@
+{
+	"Categorie-1": {
+		"setNom": "Action",
+		"setObjet": 2
+	},
+	"Categorie-2": {
+		"setNom": "Aventure",
+		"setObjet": 0
+	},
+	"Categorie-3": {
+		"setNom": "Drame",
+		"setObjet": 0
+	},
+	"Categorie-4": {
+		"setNom": "Dessin-animé",
+		"setObjet": 2
+	},
+	"Categorie-5": {
+		"setNom": "Science-fiction",
+		"setObjet": 0
+	},
+	"Categorie-6": {
+		"setNom": "Comédie",
+		"setObjet": 2
+	},
+	"Categorie-7": {
+		"setNom": "Western",
+		"setObjet": 2
+	},
+	"Categorie-8": {
+		"setNom": "Fantastique",
+		"setObjet": 0
+	},
+	"Categorie-9": {
+		"setNom": "Policier",
+		"setObjet": 0
+	},
+	"Categorie-10": {
+		"setNom": "Marvel",
+		"setObjet": 2
+	},
+	"Categorie-11": {
+		"setNom": "Horreur",
+		"setObjet": 0
+	},
+	"Categorie-12": {
+		"setNom": "Peplum",
+		"setObjet": 2
+	},
+	"Categorie-13": {
+		"setNom": "Thriller",
+		"setObjet": 0
+	},
+	"Categorie-14": {
+		"setNom": "Espionnage",
+		"setObjet": 0
+	},
+	"Categorie-15": {
+		"setNom": "Français",
+		"setObjet": 2
+	},
+	"Categorie-16": {
+		"setNom": "Classique",
+		"setObjet": 0
+	},
+	"Categorie-17": {
+		"setNom": "Jeunesse",
+		"setObjet": 0
+	},
+	"Categorie-18": {
+		"setNom": "Adolescent",
+		"setObjet": 0
+	},
+	"Categorie-19": {
+		"setNom": "Biopic",
+		"setObjet": 2
+	},
+	"Categorie-20": {
+		"setNom": "Historique",
+		"setObjet": 0
+	},
+	"Categorie-21": {
+		"setNom": "Documentaire",
+		"setObjet": 2
+	},
+	"Categorie-22": {
+		"setNom": "Spectacle",
+		"setObjet": 2
+	},
+	"Categorie-23": {
+		"setNom": "Comédie horrifique",
+		"setObjet": 2
+	},
+	"Categorie-24": {
+		"setNom": "Danse",
+		"setObjet": 2
+	},
+	"Categorie-25": {
+		"setNom": "Musique",
+		"setObjet": 0
+	},
+	"Categorie-26": {
+		"setNom": "Informatique",
+		"setObjet": 1
+	},
+	"Categorie-27": {
+		"setNom": "Gangster",
+		"setObjet": 0
+	},
+	"Categorie-28": {
+		"setNom": "Théâtre",
+		"setObjet": 1
+	},
+	"Categorie-29": {
+		"setNom": "Humour",
+		"setObjet": 1
+	},
+	"Categorie-30": {
+		"setNom": "DC",
+		"setObjet": 0
+	},
+	"Categorie-31": {
+		"setNom": "Super-héros",
+		"setObjet": 0
+	},
+	"Categorie-32": {
+		"setNom": "Romance",
+		"setObjet": 0
+	}
+}

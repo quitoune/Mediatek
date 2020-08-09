@@ -1,0 +1,53 @@
+<div id="ajax_episode_personne_ajouter">
+	{{ form_start(form) }}
+    <div class="modal-header">
+        <h5 class="modal-title">Ajout d'un propriétaire à l'épisode {{ titre(episode, app.session.get('user')['episode_vo']) }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    
+    <div class="modal-body">
+        <div class="row">
+        	<div class="col-sm w-100">
+            	{{ form_row(form.personne) }}
+            </div>
+        	<div class="col-sm w-100">
+            	{{ form_row(form.lieu) }}
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-sm w-100">
+            	{{ form_row(form.format) }}
+            </div>
+        	<div class="col-sm">
+            	{{ form_row(form.date_achat) }}
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-footer">
+    	{{ form_row(form.save) }}
+    </div>
+    
+    {{ form_rest(form) }}
+    {{ form_errors(form) }}
+    {{ form_end(form) }}
+</div>
+
+{% block javascripts %}
+    <script type="text/javascript">
+        $('#bloc_modal').modal({
+            'show' : true,
+            'backdrop' : 'static'
+        });
+
+        $("form select").select2({
+        	minimumResultsForSearch: -1
+        });
+
+        var url = "{{ path('ajax_episode_personne_ajouter_personne', {'slug': episode.slug}) }}";
+		var url_base = "{{ path('personne_pour_episode', {'slug': episode.slug}) }}";
+		SubmitModal("episode_personne", "episode", url, "#bloc_modal", url_base, "#personnes");
+    </script>
+{% endblock %}

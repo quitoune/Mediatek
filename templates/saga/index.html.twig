@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sagas{% endblock %}
+
+{% block body %}
+    <div class="card text-center">
+        <div class="card-header text-left bg-primary">
+            {{ pagination.total }} saga{% if pagination.total > 1 %}s{% endif %} {% if pagination.nbr_page > 0 %} - Page {{ pagination.page }} / {{ pagination.nbr_page }} {% endif %}
+            {% if is_granted('ROLE_UTILISATEUR') %}
+            	{{ ajouter(path('saga_ajouter'), 'float-right marg-r-2') | raw }}</th>
+            {% endif %}
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Nom Complet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	{% if sagas is empty %}
+                	    <td colspan="3" class="text-info text-center">Aucune saga correspondant à la recherche.</td>
+                    {% else %}
+                    	{% for saga in sagas %}
+                            <tr>
+                                <td> {{ saga.id }} </td>
+                                <td> <a href="{{ path('saga_afficher', {'slug': saga.slug, 'page': pagination.page }) }}"> {{ saga.nom }} </a></td>
+                                <td> {{ saga.nomComplet }} </td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+			</table>
+        </div>
+        <div class="card-footer text-muted">
+        	{% include 'app/pagination.html.twig' %}
+        </div>
+    </div> 
+{% endblock %}

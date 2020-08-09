@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ titre(saison.serie, app.session.get('user')['episode_vo']) }} - Saison {{ saison.numeroSaison }} {% endblock %}
+
+{% block body %}
+	<div class="affichage">
+		<div class="row">
+			<div class="col-sm center_img text-center">
+				{{ image(saison, app.session.get('user')['episode_vo']) | raw }}
+			</div>
+			<div class="col-sm center_img">
+				<table class="middle">
+            		<tr>
+            			<th></th>
+            			<td align="center">
+            				{{ modifier(path('saison_modifier', {'slug': saison.slug, 'page': page})) | raw }}
+                            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                                {{ supprimer(path('saison_supprimer', {'slug': saison.slug})) | raw }}
+                            {% endif %}
+            			</td>
+            		</tr>
+    				<tr>
+        				<th>Série</th>
+        				<td align=center>
+            				<a href="{{ path('serie_afficher', {'slug': saison.serie.slug}) }}">
+            				    {{ titre(saison.serie, app.session.get('user')['episode_vo']) }}
+            				</a>
+        				</td>
+    				</tr>
+    				{% if saison.nom is not null %}
+        				<tr>
+            				<th>Nom</th>
+            				<td align=center>{{ saison.nom }}</td>
+        				</tr>
+    				{% endif %}
+    				<tr>
+        				<th>N° de la saison</th>
+        				<td align=center>{{ saison.numeroSaison }}</td>
+    				</tr>
+    				<tr>
+        				<th>Nombre d'épisodes</th>
+        				<td align=center>{{ saison.nombreEpisode }}</td>
+    				</tr>
+				</table>
+			</div>
+		</div>
+		<br><br>
+		<h4 class="bold">Acteurs 
+			<span id="edit_acteur" class="link"><span class="oi oi-pencil"></span></span>
+		</h4>
+		<div class="row saison_header">
+			<h5 class="col-12">Principaux: </h5>
+		</div>
+		<div class="row" id="principaux">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+		<div class="row saison_header">
+			<h5 class="col-12">Récurrents: </h5>
+		</div>
+		<div class="row" id="recurrents">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+		<div class="row saison_header">
+			<h5 class="col-12">Invités: </h5>
+		</div>
+		<div class="row" id="invites">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+		<div class="row episode_header">
+    		<h4 class="bold">
+    			Episodes:  
+    			<span class="link"><span class="oi oi-pencil"></span></span>
+    			<span id="add_pers" class="link fontawesome"><i class="fas fa-user-plus"></i></span>
+    		</h4>
+		</div>
+		<div class="row" id="episodes">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+	</div>
+    
+    <div class="modal" tabindex="-1" role="dialog" id="bloc_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id ="modal_saison">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+	<script src="{{ asset('js/collection.js') }}"></script>
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			Ajax("{{ path('acteur_pour_saison', {'slug': saison.slug, 'principal': 2}) }}", "#principaux");
+			Ajax("{{ path('acteur_pour_saison', {'slug': saison.slug, 'principal': 1}) }}", "#recurrents");
+			Ajax("{{ path('acteur_pour_saison', {'slug': saison.slug, 'principal': 0}) }}", "#invites");
+			Ajax("{{ path('episode_saison_afficher', {'slug': saison.slug}) }}", "#episodes");
+			$("#edit_acteur").click(function(){
+				$("html").showLoading();
+            	Ajax("{{ path('ajax_editer_acteurs_saison', {'slug': saison.slug}) }}", "#modal_saison");
+			});
+			$("#add_pers").click(function(){
+				$("html").showLoading();
+            	Ajax("{{ path('ajax_ajouter_depuis_saison', {'slug': saison.slug}) }}", "#modal_saison");
+			});
+		})
+	</script>
+{% endblock %}

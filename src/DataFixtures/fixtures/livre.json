@@ -1,0 +1,69 @@
+{
+	"Livre-1": {
+		"setSlug": "Murder_on_the_Orient_Express",
+		"setTitre": "Le crime de l'Orient Express",
+		"setTitreOriginal": "Murder on the Orient Express",
+		"setAuteur": "Agatha Christie",
+		"setType": "Type-5",
+		"setPremiereEdition": 1934,
+		"addCategory": [
+			"Categorie-9"
+		]
+	},
+	"Livre-2": {
+		"setSlug": "The_Hunger_Games",
+		"setTitre": "Hunger Games",
+		"setTitreOriginal": "The Hunger Games",
+		"setAuteur": "Suzanne Collins",
+		"setType": "Type-5",
+		"setPremiereEdition": 2008,
+		"setSaga": "Saga-8",
+		"setTome": 1,
+		"setPhoto": "Photo-1",
+		"addCategory": [
+			"Categorie-5"
+		]
+	},
+	"Livre-3": {
+		"setSlug": "Catching_Fire",
+		"setTitre": "L'Embrasement",
+		"setTitreOriginal": "Catching Fire",
+		"setAuteur": "Suzanne Collins",
+		"setType": "Type-5",
+		"setPremiereEdition": 2009,
+		"setSaga": "Saga-8",
+		"setTome": 2,
+		"setPhoto": "Photo-2",
+		"addCategory": [
+			"Categorie-5"
+		]
+	},
+	"Livre-4": {
+		"setSlug": "Mockingjay",
+		"setTitre": "La Révolte",
+		"setTitreOriginal": "Mockingjay",
+		"setAuteur": "Suzanne Collins",
+		"setType": "Type-5",
+		"setPremiereEdition": 2010,
+		"setSaga": "Saga-8",
+		"setTome": 3,
+		"setPhoto": "Photo-3",
+		"addCategory": [
+			"Categorie-5"
+		]
+	},
+	"Livre-5": {
+		"setSlug": "The_Darkest_Minds",
+		"setTitre": "Les Insoumis",
+		"setTitreOriginal": "The Darkest Minds",
+		"setAuteur": "Alexandra Bracken",
+		"setType": "Type-5",
+		"setPremiereEdition": 2012,
+		"setSaga": "Saga-28",
+		"setTome": 1,
+		"setPhoto": "Photo-43",
+		"addCategory": [
+			"Categorie-5"
+		]
+	}
+}

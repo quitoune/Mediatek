@@ -1,0 +1,122 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Saga - {{ saga.nom }} {% endblock %}
+
+{% block body %}
+    <div class="affichage">
+    	<div class="card">
+    		<div class="card-header">
+    			Infos
+    			{% if is_granted('ROLE_UTILISATEUR') %}
+                    {{ modifier(path('saga_modifier', {'id': saga.id, 'page':page}), "float-right") | raw }} 
+                    {% if is_granted('ROLE_SUPER_ADMIN') %}
+                        {{ supprimer(path('saga_supprimer', {'slug': saga.slug}), "marg-r-2 float-right") | raw }}
+                    {% endif %}
+                {% endif %}
+    		</div>
+    		<div class="card-body">
+    			<div class="row">
+    				{% if saga.saga is not null %}
+        				<div class="col-3 p-none bold">Saga mère</div>
+        				<div class="col-9 p-none">
+            				<a href="{{ path('saga_afficher', {'slug': saga.saga.slug}) }}">
+            				    {{ saga.saga.nom }}
+            				</a>
+        				</div>
+        				<div class="col-3 p-none bold">Nom</div>
+        				<div class="col-9 p-none">{{ saga.nom }} ({{ saga.nomComplet }})</div>
+        			{% else %}
+        				<div class="col-3 p-none bold">Nom</div>
+        				<div class="col-9 p-none">{{ saga.nom }}</div>
+    				{% endif %}
+    				{% if saga.sousSagas is not empty %}
+    					<div class="col-3 p-none bold">Sagas dérivées</div>
+    					<div class="col-9"></div>
+    					{% for sousSaga in saga.sousSagas %}
+        					<div class="col-1 p-none"></div>
+        					<div class="col-9 p-none">-
+        						<a href="{{ path('saga_afficher', {'slug': sousSaga.slug}) }}">
+        							{{ sousSaga.nom }}
+        						</a>
+        					</div>
+        					<div class="col-2 p-none"></div>
+    					{% endfor %}
+    				{% endif %}
+    			</div>
+    		</div>
+    	</div>
+    
+		<div class="card">
+		    {{ collapse("headingLivres", "collapseLivres", "Livres") | raw }}
+
+			<div id="collapseLivres" class="collapse" aria-labelledby="headingLivres">
+				<div class="card-body">
+					<div class="row">
+						{% if saga.livres is empty %}
+							<div class="col-12 p-none text-center">Aucun livre n'appartient à cette saga.</div>
+						{% else %}
+    						<div class="col-3 p-none bold">Tome</div>
+    						<div class="col-9 p-none bold">Titre</div>
+    						{% for livre in saga.livres %}
+        						<div class="col-3 p-none">
+        						    {{ livre.tome }}
+        						</div>
+        						<div class="col-9 p-none">
+            						<a href="{{ path('livre_afficher', {'slug': livre.slug}) }}">
+            						    {{ titre(livre, app.session.get('user')['livre_vo']) }}
+            						</a>
+        						</div>
+        					{% endfor %}
+    					{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+		    {{ collapse("headingFilms", "collapseFilms", "Films") | raw }}
+			<div id="collapseFilms" class="collapse" aria-labelledby="headingFilms">
+				<div class="card-body">
+					<div class="row">
+						{% if saga.films is empty %}
+							<div class="col-12 p-none text-center">Aucun film n'appartient à cette saga.</div>
+						{% else %}
+    						<div class="col-3 p-none bold">Volet</div>
+    						<div class="col-9 p-none bold">Titre</div>
+    						{% for film in saga.films %}
+        						<div class="col-3 p-none">
+        						    {{ film.volet }}
+        						</div>
+        						<div class="col-9 p-none">
+            						<a href="{{ path('film_afficher', {'slug': film.slug}) }}">
+            						    {{ titre(film, app.session.get('user')['film_vo']) }}
+            						</a>
+        						</div>
+        					{% endfor %}
+    					{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+		    {{ collapse("headingSeries", "collapseSeries", "Series") | raw }}
+			<div id="collapseSeries" class="collapse" aria-labelledby="headingSeries">
+				<div class="card-body">
+					<div class="row">
+						{% if saga.series is empty %}
+							<div class="col-12 p-none text-center">Aucune série n'appartient à cette saga.</div>
+						{% else %}
+    						<div class="col-12 p-none bold text-center">Titre</div>
+    						{% for serie in saga.series %}
+        						<div class="col-12 p-none text-center">
+            						<a href="{{ path('serie_afficher', {'slug': serie.slug}) }}">
+            						    {{ titre(serie, app.session.get('user')['episode_vo']) }}
+            						</a>
+        						</div>
+        					{% endfor %}
+    					{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+{% endblock %}

@@ -1,0 +1,239 @@
+{
+	"Film-1": {
+		"setSlug": "Harry_Potter_and_the_Philosopher-s_Stone",
+		"setTitre": "Harry Potter et l'école des sorciers",
+		"setTitreOriginal": "Harry Potter and the Philosopher's Stone",
+		"setRealisateur": "Chris Columbus",
+		"setDuree": 152,
+		"setAnnee": 2001,
+		"addCategory": [
+			"Categorie-8"
+		],
+		"setSaga": "Saga-26",
+		"setVolet": 1,
+		"setPhoto": "Photo-4"
+	},
+	"Film-2": {
+		"setSlug": "Harry_Potter_and_the_Chamber_of_Secrets",
+		"setTitre": "Harry Potter et la chambre des secrets",
+		"setTitreOriginal": "Harry Potter and the Chamber of Secrets",
+		"setRealisateur": "Chris Columbus",
+		"setDuree": 161,
+		"setAnnee": 2002,
+		"addCategory": [
+			"Categorie-8"
+		],
+		"setSaga": "Saga-26",
+		"setVolet": 2,
+		"setPhoto": "Photo-5"
+	},
+	"Film-3": {
+		"setSlug": "Harry_Potter_and_the_Prisoner_of_Azkaban",
+		"setTitre": "Harry Potter et le prisonnier d'Azkaban",
+		"setTitreOriginal": "Harry Potter and the Prisoner of Azkaban",
+		"setRealisateur": "Alfonso Cuaron",
+		"setDuree": 142,
+		"setAnnee": 2004,
+		"addCategory": [
+			"Categorie-8"
+		],
+		"setSaga": "Saga-26",
+		"setVolet": 3,
+		"setPhoto": "Photo-6"
+	},
+	"Film-4": {
+		"setSlug": "Harry_Potter_and_the_Goblet_of_Fire",
+		"setTitre": "Harry Potter et la coupe de feu",
+		"setTitreOriginal": "Harry Potter and the Goblet of Fire",
+		"setRealisateur": "Mike Newell",
+		"setDuree": 157,
+		"setAnnee": 2005,
+		"addCategory": [
+			"Categorie-8"
+		],
+		"setSaga": "Saga-26",
+		"setVolet": 4,
+		"setPhoto": "Photo-7"
+	},
+	"Film-5": {
+		"setSlug": "Harry_Potter_and_the_Order_of_the_Phoenix",
+		"setTitre": "Harry Potter et l'ordre du phoenix",
+		"setTitreOriginal": "Harry Potter and the Order of the Phoenix",
+		"setRealisateur": "David Yates",
+		"setDuree": 138,
+		"setAnnee": 2007,
+		"addCategory": [
+			"Categorie-8"
+		],
+		"setSaga": "Saga-26",
+		"setVolet": 5,
+		"setPhoto": "Photo-8"
+	},
+	"Film-6": {
+		"setSlug": "Harry_Potter_and_the_Half-Blood_Prince",
+		"setTitre": "Harry Potter et le prince de sang mélé",
+		"setTitreOriginal": "Harry Potter and the Half-Blood Prince",
+		"setRealisateur": "David Yates",
+		"setDuree": 153,
+		"setAnnee": 2009,
+		"addCategory": [
+			"Categorie-8"
+		],
+		"setSaga": "Saga-26",
+		"setVolet": 6,
+		"setPhoto": "Photo-9"
+	},
+	"Film-7": {
+		"setSlug": "Harry_Potter_and_the_Deathly_Hallows_-_Part_1",
+		"setTitre": "Harry Potter et les reliques de la mort: partie 1",
+		"setTitreOriginal": "Harry Potter and the Deathly Hallows - Part 1",
+		"setRealisateur": "David Yates",
+		"setDuree": 146,
+		"setAnnee": 2010,
+		"addCategory": [
+			"Categorie-8"
+		],
+		"setSaga": "Saga-26",
+		"setVolet": 7,
+		"setPhoto": "Photo-7"
+	},
+	"Film-8": {
+		"setSlug": "Harry_Potter_and_the_Deathly_Hallows_-_Part_2",
+		"setTitre": "Harry Potter et les reliques de la mort: partie 2",
+		"setTitreOriginal": "Harry Potter and the Deathly Hallows - Part 2",
+		"setRealisateur": "David Yates",
+		"setDuree": 130,
+		"setAnnee": 2011,
+		"addCategory": [
+			"Categorie-8"
+		],
+		"setSaga": "Saga-26",
+		"setVolet": 8,
+		"setPhoto": "Photo-8"
+	},
+	"Film-9": {
+		"setSlug": "Prince_of_Persia_The_Sands_of_Time",
+		"setTitre": "Prince of Persia : Les Sables du temps",
+		"setTitreOriginal": "Prince of Persia: The Sands of Time",
+		"setRealisateur": "Mike Newell",
+		"setDuree": 111,
+		"setAnnee": 2010,
+		"addCategory": [
+			"Categorie-2"
+		]
+	},
+	"Film-10": {
+		"setSlug": "Juno",
+		"setTitre": "Juno",
+		"setTitreOriginal": "Juno",
+		"setRealisateur": "Jason Reitman",
+		"setDuree": 92,
+		"setAnnee": 2008,
+		"addCategory": [
+			"Categorie-6"
+		]
+	},
+	"Film-11": {
+		"setSlug": "The_Purge",
+		"setTitre": "American Nightmare",
+		"setTitreOriginal": "The Purge",
+		"setRealisateur": "James DeMonaco",
+		"setDuree": 85,
+		"setAnnee": 2013,
+		"addCategory": [
+			"Categorie-13",
+			"Categorie-11"
+		],
+		"setSaga": "Saga-27",
+		"setVolet": 1,
+		"setPhoto": "Photo-40"
+	},
+	"Film-12": {
+		"setSlug": "The_Purge_Anarchy",
+		"setTitre": "American Nightmare 2: Anarchy",
+		"setTitreOriginal": "The Purge: Anarchy",
+		"setRealisateur": "James DeMonaco",
+		"setDuree": 103,
+		"setAnnee": 2014,
+		"addCategory": [
+			"Categorie-13",
+			"Categorie-1",
+			"Categorie-11"
+		],
+		"setSaga": "Saga-27",
+		"setVolet": 2,
+		"setPhoto": "Photo-41"
+	},
+	"Film-13": {
+		"setSlug": "The_Purge_Election_Year",
+		"setTitre": "American Nightmare 3: élections",
+		"setTitreOriginal": "The Purge: Election Year",
+		"setRealisateur": "James DeMonaco",
+		"setDuree": 109,
+		"setAnnee": 2016,
+		"addCategory": [
+			"Categorie-13",
+			"Categorie-1",
+			"Categorie-11"
+		],
+		"setSaga": "Saga-27",
+		"setVolet": 3,
+		"setPhoto": "Photo-42"
+	},
+	"Film-14": {
+		"setSlug": "The_Hunger_Games",
+		"setTitre": "Hunger games",
+		"setTitreOriginal": "The Hunger Games",
+		"setRealisateur": "Gary Ross",
+		"setDuree": 142,
+		"addCategory": [
+			"Categorie-5"
+		],
+		"setAnnee": 2012,
+		"setSaga": "Saga-8",
+		"setVolet": 1,
+		"setPhoto": "Photo-44"
+	},
+	"Film-15": {
+		"setSlug": "The_Hunger_Games_Catching_Fire",
+		"setTitre": "Hunger games: l'embrasement",
+		"setTitreOriginal": "The Hunger Games: Catching Fire",
+		"setRealisateur": "Francis Lawrence",
+		"setDuree": 146,
+		"addCategory": [
+			"Categorie-5"
+		],
+		"setAnnee": 2013,
+		"setSaga": "Saga-8",
+		"setVolet": 2,
+		"setPhoto": "Photo-45"
+	},
+	"Film-16": {
+		"setSlug": "The_Hunger_Games_Mockingjay_-_Part_1",
+		"setTitre": "Hunger games: la révolte, partie 1",
+		"setTitreOriginal": "The Hunger Games: Mockingjay - Part 1",
+		"setRealisateur": "Francis Lawrence",
+		"setDuree": 125,
+		"addCategory": [
+			"Categorie-5"
+		],
+		"setAnnee": 2014,
+		"setSaga": "Saga-8",
+		"setVolet": 3,
+		"setPhoto": "Photo-46"
+	},
+	"Film-17": {
+		"setSlug": "The_Hunger_Games_Mockingjay_-_Part_2",
+		"setTitre": "Hunger games: la révolte, partie 2",
+		"setTitreOriginal": "The Hunger Games: Mockingjay - Part 2",
+		"setRealisateur": "Francis Lawrence",
+		"setDuree": 137,
+		"addCategory": [
+			"Categorie-5"
+		],
+		"setAnnee": 2015,
+		"setSaga": "Saga-8",
+		"setVolet": 4,
+		"setPhoto": "Photo-47"
+	}
+}

@@ -1,0 +1,17 @@
+{% if principaux is empty %}
+	<div class="col-12 text-center">
+		Aucun acteur principal n'est renseigné pour ce film.
+	</div>
+{% else %}
+		{% for principal in principaux %}
+			<div class="col-img">
+				<div class="img-elt">
+    				<a href="{{ path('acteur_afficher', {'slug': principal.acteur.slug}) }}">
+    				    {{ image(principal.acteur) | raw }}
+            		    {% if principal.role is not null %} {{ principal.role }}<br> {% endif %}
+    				</a>
+				</div>
+			</div>
+        {% endfor %}
+        </table>
+{% endif %}

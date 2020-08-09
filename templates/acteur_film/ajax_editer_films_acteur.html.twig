@@ -1,0 +1,53 @@
+<div id="ajax_acteur_film_ajouter">
+	<form name="acteur_film" method="get">
+        <div class="modal-header">
+            <h5 class="modal-title">Ajout d'un film à l'{% if acteur.sexe %}actrice{% else %}acteur{% endif %} {{ acteur.nomComplet }}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        
+        <div class="modal-body">
+        	<div id="acteurFilms" class="row">
+            	<div class="col-sm-11 collection">Film(s) dans lesquels {% if acteur.sexe %}elle{% else %}il{% endif %} a joué</div>
+            	<div class="col-sm-1 addElement collection"><i class="fas fa-plus"></i></div>
+            	<div class="col-sm-4 text-center">Films</div>
+            	<div class="col-sm-4 text-center"></div>
+            	<div class="col-sm-3 text-center">Rôle</div>
+            	<div class="col-sm-1 text-center"></div>
+            </div>
+        </div>
+        
+        <div class="modal-footer">
+        	<button id = "acteur_film_save" class="btn btn-media">Save</button>
+        </div>
+    </form>
+</div>
+
+{% block javascripts %}
+    <script type="text/javascript">
+        $('#bloc_modal').modal({
+            'show' : true,
+            'backdrop' : 'static'
+        });
+
+        var index = 0;
+
+        {% for acteurFilm in acteur.acteurFilms %}
+            var select1 = "{{ select("acteur[acteurFilms][INDEX][film]", films, opt_film|merge({'default': acteurFilm.film.id})) |raw }}";
+    		var select2 = '{{ select_principal("acteur_acteurFilms_INDEX_principal", "film", "acteur[acteurFilms][INDEX][principal]", acteurFilm.principal) | raw }}';
+    		index = addNewActeurFilm(select1, select2, index, "{{ acteurFilm.role }}", "{{ acteurFilm.id }}");
+        {% endfor %}
+        
+		var select1 = "{{ select("acteur[acteurFilms][INDEX][film]", films, opt_film) |raw }}";
+		var select2 = '{{ select_principal("acteur_acteurFilms_INDEX_principal", "film", "acteur[acteurFilms][INDEX][principal]") | raw }}';
+
+		$(".addElement").click(function(){
+			index = addNewActeurFilm(select1, select2, index);
+		});
+
+		var url = "{{ path('ajax_editer_films_acteur', {'slug': acteur.slug}) }}";
+		var url_base = "{{ path('film_pour_acteur', {'slug': acteur.slug}) }}";
+		SubmitModal("acteur_film", "acteur", url, "#bloc_modal", url_base, "#films");
+    </script>
+{% endblock %}

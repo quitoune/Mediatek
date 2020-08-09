@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Episode - Modification {% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div class="shadow-sm p-3 mb-5 bg-white rounded border">
+        <div class="row">
+        	<div class="col-sm w-100">
+                {{ form_row(form.saison) }}
+            </div>
+    	</div>
+    	
+        <div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.titre) }}
+            </div>
+        	<div class="col-sm">
+                {{ form_row(form.titre_original) }}
+            </div>
+    	</div>
+    	
+        <div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.numero_episode) }}
+            </div>
+        	<div class="col-sm">
+                {{ form_row(form.numero_production) }}
+            </div>
+    	</div>
+    	
+        <div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.duree) }}
+            </div>
+        	<div class="col-sm">
+                {{ form_row(form.premiere_diffusion) }}
+            </div>
+    	</div>
+        
+        <div class="row text-center center-item">
+            {{ form_row(form.save) }}
+        </div>
+    </div>
+    
+    {{ form_rest(form) }}
+    {{ form_errors(form) }}
+    {{ form_end(form) }}
+    
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#episode_saison").select2();
+			$("#episode_premiere_diffusion select").select2();
+		});
+	</script>
+{% endblock %}

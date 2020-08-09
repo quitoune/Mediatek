@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Épisodes{% endblock %}
+
+{% block body %}
+	<div class="card text-center">
+        <div class="card-header text-left">
+            {{ pagination.total }} épisode{% if pagination.total > 1 %}s{% endif %} {% if pagination.nbr_page > 0 %} - Page {{ pagination.page }} / {{ pagination.nbr_page }} {% endif %}
+            {% if is_granted('ROLE_UTILISATEUR') %}
+	            {{ ajouter(path('episode_ajouter'), "float-right marg-r-2") | raw }}
+	        {% endif %}
+        </div>
+        <div class="card-body">
+        	{% if episodes is empty %}
+        		<div class="text-info text-center">Aucun épisode correspondant à la recherche.</div>
+        	{% else %}
+            	<table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Titre</th>
+                            <th>Série - Saison</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	{% for episode in episodes %}
+                            <tr>
+                                <td>{{ episode.id }}</td>
+                                <td>
+                                	<a href="{{ path('episode_afficher', {'slug': episode.slug}) }}">
+                                        {{ titre(episode, app.session.get('user')['episode_vo']) }}
+                                    </a>
+                                </td>
+                                <td>{{ titre(episode.saison.serie, app.session.get('user')['episode_vo']) }} - Saison {{ episode.saison.numeroSaison }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+    			</table>
+			{% endif %}
+        </div>
+        <div class="card-footer text-muted">
+            {% include 'app/pagination.html.twig' %}
+        </div>
+    </div>
+{% endblock %}

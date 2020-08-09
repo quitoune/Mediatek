@@ -1,0 +1,51 @@
+{% if livrePersonnes is empty %}
+	<div class="col-12 text-center">
+		Personne ne possède ce livre.
+	</div>
+{% else %}
+	<table style="margin-left: 30px">
+		{% for livrePersonne in livrePersonnes %}
+			<tr align="center">
+				<td>{{ livrePersonne.personne.username }}</td>
+				<td>{{ livrePersonne.format.nom }}</td>
+				<td>{{ livrePersonne.lieu.nom }}</td>
+				<td>
+					{% if livrePersonne.dateAchat is not null %}
+				        {{ livrePersonne.dateAchat | date('d/m/Y') }}
+				    {% endif %}
+				</td>
+				{% if is_granted('ROLE_UTILISATEUR') %}
+					<td>
+						<span id="edit_pers_{{ livrePersonne.id }}" class="link">
+							<span class="oi oi-pencil"></span>
+						</span>
+						<span id="delete_pers_{{ livrePersonne.id }}" class="link">
+							<span class="oi oi-x"></span>
+						</span>
+					</td>
+				{% endif %}
+			</tr>
+        {% endfor %}
+        </table>
+{% endif %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			{% for livrePersonne in livrePersonnes %}
+				var id = "#edit_pers_{{ livrePersonne.id }}";
+    			$(id).click(function(){
+    				$("html").showLoading();
+                	Ajax("{{ path('ajax_livre_personne_editer_personne', {'id': livrePersonne.id}) }}", "#modal_livre");
+    			});
+
+    			var id_del = "#delete_pers_{{ livrePersonne.id }}";
+    			$(id_del).click(function(){
+        			var url = "{{ path('ajax_livre_personne_supprimer_personne', {'id': livrePersonne.id}) }}";
+        			var url_base = "{{ path('personne_pour_livre', {'slug': livrePersonne.livre.slug}) }}";
+        			deleteAjax(url, url_base, "#personnes");
+    			});
+			{% endfor %}
+		})
+	</script>
+{% endblock %}

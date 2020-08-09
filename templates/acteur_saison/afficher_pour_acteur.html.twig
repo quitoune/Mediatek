@@ -1,0 +1,21 @@
+{% if acteurSaisons is empty %}
+	<div class="col-12 text-center">
+		{% if acteur.sexe %}Elle {% else %}Il {% endif %} 
+		n'a joué dans aucune série que vous possédez.
+	</div>
+{% else %}
+    {% for acteurSaison in acteurSaisons %}
+    	<div class="col-img">
+    		<div class="img-elt">
+        		<a href="{{ path('saison_afficher', {'slug': acteurSaison.saison.slug}) }}">
+            		{{ image(acteurSaison.saison, app.session.get('user')['episode_vo']) | raw }}<br>
+            		{% if acteurSaison.role is not null %} {{ acteurSaison.role }}<br> {% endif %}
+            		{{ acteurSaison.principal | roleActeurSaison }}
+            	</a>
+        	</div>
+        </div>
+    {% endfor %}
+    <div class="col-12 text-center">
+    	{% include 'app/ajax_pagination.html.twig' %}
+    </div>
+{% endif %}

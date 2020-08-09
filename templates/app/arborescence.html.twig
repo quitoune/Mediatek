@@ -1,0 +1,3 @@
+{% if paths is defined %}
+    {{ arborescence(paths, app.session.get('user')['avatar']) | raw }}
+{% endif %}

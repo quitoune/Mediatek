@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Nationalité - Modification {% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div class="shadow-sm p-3 mb-5 bg-white rounded border">
+        <div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.pays) }}
+            </div>
+            <div class="col-sm">
+                {{ form_row(form.etat) }}
+            </div>
+    	</div>
+    	
+    	<div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.feminin) }}
+            </div>
+            <div class="col-sm">
+                {{ form_row(form.masculin) }}
+            </div>
+    	</div>
+        
+        <div class="row text-center center-item">
+            {{ form_row(form.save) }}
+        </div>
+    </div>
+    
+    {{ form_rest(form) }}
+    {{ form_errors(form) }}
+    {{ form_end(form) }}
+    
+{% endblock %}

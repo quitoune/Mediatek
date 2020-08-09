@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ titre(livre, app.session.get('user')['livre_vo']) }} {% endblock %}
+
+{% block body %}
+    <div class="affichage">
+    	<div class="row">
+            <div class="col-sm center_img text-center">
+            	{{ image(livre, app.session.get('user')['livre_vo']) | raw }}
+            </div>
+            <div class="col-sm center_img">
+                <table class="marg-auto">
+            		<tr>
+            			<th></th>
+            			<td align="center">
+            				{{ modifier(path('livre_modifier', {'slug': livre.slug, 'page': page})) | raw }}
+                            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                                {{ supprimer(path('livre_supprimer', {'slug': livre.slug})) | raw }}
+                            {% endif %}
+            			</td>
+            		</tr>
+    				<tr>
+    					<th>Titre</th><td>{{ livre.titre }}</td>
+    				</tr>
+    				<tr>
+    					<th>Titre original</th><td><i>{{ livre.titreOriginal }}</i></td>
+    				</tr>
+    				<tr>
+    					<th>Auteur</th><td>{{ livre.auteur }}</td>
+    				</tr>
+    				<tr>
+    					<th>Première édition</th><td>{{ livre.premiereEdition }}</td>
+    				</tr>
+    				{% if livre.saga is not null %}
+        				<tr>
+        					<th>Saga</th><td><a href="{{ path('saga_afficher', {'slug': livre.saga.slug}) }}">{{ livre.saga.nom }}</a></td>
+        				</tr>
+        				<tr>
+        					<th>Tome</th><td>{{ livre.tome }}</td>
+        				</tr>
+    				{% endif %}
+    				<tr>
+    					<th>Type</th><td>{{ livre.type.nom }}</td>
+    				</tr>
+    				<tr>
+    					<th>Genre</th><td>
+    						{% for categorie in livre.categories %}
+    							{{ categorie.nom }}
+    						{% endfor %}
+    					</td>
+    				</tr>
+    			</table>
+            </div>
+    	</div>
+		<div class="row episode_header">
+			<h5 class="col-12">Propriétaires: 
+				<span id="add_personne" class="link"><span class="oi oi-plus"></span></span>
+			</h5>
+		</div>
+		<div class="row" id="personnes">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+    </div>
+    
+    <div class="modal" tabindex="-1" role="dialog" id="bloc_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id ="modal_livre">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			Ajax("{{ path('personne_pour_livre', {'slug': livre.slug}) }}", "#personnes");
+			$("#add_personne").click(function(){
+				$("html").showLoading();
+            	Ajax("{{ path('ajax_livre_personne_ajouter_personne', {'slug': livre.slug}) }}", "#modal_livre");
+			});
+		})
+	</script>
+{% endblock %}

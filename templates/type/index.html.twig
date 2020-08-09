@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Types{% endblock %}
+
+{% block body %}
+    <div class="card text-center">
+        <div class="card-header text-left bg-primary">
+            {{ pagination.total }} type{% if pagination.total > 1 %}s{% endif %} {% if pagination.nbr_page > 0 %} - Page {{ pagination.page }} / {{ pagination.nbr_page }} {% endif %}
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        {% if is_granted('ROLE_UTILISATEUR') %}
+                        	<th>{{ ajouter(path('type_ajouter')) | raw }}</th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                	{% if types is empty %}
+                	    {% if is_granted('ROLE_UTILISATEUR') %}
+                        	<td colspan="3" class="text-info text-center">Aucun type correspondant à la recherche.</td>
+                        {% else %}
+                        	<td colspan="2" class="text-info text-center">Aucun type correspondant à la recherche.</td>
+                        {% endif %}
+                    	
+                    {% else %}
+                    	{% for type in types %}
+                            <tr>
+                                <td>{{ type.id }}</td>
+                                <td>{{ type.nom }}</td>
+                                {% if is_granted('ROLE_UTILISATEUR') %}
+                                	<td>
+                                		{{ modifier(path('type_modifier', {'id': type.id, 'page':pagination.page})) | raw }}
+                                		{% if is_granted('ROLE_SUPER_ADMIN') %}
+                                		    {{ supprimer(path('type_supprimer', {'id': type.id})) | raw }}
+                                		{% endif %}
+                                	</td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+			</table>
+        </div>
+        <div class="card-footer text-muted">
+        	{% include 'app/pagination.html.twig' %}
+        </div>
+    </div> 
+{% endblock %}

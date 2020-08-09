@@ -1,0 +1,444 @@
+{
+    "Saga-1": {
+        "setSlug": "Le_Monde_emerge",
+        "setNom": "Le Monde émergé"
+    },
+    "Saga-2": {
+        "setSlug": "Les_Chroniques_des_Chasseurs_d-Ombres",
+        "setNom": "Les Chroniques des Chasseurs d'Ombres"
+    },
+    "Saga-3": {
+        "setSlug": "Nes_a_minuit",
+        "setNom": "Nés à minuit"
+    },
+    "Saga-4": {
+        "setSaga": "Saga-1",
+        "setSlug": "Le_Monde_emerge-Chroniques_du_monde_emerge",
+        "setNom": "Chroniques du monde émergé"
+    },
+    "Saga-5": {
+        "setSaga": "Saga-1",
+        "setSlug": "Le_Monde_emerge-Guerres_du_monde_emerge",
+        "setNom": "Guerres du monde émergé"
+    },
+    "Saga-6": {
+        "setSaga": "Saga-1",
+        "setSlug": "Le_Monde_emerge-Legendes_du_monde_emerge",
+        "setNom": "Légendes du monde émergé"
+    },
+    "Saga-7": {
+        "setSlug": "A_la_croisee_des_mondes",
+        "setNom": "A la croisée des mondes"
+    },
+    "Saga-8": {
+        "setSlug": "Hunger_games",
+        "setNom": "Hunger games"
+    },
+    "Saga-9": {
+        "setSlug": "Intuitions",
+        "setNom": "Intuitions"
+    },
+    "Saga-10": {
+        "setSlug": "Quatre_filles_et_un_jean",
+        "setNom": "Quatre filles et un jean"
+    },
+    "Saga-11": {
+        "setSlug": "Lorien_Legacies",
+        "setNom": "Lorien Legacies"
+    },
+    "Saga-12": {
+        "setSlug": "Gone",
+        "setNom": "Gone"
+    },
+    "Saga-13": {
+        "setSlug": "L-eleve_Ducobu",
+        "setNom": "L'élève Ducobu"
+    },
+    "Saga-14": {
+        "setSlug": "Les_Psy",
+        "setNom": "Les Psy"
+    },
+    "Saga-15": {
+        "setSlug": "Les_blondes",
+        "setNom": "Les blondes"
+    },
+    "Saga-16": {
+        "setSlug": "Les_pompiers",
+        "setNom": "Les pompiers"
+    },
+    "Saga-17": {
+        "setSlug": "Lucky_Luke",
+        "setNom": "Lucky Luke"
+    },
+    "Saga-18": {
+        "setSlug": "Zoe_la_trouille",
+        "setNom": "Zoé la trouille"
+    },
+    "Saga-19": {
+        "setSlug": "Dragon_Ball",
+        "setNom": "Dragon Ball"
+    },
+    "Saga-20": {
+        "setSlug": "Insaisissable",
+        "setNom": "Insaisissable"
+    },
+    "Saga-21": {
+        "setSaga": "Saga-2",
+        "setSlug": "Les_Chroniques_des_Chasseurs_d-Ombres-The_mortal_instruments",
+        "setNom": "The mortal instruments"
+    },
+    "Saga-22": {
+        "setSlug": "Hannah_Montana",
+        "setNom": "Hannah Montana"
+    },
+    "Saga-23": {
+        "setSlug": "Totally_spies",
+        "setNom": "Totally spies"
+    },
+    "Saga-24": {
+        "setSlug": "Soeurs_sorcieres",
+        "setNom": "Soeurs sorcières",
+        "setNomOriginal": "The Cahill Witch Chronicles"
+    },
+    "Saga-25": {
+        "setSlug": "La_trilogie_du_magicien",
+        "setNom": "La trilogie du magicien"
+    },
+    "Saga-26": {
+        "setSlug": "Harry_Potter",
+        "setNom": "Harry Potter"
+    },
+    "Saga-27": {
+        "setSlug": "Kid_Paddle",
+        "setNom": "Kid Paddle"
+    },
+    "Saga-28": {
+        "setSlug": "Pirates_de_caraibes",
+        "setNom": "Pirates de caraïbes"
+    },
+    "Saga-29": {
+        "setSlug": "Titeuf",
+        "setNom": "Titeuf"
+    },
+    "Saga-30": {
+        "setSlug": "La_quete_du_livre_monde",
+        "setNom": "La quête du livre monde"
+    },
+    "Saga-31": {
+        "setSlug": "Fast_Furious",
+        "setNom": "Fast & Furious"
+    },
+    "Saga-32": {
+        "setSlug": "Le_Roi_Lion",
+        "setNom": "Le Roi Lion"
+    },
+    "Saga-33": {
+        "setSlug": "Aladdin",
+        "setNom": "Aladdin"
+    },
+    "Saga-34": {
+        "setSlug": "Mad_Max",
+        "setNom": "Mad Max"
+    },
+    "Saga-35": {
+        "setSlug": "Pitch_Perfect",
+        "setNom": "Pitch Perfect"
+    },
+    "Saga-36": {
+        "setSlug": "Moi_moche_et_mechant",
+        "setNom": "Moi, moche et méchant"
+    },
+    "Saga-37": {
+        "setSlug": "Iron_Man",
+        "setNom": "Iron Man"
+    },
+    "Saga-38": {
+        "setSlug": "Dragons",
+        "setNom": "Dragons"
+    },
+    "Saga-39": {
+        "setSlug": "Underworld",
+        "setNom": "Underworld"
+    },
+    "Saga-40": {
+        "setSlug": "Le_cygne_et_la_princesse",
+        "setNom": "Le cygne et la princesse"
+    },
+    "Saga-41": {
+        "setSlug": "Transformers",
+        "setNom": "Transformers"
+    },
+    "Saga-42": {
+        "setSlug": "Captain_America",
+        "setNom": "Captain America"
+    },
+    "Saga-43": {
+        "setSlug": "Thor",
+        "setNom": "Thor"
+    },
+    "Saga-44": {
+        "setSlug": "Avengers",
+        "setNom": "Avengers"
+    },
+    "Saga-45": {
+        "setSlug": "Jason_Bourne",
+        "setNom": "Jason Bourne"
+    },
+    "Saga-46": {
+        "setSlug": "X-men",
+        "setNom": "X-men"
+    },
+    "Saga-47": {
+        "setSlug": "Toy_story",
+        "setNom": "Toy story"
+    },
+    "Saga-48": {
+        "setSlug": "Star_Wars",
+        "setNom": "Star Wars"
+    },
+    "Saga-49": {
+        "setSlug": "Cars",
+        "setNom": "Cars"
+    },
+    "Saga-50": {
+        "setSlug": "Sexy_Dance",
+        "setNom": "Sexy Dance"
+    },
+    "Saga-51": {
+        "setSlug": "Asterix_et_Obelix",
+        "setNom": "Astérix et Obélix"
+    },
+    "Saga-52": {
+        "setSlug": "Scary_Movie",
+        "setNom": "Scary Movie"
+    },
+    "Saga-53": {
+        "setSlug": "Destination_Finale",
+        "setNom": "Destination Finale"
+    },
+    "Saga-54": {
+        "setSlug": "Jurassic_Park",
+        "setNom": "Jurassic Park"
+    },
+    "Saga-55": {
+        "setSlug": "Ocean",
+        "setNom": "Ocean"
+    },
+    "Saga-56": {
+        "setSlug": "Rush_Hour",
+        "setNom": "Rush Hour"
+    },
+    "Saga-57": {
+        "setSlug": "La_momie",
+        "setNom": "La momie"
+    },
+    "Saga-58": {
+        "setSlug": "Taxi",
+        "setNom": "Taxi"
+    },
+    "Saga-59": {
+        "setSlug": "Expendables",
+        "setNom": "Expendables"
+    },
+    "Saga-60": {
+        "setSlug": "Spider-man",
+        "setNom": "Spider-man"
+    },
+    "Saga-61": {
+        "setSlug": "La_petite_sirene",
+        "setNom": "La petite sirène"
+    },
+    "Saga-62": {
+        "setSlug": "Course_a_la_mort",
+        "setNom": "Course à la mort"
+    },
+    "Saga-63": {
+        "setSlug": "Resident_Evil",
+        "setNom": "Resident Evil"
+    },
+    "Saga-64": {
+        "setSlug": "Indiana_Jones",
+        "setNom": "Indiana Jones"
+    },
+    "Saga-65": {
+        "setSlug": "La_planete_des_singes",
+        "setNom": "La planète des singes"
+    },
+    "Saga-66": {
+        "setSlug": "Trilogie_des_gemmes",
+        "setNom": "Trilogie des gemmes"
+    },
+    "Saga-67": {
+        "setSlug": "Cendrillon",
+        "setNom": "Cendrillon"
+    },
+    "Saga-68": {
+        "setSlug": "Shrek",
+        "setNom": "Shrek"
+    },
+    "Saga-69": {
+        "setSlug": "Twilight",
+        "setNom": "Twilight"
+    },
+    "Saga-70": {
+        "setSlug": "James_Bond",
+        "setNom": "James Bond"
+    },
+    "Saga-71": {
+        "setSlug": "Le_transporteur",
+        "setNom": "Le transporteur"
+    },
+    "Saga-72": {
+        "setSlug": "L-heritage",
+        "setNom": "L'héritage"
+    },
+    "Saga-73": {
+        "setSlug": "Men_In_Black",
+        "setNom": "Men In Black"
+    },
+    "Saga-74": {
+        "setSlug": "Chroniques_du_Necromancien",
+        "setNom": "Chroniques du Nécromancien"
+    },
+    "Saga-75": {
+        "setSlug": "Le_monde_de_Narnia",
+        "setNom": "Le monde de Narnia"
+    },
+    "Saga-76": {
+        "setSlug": "Calendar_Girl",
+        "setNom": "Calendar Girl"
+    },
+    "Saga-77": {
+        "setSlug": "Alien",
+        "setNom": "Alien"
+    },
+    "Saga-78": {
+        "setSlug": "SOS_Fantomes",
+        "setNom": "SOS Fantômes"
+    },
+    "Saga-79": {
+        "setSaga": "Saga-2",
+        "setSlug": "Les_Chroniques_des_Chasseurs_d-Ombres-The_Mortal_Instruments_-_Renaissance",
+        "setNom": "The Mortal Instruments - Renaissance"
+    },
+    "Saga-80": {
+        "setSaga": "Saga-2",
+        "setSlug": "Les_Chroniques_des_Chasseurs_d-Ombres-The_Mortal_Instruments_-_Les_Origines",
+        "setNom": "The Mortal Instruments - Les Origines"
+    },
+    "Saga-81": {
+        "setSlug": "American_Nightmare",
+        "setNom": "American Nightmare"
+    },
+    "Saga-82": {
+        "setSlug": "La_Sagesse_des_mythes",
+        "setNom": "La Sagesse des mythes"
+    },
+    "Saga-83": {
+        "setSlug": "La_collection_des_court-metrage_PIXAR",
+        "setNom": "La collection des court-métrage PIXAR"
+    },
+    "Saga-84": {
+        "setSlug": "Die_Hard",
+        "setNom": "Die Hard"
+    },
+    "Saga-85": {
+        "setSlug": "Fate-Stay_Night",
+        "setNom": "Fate\/Stay Night"
+    },
+    "Saga-86": {
+        "setSlug": "Mar",
+        "setNom": "Mär",
+        "setNomOriginal": "Meru hevun"
+    },
+    "Saga-87": {
+        "setSlug": "La_Fee_Clochette",
+        "setNom": "La Fée Clochette"
+    },
+    "Saga-88": {
+        "setSlug": "Bad_Boys",
+        "setNom": "Bad Boys"
+    },
+    "Saga-89": {
+        "setSlug": "Red_Eyes_Sword_Zero_-_Akame_ga_Kill_!",
+        "setNom": "Red Eyes Sword Zero - Akame ga Kill !"
+    },
+    "Saga-90": {
+        "setSlug": "Trilogie_du_dollar",
+        "setNom": "Trilogie du dollar"
+    },
+    "Saga-91": {
+        "setSlug": "Vampire_Academy",
+        "setNom": "Vampire Academy"
+    },
+    "Saga-92": {
+        "setSlug": "Darkest_Minds",
+        "setNom": "Darkest Minds"
+    },
+    "Saga-93": {
+        "setSlug": "L-epreuve",
+        "setNom": "L'épreuve"
+    },
+    "Saga-94": {
+        "setSlug": "Les_Bannis_et_les_Proscrits",
+        "setNom": "Les Bannis et les Proscrits"
+    },
+    "Saga-95": {
+        "setSlug": "Legendes_d-Alagaesia",
+        "setNom": "Légendes d'Alagaësia"
+    },
+    "Saga-96": {
+        "setSaga": "Saga-3",
+        "setSlug": "Nes_a_minuit-Nes_a_Minuit__Renaissance",
+        "setNom": "Nés à Minuit : Renaissance"
+    },
+    "Saga-97": {
+        "setSlug": "Le_Donjon_de_Naheulbeuk",
+        "setNom": "Le Donjon de Naheulbeuk"
+    },
+    "Saga-98": {
+        "setSlug": "John_Wick",
+        "setNom": "John Wick"
+    },
+    "Saga-99": {
+        "setSlug": "Happy_BirthDead",
+        "setNom": "Happy BirthDead"
+    },
+    "Saga-100": {
+        "setSaga": "Saga-4",
+        "setSlug": "Le_Monde_emerge-Chroniques_du_monde_emerge-Les_Nouvelles_Aventures_de_Nihal",
+        "setNom": "Les Nouvelles Aventures de Nihal"
+    },
+    "Saga-101": {
+        "setSlug": "Gods_and_Monsters",
+        "setNom": "Gods and Monsters"
+    },
+    "Saga-102": {
+        "setSlug": "Les_Sept_Lames",
+        "setNom": "Les Sept Lames"
+    },
+    "Saga-103": {
+        "setSlug": "Annales_du_Disque-monde",
+        "setNom": "Annales du Disque-monde"
+    },
+    "Saga-104": {
+        "setSaga": "Saga-12",
+        "setSlug": "Gone-Monster",
+        "setNom": "Monster",
+        "setNomOriginal": "Season 2"
+    },
+    "Saga-105": {
+        "setSlug": "Tara_Duncan",
+        "setNom": "Tara Duncan"
+    },
+    "Saga-106": {
+        "setSaga": "Saga-82",
+        "setSlug": "La_Sagesse_des_mythes-Jason_et_la_Toison_d-Or",
+        "setNom": "Jason et la Toison d'Or"
+    },
+    "Saga-107": {
+        "setSaga": "Saga-82",
+        "setSlug": "La_Sagesse_des_mythes-L-Iliade",
+        "setNom": "L'Iliade"
+    }
+}

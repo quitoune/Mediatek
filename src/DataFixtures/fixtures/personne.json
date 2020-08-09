@@ -1,0 +1,155 @@
+{
+	"Personne-1": {
+		"setUsername": "dhenriot",
+		"setPassword": "dhenriot",
+		"setPrenom": "Dominique",
+		"setNom": "Henriot",
+		"setEmail": "dhenriot@p.fr",
+		"setFilmVo": false,
+		"setEpisodeVo": false,
+		"setLivreVo": false,
+		"setLieu": "Lieu-1",
+		"setSalt": "d1o2m3i4n5i6q7u8e9",
+		"setRoles": [
+			"ROLE_UTILISATEUR"
+		]
+	},
+	"Personne-2": {
+		"setUsername": "jhenriot",
+		"setPassword": "jhenriot",
+		"setPrenom": "Judith",
+		"setNom": "Henriot",
+		"setEmail": "jhenriot@pfr",
+		"setFilmVo": false,
+		"setEpisodeVo": false,
+		"setLivreVo": false,
+		"setLieu": "Lieu-1",
+		"setSalt": "j1u2d3i4t5h6",
+		"setRoles": [
+			"ROLE_UTILISATEUR"
+		]
+	},
+	"Personne-3": {
+		"setUsername": "kitoune92",
+		"setPassword": "chenriot",
+		"setPrenom": "Christine",
+		"setNom": "Henriot",
+		"setEmail": "chenriot@outlook.com",
+		"setFilmVo": true,
+		"setEpisodeVo": true,
+		"setLivreVo": true,
+		"setLieu": "Lieu-1",
+		"setAvatar": "Avatar-17",
+		"setSalt": "c1h2r3i4s5t6i7n8e9",
+		"setRoles": [
+			"ROLE_SUPER_ADMIN"
+		]
+	},
+	"Personne-4": {
+		"setUsername": "shenriot",
+		"setPassword": "shenriot",
+		"setPrenom": "Sandrine",
+		"setNom": "Henriot",
+		"setEmail": "shenriot@pfr",
+		"setFilmVo": false,
+		"setEpisodeVo": false,
+		"setLivreVo": false,
+		"setLieu": "Lieu-1",
+		"setSalt": "s1a2n3d4r5i6n7e8",
+		"setRoles": [
+			"ROLE_UTILISATEUR"
+		]
+	},
+	"Personne-5": {
+		"setUsername": "vhenriot",
+		"setPassword": "vhenriot",
+		"setPrenom": "Vincent",
+		"setNom": "Henriot",
+		"setEmail": "vhenriot@pfr",
+		"setFilmVo": false,
+		"setEpisodeVo": false,
+		"setLivreVo": false,
+		"setLieu": "Lieu-1",
+		"setSalt": "v1i2n3c4e5n6t7",
+		"setRoles": [
+			"ROLE_UTILISATEUR"
+		]
+	},
+	"Personne-6": {
+		"setUsername": "syaa92",
+		"setPassword": "yhenriot",
+		"setPrenom": "Ysabel",
+		"setNom": "Henriot",
+		"setEmail": "yhenriot@pfr",
+		"setFilmVo": false,
+		"setEpisodeVo": true,
+		"setLivreVo": false,
+		"setLieu": "Lieu-1",
+		"setSalt": "y1s2a3b4e5l6",
+		"setRoles": [
+			"ROLE_UTILISATEUR"
+		]
+	},
+	"Personne-7": {
+		"setUsername": "dbouret",
+		"setPassword": "dbouret",
+		"setPrenom": "Daniel",
+		"setNom": "Bouret",
+		"setEmail": "dbouret@pfr",
+		"setFilmVo": false,
+		"setEpisodeVo": false,
+		"setLivreVo": false,
+		"setLieu": "Lieu-4",
+		"setSalt": "Daniel",
+		"setRoles": [
+			"ROLE_UTILISATEUR"
+		]
+	},
+	"Personne-8": {
+		"setUsername": "vbouret",
+		"setPassword": "vbouret",
+		"setPrenom": "Valérie",
+		"setNom": "Bouret",
+		"setEmail": "vbouret@pfr",
+		"setFilmVo": false,
+		"setEpisodeVo": false,
+		"setLivreVo": false,
+		"setLieu": "Lieu-4",
+		"setSalt": "v1a2l3e4r5i6e7",
+		"setRoles": [
+			"ROLE_UTILISATEUR"
+		]
+	},
+	"Personne-9": {
+		"setUsername": "luclight91",
+		"setPassword": "lbouret",
+		"setPrenom": "Lucas",
+		"setNom": "Bouret",
+		"setEmail": "lbouret@pfr",
+		"setFilmVo": false,
+		"setEpisodeVo": false,
+		"setLivreVo": false,
+		"setLieu": "Lieu-4",
+		"setAvatar": "Avatar-26",
+		"setSalt": "l1u2c3a4s5",
+		"setRoles": [
+			"ROLE_ADMIN"
+		]
+	},
+	"Personne-10": {
+		"setUsername": "mbouret",
+		"setPassword": "mbouret",
+		"setPrenom": "Mélina",
+		"setNom": "Bouret",
+		"setEmail": "mbouret@pfr",
+		"setFilmVo": false,
+		"setEpisodeVo": false,
+		"setLivreVo": false,
+		"setLieu": "Lieu-4",
+		"setAvatar": "Avatar-5",
+		"setSalt": "m1e2l3i4n5a6",
+		"setRoles": [
+			"ROLE_UTILISATEUR"
+		]
+	}
+}

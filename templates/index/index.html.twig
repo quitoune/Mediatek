@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+	<div class="card card-index">
+    	<div class="card-header fiche">
+        	Films achetés ces {{ mois }} derniers mois
+        </div>
+        <div class="card-body">
+        	{{ derniersAchats('film', films, doctrine, app.session.get('user')['film_vo']) | raw }}
+        </div>
+    </div>
+    
+    <br>
+
+    <div class="card card-index">
+    	<div class="card-header fiche">
+    		Livres achetés ces {{ mois }} derniers mois
+    	</div>
+    	<div class="card-body">
+    		{{ derniersAchats('livre', livres, doctrine, app.session.get('user')['livre_vo']) | raw }}
+    	</div>
+    </div>
+    
+    <br>
+    <div class="card card-index">
+    	<div class="card-header fiche">
+    		Episodes achetés ces {{ mois }} derniers mois
+    	</div>
+    	<div class="card-body">
+    		{{ derniersAchats('episode', episodes, doctrine, app.session.get('user')['episode_vo']) | raw }}
+    	</div>
+    </div>
+    
+    <br>
+
+{% endblock %}

@@ -1,0 +1,156 @@
+{
+	"Nationalite-1": {
+		"setSlug": "Etat-Unis",
+		"setPays": "États-Unis",
+		"setFeminin": "Américaine",
+		"setMasculin": "Américain"
+	},
+	"Nationalite-2": {
+		"setSlug": "France",
+		"setPays": "France",
+		"setFeminin": "Française",
+		"setMasculin": "Français"
+	},
+	"Nationalite-3": {
+		"setSlug": "Royaume-Uni_Angleterre",
+		"setPays": "Royaume-Uni",
+		"setFeminin": "Britannique",
+		"setEtat": "Angleterre"
+	},
+	"Nationalite-4": {
+		"setSlug": "Australie",
+		"setPays": "Australie",
+		"setFeminin": "Australienne",
+		"setMasculin": "Australien"
+	},
+	"Nationalite-5": {
+		"setSlug": "Allemagne",
+		"setPays": "Allemagne",
+		"setFeminin": "Allemande",
+		"setMasculin": "Allemand"
+	},
+	"Nationalite-6": {
+		"setSlug": "Canada",
+		"setPays": "Canada",
+		"setFeminin": "Canadienne",
+		"setMasculin": "Canadien"
+	},
+	"Nationalite-7": {
+		"setSlug": "Royaume-Uni_Ecosse",
+		"setPays": "Royaume-Uni",
+		"setFeminin": "Britannique",
+		"setEtat": "Écosse"
+	},
+	"Nationalite-8": {
+		"setSlug": "Chine",
+		"setPays": "Chine",
+		"setFeminin": "Chinoise",
+		"setMasculin": "Chinois"
+	},
+	"Nationalite-9": {
+		"setSlug": "Japon",
+		"setPays": "Japon",
+		"setFeminin": "Japonaise",
+		"setMasculin": "Japonnais"
+	},
+	"Nationalite-10": {
+		"setSlug": "Inde",
+		"setPays": "Inde",
+		"setFeminin": "Indienne",
+		"setMasculin": "Indien"
+	},
+	"Nationalite-11": {
+		"setSlug": "Espagne",
+		"setPays": "Espagne",
+		"setFeminin": "Espagnole",
+		"setMasculin": "Espagnol"
+	},
+	"Nationalite-12": {
+		"setSlug": "Suede",
+		"setPays": "Suède",
+		"setFeminin": "Suédoise",
+		"setMasculin": "Suédois"
+	},
+	"Nationalite-13": {
+		"setSlug": "Colombie",
+		"setPays": "Colombie",
+		"setFeminin": "Colombienne",
+		"setMasculin": "Colombien"
+	},
+	"Nationalite-14": {
+		"setSlug": "Russie",
+		"setPays": "Russie",
+		"setFeminin": "Russe"
+	},
+	"Nationalite-15": {
+		"setSlug": "Nouvelle-Zelande",
+		"setPays": "Nouvelle-Zélande",
+		"setFeminin": "Néo-zélandaise",
+		"setMasculin": "Néo-zélandais"
+	},
+	"Nationalite-16": {
+		"setSlug": "Pologne",
+		"setPays": "Pologne",
+		"setFeminin": "Polonaise",
+		"setMasculin": "Polonais"
+	},
+	"Nationalite-17": {
+		"setSlug": "Chili",
+		"setPays": "Chili",
+		"setFeminin": "Chilienne",
+		"setMasculin": "Chilien"
+	},
+	"Nationalite-18": {
+		"setSlug": "Venezuela",
+		"setPays": "Vénézuéla",
+		"setFeminin": "Vénézuélienne",
+		"setMasculin": "Vénézuélien"
+	},
+	"Nationalite-19": {
+		"setSlug": "Finlande",
+		"setPays": "Finlande",
+		"setFeminin": "Finlandaise",
+		"setMasculin": "Finlandais"
+	},
+	"Nationalite-20": {
+		"setSlug": "Afrique_du_sud",
+		"setPays": "Afrique du Sud",
+		"setFeminin": "Sud-Africaine",
+		"setMasculin": "Sud-Africain"
+	},
+	"Nationalite-21": {
+		"setSlug": "Grece",
+		"setPays": "Grèce",
+		"setFeminin": "Grecque",
+		"setMasculin": "Grec"
+	},
+	"Nationalite-22": {
+		"setSlug": "Royaume-Uni_Pays_de_Galles",
+		"setPays": "Royaume-Uni",
+		"setFeminin": "Britannique",
+		"setEtat": "Pays de Galles"
+	},
+	"Nationalite-23": {
+		"setSlug": "Italie",
+		"setPays": "Italie",
+		"setFeminin": "Italienne",
+		"setMasculin": "Italien"
+	},
+	"Nationalite-24": {
+		"setSlug": "Bresil",
+		"setPays": "Brésil",
+		"setFeminin": "Brésilienne",
+		"setMasculin": "Brésilien"
+	},
+	"Nationalite-25": {
+		"setSlug": "Pays-Bas",
+		"setPays": "Pays-Bas",
+		"setFeminin": "Néerlandaise",
+		"setMasculin": "Néerlandais"
+	},
+	"Nationalite-26": {
+		"setSlug": "Bulgarie",
+		"setPays": "Bulgarie",
+		"setFeminin": "Bulgare"
+	}
+}

@@ -1,0 +1,152 @@
+{
+	"Avatar-1": {
+		"setSlug": "Alaric_et_Damon",
+		"setNom": "Alaric et Damon",
+		"setChemin": "alaric-damon.png"
+	},
+	"Avatar-2": {
+		"setSlug": "Bonnie",
+		"setNom": "Bonnie",
+		"setChemin": "bonnie.png"
+	},
+	"Avatar-3": {
+		"setSlug": "Bonnie_et_son_chaudron",
+		"setNom": "Bonnie et son chaudron",
+		"setChemin": "bonnie-chaudron.png"
+	},
+	"Avatar-4": {
+		"setSlug": "Candice",
+		"setNom": "Candice",
+		"setChemin": "candice.png"
+	},
+	"Avatar-5": {
+		"setSlug": "Damon_et_Elena_a_Miss_Mystic_Falls",
+		"setNom": "Damon et Elena à Miss Mystic Falls",
+		"setChemin": "damon-elena-miss-mystic-falls.png"
+	},
+	"Avatar-6": {
+		"setSlug": "Damon_et_Jeremy",
+		"setNom": "Damon et Jeremy",
+		"setChemin": "damon-jeremy.png"
+	},
+	"Avatar-7": {
+		"setSlug": "Damon_et_Katherine",
+		"setNom": "Damon et Katherine",
+		"setChemin": "damon-katherine.png"
+	},
+	"Avatar-8": {
+		"setSlug": "Damon_et_Stefan",
+		"setNom": "Damon et Stefan",
+		"setChemin": "damon-stefan.png"
+	},
+	"Avatar-9": {
+		"setSlug": "Dead_Elijah",
+		"setNom": "Dead Elijah",
+		"setChemin": "elijah-dead.png"
+	},
+	"Avatar-10": {
+		"setSlug": "Elijah_saying_OMG",
+		"setNom": "Elijah saying OMG",
+		"setChemin": "elijah-omg.png"
+	},
+	"Avatar-11": {
+		"setSlug": "Elijah_Stabbed",
+		"setNom": "Elijah Stabbed",
+		"setChemin": "elijah-stabbed.png"
+	},
+	"Avatar-12": {
+		"setSlug": "Ian",
+		"setNom": "Ian",
+		"setChemin": "ian.png"
+	},
+	"Avatar-13": {
+		"setSlug": "Jenna",
+		"setNom": "Jenna",
+		"setChemin": "jenna.png"
+	},
+	"Avatar-14": {
+		"setSlug": "Katherine_dancing",
+		"setNom": "Katherine dancing",
+		"setChemin": "katherine-dance.png"
+	},
+	"Avatar-15": {
+		"setSlug": "Katherine_Pierce",
+		"setNom": "Katherine Pierce",
+		"setChemin": "katherine-pierce.png"
+	},
+	"Avatar-16": {
+		"setSlug": "Katherine_Pierce_1594",
+		"setNom": "Katherine Pierce 1594",
+		"setChemin": "katherine-pierce_1594.png"
+	},
+	"Avatar-17": {
+		"setSlug": "Klaus",
+		"setNom": "Klaus",
+		"setChemin": "klaus.png"
+	},
+	"Avatar-18": {
+		"setSlug": "Lexi",
+		"setNom": "Lexi",
+		"setChemin": "lexi.png"
+	},
+	"Avatar-19": {
+		"setSlug": "Modern_Lexi",
+		"setNom": "Modern Lexi",
+		"setChemin": "lexi-modern.png"
+	},
+	"Avatar-20": {
+		"setSlug": "Liz",
+		"setNom": "Liz",
+		"setChemin": "liz.png"
+	},
+	"Avatar-21": {
+		"setSlug": "Lockwolf",
+		"setNom": "Lockwolf",
+		"setChemin": "lockwolf.png"
+	},
+	"Avatar-22": {
+		"setSlug": "Mason_et_Katherine",
+		"setNom": "Mason et Katherine",
+		"setChemin": "mason-katherine.png"
+	},
+	"Avatar-23": {
+		"setSlug": "Masquerade-Katherine_et_Stefan",
+		"setNom": "Masquerade: Katherine et Stefan",
+		"setChemin": "masquerade-katherine-stefan.png"
+	},
+	"Avatar-24": {
+		"setSlug": "Mikealsons",
+		"setNom": "Mikealsons",
+		"setChemin": "mikealsons.png"
+	},
+	"Avatar-25": {
+		"setSlug": "Nathaniel_Buzolic",
+		"setNom": "Nathaniel Buzolic",
+		"setChemin": "nat-buzolic.png"
+	},
+	"Avatar-26": {
+		"setSlug": "Paul_Wesley",
+		"setNom": "Paul Wesley",
+		"setChemin": "paul-wesley.png"
+	},
+	"Avatar-27": {
+		"setSlug": "Rebekah",
+		"setNom": "Rebekah",
+		"setChemin": "rebekah.png"
+	},
+	"Avatar-28": {
+		"setSlug": "Sage",
+		"setNom": "Sage",
+		"setChemin": "sage.png"
+	},
+	"Avatar-29": {
+		"setSlug": "Sexy_Katherine",
+		"setNom": "Sexy Katherine",
+		"setChemin": "sexy-katherine.png"
+	},
+	"Avatar-30": {
+		"setSlug": "Tyler",
+		"setNom": "Tyler",
+		"setChemin": "tyler.png"
+	}
+}

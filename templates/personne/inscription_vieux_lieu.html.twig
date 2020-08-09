@@ -1,0 +1,12 @@
+<div id="take_old_address_div" class="m-t-15">
+	{% if lieux is not empty %}
+        {% for lieu in lieux %}
+        	<div class="form-group">
+        		<input type="radio" name="personne[lieu]">
+        		{{ tooltip_address(lieu) | raw }}
+        	</div>
+        {% endfor %}
+    {% else %}
+    	<p>Aucune adresse n'est associée à cette famille, Veuillez en créer une.</p>
+    {% endif %}
+</div>

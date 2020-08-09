@@ -1,0 +1,92 @@
+{
+	"Episode-1": {
+		"setSlug": "Pilot",
+		"setTitre": "Mystic Falls",
+		"setTitreOriginal": "Pilot",
+		"setNumeroEpisode": 1,
+		"setNumeroProduction": 1,
+		"setDuree": 41,
+		"setPremiereDiffusion": "2009-09-10",
+		"setSaison": "Saison-1"
+	},
+	"Episode-2": {
+		"setSlug": "Masquerade",
+		"setTitre": "Tous contre elle",
+		"setTitreOriginal": "Masquerade",
+		"setNumeroEpisode": 7,
+		"setNumeroProduction": 29,
+		"setDuree": 41,
+		"setPremiereDiffusion": "2010-10-28",
+		"setSaison": "Saison-2"
+	},
+	"Episode-3": {
+		"setSlug": "Ghost_World",
+		"setTitre": "Paroles de fantômes",
+		"setTitreOriginal": "Ghost World",
+		"setNumeroEpisode": 7,
+		"setNumeroProduction": 51,
+		"setDuree": 43,
+		"setPremiereDiffusion": "2011-10-27",
+		"setSaison": "Saison-3"
+	},
+	"Episode-4": {
+		"setSlug": "Dangerous_Liaisons",
+		"setTitre": "Esther",
+		"setTitreOriginal": "Dangerous Liaisons",
+		"setNumeroEpisode": 14,
+		"setNumeroProduction": 58,
+		"setDuree": 43,
+		"setPremiereDiffusion": "2012-02-09",
+		"setSaison": "Saison-3"
+	},
+	"Episode-5": {
+		"setSlug": "Break_On_Through",
+		"setTitre": "Son autre visage",
+		"setTitreOriginal": "Break On Through",
+		"setNumeroEpisode": 17,
+		"setNumeroProduction": 61,
+		"setDuree": 43,
+		"setPremiereDiffusion": "2012-03-22",
+		"setSaison": "Saison-3"
+	},
+	"Episode-6": {
+		"setSlug": "The_Murder_of_One",
+		"setTitre": "Descendance",
+		"setTitreOriginal": "The Murder of One",
+		"setNumeroEpisode": 18,
+		"setNumeroProduction": 62,
+		"setDuree": 42,
+		"setPremiereDiffusion": "2012-03-29",
+		"setSaison": "Saison-3"
+	},
+	"Episode-7": {
+		"setSlug": "Shut_Up_Dr_Phil",
+		"setTitre": "Ma sorcière bien-aimée",
+		"setTitreOriginal": "Shut Up, Dr Phil",
+		"setNumeroEpisode": 5,
+		"setNumeroProduction": 131,
+		"setDuree": 40,
+		"setPremiereDiffusion": "2011-10-21",
+		"setSaison": "Saison-18"
+	},
+	"Episode-8": {
+		"setSlug": "Dog_Dean_Afternoon",
+		"setTitre": " Un après-midi de chien",
+		"setTitreOriginal": "Dog Dean Afternoon",
+		"setNumeroEpisode": 5,
+		"setNumeroProduction": 177,
+		"setDuree": 42,
+		"setPremiereDiffusion": "2013-11-05",
+		"setSaison": "Saison-19"
+	},
+	"Episode-9": {
+		"setSlug": "Regarding_Dean",
+		"setTitre": "C'est qui Dean ?",
+		"setTitreOriginal": "Regarding Dean",
+		"setNumeroEpisode": 11,
+		"setNumeroProduction": 252,
+		"setDuree": 43,
+		"setPremiereDiffusion": "2017-02-09",
+		"setSaison": "Saison-20"
+	}
+}

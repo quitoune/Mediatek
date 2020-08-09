@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ titre(episode, app.session.get('user')['episode_vo']) }} {% endblock %}
+
+{% block body %}
+	<div class="affichage">
+		<div class="row">
+			<div class="col-sm center_img text-center">
+				{{ image(episode.saison) | raw }}
+			</div>
+			<div class="col-sm center_img">
+				<table class="middle">
+            		<tr>
+            			<th></th>
+            			<td align="center">
+            				{{ modifier(path('episode_modifier', {'slug': episode.slug, 'page': page})) | raw }}
+                            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                                {{ supprimer(path('episode_supprimer', {'slug': episode.slug})) | raw }}
+                            {% endif %}
+            			</td>
+            		</tr>
+    				<tr>
+        				<th>Série</th>
+        				<td align=center>
+        					<a href="{{ path('serie_afficher', {'slug': episode.saison.serie.slug}) }}">
+        				        {{ titre(episode.saison.serie, app.session.get('user')['episode_vo']) }}
+        					</a>
+        				</td>
+    				</tr>
+    				<tr>
+        				<th>Saison</th>
+        				<td align=center>
+        					<a href="{{ path('saison_afficher', {'slug': episode.saison.slug}) }}">
+        						Saison {{ episode.saison.numeroSaison }}
+        					</a>
+        				</td>
+    				</tr>
+					{% if episode.titre is not null %}
+        				<tr>
+            				<th>Titre</th>
+            				<td align=center>{{ episode.titre }}</td>
+        				</tr>
+    				{% endif %}
+    				<tr>
+        				<th>Titre Original</th>
+        				<td align=center>{{ episode.titreOriginal }}</td>
+    				</tr>
+    				<tr>
+        				<th>N° épisode</th>
+        				<td align=center>{{ episode.numeroEpisode }}</td>
+    				</tr>
+    				<tr>
+        				<th>N° de production</th>
+        				<td align=center>{{ episode.numeroProduction }}</td>
+    				</tr>
+    				<tr>
+        				<th>Première Diffusion</th>
+        				<td align=center>{{ episode.premiereDiffusion | date('d/m/Y') }}</td>
+    				</tr>
+    				<tr>
+        				<th>Durée</th>
+        				<td align=center>{{ episode.duree }} min</td>
+    				</tr>
+				</table>
+			</div>
+		</div>
+		<div class="row episode_header">
+			<h5 class="col-12">
+				Propriétaires: 
+				<span id="add_personne" class="link"><span class="oi oi-plus"></span></span>
+			</h5>
+		</div>
+		<div class="row" id="personnes">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+	</div>
+    
+    <div class="modal" tabindex="-1" role="dialog" id="bloc_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id ="modal_episode">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			Ajax("{{ path('personne_pour_episode', {'slug': episode.slug}) }}", "#personnes");
+			$("#add_personne").click(function(){
+				$("html").showLoading();
+            	Ajax("{{ path('ajax_episode_personne_ajouter_personne', {'slug': episode.slug}) }}", "#modal_episode");
+			});
+		})
+	</script>
+{% endblock %}

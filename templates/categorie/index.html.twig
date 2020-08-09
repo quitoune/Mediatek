@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catégories{% endblock %}
+
+{% block body %}
+    <div class="card text-center">
+        <div class="card-header text-left bg-primary">
+            {{ pagination.total }} catégorie{% if pagination.total > 1 %}s{% endif %} {% if pagination.nbr_page > 0 %} - Page {{ pagination.page }} / {{ pagination.nbr_page }} {% endif %}
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Type d'objet</th>
+                        {% if is_granted('ROLE_UTILISATEUR') %}
+                        	<th>{{ ajouter(path('categorie_ajouter')) | raw }}</th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                	{% if categories is empty %}
+                	    {% if is_granted('ROLE_UTILISATEUR') %}
+                        	<td colspan="4" class="text-info text-center">Il  n'y a aucune catégorie correspondant à la recherche.</td>
+                        {% else %}
+                        	<td colspan="3" class="text-info text-center">Il  n'y a aucune catégorie correspondant à la recherche.</td>
+                        {% endif %}
+                    	
+                    {% else %}
+                    	{% for categorie in categories %}
+                            <tr>
+                                <td> {{ categorie.id }} </a></td>
+                                <td> {{ categorie.nom }}</td>
+                                <td> {{ categorie.objet | objet }}</td>
+                                {% if is_granted('ROLE_UTILISATEUR') %}
+                                	<td>
+                                		{{ modifier(path('categorie_modifier', {'id': categorie.id, 'page':pagination.page})) | raw }}
+                                		{% if is_granted('ROLE_SUPER_ADMIN') %}
+                                		    {{ supprimer(path('categorie_supprimer', {'id': categorie.id})) | raw }}
+                                		{% endif %}
+                                	</td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+			</table>
+        </div>
+        <div class="card-footer text-muted">
+        	{% include 'app/pagination.html.twig' %}
+        </div>
+    </div> 
+{% endblock %}

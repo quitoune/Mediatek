@@ -1,0 +1,184 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+	<div class="card">
+		<div class="card-header">
+			Inscription
+		</div>
+    	{{ form_start(form) }}
+    	<div class="card-body">
+            <div class="row m-t-15">
+            	<div class="col-12 pad-form" style="font-size: x-large">
+            		Infos
+            	</div>
+            	<div class="col-6 pad-form">
+            		<div class="form-group">
+                	    {{ form_label(form.username) }}<span class="mandatory">*</span>
+                	    {{ form_widget(form.username) }}
+                	    {{ form_errors(form.username) }}
+                	</div>
+            	</div>
+            	<div class="col-6 pad-form">
+            		<div class="form-group">
+                	    {{ form_label(form.email) }}<span class="mandatory">*</span>
+                	    {{ form_widget(form.email) }}
+                	    {{ form_errors(form.email) }}
+            		</div>
+            	</div>
+            </div>
+            <div class="row">
+            	<div class="col-6 pad-form">
+            		<div class="form-group">
+                	    {{ form_label(form.prenom) }}
+                	    {{ form_widget(form.prenom) }}
+                	    {{ form_errors(form.prenom) }}
+            		</div>
+            	</div>
+            	<div class="col-6 pad-form">
+            		<div class="form-group">
+                	    {{ form_label(form.nom) }}
+                	    {{ form_widget(form.nom) }}
+                	    {{ form_errors(form.nom) }}
+            		</div>
+            	</div>
+            </div>
+            <div class="row">
+            	<div class="col-6 pad-form">
+            		<div class="form-group">
+                	    {{ form_widget(form.password) }}
+                	    {{ form_errors(form.password) }}
+            		</div>
+            	</div>
+            </div>
+            <hr class="form-hr">
+            <div class="row">
+            	<div class="col-12 pad-form" style="font-size: x-large">
+            		Affichage des titres en VO
+            	</div>
+            	<div class="col-4 pad-form">
+            		<div class="form-group">
+                	    {{ form_label(form.film_vo) }}<br>
+                	    {{ form_widget(form.film_vo) }}<br>
+                	    {{ form_errors(form.film_vo) }}
+            		</div>
+            	</div>
+            	<div class="col-4 pad-form">
+            		<div class="form-group">
+                	    {{ form_label(form.livre_vo) }}<br>
+                	    {{ form_widget(form.livre_vo) }}<br>
+                	    {{ form_errors(form.livre_vo) }}
+            		</div>
+            	</div>
+            	<div class="col-4 pad-form">
+            		<div class="form-group">
+                	    {{ form_label(form.episode_vo) }}<br>
+                	    {{ form_widget(form.episode_vo) }}<br>
+                	    {{ form_errors(form.episode_vo) }}
+            		</div>
+            	</div>
+            </div>
+            <hr class="form-hr">
+            <div class="row">
+            	<div class="col-12 pad-form" style="font-size: x-large">
+            		Préférences
+            	</div>
+            	<div class="col-4 pad-form">
+            		<div class="form-group w-100">
+                	    {{ form_label(form.film_favori) }}<br>
+                	    {{ form_widget(form.film_favori) }}<br>
+                	    {{ form_errors(form.film_favori) }}
+            		</div>
+            	</div>
+            	<div class="col-4 pad-form">
+            		<div class="form-group w-100">
+                	    {{ form_label(form.acteur_favori) }}<br>
+                	    {{ form_widget(form.acteur_favori) }}<br>
+                	    {{ form_errors(form.acteur_favori) }}
+            		</div>
+            	</div>
+            	<div class="col-4 pad-form">
+            		<div class="form-group w-100">
+                	    {{ form_label(form.livre_favori) }}<br>
+                	    {{ form_widget(form.livre_favori) }}<br>
+                	    {{ form_errors(form.livre_favori) }}
+            		</div>
+            	</div>
+            	<div class="col-4 pad-form">
+            		<div class="form-group w-100">
+                	    {{ form_label(form.serie_favorie) }}<br>
+                	    {{ form_widget(form.serie_favorie) }}<br>
+                	    {{ form_errors(form.serie_favorie) }}
+            		</div>
+            	</div>
+            	<div class="col-4 pad-form">
+            		<div class="form-group w-100">
+                	    {{ form_label(form.episode_favori) }}<br>
+                	    {{ form_widget(form.episode_favori) }}<br>
+                	    {{ form_errors(form.episode_favori) }}
+            		</div>
+            	</div>
+            </div>
+            
+            <hr class="form-hr">
+            <div class="row">
+            	<div class="col-12" style="font-size: x-large">
+            		Famille
+            	</div>
+            </div>
+            <div id="bouton_famille" class="row">
+            	<div class="col-12">
+                    <div id="join_family" class="btn btn-media">
+                    	Rejoindre une famille
+                    </div>
+                    <div id="create_family" class="btn btn-media">
+                    	Créer sa famille
+                    </div>
+                </div>
+            </div>
+            <div id="add_personne_famille"></div>
+            
+            <div id="bouton_lieu" class="row">
+            	<div class="col-12">
+                    <div id="take_old_address" class="btn btn-media">
+                    	Utiliser une adresse existante
+                    </div>
+                    <div id="create_address" class="btn btn-media">
+                    	Nouvelle Adresse
+                    </div>
+                </div>
+            </div>
+            <div id="add_personne_lieu"></div>
+        </div>
+        <div class="card-footer">
+        	<div class="row text-center center-item">
+                {{ form_row(form.save) }}
+            </div>
+        </div>
+        {{ form_rest(form) }}
+        {{ form_errors(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#personne_save").hide();
+			$("#personne_film_vo, #personne_episode_vo, #personne_livre_vo").select2({
+				minimumResultsForSearch: -1
+			});
+			$("#personne_film_favori, #personne_episode_favori").select2();
+			$("#personne_livre_favori, #personne_acteur_favori, #personne_serie_favorie").select2();
+
+			$("#join_family").click(function(){
+				Ajax("{{ path('inscription_famille', {'cas': 0}) }}", "#add_personne_famille");
+			});
+
+			$("#create_family").click(function(){
+				Ajax("{{ path('inscription_famille', {'cas': 1}) }}", "#add_personne_famille");
+			});
+		});
+	</script>
+{% endblock %}

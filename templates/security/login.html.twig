@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+
+    <div class="card mx-auto shadow" style="width: 18rem;">
+    	<div class="text-center">
+    		<img class="card-img-top mt-3" src="{{asset('image/appli/caroline_cartoon.png')}}" alt="Mediatek">
+    	</div>
+      		<div class="card-body">
+        		{% if error %}
+        			<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+      			<form action="{{ path('security_login') }}" method="post" id="login-form">
+      				<div class="form-group">
+                        <label for="username">Identifiant</label>
+                        <input type="text" class="form-control" id="username" value="{{ last_username }}" placeholder="Nom d'utilisateur" name="_username">
+                      </div>
+        			<div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" class="form-control" id="password" placeholder="Mot de passe" name="_password">
+                        <small id="emailHelp" class="form-text text-muted"><a href="#" class="card-link">Mot de passe oublié</a></small>
+                    </div>
+                    
+                   	<div class="text-center">
+        				<button class="btn btn-media" id="btn-submit-login" type="submit">Se connecter</button>
+        			</div>
+        		</form>
+    		</div>
+    </div>
+
+{% endblock %}

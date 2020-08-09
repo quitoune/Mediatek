@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ titre(film, app.session.get('user')['film_vo']) }} {% endblock %}
+
+{% block body %}
+    <div class="affichage">
+    	<div class="row">
+            <div class="col-sm center_img text-center">
+            	{{ image(film, app.session.get('user')['film_vo']) | raw }}
+            </div>
+            <div class="col-sm center_img">
+                <table class="marg-auto">
+            		<tr>
+            			<th></th>
+            			<td align="center">
+            				{{ modifier(path('film_modifier', {'slug': film.slug, 'page': page})) | raw }}
+                            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                                {{ supprimer(path('film_supprimer', {'slug': film.slug})) | raw }}
+                            {% endif %}
+            			</td>
+            		</tr>
+    				<tr>
+    					<th>Titre</th><td>{{ film.titre }}</td>
+    				</tr>
+    				<tr>
+    					<th>Titre original</th><td><i>{{ film.titreOriginal }}</i></td>
+    				</tr>
+    				<tr>
+    					<th>Réalisateur</th><td>{{ film.realisateur }}</td>
+    				</tr>
+    				<tr>
+    					<th>Durée</th><td>{{ film.duree }}min</td>
+    				</tr>
+    				<tr>
+    					<th>Année</th><td>{{ film.annee }}</td>
+    				</tr>
+    				{% if film.saga is not null %}
+        				<tr>
+        					<th>Saga</th>
+        					<td><a href="{{ path('saga_afficher', {'slug': film.saga.slug}) }}">{{ film.saga.nom }}</a></td>
+        				</tr>
+        				<tr>
+        					<th>Volet</th><td>{{ film.volet }}</td>
+        				</tr>
+    				{% endif %}
+    				<tr>
+    					<th>Genre</th><td>
+    						{% for categorie in film.categories %}
+    							{{ categorie.nom }}
+    						{% endfor %}
+    					</td>
+    				</tr>
+    			</table>
+            </div>
+    	</div>
+		<div class="row episode_header">
+			<h5 class="col-12">Propriétaires: 
+				<span id="add_personne" class="link"><span class="oi oi-plus"></span></span>
+			</h5>
+		</div>
+		<div class="row" id="personnes">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+		<br><br>
+		<h4 class="bold">Acteurs 
+			<span id="edit_acteur" class="link"><span class="oi oi-pencil"></span></span>
+		</h4>
+		<div class="row saison_header">
+			<h5 class="col-12">Principaux: </h5>
+		</div>
+		<div class="row" id="principaux">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+		<div class="row saison_header">
+			<h5 class="col-12">Secondaires: </h5>
+		</div>
+		<div class="row" id="secondaires">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+		<div class="row saison_header">
+			<h5 class="col-12">Caméos: </h5>
+		</div>
+		<div class="row" id="cameos">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+    </div>
+    
+    <div class="modal" tabindex="-1" role="dialog" id="bloc_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id ="modal_film">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+	<script src="{{ asset('js/collection.js') }}"></script>
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			Ajax("{{ path('acteur_pour_film', {'slug': film.slug, 'principal': 2}) }}", "#principaux");
+			Ajax("{{ path('acteur_pour_film', {'slug': film.slug, 'principal': 1}) }}", "#secondaires");
+			Ajax("{{ path('acteur_pour_film', {'slug': film.slug, 'principal': 0}) }}", "#cameos");
+			Ajax("{{ path('personne_pour_film', {'slug': film.slug}) }}", "#personnes");
+			$("#add_personne").click(function(){
+				$("html").showLoading();
+            	Ajax("{{ path('ajax_film_personne_ajouter_personne', {'slug': film.slug}) }}", "#modal_film");
+			});
+			$("#edit_acteur").click(function(){
+				$("html").showLoading();
+            	Ajax("{{ path('ajax_editer_acteurs_film', {'slug': film.slug}) }}", "#modal_film");
+			});
+		})
+	</script>
+{% endblock %}

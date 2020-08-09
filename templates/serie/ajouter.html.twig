@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Série - Ajout {% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div class="shadow-sm p-3 mb-5 bg-white rounded border">
+        <div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.titre) }}
+            </div>
+        	<div class="col-sm">
+                {{ form_row(form.titre_original) }}
+            </div>
+    	</div>
+    	
+        <div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.annee) }}
+            </div>
+        	<div class="col-sm w-100">
+                {{ form_row(form.terminee) }}
+            </div>
+    	</div>
+    	
+        <div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.nombre_saison) }}
+            </div>
+        	<div class="col-sm">
+                {{ form_row(form.nombre_episode) }}
+            </div>
+    	</div>
+    	
+        <div class="row">
+        	<div class="col-sm w-100">
+                {{ form_row(form.categorie) }}
+            </div>
+        	<div class="col-sm w-100">
+                {{ form_row(form.saga) }}
+            </div>
+    	</div>
+    	
+    	<hr>
+    	
+    	<h4>Saisons</h4>
+    	
+    	<div id="serie_saisons">
+            <div class="row">
+            	<div class="col-sm-3">Nom</div>
+            	<div class="col-sm-4">N° de saison</div>
+            	<div class="col-sm-4">Nombre d'épisode</div>
+            	<div class="col-sm-1 addElement collection"><i class="fas fa-plus"></i></div>
+            </div>
+        </div>
+        
+        <div class="row text-center center-item">
+            {{ form_row(form.save) }}
+        </div>
+    </div>
+    
+    {{ form_rest(form) }}
+    {{ form_errors(form) }}
+    {{ form_end(form) }}
+    
+{% endblock %}
+
+{% block script %}
+	<script src="{{ asset('js/collection.js') }}"></script>
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var index = 0;
+	        
+			$("#serie_terminee").select2({
+				minimumResultsForSearch: -1
+			});
+			$("#serie_categorie,#serie_saga").select2();
+
+			$(".addElement").click(function(){
+				index = addNewSerieSaisons(index);
+			});
+			index = addNewSerieSaisons(index);
+		});
+	</script>
+{% endblock %}

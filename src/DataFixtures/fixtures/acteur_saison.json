@@ -1,0 +1,52 @@
+{
+	"ActeurSaison-1": {
+		"setActeur": "Acteur-11",
+		"setSaison": "Saison-1",
+		"setPrincipal": 2
+	},
+	"ActeurSaison-2": {
+		"setActeur": "Acteur-11",
+		"setSaison": "Saison-2",
+		"setPrincipal": 2
+	},
+	"ActeurSaison-3": {
+		"setActeur": "Acteur-11",
+		"setSaison": "Saison-3",
+		"setPrincipal": 2
+	},
+	"ActeurSaison-4": {
+		"setActeur": "Acteur-11",
+		"setSaison": "Saison-4",
+		"setPrincipal": 2
+	},
+	"ActeurSaison-5": {
+		"setActeur": "Acteur-11",
+		"setSaison": "Saison-5",
+		"setPrincipal": 2
+	},
+	"ActeurSaison-6": {
+		"setActeur": "Acteur-11",
+		"setSaison": "Saison-6",
+		"setPrincipal": 2
+	},
+	"ActeurSaison-7": {
+		"setActeur": "Acteur-11",
+		"setSaison": "Saison-7",
+		"setPrincipal": 2
+	},
+	"ActeurSaison-8": {
+		"setActeur": "Acteur-11",
+		"setSaison": "Saison-8",
+		"setPrincipal": 2
+	},
+	"ActeurSaison-9": {
+		"setActeur": "Acteur-11",
+		"setSaison": "Saison-13",
+		"setPrincipal": 1
+	},
+	"ActeurSaison-10": {
+		"setActeur": "Acteur-11",
+		"setSaison": "Saison-15",
+		"setPrincipal": 0
+	}
+}

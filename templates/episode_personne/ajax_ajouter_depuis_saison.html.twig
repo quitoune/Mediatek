@@ -1,0 +1,108 @@
+<div id="ajax_episode_personne_ajouter">
+	<form name="episode_personne" method="post">
+    <div class="modal-header">
+        <h5 class="modal-title">Ajout d'un propriétaire à tous les épisodes de {{ titre(saison, app.session.get('user')['episode_vo']) }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    
+    <div class="modal-body">
+        <div class="row">
+        	<div class="col-sm w-100">
+            	<div class="form-group">
+            		<label class="required" for="episode_personne_personne">Personne</label>
+            		<select id="episode_personne_personne" name="episode_personne[personne]" class="form-control">
+            			{% for personne in personnes %}
+            				<option value="{{ personne.id }}">{{ personne.nomComplet }}</option>
+            			{% endfor %}
+            		</select>
+            	</div>
+            </div>
+        	<div class="col-sm w-100">
+            	<div class="form-group">
+            		<label class="required" for="episode_personne_lieu">Lieu</label>
+            		<select id="episode_personne_lieu" name="episode_personne[lieu]" class="form-control">
+            			{% for lieu in lieux %}
+            				<option value="{{ lieu.id }}">{{ lieu.nom }}</option>
+            			{% endfor %}
+            		</select>
+            	</div>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-sm w-100">
+            	<div class="form-group">
+            		<label class="required" for="episode_personne_format">Format</label>
+            		<select id="episode_personne_format" name="episode_personne[format]" class="form-control">
+            			{% for format in formats %}
+            				<option value="{{ format.id }}">{{ format.nom }}</option>
+            			{% endfor %}
+            		</select>
+            	</div>
+            </div>
+        	<div class="col-sm">
+				<fieldset class="form-group">
+					<legend class="col-form-label">Date d'achat</legend>
+					<div id="episode_personne_date_achat" class="form-inline">
+					<div class="sr-only">
+                        <label class="" for="episode_personne_date_achat_year">Year</label>
+                        <label class="" for="episode_personne_date_achat_month">Month</label>
+                        <label class="" for="episode_personne_date_achat_day">Day</label>
+            		</div>
+            		<select id="episode_personne_date_achat_day" name="episode_personne[date_achat][day]" class="form-control">
+            			<option value=""></option>
+            			{% for i in 1..9 %}
+            				<option value="{{ i }}">0{{ i }}</option>
+            			{% endfor %}
+            			{% for i in 10..31 %}
+            				<option value="{{ i }}">{{ i }}</option>
+            			{% endfor %}
+            		</select>
+            		<select id="episode_personne_date_achat_month" name="episode_personne[date_achat][month]" class="form-control">
+            			<option value=""></option>
+            			{% for i in 1..9 %}
+            				<option value="{{ i }}">0{{ i }}</option>
+            			{% endfor %}
+            			{% for i in 10..12 %}
+            				<option value="{{ i }}">{{ i }}</option>
+            			{% endfor %}
+            		</select>
+            		<select id="episode_personne_date_achat_year" name="episode_personne[date_achat][year]" class="form-control">
+            			<option value=""></option>
+            			{% for i in 1902..2020 %}
+            				<option value="{{ i }}">{{ i }}</option>
+            			{% endfor %}
+            		</select>
+            	</fieldset>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-footer">
+    	<div class="form-group">
+    		<button type="submit" id="episode_personne_save" name="episode_personne[save]" class="btn btn-media btn">
+    			Valider
+    		</button>
+    	</div>
+    </div>
+    
+    </form>
+</div>
+
+{% block javascripts %}
+    <script type="text/javascript">
+        $('#bloc_modal').modal({
+            'show' : true,
+            'backdrop' : 'static'
+        });
+
+        $("form select").select2({
+        	minimumResultsForSearch: -1
+        });
+
+        var url = "{{ path('ajax_ajouter_depuis_saison', {'slug': saison.slug}) }}";
+		var url_base = "{{ path('episode_saison_afficher', {'slug': saison.slug}) }}";
+		SubmitModal("episode_personne", "saison", url, "#bloc_modal", url_base, "#saisons");
+    </script>
+{% endblock %}

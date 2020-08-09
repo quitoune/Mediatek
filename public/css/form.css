@@ -1,0 +1,268 @@
+option:checked,
+option:hover {
+    color: white;
+    background: #F072A9;
+}
+
+/********************************************
+*
+* INPUT
+*
+*********************************************/
+.form-control {
+    border: 1px solid #FFC2DC;
+	border-radius : 10px;
+    color: #F072A9;
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+    background: #FFEFF6;
+}
+
+.multiple {
+	border-radius : 10px!important;
+}
+
+.multiple:hover,
+.multiple:focus {
+	border-radius : 10px!important;
+}
+
+.form-control:hover,
+.form-control:focus {
+	border: 1px solid #FFC2DC;
+	border-radius : 10px;
+    color: #F072A9;
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+    background: #FFEFF6;
+}
+
+.not_chosen {
+	background: #ff8000;
+	color: black;
+}
+
+::placeholder {
+    color: #f9bfd8!important;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #f9bfd8!important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #f9bfd8!important;
+}
+
+.center {
+	width: 150px;
+	margin: 40px auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+	-webkit-text-fill-color: #d5488b;
+	-webkit-box-shadow: 0 0 1px 1000px #ffc1dc inset;
+	transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 2px 2px 5px #d5488b;
+    border: 1px solid #d5488b;
+}
+/********************************************
+*
+* FIN INPUT
+*
+*********************************************/
+/********************************************
+*
+* DEBUT INPUT NUMBER
+*
+********************************************/
+.thead-dark th {
+	background-color: #000!important;
+    border-color: #000!important;
+}
+
+
+
+.plus {
+	border-top-left-radius: 0px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 10px;
+}
+
+.minus {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 0px;
+}
+/********************************************
+*
+* FIN INPUT NUMBER
+*
+********************************************/
+/********************************************
+*
+* DEBUT INPUT SELECT 2
+*
+********************************************/
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #d5488b;
+}
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid #FFC2DC;
+    height: calc(2.25rem + 2px);
+    font-size: 1rem;
+    padding: 5px;
+    background: #FFEFF6;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+}
+
+.select2-container--default .select2-selection--multiple {
+    border: 1px solid #FFC2DC;
+    background: #FFEFF6;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--single,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+	-webkit-box-shadow: 0 0 1px 1000px #ffc1dc inset;
+    border: solid #d5488b 2px;
+    outline: 0;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: rgba(213,72,139,.25);
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #d0337e;
+    color: white;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 35px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+	border-color: #d0337e transparent transparent transparent;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    border-radius: 10px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid #FFC2DC;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field:focus {
+    border: 1px solid #FFC2DC!important;
+    box-shadow: 0 0 0 .2rem rgba(255,194,220,.25)!important;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent #d0337e transparent;
+}
+
+.select2-container--default .select2-selection--single {
+	min-width: 60px;
+}
+
+.select2.select2-container.select2-container--default {
+	width: auto!important;
+}
+
+.w-100 .select2.select2-container.select2-container--default {
+	width: 100%!important;
+}
+
+.select2-dropdown {
+    border: 1px solid #FFC2DC;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+	background-color: #FFC2DC;
+    border: 1px solid #d0337e;
+    color: #d0337e;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+	color: #d0337e;
+}
+/********************************************
+*
+* FIN INPUT SELECT 2
+*
+********************************************/
+
+.form-control.disabled, .form-control:disabled, .form-control[readonly] {
+    background-color: #FFEFF6;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.form-hr {
+	width: 90%;
+    background-color: #d5488b;
+}
+
+.mandatory {
+	color: red;
+}
+
+input[type=radio] { 
+	width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.check {
+	top: 50%;
+    transform: translateY(-50%);
+    font-size: larger;
+}
+
+.affichage {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.collection {
+	width: 100%;	
+}
+
+.modal-dialog {
+    max-width: 90%!important;
+}
+
+.link {
+	color: #D5488B;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.enable {
+	display: none;
+}

@@ -1,0 +1,35 @@
+{
+	"Serie-1": {
+		"setSlug": "The_Vampire_Diaries",
+		"setTitre": "The Vampire Diaries",
+		"setTitreOriginal": "The Vampire Diaries",
+		"setNombreEpisode": 171,
+		"setNombreSaison": 8,
+		"setTerminee": true,
+		"setCategorie": "Categorie-8",
+		"setPhoto": "Photo-17",
+		"setAnnee": 2009
+	},
+	"Serie-2": {
+		"setSlug": "The_Originals",
+		"setTitre": "The Originals",
+		"setTitreOriginal": "The Originals",
+		"setNombreEpisode": 92,
+		"setNombreSaison": 5,
+		"setTerminee": true,
+		"setCategorie": "Categorie-8",
+		"setPhoto": "Photo-18",
+		"setAnnee": 2013
+	},
+	"Serie-3": {
+		"setSlug": "Supernatural",
+		"setTitre": "Supernatural",
+		"setTitreOriginal": "Supernatural",
+		"setNombreEpisode": 287,
+		"setNombreSaison": 13,
+		"setTerminee": false,
+		"setCategorie": "Categorie-8",
+		"setPhoto": "Photo-19",
+		"setAnnee": 2005
+	}
+}

@@ -1,0 +1,75 @@
+<nav id="menu_principal" class="navbar navbar-expand-lg bg-primary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="oi oi-menu"></span>
+  	</button>
+    <a class="navbar-brand" href="{{ path('index') }}">
+    	<img src="{{ asset("image/appli/caroline_cartoon.png") }}" class="avatar">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li class="nav-item">
+                	<a class="nav-link" href="{{ path('livre_liste') }}"><span class="oi oi-book"></span> Livres</a>
+              	</li>
+              	
+              	<li class="nav-item">
+                	<a class="nav-link" href="{{ path('film_liste') }}"><span class="oi oi-video"></span> Films</a>
+              	</li>
+            
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="oi oi-monitor"></span> Télévision
+                    </a>
+                    <div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ path('serie_liste') }}"><span class="oi oi-tablet"></span> Séries</a>
+                        <a class="dropdown-item" href="{{ path('saison_liste') }}"><span class="oi oi-phone"></span> Saisons</a>
+                        <a class="dropdown-item" href="{{ path('episode_liste') }}"><span class="oi oi-clipboard"></span> Episodes</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                	<a class="nav-link" href="{{ path('acteur_liste') }}"><span class="oi oi-star"></span> Acteurs</a>
+              	</li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="oi oi-layers"></span> Intitulés
+                    </a>
+                    <div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ path('categorie_liste') }}"><span class="oi oi-aperture"></span> Catégories</a>
+                        <a class="dropdown-item" href="{{ path('format_liste') }}"><span class="oi oi-layers"></span> Formats</a>
+                        <a class="dropdown-item" href="{{ path('nationalite_liste') }}"><span class="oi oi-flag"></span> Nationalités</a>
+                        <a class="dropdown-item" href="{{ path('saga_liste') }}"><span class="oi oi-badge"></span> Sagas</a>
+                        <a class="dropdown-item" href="{{ path('type_liste') }}"><span class="oi oi-text"></span> Types</a>
+                        <div class="dropdown-divider"></div>
+                        {% if is_granted("ROLE_SUPER_ADMIN") %}
+                        	<a class="dropdown-item" href="{{ path('lieu') }}"><span class="oi oi-basket"></span> Lieux</a>
+                        	<a class="dropdown-item" href="{{ path('famille') }}"><span class="oi oi-people"></span> Familles</a>
+                        {% endif %}
+                        <a class="dropdown-item" href="{{ path('photo_liste') }}"><span class="oi oi-image"></span> Galérie de photos</a>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        
+        <ul class="navbar-nav justify-content-end">
+      		<li class="nav-item dropdown">
+          		{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              			Bonjour {{ app.user.username }}
+            		</a>
+            		<div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
+            			<a class="dropdown-item" href="{{ path('personne_liste') }}"><span class="oi oi-person"></span> Annuaire</a>
+              			<a class="dropdown-item" href='{{ path('security_logout') }}'><span class="oi oi-power-standby"></span> Déconnexion</a>
+            		</div>
+            	{% else %}
+            		<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            			<i class="fas fa-dragon"></i> Mon compte
+            		</a>
+            		<div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
+              			<a class="dropdown-item" href='{{ path('security_login') }}'><span class="oi oi-power-standby"></span> Connexion</a>
+            			<a class="dropdown-item" href='{{ path('inscription') }}'><i class="fas fa-sign-in-alt"></i> Inscription</a>
+            		</div>
+            	{% endif %}
+      		</li>
+    	</ul>
+    </div>
+</nav>

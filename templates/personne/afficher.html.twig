@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ personne.nomComplet }} {% endblock %}
+
+{% block body %}
+	<div class="affichage">
+		<div class="row">
+            <div class="col-sm center_img text-center">
+            	{{ avatar(personne) | raw }}
+            </div>
+            <div class="col-sm center_img">
+            	<table class="middle">
+            		<tr>
+            			<th>Nom</th>
+            			<td>{{ personne.prenom }} {{ personne.nom }}</td>
+            		</tr>
+            		<tr>
+            			<th>Pseudo</th>
+            			<td>{{ personne.username }}</td>
+            		</tr>
+            		<tr>
+            			<th>E-mail</th>
+            			<td>{{ personne.email }}</td>
+            		</tr>
+            		<tr>
+            			<th>Adresse</th>
+            			<td>{{ personne.lieu.adresse | raw }}</td>
+            		</tr>
+            		<tr>
+            			<th>Famille(s)</th>
+            			<td>
+                            {% for famillePersonne in personne.famillePersonnes %}
+            					{{ famillePersonne.famille.nom }} 
+            					{% if famillePersonne.admin %}(Admin){% endif %}<br>
+            				{% endfor %}
+            			</td>
+            		</tr>
+            	</table>
+            </div>
+		</div>
+		<br>
+		<hr>
+		<h4>Médias</h4>
+		<div class="row">
+			<div class="col-sm bold">Livres</div>
+			<div class="col-sm">{{ nbr_livre }}</div>
+			<div class="col-sm bold">Films</div>
+			<div class="col-sm">{{ nbr_film }}</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3 bold">Épisodes</div>
+			<div class="col-sm-9"> {{ nbr_episode }} (répartis sur {{ nbr_serie }} séries)</div>
+		</div>
+		<br>
+		<hr>
+		<h4>Favoris</h4>
+		<div class="row">
+			<div class="col-sm bold">Livre</div>
+			<div class="col-sm">
+				{% if personne.livreFavori is not null %}
+				    {{ titre(personne.livreFavori, app.session.get('user')['livre_vo']) }}
+				{% endif %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm bold">Film</div>
+			<div class="col-sm">
+				{% if personne.filmFavori is not null %}
+				    {{ titre(personne.filmFavori, app.session.get('user')['film_vo']) }}
+				{% endif %}
+			</div>
+			<div class="col-sm bold">Acteur</div>
+			<div class="col-sm">
+				{% if personne.acteurFavori is not null %}
+				    {{ personne.acteurFavori.nomComplet }}
+				{% endif %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm bold">Série</div>
+			<div class="col-sm">
+				{% if personne.serieFavorie is not null %}
+				    {{ titre(personne.serieFavorie, app.session.get('user')['episode_vo']) }}
+				{% endif %}
+			</div>
+			<div class="col-sm bold">Épisode</div>
+			<div class="col-sm">
+				{% if personne.episodeFavori is not null %}
+				    {{ titre(personne.episodeFavori, app.session.get('user')['episode_vo']) }}
+				{% endif %}
+			</div>
+		</div>
+		<br>
+		<hr>
+		<h4>Configuration</h4>
+		<div class="row">
+			<div class="col-sm bold">Toujours afficher les titres originaux</div>
+		</div>
+		<div class="row">
+			<div class="col-sm bold">Livres</div>
+			<div class="col-sm">{{ personne.livreVo | ouiNon }}</div>
+			<div class="col-sm bold">Films</div>
+			<div class="col-sm">{{ personne.filmVo | ouiNon }}</div>
+			<div class="col-sm bold">Séries</div>
+			<div class="col-sm">{{ personne.episodeVo | ouiNon }}</div>
+		</div>
+	</div>
+{% endblock %}

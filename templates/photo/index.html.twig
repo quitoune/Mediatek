@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Galerie{% endblock %}
+
+{% block body %}
+	<div class="card text-center">
+        <div class="card-header text-left">
+            {{ pagination.total }} photo{% if pagination.total > 1 %}s{% endif %} {% if pagination.nbr_page > 0 %} - Page {{ pagination.page }} / {{ pagination.nbr_page }} {% endif %}
+        </div>
+        <div class="card-body">
+        	<div class="row">
+        		{% if photos is empty %}
+        			<div class="col-12 text-center">Il  n'y a aucune photo dans la galerie.</div>
+        		{% else %}
+            		{% for photo in photos %}
+                        <div class="col-img">
+    						<a href="{{ path('photo_modifier', {'id': photo.id, 'page': pagination.page}) }}">
+    						    {{ image(photo) | raw }}
+    						</a>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        	</div>
+        </div>
+        <div class="card-footer text-muted">
+            {% include 'app/pagination.html.twig' %}
+        </div>
+    </div>
+{% endblock %}

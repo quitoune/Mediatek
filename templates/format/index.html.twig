@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formats{% endblock %}
+
+{% block body %}
+    <div class="card text-center">
+        <div class="card-header text-left bg-primary">
+            {{ pagination.total }} format{% if pagination.total > 1 %}s{% endif %} {% if pagination.nbr_page > 0 %} - Page {{ pagination.page }} / {{ pagination.nbr_page }} {% endif %}
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Type d'objet</th>
+                        {% if is_granted('ROLE_ADMIN') %}
+                        	<th>{{ ajouter(path('format_ajouter')) | raw }}</th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                	{% if formats is empty %}
+                	    {% if is_granted('ROLE_UTILISATEUR') %}
+                        	<td colspan="4" class="text-info text-center">Aucun format correspondant à la recherche.</td>
+                        {% else %}
+                        	<td colspan="3" class="text-info text-center">Aucun format correspondant à la recherche.</td>
+                        {% endif %}
+                    	
+                    {% else %}
+                    	{% for format in formats %}
+                            <tr>
+                                <td>{{ format.id }}</td>
+                                <td>{{ format.nom }}</td>
+                                <td>{{ format.objet | objet }}</td>
+                                {% if is_granted('ROLE_ADMIN') %}
+                                	<td>
+                                		{{ modifier(path('format_modifier', {'id': format.id, 'page':pagination.page})) | raw }}
+                                		{% if is_granted('ROLE_SUPER_ADMIN') %}
+                                		    {{ supprimer(path('format_supprimer', {'id': format.id})) | raw }}
+                                		{% endif %}
+                                	</td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+			</table>
+        </div>
+        <div class="card-footer text-muted">
+        	{% include 'app/pagination.html.twig' %}
+        </div>
+    </div> 
+{% endblock %}

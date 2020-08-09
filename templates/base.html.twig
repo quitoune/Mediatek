@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href='{{asset('image/appli/caroline_cartoon.png')}}' rel='shortcut icon' type='images/x-icon' >
+        
+        <title>{% block title %}Bienvenue{% endblock %}</title>
+        {% include 'app/stylesheets.html.twig' %}
+        {% include 'app/scripts.html.twig' %}
+    </head>
+    <body>
+    	<div class="wrapper">
+        	<div id="header">
+                {% include 'app/menu.html.twig' %}
+                {% include 'app/arborescence.html.twig' %}
+        	</div>
+            <div id="container">
+            	<div class="container-fluid">
+                    {% block body %}	   {% endblock %}
+                    {% block script %}     {% endblock %}
+                    {% block javascripts %}{% endblock %}
+                </div>
+            </div>
+            <div id="footer" class="text-center">
+            	mediatek.com
+            </div>
+        </div>
+    </body>
+</html>

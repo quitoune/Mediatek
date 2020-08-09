@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ titre(serie, app.session.get('user')['episode_vo']) }} {% endblock %}
+
+{% block body %}
+	<div class="affichage">
+		<div class="row">
+			<div class="col-sm center_img text-center">
+				{{ image(serie) | raw }}
+			</div>
+			<div class="col-sm center_img">
+				<table class="middle">
+            		<tr>
+            			<th></th>
+            			<td align="center">
+            				{{ modifier(path('serie_modifier', {'slug': serie.slug, 'page': page})) | raw }}
+                            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                                {{ supprimer(path('serie_supprimer', {'slug': serie.slug})) | raw }}
+                            {% endif %}
+            			</td>
+            		</tr>
+					{% if serie.titre is not null %}
+        				<tr>
+            				<th>Titre</th>
+            				<td align=center>{{ serie.titre }}</td>
+        				</tr>
+    				{% endif %}
+    				<tr>
+        				<th>Titre Original</th>
+        				<td align=center>{{ serie.titreOriginal }}</td>
+    				</tr>
+    				<tr>
+        				<th>Année</th>
+        				<td align=center>{{ serie.annee }}</td>
+    				</tr>
+    				<tr>
+        				<th>Catégorie</th>
+        				<td align=center>{{ serie.categorie.nom }}</td>
+    				</tr>
+    				<tr>
+        				<th>Nombre de saisons</th>
+        				<td align=center>{{ serie.nombreSaison }}</td>
+    				</tr>
+    				<tr>
+        				<th>Nombre d'épisodes</th>
+        				<td align=center>{{ serie.nombreEpisode }}</td>
+    				</tr>
+    				{% if serie.saga is not null %}
+        				<tr>
+            				<th>Saga</th>
+            				<td align=center>{{ serie.saga.nom }}</td>
+        				</tr>
+    				{% endif %}
+    				<tr>
+        				<th>Terminee</th>
+        				<td align=center>{{ serie.terminee | ouiNon }}</td>
+    				</tr>
+				</table>
+			</div>
+		</div>
+		<div class="row serie_header">
+			<h5 class="col-12">Saisons: 
+				<span id="add_saisons" class="link"><span class="oi oi-plus"></span></span>
+			</h5>
+		</div>
+		<div class="row" id="saisons">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+	</div>
+    
+    <div class="modal" tabindex="-1" role="dialog" id="bloc_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id ="modal_serie">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+	<script src="{{ asset('js/collection.js') }}"></script>
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			Ajax("{{ path('saison_serie_afficher', {'slug': serie.slug}) }}", "#saisons");
+			$("#add_saisons").click(function(){
+        		$("html").showLoading();
+            	Ajax("{{ path('ajax_ajouter_saisons', {'slug': serie.slug}) }}", "#modal_serie");
+            });
+		})
+	</script>
+{% endblock %}

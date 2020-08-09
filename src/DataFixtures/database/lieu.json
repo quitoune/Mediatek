@@ -1,0 +1,52 @@
+{
+    "Lieu-1": {
+        "setSlug": "Clamart_Papa",
+        "setNom": "Clamart Papa",
+        "setNumeroVoie": "22",
+        "setVoie": "rue de la Liberté",
+        "setCodePostal": "92140",
+        "setVille": "Clamart"
+    },
+    "Lieu-2": {
+        "setSlug": "Besancon",
+        "setNom": "Besancon",
+        "setNumeroVoie": "56",
+        "setVoie": "faubourg Rivotte",
+        "setCodePostal": "25000",
+        "setVille": "Besançon"
+    },
+    "Lieu-3": {
+        "setSlug": "Lille",
+        "setNom": "Lille",
+        "setMention": "Bat 1 Ch 309",
+        "setVoie": "Village Galois, Cité Scientifique",
+        "setCodePostal": "59650",
+        "setVille": "Villeneuve d'ascq"
+    },
+    "Lieu-4": {
+        "setSlug": "Sainte-Genevieve-des-Bois",
+        "setNom": "Sainte-Geneviève-des-Bois",
+        "setNumeroVoie": "36",
+        "setComplement": "allée de la Grotte",
+        "setCodePostal": "91700",
+        "setVille": "Sainte-Geneviève-Des-Bois"
+    },
+    "Lieu-5": {
+        "setSlug": "Clamart_Maman",
+        "setNom": "Clamart Maman",
+        "setNumeroVoie": "145",
+        "setVoie": "avenue du général de Gaulle",
+        "setComplement": "Bâtiment B Appartement 23",
+        "setCodePostal": "92140",
+        "setVille": "Clamart"
+    },
+    "Lieu-6": {
+        "setSlug": "Colombes",
+        "setNom": "Colombes",
+        "setNumeroVoie": "42",
+        "setMention": "Appart B105",
+        "setVoie": "avenue Henri Barbusse",
+        "setCodePostal": "92700",
+        "setVille": "Colombes"
+    }
+}

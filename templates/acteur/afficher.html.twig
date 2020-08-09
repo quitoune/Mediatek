@@ -1,0 +1,127 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% if acteur.sexe == 1 %}Actrice{% else %}Acteur{% endif %} - {{ acteur.nomComplet }} {% endblock %}
+
+{% block body %}
+    <div class="affichage">
+    	<div class="row">
+            <div class="col-sm center_img text-center">
+            	{{ image(acteur) | raw }}
+            </div>
+            <div class="col-sm center_img">
+				<table class="middle">
+					{% if is_granted('ROLE_UTILISATEUR') %}
+    					<tr>
+    						<td></td>
+    						<td align="center">
+                                {{ modifier(path('acteur_modifier', {'slug': acteur.slug, 'page':page})) | raw }}
+                                {% if is_granted('ROLE_SUPER_ADMIN') %}
+                                    {{ supprimer(path('acteur_supprimer', {'slug': acteur.slug})) | raw }}
+                                {% endif %}
+                        	</td>
+                    	</tr>
+                    {% endif %}
+					{% if acteur.prenom is not null %}
+        				<tr>
+            				<td>Prénom</td>
+            				<td>{{ acteur.prenom }}</td>
+        				</tr>
+    				{% endif %}
+					{% if acteur.nom is not null %}
+    					<tr>
+    						<td>Nom</td>
+            				<td>{{ acteur.nom }}</td>
+        				</tr>
+    				{% endif %}
+					{% if acteur.nomUsage is not null %}
+        				<tr>
+            				<td>Nom d'usage</td>
+            				<td>{{ acteur.nomUsage }}</td>
+        				</tr>
+    				{% endif %}
+					{% if acteur.nomNaissance is not null %}
+        				<tr>
+            				<td>Nom de naissance</td>
+            				<td>{{ acteur.nomNaissance }}</td>
+        				</tr>
+    				{% endif %}
+					{% if acteur.dateNaissance is not null %}
+        				<tr>
+            				<td>Date de naissance</td>
+            				<td>{{ acteur.dateNaissance | date('d/m/Y') }}</td>
+        				</tr>
+        			{% endif %}
+    				{% if acteur.dateDeces is not null %}
+        				<tr>
+            				<td>Date de décès</td>
+            				<td>{{ acteur.dateDeces | date('d/m/Y') }}</td>
+        				</tr>
+    				{% endif %}
+    				<tr>
+        				<td>Sexe</td>
+        				<td>{{ acteur.sexe | sexe }}</td>
+    				</tr>
+    				{% if acteur.nationalites is not null %}
+        				<tr>
+            				<td>Nationalité(s)</td>
+            				<td>
+            				    {% for nationalite in acteur.nationalites %}
+            				    	{{ nationalite(nationalite, acteur.sexe) }}<br>
+            				    {% endfor %}
+            				</td>
+        				</tr>
+    				{% endif %}
+				</table>
+    		</div>
+    	</div>
+		<div class="row saison_header">
+			<h5 class="col-12">
+				Ses films: 
+				<span id="edit_films" class="link"><span class="oi oi-pencil"></span></span>
+			</h5>
+		</div>
+		<div class="row" id="films">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+		<div class="row saison_header">
+			<h5 class="col-12">Ses séries:  
+				<span id="edit_saisons" class="link"><span class="oi oi-pencil"></span></span>
+			</h5>
+		</div>
+		<div class="row" id="saisons">
+			<div class="col-12 text-center">
+				Chargement...
+			</div>
+		</div>
+    </div>
+    
+    <div class="modal" tabindex="-1" role="dialog" id="bloc_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id ="modal_acteur">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+	<script src="{{ asset('js/collection.js') }}"></script>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+        $(document).ready(function(){
+        	Ajax("{{ path('film_pour_acteur', {'slug': acteur.slug}) }}", "#films");
+        	Ajax("{{ path('saison_pour_acteur', {'slug': acteur.slug}) }}", "#saisons");
+        	$("#edit_films").click(function(){
+        		$("html").showLoading();
+            	Ajax("{{ path('ajax_editer_films_acteur', {'slug': acteur.slug}) }}", "#modal_acteur");
+            });
+        	$("#edit_saisons").click(function(){
+        		$("html").showLoading();
+            	Ajax("{{ path('ajax_editer_saisons_acteur', {'slug': acteur.slug}) }}", "#modal_acteur");
+            });
+        });
+    </script>
+{% endblock %}

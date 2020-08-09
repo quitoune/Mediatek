@@ -1,0 +1,41 @@
+{
+    "Type-1": {
+        "setNom": "Conte"
+    },
+    "Type-2": {
+        "setNom": "Manga"
+    },
+    "Type-3": {
+        "setNom": "Nouvelle"
+    },
+    "Type-4": {
+        "setNom": "BD"
+    },
+    "Type-5": {
+        "setNom": "Roman"
+    },
+    "Type-6": {
+        "setNom": "Savoir"
+    },
+    "Type-7": {
+        "setNom": "Scolaire"
+    },
+    "Type-8": {
+        "setNom": "Théâtre"
+    },
+    "Type-9": {
+        "setNom": "Poésie"
+    },
+    "Type-10": {
+        "setNom": "Philosophie"
+    },
+    "Type-11": {
+        "setNom": "Humour"
+    },
+    "Type-12": {
+        "setNom": "Mythologie"
+    },
+    "Type-13": {
+        "setNom": "Sport"
+    }
+}

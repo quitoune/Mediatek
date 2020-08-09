@@ -1,0 +1,127 @@
+#container img {
+	max-width: 100%;
+	max-height: 100%;
+    padding: 3px;
+    border: 2px solid #d5488b;
+    border-radius: 5px;
+}
+
+.card-img-top {
+	width: 35%!important;
+	border: none!important;
+}
+
+.saison-img {
+	padding: 5px;
+}
+
+.img-elt {
+	position: relative;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.center-item {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-img {
+	position: relative;
+	width: 20%;
+	text-align: center;
+	padding: 15px;
+}
+
+@media only screen and (max-width: 800px) {
+	.col-img {
+		width: 33%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.col-img {
+		width: 50%;
+	}
+}
+
+.col-img > .center_film,
+.col-img > img,
+.col-img > a > img,
+.col-img > a > .center {
+	width: 100%;
+    height: auto;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.img_title {
+	width: 100%;
+    height: auto;
+	position: relative;
+  	top: 55%;
+  	transform: translateY(-50%);
+}
+
+.center_img > img,
+.center_img > table,
+.center_img .center-table,
+.center_img form,
+.center_img > .nav.flex-column.nav-pills,
+.center_img > .tab-content,
+.center_img > .form-group {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.b-none {
+	border: none!important;
+}
+
+.tooltips {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltips .tooltipimg {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltips .tooltipimg img {
+	max-width: 110px;
+}
+
+.tooltips .tooltipimg::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltips:hover .tooltipimg {
+  visibility: visible;
+}
+
+.middle {
+	margin-left: auto;
+	margin-right: auto;
+}

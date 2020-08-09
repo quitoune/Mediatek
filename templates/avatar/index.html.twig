@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Avatars{% endblock %}
+
+{% block body %}
+	<div class="row avatar">
+		{% for avatar in avatars %}
+			<div class="center_img col-img b-none">
+				<img class="b-none" src="/image/avatar/{{ avatar.chemin }}">
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
+{% block script %}
+	<script src="{{ asset("js/mediatek.js") }}" type="text/javascript"></script>
+{% endblock %}

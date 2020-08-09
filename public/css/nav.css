@@ -1,0 +1,48 @@
+.nav-link,
+.dropdown-item,
+.navbar-toggler {
+	color: #d5488b;
+}
+
+.dropdown-item:hover {
+	background-color: #d5488b!important;
+	color: #000000;
+}
+
+.bg-primary {
+	background-color: #000000!important;
+	color: #d5488b;
+}
+
+.dropdown-divider {
+	border-top: 1px solid #D5488B!important;
+}
+
+button.navbar-toggler:hover,
+button.navbar-toggler:focus,
+button.navbar-toggler:active {
+	outline: 5px auto #d5488b!important;
+}
+
+.dropdown-item:focus, 
+.dropdown-item:hover {
+    color: black;
+    background-color: #d5488b;
+}
+
+#menu_principal .avatar {
+	max-height: 30px;
+	max-width: 25px;
+}
+
+#arborescence .avatar {
+	max-height: 22px;
+	max-width: 20px;
+}
+
+
+.nav-pills .nav-link.active, 
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #d5488b;
+}

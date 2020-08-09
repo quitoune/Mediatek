@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Films{% endblock %}
+
+{% block body %}
+    <div class="card text-center">
+        <div class="card-header text-left bg-primary">
+            {{ pagination.total }} film{% if pagination.total > 1 %}s{% endif %} {% if pagination.nbr_page > 0 %} - Page {{ pagination.page }} / {{ pagination.nbr_page }} {% endif %}
+            {% if is_granted('ROLE_UTILISATEUR') %}
+            	{{ ajouter(path('film_ajouter'), "float-right") | raw }}
+            {% endif %}
+        </div>
+        <div class="card-body">
+        	<div class="row">
+            	{% if films is empty %}
+                    <div class="col-12 text-center">Il  n'y a aucun film correspondant à la recherche.</div>
+                {% else %}
+                    {% for film in films %}
+                		<div class="col-img">
+                			<div class="img-elt">
+                    			<a href="{{ path('film_afficher', {'slug': film.slug, 'page': pagination.page}) }}">
+                    			    {{ image(film) | raw }}<br>
+                    			    {{ titre(film, app.session.get('user')['film_vo']) }}
+                    			</a>
+                			</div>
+                		</div>
+                	{% endfor %}
+            	{% endif %}
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+        	{% include 'app/pagination.html.twig' %}
+        </div>
+    </div> 
+{% endblock %}

@@ -1,0 +1,57 @@
+/********************************************
+*
+* btn-media
+*
+********************************************/
+.btn-media {
+  color: #fff;
+  background-color: #d5488b;
+  border-color: #B13075;
+}
+
+.btn-media:hover {
+  color: #fff;
+  background-color: #ff80c0;
+  border-color: #B13075;
+}
+
+.btn-media:focus, 
+.btn-media.focus {
+  box-shadow: 0 0 0 0.2rem rgba(177, 48, 117, 0.5); 
+}
+
+.btn-media.disabled, 
+.btn-media:disabled {
+  color: #fff;
+  background-color: #D78FB3;
+  border-color: #D78FB3;
+}
+
+.btn-media:not(:disabled):not(.disabled):active, 
+.btn-media:not(:disabled):not(.disabled).active,
+.show > .btn-media.dropdown-toggle {
+  color: #fff;
+  background-color: #B13075;
+  border-color: #786D59;
+}
+
+.btn-media:not(:disabled):not(.disabled):active:focus, 
+.btn-media:not(:disabled):not(.disabled).active:focus,
+.show > .btn-media.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(177, 48, 117, 0.5);
+}
+/********************************************
+*
+* btn-link
+*
+********************************************/
+
+.btn-link {
+    color: #D5488B;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+    color: #AA2765;
+    text-decoration: none;
+}

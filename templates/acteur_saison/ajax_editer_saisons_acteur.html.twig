@@ -1,0 +1,53 @@
+<div id="ajax_acteur_saison_ajouter">
+	<form name="acteur_saison" method="get">
+        <div class="modal-header">
+            <h5 class="modal-title">Ajout d'une saison à l'{% if acteur.sexe %}actrice{% else %}acteur{% endif %} {{ acteur.nomComplet }}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        
+        <div class="modal-body">
+        	<div id="acteurSaisons" class="row">
+            	<div class="col-sm-11 collection">Saison(s) dans lesquels {% if acteur.sexe %}elle{% else %}il{% endif %} a joué</div>
+            	<div class="col-sm-1 addElement collection"><i class="fas fa-plus"></i></div>
+            	<div class="col-sm-4 text-center">Saisons</div>
+            	<div class="col-sm-4 text-center"></div>
+            	<div class="col-sm-3 text-center">Rôle</div>
+            	<div class="col-sm-1 text-center"></div>
+            </div>
+        </div>
+        
+        <div class="modal-footer">
+        	<button id = "acteur_saison_save" class="btn btn-media">Save</button>
+        </div>
+    </form>
+</div>
+
+{% block javascripts %}
+    <script type="text/javascript">
+        $('#bloc_modal').modal({
+            'show' : true,
+            'backdrop' : 'static'
+        });
+
+        var index = 0;
+
+        {% for acteurSaison in acteur.acteurSaisons %}
+            var select1 = "{{ select("acteur[acteurSaisons][INDEX][saison]", saisons, opt_saison|merge({'default': acteurSaison.saison.id})) |raw }}";
+    		var select2 = '{{ select_principal("acteur_acteurSaisons_INDEX_principal", "saison", "acteur[acteurSaisons][INDEX][principal]", acteurSaison.principal) | raw }}';
+    		index = addNewActeurSaison(select1, select2, index, "{{ acteurSaison.role }}", "{{ acteurSaison.id }}");
+        {% endfor %}
+        
+		var select1 = "{{ select("acteur[acteurSaisons][INDEX][saison]", saisons, opt_saison) |raw }}";
+		var select2 = '{{ select_principal("acteur_acteurSaisons_INDEX_principal", "saison", "acteur[acteurSaisons][INDEX][principal]") | raw }}';
+
+		$(".addElement").click(function(){
+			index = addNewActeurSaison(select1, select2, index);
+		});
+
+		var url = "{{ path('ajax_editer_saisons_acteur', {'slug': acteur.slug}) }}";
+		var url_base = "{{ path('saison_pour_acteur', {'slug': acteur.slug}) }}";
+		SubmitModal("acteur_saison", "acteur", url, "#bloc_modal", url_base, "#saisons");
+    </script>
+{% endblock %}

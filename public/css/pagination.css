@@ -1,0 +1,30 @@
+.page-item.active .page-link {
+	background-color: #d5488b;
+    border-color: #d5488b;
+}
+
+a.page-link {
+	color: #d5488b;
+}
+
+a.page-link:hover {
+	color: white;
+	background-color: #d5488b;
+}
+
+a.page-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(213,72,139,.25);
+}
+
+li.page-item:last-child,
+li.page-link {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+li.page-item:first-child,
+li.page-item {
+    margin-left: 0;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}

@@ -1,0 +1,62 @@
+{
+	"FamillePersonne-1": {
+		"setFamille": "Famille-1",
+		"setPersonne": "Personne-1",
+		"setAdmin": false
+	},
+	"FamillePersonne-2": {
+		"setFamille": "Famille-1",
+		"setPersonne": "Personne-2",
+		"setAdmin": false
+	},
+	"FamillePersonne-3": {
+		"setFamille": "Famille-1",
+		"setPersonne": "Personne-3",
+		"setAdmin": true
+	},
+	"FamillePersonne-4": {
+		"setFamille": "Famille-1",
+		"setPersonne": "Personne-4",
+		"setAdmin": false
+	},
+	"FamillePersonne-5": {
+		"setFamille": "Famille-1",
+		"setPersonne": "Personne-5",
+		"setAdmin": false
+	},
+	"FamillePersonne-6": {
+		"setFamille": "Famille-1",
+		"setPersonne": "Personne-6",
+		"setAdmin": false
+	},
+	"FamillePersonne-7": {
+		"setFamille": "Famille-2",
+		"setPersonne": "Personne-7",
+		"setAdmin": false
+	},
+	"FamillePersonne-8": {
+		"setFamille": "Famille-2",
+		"setPersonne": "Personne-8",
+		"setAdmin": false
+	},
+	"FamillePersonne-9": {
+		"setFamille": "Famille-2",
+		"setPersonne": "Personne-9",
+		"setAdmin": true
+	},
+	"FamillePersonne-10": {
+		"setFamille": "Famille-2",
+		"setPersonne": "Personne-10",
+		"setAdmin": false
+	},
+	"FamillePersonne-11": {
+		"setFamille": "Famille-3",
+		"setPersonne": "Personne-3",
+		"setAdmin": true
+	},
+	"FamillePersonne-12": {
+		"setFamille": "Famille-3",
+		"setPersonne": "Personne-9",
+		"setAdmin": false
+	}
+}

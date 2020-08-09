@@ -1,0 +1,26 @@
+{% if saison.episodes is empty %}
+	<div class="col-12 text-center">
+		Aucun épisode n'est renseigné pour cette saison.
+	</div>
+{% else %}
+	<table align="center" valign="middle">
+		<tr align="center">
+			<th>N° épisode</th>
+			<th>Titre</th>
+			<th>Durée (min)</th>
+			<th>1ère diffusion</th>
+		</tr>
+		{% for episode in saison.episodes %}
+			<tr align="center">
+				<td>{{ episode.numeroEpisode }}</td>
+				<td>
+					<a href="{{ path('episode_afficher', {'slug': episode.slug}) }}">
+						{{ titre(episode, app.session.get('user')['episode_vo']) }}
+					</a>
+				</td>
+				<td>{{ episode.duree }}</td>
+				<td>{{ episode.premiereDiffusion | date('d/m/Y') }}</td>
+			</tr>
+        {% endfor %}
+        </table>
+{% endif %}

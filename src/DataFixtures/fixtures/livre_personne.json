@@ -1,0 +1,33 @@
+{
+	"LivrePersonne-1": {
+		"setPersonne": "Personne-3",
+		"setLivre": "Livre-1",
+		"setFormat": "Format-7",
+		"setLieu": "Lieu-1"
+	},
+	"LivrePersonne-2": {
+		"setPersonne": "Personne-3",
+		"setLivre": "Livre-2",
+		"setFormat": "Format-6",
+		"setLieu": "Lieu-1"
+	},
+	"LivrePersonne-3": {
+		"setPersonne": "Personne-3",
+		"setLivre": "Livre-3",
+		"setFormat": "Format-6",
+		"setLieu": "Lieu-1"
+	},
+	"LivrePersonne-4": {
+		"setPersonne": "Personne-3",
+		"setLivre": "Livre-4",
+		"setFormat": "Format-6",
+		"setLieu": "Lieu-1"
+	},
+	"LivrePersonne-5": {
+		"setPersonne": "Personne-3",
+		"setLivre": "Livre-5",
+		"setFormat": "Format-6",
+		"setLieu": "Lieu-1",
+		"setDateAchat": "2018-08-23"
+	}
+}

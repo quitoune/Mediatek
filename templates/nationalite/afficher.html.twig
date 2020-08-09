@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Nationalité - {{ nationalite.nomComplet }} {% endblock %}
+
+{% block body %}
+    <div class="affichage">
+    	<div class="card">
+    		<div class="card-header">
+    			Infos 
+    			{% if is_granted('ROLE_UTILISATEUR') %}
+                	<span class="float-right">
+                		{{ modifier(path('nationalite_modifier', {'id': nationalite.id, 'page':page})) | raw }}
+                		{% if is_granted('ROLE_SUPER_ADMIN') %}
+                		    {{ supprimer(path('nationalite_supprimer', {'id': nationalite.id})) | raw }}
+                		{% endif %}
+                	</span>
+                {% endif %}
+    		</div>
+    		<div class="card-body">
+    			<div class="row">
+    				<div class="col-3 p-none bold">
+    					Pays
+    				</div>
+    				<div class="col-3 p-none">
+    				    {{ nationalite.pays }}
+    				</div>
+    				<div class="col-3 p-none bold">
+    					Etat
+    				</div>
+    				<div class="col-3 p-none">
+    				    {{ nationalite.etat }}
+    				</div>
+    				<div class="col-12 p-none bold">
+    					Versions
+    				</div>
+    				<div class="col-3 p-none bold">
+    					Féminin
+    				</div>
+    				<div class="col-3 p-none">
+    				    {{ nationalite.feminin }}
+    				</div>
+    				<div class="col-3 p-none bold">
+    					Masculin
+    				</div>
+    				<div class="col-3 p-none">
+    				    {% if nationalite.masculin is null %} 
+    				        {{ nationalite.feminin }}
+    				    {% else %} 
+    				    	{{ nationalite.masculin }}
+    				    {% endif %}
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+	</div>
+{% endblock %}

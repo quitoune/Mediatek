@@ -1,0 +1,142 @@
+{
+	"Saison-1": {
+		"setSlug": "The_Vampire_Diaries-Saison_1",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 1,
+		"setSerie": "Serie-1",
+		"setPhoto": "Photo-20"
+	},
+	"Saison-2": {
+		"setSlug": "The_Vampire_Diaries-Saison_2",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 2,
+		"setSerie": "Serie-1",
+		"setPhoto": "Photo-21"
+	},
+	"Saison-3": {
+		"setSlug": "The_Vampire_Diaries-Saison_3",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 3,
+		"setSerie": "Serie-1",
+		"setPhoto": "Photo-22"
+	},
+	"Saison-4": {
+		"setSlug": "The_Vampire_Diaries-Saison_4",
+		"setNombreEpisode": 23,
+		"setNumeroSaison": 4,
+		"setSerie": "Serie-1",
+		"setPhoto": "Photo-23"
+	},
+	"Saison-5": {
+		"setSlug": "The_Vampire_Diaries-Saison_5",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 5,
+		"setSerie": "Serie-1",
+		"setPhoto": "Photo-24"
+	},
+	"Saison-6": {
+		"setSlug": "The_Vampire_Diaries-Saison_6",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 6,
+		"setSerie": "Serie-1",
+		"setPhoto": "Photo-25"
+	},
+	"Saison-7": {
+		"setSlug": "The_Vampire_Diaries-Saison_7",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 7,
+		"setSerie": "Serie-1",
+		"setPhoto": "Photo-26"
+	},
+	"Saison-8": {
+		"setSlug": "The_Vampire_Diaries-Saison_8",
+		"setNombreEpisode": 16,
+		"setNumeroSaison": 8,
+		"setSerie": "Serie-1",
+		"setPhoto": "Photo-27"
+	},
+	"Saison-9": {
+		"setSlug": "The_Originals-Saison_1",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 1,
+		"setSerie": "Serie-2",
+		"setPhoto": "Photo-28"
+	},
+	"Saison-10": {
+		"setSlug": "The_Originals-Saison_2",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 2,
+		"setSerie": "Serie-2",
+		"setPhoto": "Photo-29"
+	},
+	"Saison-11": {
+		"setSlug": "The_Originals-Saison_3",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 3,
+		"setSerie": "Serie-2",
+		"setPhoto": "Photo-30"
+	},
+	"Saison-12": {
+		"setSlug": "The_Originals-Saison_4",
+		"setNombreEpisode": 13,
+		"setNumeroSaison": 4,
+		"setSerie": "Serie-2",
+		"setPhoto": "Photo-31"
+	},
+	"Saison-13": {
+		"setSlug": "The_Originals-Saison_5",
+		"setNombreEpisode": 13,
+		"setNumeroSaison": 5,
+		"setSerie": "Serie-2",
+		"setPhoto": "Photo-32"
+	},
+	"Saison-14": {
+		"setSlug": "Supernatural-Saison_3",
+		"setNombreEpisode": 16,
+		"setNumeroSaison": 3,
+		"setSerie": "Serie-3",
+		"setPhoto": "Photo-33"
+	},
+	"Saison-15": {
+		"setSlug": "Supernatural-Saison_4",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 4,
+		"setSerie": "Serie-3",
+		"setPhoto": "Photo-34"
+	},
+	"Saison-16": {
+		"setSlug": "Supernatural-Saison_5",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 5,
+		"setSerie": "Serie-3",
+		"setPhoto": "Photo-35"
+	},
+	"Saison-17": {
+		"setSlug": "Supernatural-Saison_6",
+		"setNombreEpisode": 22,
+		"setNumeroSaison": 6,
+		"setSerie": "Serie-3",
+		"setPhoto": "Photo-36"
+	},
+	"Saison-18": {
+		"setSlug": "Supernatural-Saison_7",
+		"setNombreEpisode": 23,
+		"setNumeroSaison": 7,
+		"setSerie": "Serie-3",
+		"setPhoto": "Photo-37"
+	},
+	"Saison-19": {
+		"setSlug": "Supernatural-Saison_9",
+		"setNombreEpisode": 23,
+		"setNumeroSaison": 9,
+		"setSerie": "Serie-3",
+		"setPhoto": "Photo-38"
+	},
+	"Saison-20": {
+		"setSlug": "Supernatural-Saison_12",
+		"setNombreEpisode": 23,
+		"setNumeroSaison": 12,
+		"setSerie": "Serie-3",
+		"setPhoto": "Photo-39"
+	}
+}

@@ -1,0 +1,51 @@
+{% if episodePersonnes is empty %}
+	<div class="col-12 text-center">
+		Personne ne possède cette épisode.
+	</div>
+{% else %}
+	<table style="margin-left: 30px">
+		{% for episodePersonne in episodePersonnes %}
+			<tr align="center">
+				<td>{{ episodePersonne.personne.username }}</td>
+				<td>{{ episodePersonne.format.nom }}</td>
+				<td>{{ episodePersonne.lieu.nom }}</td>
+				<td>
+					{% if episodePersonne.dateAchat is not null %}
+				        {{ episodePersonne.dateAchat | date('d/m/Y') }}
+				    {% endif %}
+				</td>
+				{% if is_granted('ROLE_UTILISATEUR') %}
+					<td>
+						<span id="edit_pers_{{ episodePersonne.id }}" class="link">
+							<span class="oi oi-pencil"></span>
+						</span>
+						<span id="delete_pers_{{ episodePersonne.id }}" class="link">
+							<span class="oi oi-x"></span>
+						</span>
+					</td>
+				{% endif %}
+			</tr>
+        {% endfor %}
+        </table>
+{% endif %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			{% for episodePersonne in episodePersonnes %}
+				var id = "#edit_pers_{{ episodePersonne.id }}";
+    			$(id).click(function(){
+    				$("html").showLoading();
+                	Ajax("{{ path('ajax_episode_personne_editer_personne', {'id': episodePersonne.id}) }}", "#modal_episode");
+    			});
+
+    			var id_del = "#delete_pers_{{ episodePersonne.id }}";
+    			$(id_del).click(function(){
+        			var url = "{{ path('ajax_episode_personne_supprimer_personne', {'id': episodePersonne.id}) }}";
+        			var url_base = "{{ path('personne_pour_episode', {'slug': episodePersonne.episode.slug}) }}";
+        			deleteAjax(url, url_base, "#personnes");
+    			});
+			{% endfor %}
+		})
+	</script>
+{% endblock %}

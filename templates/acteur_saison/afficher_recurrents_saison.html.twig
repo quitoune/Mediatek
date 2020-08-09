@@ -1,0 +1,17 @@
+{% if recurrents is empty %}
+	<div class="col-12 text-center">
+		Aucun acteur récurrent n'est renseigné pour cette saison.
+	</div>
+{% else %}
+		{% for recurrent in recurrents %}
+			<div class="col-img">
+        		<div class="img-elt">
+        			<a href="{{ path('acteur_afficher', {'slug': recurrent.acteur.slug}) }}">
+    				    {{ image(recurrent.acteur) | raw }}
+    				    {% if recurrent.role is not null %}<br>{{ recurrent.role }}{% endif %}
+    				</a>
+    			</div>
+			</div>
+        {% endfor %}
+        </table>
+{% endif %}

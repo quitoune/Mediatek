@@ -1,0 +1,141 @@
+{
+	"Saga-1": {
+		"setSlug": "Le_monde_emerge",
+		"setNom": "Le monde émergé"
+	},
+	"Saga-2": {
+		"setSlug": "Les_Bannis_et_les_Proscrits",
+		"setNom": "Les Bannis et les Proscrits"
+	},
+	"Saga-3": {
+		"setSlug": "Nes_a_minuit",
+		"setNom": "Nés à minuit"
+	},
+	"Saga-4": {
+		"setSaga": "Saga-1",
+		"setSlug": "Le_monde_emerge-Chroniques_du_monde_emerge",
+		"setNom": "Chroniques du monde émergé"
+	},
+	"Saga-5": {
+		"setSaga": "Saga-1",
+		"setSlug": "Le_monde_emerge-Guerres_du_monde_emerge",
+		"setNom": "Guerres du monde émergé"
+	},
+	"Saga-6": {
+		"setSaga": "Saga-1",
+		"setSlug": "Le_monde_emerge-Legendes_du_monde_emerge",
+		"setNom": "Légendes du monde émergé"
+	},
+	"Saga-7": {
+		"setSlug": "A_la_croisee_des_mondes",
+		"setNom": "A la croisée des mondes"
+	},
+	"Saga-8": {
+		"setSlug": "Hunger games",
+		"setNom": "Hunger games"
+	},
+	"Saga-9": {
+		"setSlug": "Intuitions",
+		"setNom": "Intuitions"
+	},
+	"Saga-10": {
+		"setSlug": "Quatre_filles_et_un_jean",
+		"setNom": "Quatre filles et un jean"
+	},
+	"Saga-11": {
+		"setSlug": "Lorien_Legacies",
+		"setNom": "Lorien Legacies"
+	},
+	"Saga-12": {
+		"setSlug": "Gone",
+		"setNom": "Gone"
+	},
+	"Saga-13": {
+		"setSlug": "L-eleve_Ducobu",
+		"setNom": "L'élève Ducobu"
+	},
+	"Saga-14": {
+		"setSlug": "Les_psys",
+		"setNom": "Les psys"
+	},
+	"Saga-15": {
+		"setSlug": "Les_blondes",
+		"setNom": "Les blondes"
+	},
+	"Saga-16": {
+		"setSlug": "Les_pompiers",
+		"setNom": "Les pompiers"
+	},
+	"Saga-17": {
+		"setSlug": "Lucky_Luke",
+		"setNom": "Lucky Luke"
+	},
+	"Saga-18": {
+		"setSlug": "Zoe_la_trouille",
+		"setNom": "Zoé la trouille"
+	},
+	"Saga-19": {
+		"setSlug": "Dragon_Ball",
+		"setNom": "Dragon Ball"
+	},
+	"Saga-20": {
+		"setSlug": "Insaisissable",
+		"setNom": "Insaisissable"
+	},
+	"Saga-21": {
+		"setSlug": "The_mortal_instruments",
+		"setNom": "The mortal instruments"
+	},
+	"Saga-22": {
+		"setSlug": "Hannah_Montana",
+		"setNom": "Hannah Montana"
+	},
+	"Saga-23": {
+		"setSlug": "Totally_spies",
+		"setNom": "Totally spies"
+	},
+	"Saga-24": {
+		"setSlug": "Soeurs_sorcieres",
+		"setNom": "Soeurs sorcières"
+	},
+	"Saga-25": {
+		"setSlug": "La_trilogie_du_magicien_noir",
+		"setNom": "La trilogie du magicien noir"
+	},
+	"Saga-26": {
+		"setSlug": "Harry_Potter",
+		"setNom": "Harry Potter"
+	},
+	"Saga-27": {
+		"setSlug": "American_Nightmare",
+		"setNom": "American Nightmare"
+	},
+	"Saga-28": {
+		"setSlug": "Darkest_Minds",
+		"setNom": "Darkest Minds"
+	},
+	"Saga-29": {
+		"setSlug": "Surnaturel",
+		"setNom": "Surnaturel"
+	},
+	"Saga-30": {
+		"setSaga": "Saga-29",
+		"setSlug": "Surnaturel-Laura",
+		"setNom": "Laura"
+	},
+	"Saga-31": {
+		"setSaga": "Saga-30",
+		"setSlug": "Surnaturel-Laura-Les_Legionnaires",
+		"setNom": "Les Légionnaires"
+	},
+	"Saga-32": {
+		"setSaga": "Saga-29",
+		"setSlug": "Surnaturel-Alec",
+		"setNom": "Alec"
+	},
+	"Saga-33": {
+		"setSaga": "Saga-32",
+		"setSlug": "Surnaturel-Alec-Eva__Faith",
+		"setNom": "Eva & Faith"
+	}
+}

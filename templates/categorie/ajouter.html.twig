@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Catégorie - Ajout {% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div class="shadow-sm p-3 mb-5 bg-white rounded border">
+        <div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.nom) }}
+            </div>
+            <div class="col-sm w-100">
+                {{ form_row(form.objet) }}
+            </div>
+    	</div>
+        
+        <div class="row text-center center-item">
+            {{ form_row(form.save) }}
+        </div>
+    </div>
+    
+    {{ form_rest(form) }}
+    {{ form_errors(form) }}
+    {{ form_end(form) }}
+    
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+        	$("#categorie_objet").select2({
+    		    minimumResultsForSearch: -1
+    		});
+        });
+    </script> 
+{% endblock %}

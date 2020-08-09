@@ -1,0 +1,205 @@
+/********************************************
+*
+* DEFINITION DES FONTS
+*
+********************************************/
+@font-face {
+	font-family: 'ARCENA';
+	src: url('../font/ARCENA.ttf');
+}
+
+/********************************************
+*
+* GLOBAL
+*
+********************************************/
+html, body {
+	font-family: 'Comic Sans MS', 'ARCENA';
+	background:  #f8f7f3;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+.wrapper {
+	overflow: hidden;
+	display: table;
+	height: 100%;
+	width:100%;
+}
+
+#header, #container, #footer {
+	display: table-row;
+	height: 100%;
+}
+
+#header {
+	height: 0;
+}
+
+.breadcrumb {
+	margin-bottom: 0;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+ 	color: #d5488b;
+	height: 40px;
+	background: black;
+	padding: 5px;
+    line-height: 2;
+    font-size: 16px;
+    /* z-index: 1000; */
+}
+
+.container-fluid {
+    padding: 15px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	/* padding-bottom: 50px; */
+}
+
+a {
+	color: #d5488b;
+}
+
+a:hover {
+	color: #d5488b;
+	text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+    padding: 0px;
+}
+ 
+::-webkit-scrollbar-track {
+    border-radius: 25px;
+}
+ 
+::-webkit-scrollbar-thumb {
+	background-color: #FFD5E7;
+	outline: 1px solid #FFD5E7;
+	border-radius: 25px;
+}
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.marg-auto {
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+}
+
+.pad-form {
+	padding: 0 15px!important;
+}
+
+.pad-b-0 {
+	padding-bottom: 0!important;
+}
+
+.pad-t-0 {
+	padding-top: 0!important;
+}
+
+.b-top {
+	border-top: 1px solid grey;
+}
+
+.m-t-15 {
+	margin-top: 15px;
+}
+
+.m-b-15 {
+	margin-bottom: 15px;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, 
+.col-2, .col-3, .col-4, .col-5, .col-6, 
+.col-7, .col-8, .col-9, .col-auto, 
+.col-lg, .col-lg-1, .col-lg-10, .col-lg-11, 
+.col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, 
+.col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, 
+.col-lg-9, .col-lg-auto, .col-md, .col-md-1, 
+.col-md-10, .col-md-11, .col-md-12, .col-md-2, 
+.col-md-3, .col-md-4, .col-md-5, .col-md-6, 
+.col-md-7, .col-md-8, .col-md-9, .col-md-auto, 
+.col-sm, .col-sm-1, .col-sm-10, .col-sm-11, 
+.col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, 
+.col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, 
+.col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, 
+.col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, 
+.col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, 
+.col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.large {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 5px;
+}
+
+.table td, .table th {
+    border-top-color: #FFD5E7;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(213,72,139,.3);
+}
+
+.p-none {
+	padding: 0;
+}
+
+.bold {
+	font-weight: bolder;
+}
+
+.marg-r-2 {
+	margin-right: 2%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.serie_header {
+	margin-bottom: -10px;
+}
+
+.serie_header > .col-12,
+.saison_header > .col-12,
+.episode_header > .col-12 {
+	padding: 0 15px;
+	font-weight: 900;
+}
+
+.saison_header {
+	margin-bottom: -15px;
+}
+
+.episodes_header {
+	margin-bottom: -5px;
+}
+
+.text-media {
+	color: #d5488b;
+}
+
+.fontawesome svg {
+	margin-top: -7px;
+    margin-left: 5px;
+}

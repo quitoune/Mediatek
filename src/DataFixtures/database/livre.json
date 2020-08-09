@@ -1,0 +1,3928 @@
+{
+    "Livre-1": {
+        "setSlug": "Murder_on_the_Orient_Express",
+        "setTitre": "Le crime de l'Orient Express",
+        "setTitreOriginal": "Murder on the Orient Express",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "2001",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1758"
+    },
+    "Livre-2": {
+        "setSlug": "The_Hunger_Games",
+        "setTitre": "Hunger games",
+        "setTitreOriginal": "The Hunger Games",
+        "setAuteur": "Suzanne Collins",
+        "setPremiereEdition": "2008",
+        "setType": "Type-5",
+        "setSaga": "Saga-8",
+        "setTome": "1",
+        "setPhoto": "Photo-184"
+    },
+    "Livre-3": {
+        "setSlug": "Catching_Fire",
+        "setTitre": "L'embrasement",
+        "setTitreOriginal": "Catching Fire",
+        "setAuteur": "Suzanne Collins",
+        "setPremiereEdition": "2009",
+        "setType": "Type-5",
+        "setSaga": "Saga-8",
+        "setTome": "2",
+        "setPhoto": "Photo-185"
+    },
+    "Livre-4": {
+        "setSlug": "Mockingjay",
+        "setTitre": "La révolte",
+        "setTitreOriginal": "Mockingjay",
+        "setAuteur": "Suzanne Collins",
+        "setPremiereEdition": "2010",
+        "setType": "Type-5",
+        "setSaga": "Saga-8",
+        "setTome": "3",
+        "setPhoto": "Photo-186"
+    },
+    "Livre-5": {
+        "setSlug": "Feito-sutei_naito_01",
+        "setTitre": "Fate\/stay night 01",
+        "setTitreOriginal": "Feito\/sutei naito 01",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2006",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "1",
+        "setPhoto": "Photo-1510"
+    },
+    "Livre-6": {
+        "setSlug": "Feito-sutei_naito_02",
+        "setTitre": "Fate\/stay night 02",
+        "setTitreOriginal": "Feito\/sutei naito 02",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2006",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "2",
+        "setPhoto": "Photo-1511"
+    },
+    "Livre-7": {
+        "setSlug": "Feito-sutei_naito_03",
+        "setTitre": "Fate\/stay night 03",
+        "setTitreOriginal": "Feito\/sutei naito 03",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2007",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "3",
+        "setPhoto": "Photo-1512"
+    },
+    "Livre-8": {
+        "setSlug": "Feito-sutei_naito_04",
+        "setTitre": "Fate\/stay night 04",
+        "setTitreOriginal": "Feito\/sutei naito 04",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2007",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "4",
+        "setPhoto": "Photo-1513"
+    },
+    "Livre-9": {
+        "setSlug": "Feito-sutei_naito_05",
+        "setTitre": "Fate\/stay night 05",
+        "setTitreOriginal": "Feito\/sutei naito 05",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2007",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "5",
+        "setPhoto": "Photo-1514"
+    },
+    "Livre-10": {
+        "setSlug": "Feito-sutei_naito_06",
+        "setTitre": "Fate\/stay night 06",
+        "setTitreOriginal": "Feito\/sutei naito 06",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2008",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "6",
+        "setPhoto": "Photo-1515"
+    },
+    "Livre-11": {
+        "setSlug": "Feito-sutei_naito_07",
+        "setTitre": "Fate\/stay night 07",
+        "setTitreOriginal": "Feito\/sutei naito 07",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2008",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "7",
+        "setPhoto": "Photo-1516"
+    },
+    "Livre-12": {
+        "setSlug": "Feito-sutei_naito_08",
+        "setTitre": "Fate\/stay night 08",
+        "setTitreOriginal": "Feito\/sutei naito 08",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2008",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "8",
+        "setPhoto": "Photo-1517"
+    },
+    "Livre-13": {
+        "setSlug": "Feito-sutei_naito_09",
+        "setTitre": "Fate\/stay night 09",
+        "setTitreOriginal": "Feito\/sutei naito 09",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2009",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "9",
+        "setPhoto": "Photo-1518"
+    },
+    "Livre-14": {
+        "setSlug": "Feito-sutei_naito_10",
+        "setTitre": "Fate\/stay night 10",
+        "setTitreOriginal": "Feito\/sutei naito 10",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2009",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "10",
+        "setPhoto": "Photo-1519"
+    },
+    "Livre-15": {
+        "setSlug": "Northern_Lights",
+        "setTitre": "Les royaumes du nord",
+        "setTitreOriginal": "Northern Lights",
+        "setAuteur": "Philip Pullman",
+        "setPremiereEdition": "1995",
+        "setType": "Type-5",
+        "setSaga": "Saga-7",
+        "setTome": "1",
+        "setPhoto": "Photo-169"
+    },
+    "Livre-16": {
+        "setSlug": "The_Subtle_Knife",
+        "setTitre": "La tour des anges",
+        "setTitreOriginal": "The Subtle Knife",
+        "setAuteur": "Philip Pullman",
+        "setPremiereEdition": "1997",
+        "setType": "Type-5",
+        "setSaga": "Saga-7",
+        "setTome": "2",
+        "setPhoto": "Photo-170"
+    },
+    "Livre-17": {
+        "setSlug": "The_Amber_Spyglass",
+        "setTitre": "Le miroir d'ambre",
+        "setTitreOriginal": "The Amber Spyglass",
+        "setAuteur": "Philip Pullman",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5",
+        "setSaga": "Saga-7",
+        "setTome": "3",
+        "setPhoto": "Photo-171"
+    },
+    "Livre-18": {
+        "setSlug": "Les_fourberies_de_Scapin",
+        "setTitre": "Les fourberies de Scapin",
+        "setTitreOriginal": "Les fourberies de Scapin",
+        "setAuteur": "Molière",
+        "setPremiereEdition": "1991",
+        "setType": "Type-8"
+    },
+    "Livre-19": {
+        "setSlug": "Le_medecin_malgre_lui",
+        "setTitre": "Le médecin malgré lui",
+        "setTitreOriginal": "Le médecin malgré lui",
+        "setAuteur": "Molière",
+        "setPremiereEdition": "1991",
+        "setType": "Type-8"
+    },
+    "Livre-20": {
+        "setSlug": "Le_magasin_des_suicides",
+        "setTitre": "Le magasin des suicides",
+        "setTitreOriginal": "Le magasin des suicides",
+        "setAuteur": "Jean Teulé",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1109"
+    },
+    "Livre-21": {
+        "setSlug": "Les_trois_mousquetaires",
+        "setTitre": "Les trois mousquetaires",
+        "setTitreOriginal": "Les trois mousquetaires",
+        "setAuteur": "Alexandre Dumas",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5"
+    },
+    "Livre-22": {
+        "setSlug": "Le_avventure_di_Pinocchio",
+        "setTitre": "Pinocchio",
+        "setTitreOriginal": "Le avventure di Pinocchio",
+        "setAuteur": "Carlo Collodi",
+        "setPremiereEdition": "2002",
+        "setType": "Type-5"
+    },
+    "Livre-23": {
+        "setSlug": "Nihal_della_terra_del_vento",
+        "setTitre": "Nihal de la terre du vent",
+        "setTitreOriginal": "Nihal della terra del vento",
+        "setAuteur": "Licia Troisi",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setSaga": "Saga-4",
+        "setTome": "1",
+        "setPhoto": "Photo-172"
+    },
+    "Livre-24": {
+        "setSlug": "Wit-ch_Fire",
+        "setTitre": "Le Feu de la Sor'cière",
+        "setTitreOriginal": "Wit'ch Fire",
+        "setAuteur": "James Clemens",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setSaga": "Saga-94",
+        "setTome": "1",
+        "setPhoto": "Photo-190"
+    },
+    "Livre-25": {
+        "setSlug": "Wit-ch_Storm",
+        "setTitre": "Les Foudres de la Sor'cière",
+        "setTitreOriginal": "Wit'ch Storm",
+        "setAuteur": "James Clemens",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setSaga": "Saga-94",
+        "setTome": "2",
+        "setPhoto": "Photo-191"
+    },
+    "Livre-26": {
+        "setSlug": "Wit-ch_War",
+        "setTitre": "La Guerre de la Sor'cière",
+        "setTitreOriginal": "Wit'ch War",
+        "setAuteur": "James Clemens",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-94",
+        "setTome": "3",
+        "setPhoto": "Photo-192"
+    },
+    "Livre-27": {
+        "setSlug": "Wit-ch_Gate",
+        "setTitre": "Le Portail de la Sor'cière",
+        "setTitreOriginal": "Wit'ch Gate",
+        "setAuteur": "James Clemens",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-94",
+        "setTome": "4",
+        "setPhoto": "Photo-193"
+    },
+    "Livre-28": {
+        "setSlug": "The_Sisterhood_of_the_Traveling_Pants",
+        "setTitre": "Quatre filles et un jean",
+        "setTitreOriginal": "The Sisterhood of the Traveling Pants",
+        "setAuteur": "Ann Brashares",
+        "setPremiereEdition": "2002",
+        "setType": "Type-5",
+        "setSaga": "Saga-10",
+        "setTome": "1",
+        "setPhoto": "Photo-1422"
+    },
+    "Livre-29": {
+        "setSlug": "Forever_in_Blue_The_Fourth_Summer_of_the_Sisterhood",
+        "setTitre": "Le dernier été",
+        "setTitreOriginal": "Forever in Blue: The Fourth Summer of the Sisterhood",
+        "setAuteur": "Ann Brashares",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setSaga": "Saga-10",
+        "setTome": "4",
+        "setPhoto": "Photo-1423"
+    },
+    "Livre-30": {
+        "setSlug": "I_Am_Number_Four",
+        "setTitre": "Numéro Quatre",
+        "setTitreOriginal": "I Am Number Four",
+        "setAuteur": "Pittacus Lore",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setSaga": "Saga-11",
+        "setTome": "1",
+        "setPhoto": "Photo-175"
+    },
+    "Livre-31": {
+        "setSlug": "The_Power_of_Six",
+        "setTitre": "Le Pouvoir des Six",
+        "setTitreOriginal": "The Power of Six",
+        "setAuteur": "Pittacus Lore",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-11",
+        "setTome": "2",
+        "setPhoto": "Photo-176"
+    },
+    "Livre-32": {
+        "setSlug": "The_Rise_Of_Nine",
+        "setTitre": "La Révolte des Neuf",
+        "setTitreOriginal": "The Rise Of Nine",
+        "setAuteur": "Pittacus Lore",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setSaga": "Saga-11",
+        "setTome": "3",
+        "setPhoto": "Photo-177"
+    },
+    "Livre-33": {
+        "setSlug": "The_Fall_of_Five",
+        "setTitre": "L'Empreinte de Cinq",
+        "setTitreOriginal": "The Fall of Five",
+        "setAuteur": "Pittacus Lore",
+        "setPremiereEdition": "2014",
+        "setType": "Type-5",
+        "setSaga": "Saga-11",
+        "setTome": "4",
+        "setPhoto": "Photo-178"
+    },
+    "Livre-34": {
+        "setSlug": "The_Revenge_of_Seven",
+        "setTitre": "La Revanche de Sept",
+        "setTitreOriginal": "The Revenge of Seven",
+        "setAuteur": "Pittacus Lore",
+        "setPremiereEdition": "2015",
+        "setType": "Type-5",
+        "setSaga": "Saga-11",
+        "setTome": "5",
+        "setPhoto": "Photo-179"
+    },
+    "Livre-35": {
+        "setSlug": "The_Fate_of_Ten",
+        "setTitre": "Le Destin de Dix",
+        "setTitreOriginal": "The Fate of Ten",
+        "setAuteur": "Pittacus Lore",
+        "setPremiereEdition": "2016",
+        "setType": "Type-5",
+        "setSaga": "Saga-11",
+        "setTome": "6",
+        "setPhoto": "Photo-180"
+    },
+    "Livre-36": {
+        "setSlug": "These_Foolish_Things",
+        "setTitre": "Indian Palace",
+        "setTitreOriginal": "These Foolish Things",
+        "setAuteur": "Deborah Moggach",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setPhoto": "Photo-197"
+    },
+    "Livre-37": {
+        "setSlug": "Il_Decameron",
+        "setTitre": "Le Décaméron",
+        "setTitreOriginal": "Il Decameron",
+        "setAuteur": "Boccace",
+        "setPremiereEdition": "2006",
+        "setType": "Type-5"
+    },
+    "Livre-38": {
+        "setSlug": "Le_professeur_a_disparu",
+        "setTitre": "Le professeur a disparu",
+        "setTitreOriginal": "Le professeur a disparu",
+        "setAuteur": "Jean-Philippe Arrou-Vignod",
+        "setPremiereEdition": "1997",
+        "setType": "Type-5"
+    },
+    "Livre-39": {
+        "setSlug": "Therese_Raquin",
+        "setTitre": "Thérèse Raquin",
+        "setTitreOriginal": "Thérèse Raquin",
+        "setAuteur": "Zola",
+        "setPremiereEdition": "1970",
+        "setType": "Type-5"
+    },
+    "Livre-40": {
+        "setSlug": "Red-Headed_Stepchild",
+        "setTitre": "Métisse: Sabina Kane, 1",
+        "setTitreOriginal": "Red-Headed Stepchild",
+        "setAuteur": "Jaye Wells",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5"
+    },
+    "Livre-41": {
+        "setSlug": "Dracula",
+        "setTitre": "Dracula",
+        "setTitreOriginal": "Dracula",
+        "setAuteur": "Bram Stoker",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5"
+    },
+    "Livre-42": {
+        "setSlug": "Eragon",
+        "setTitre": "Eragon",
+        "setTitreOriginal": "Eragon",
+        "setAuteur": "Christopher Paolini",
+        "setPremiereEdition": "2006",
+        "setType": "Type-5",
+        "setSaga": "Saga-72",
+        "setTome": "1",
+        "setPhoto": "Photo-1410"
+    },
+    "Livre-43": {
+        "setSlug": "Hercule_Poirot-s_Christmas",
+        "setTitre": "Le noël d'Hercule Poirot",
+        "setTitreOriginal": "Hercule Poirot's Christmas",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "1970",
+        "setType": "Type-5"
+    },
+    "Livre-44": {
+        "setSlug": "450_from_Paddington",
+        "setTitre": "Le train de 16h50",
+        "setTitreOriginal": "4:50 from Paddington",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "1997",
+        "setType": "Type-5"
+    },
+    "Livre-45": {
+        "setSlug": "Death_in_the_Clouds",
+        "setTitre": "La mort dans les nuages",
+        "setTitreOriginal": "Death in the Clouds",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "1992",
+        "setType": "Type-5"
+    },
+    "Livre-46": {
+        "setSlug": "Murder_on_the_Orient_Express_(1934)",
+        "setTitre": "Murder on the Orient Express",
+        "setTitreOriginal": "Murder on the Orient Express",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "1934",
+        "setType": "Type-5"
+    },
+    "Livre-47": {
+        "setSlug": "After_the_funeral",
+        "setTitre": "After the funeral",
+        "setTitreOriginal": "After the funeral",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "1953",
+        "setType": "Type-5"
+    },
+    "Livre-48": {
+        "setSlug": "Gone",
+        "setTitre": "Gone",
+        "setTitreOriginal": "Gone",
+        "setAuteur": "Michael Grant",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-12",
+        "setTome": "1",
+        "setPhoto": "Photo-195"
+    },
+    "Livre-49": {
+        "setSlug": "Hunger",
+        "setTitre": "La faim",
+        "setTitreOriginal": "Hunger",
+        "setAuteur": "Michael Grant",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setSaga": "Saga-12",
+        "setTome": "2",
+        "setPhoto": "Photo-196"
+    },
+    "Livre-50": {
+        "setSlug": "Curtain_Poirot-s_Last_Case",
+        "setTitre": "Hercule Poirot quitte la scène",
+        "setTitreOriginal": "Curtain: Poirot's Last Case",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5"
+    },
+    "Livre-51": {
+        "setSlug": "The_A.B.C._Murders",
+        "setTitre": "A.B.C. contre Poirot",
+        "setTitreOriginal": "The A.B.C. Murders",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "2008",
+        "setType": "Type-5"
+    },
+    "Livre-52": {
+        "setSlug": "The_Mystery_of_the_Blue_Train",
+        "setTitre": "Le train bleu",
+        "setTitreOriginal": "The Mystery of the Blue Train",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5"
+    },
+    "Livre-53": {
+        "setSlug": "Ten_Little_Niggers",
+        "setTitre": "Dix petits nègres",
+        "setTitreOriginal": "Ten Little Niggers",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "2002",
+        "setType": "Type-5"
+    },
+    "Livre-54": {
+        "setSlug": "Evil_Under_the_Sun",
+        "setTitre": "Les vacances d'Hercule Poirot",
+        "setTitreOriginal": "Evil Under the Sun",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "2005",
+        "setType": "Type-5"
+    },
+    "Livre-55": {
+        "setSlug": "Numbers",
+        "setTitre": "Intuitions",
+        "setTitreOriginal": "Numbers",
+        "setAuteur": "Rachel Ward",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setSaga": "Saga-9",
+        "setTome": "1",
+        "setPhoto": "Photo-187"
+    },
+    "Livre-56": {
+        "setSlug": "Numbers_The_Chaos",
+        "setTitre": "Chaos",
+        "setTitreOriginal": "Numbers: The Chaos",
+        "setAuteur": "Rachel Ward",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setSaga": "Saga-9",
+        "setTome": "2",
+        "setPhoto": "Photo-188"
+    },
+    "Livre-57": {
+        "setSlug": "Numbers_3_Infinty",
+        "setTitre": "Infini",
+        "setTitreOriginal": "Numbers 3: Infinty",
+        "setAuteur": "Rachel Ward",
+        "setPremiereEdition": "2014",
+        "setType": "Type-5",
+        "setSaga": "Saga-9",
+        "setTome": "3",
+        "setPhoto": "Photo-189"
+    },
+    "Livre-58": {
+        "setSlug": "Perceval_ou_le_conte_du_Graal",
+        "setTitre": "Perceval ou le conte du Graal",
+        "setTitreOriginal": "Perceval ou le conte du Graal",
+        "setAuteur": "Chretien de Troyes",
+        "setPremiereEdition": "2001",
+        "setType": "Type-5"
+    },
+    "Livre-59": {
+        "setSlug": "Memoires_d-un_ane",
+        "setTitre": "Mémoires d'un âne",
+        "setTitreOriginal": "Mémoires d'un âne",
+        "setAuteur": "Comtesse de Segur",
+        "setPremiereEdition": "2001",
+        "setType": "Type-5"
+    },
+    "Livre-60": {
+        "setSlug": "Les_malheurs_de_Sophie",
+        "setTitre": "Les malheurs de Sophie",
+        "setTitreOriginal": "Les malheurs de Sophie",
+        "setAuteur": "Comtesse de Segur",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5"
+    },
+    "Livre-61": {
+        "setSlug": "Sticky_Beak",
+        "setTitre": "Le bébé de papa compte plus que moi",
+        "setTitreOriginal": "Sticky Beak",
+        "setAuteur": "Morris Gleitzman",
+        "setPremiereEdition": "2001",
+        "setType": "Type-5"
+    },
+    "Livre-62": {
+        "setSlug": "Fantomette_contre_Fantomette",
+        "setTitre": "Fantômette contre Fantômette",
+        "setTitreOriginal": "Fantômette contre Fantômette",
+        "setAuteur": "Georges Chaulet",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5"
+    },
+    "Livre-63": {
+        "setSlug": "Fantastique_Fantomette",
+        "setTitre": "Fantastique Fantômette",
+        "setTitreOriginal": "Fantastique Fantômette",
+        "setAuteur": "Georges Chaulet",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5"
+    },
+    "Livre-64": {
+        "setSlug": "Fantomette_et_le_chateau_mysterieux",
+        "setTitre": "Fantômette et le château mystérieux",
+        "setTitreOriginal": "Fantômette et le château mystérieux",
+        "setAuteur": "Georges Chaulet",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5"
+    },
+    "Livre-65": {
+        "setSlug": "Mission_impossible_Fantomette",
+        "setTitre": "Mission impossible Fantômette",
+        "setTitreOriginal": "Mission impossible Fantômette",
+        "setAuteur": "Georges Chaulet",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5"
+    },
+    "Livre-66": {
+        "setSlug": "The_Mystery_of_the_Brass-Bound_Trunk",
+        "setTitre": "Alice et la malle mystérieuse",
+        "setTitreOriginal": "The Mystery of the Brass-Bound Trunk",
+        "setAuteur": "Caroline Quine",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5"
+    },
+    "Livre-67": {
+        "setSlug": "Le_avventure_di_Pinocchio_(1998)",
+        "setTitre": "Pinocchio",
+        "setTitreOriginal": "Le avventure di Pinocchio",
+        "setAuteur": "Carlo Collodi",
+        "setPremiereEdition": "1998",
+        "setType": "Type-5"
+    },
+    "Livre-68": {
+        "setSlug": "L-hiver_des_loups",
+        "setTitre": "L'hiver des loups",
+        "setTitreOriginal": "L'hiver des loups",
+        "setAuteur": "Évelyne Brisou-Pellen",
+        "setPremiereEdition": "1998",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1112"
+    },
+    "Livre-69": {
+        "setSlug": "Le_Voeu_du_paon",
+        "setTitre": "Le Vœu du paon",
+        "setTitreOriginal": "Le Vœu du paon",
+        "setAuteur": "Jean-Côme Noguès",
+        "setPremiereEdition": "1987",
+        "setType": "Type-5"
+    },
+    "Livre-70": {
+        "setSlug": "Harry_Potter_and_the_Chamber_of_Secrets",
+        "setTitre": "Harry Potter et la chambre des secrets",
+        "setTitreOriginal": "Harry Potter and the Chamber of Secrets",
+        "setAuteur": "J.K. Rowling",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setSaga": "Saga-26",
+        "setTome": "2",
+        "setPhoto": "Photo-1673"
+    },
+    "Livre-71": {
+        "setSlug": "Alcools",
+        "setTitre": "Alcools",
+        "setTitreOriginal": "Alcools",
+        "setAuteur": "Guillaume Apollinaire",
+        "setPremiereEdition": "2009",
+        "setType": "Type-9"
+    },
+    "Livre-72": {
+        "setSlug": "Les_justes",
+        "setTitre": "Les justes",
+        "setTitreOriginal": "Les justes",
+        "setAuteur": "Albert Camus",
+        "setPremiereEdition": "2008",
+        "setType": "Type-5"
+    },
+    "Livre-73": {
+        "setSlug": "Pensees",
+        "setTitre": "Pensées",
+        "setTitreOriginal": "Pensées",
+        "setAuteur": "Blaise Pascal",
+        "setPremiereEdition": "1962",
+        "setType": "Type-10",
+        "setPhoto": "Photo-234"
+    },
+    "Livre-74": {
+        "setSlug": "Le_rouge_et_le_noir",
+        "setTitre": "Le rouge et le noir",
+        "setTitreOriginal": "Le rouge et le noir",
+        "setAuteur": "Stendhal",
+        "setPremiereEdition": "2004",
+        "setType": "Type-5"
+    },
+    "Livre-75": {
+        "setSlug": "L-enfant_de_sous_le_pont",
+        "setTitre": "L'enfant de sous le pont",
+        "setTitreOriginal": "L'enfant de sous le pont",
+        "setAuteur": "J.M.G. Le Clezio",
+        "setPremiereEdition": "2000",
+        "setType": "Type-3"
+    },
+    "Livre-76": {
+        "setSlug": "Bouli_redeboule",
+        "setTitre": "Bouli redeboule",
+        "setTitreOriginal": "Bouli redeboule",
+        "setAuteur": "Fabrice Melquiot",
+        "setPremiereEdition": "2005",
+        "setType": "Type-8"
+    },
+    "Livre-77": {
+        "setSlug": "Philosophie_de_A_a_Z",
+        "setTitre": "Philosophie de A à Z",
+        "setTitreOriginal": "Philosophie de A à Z",
+        "setAuteur": "Laurence Hansen-Love",
+        "setPremiereEdition": "2000",
+        "setType": "Type-7",
+        "setPhoto": "Photo-239"
+    },
+    "Livre-78": {
+        "setSlug": "Herr_der_Diebe",
+        "setTitre": "Le prince des voleurs",
+        "setTitreOriginal": "Herr der Diebe",
+        "setAuteur": "Cornelia Funke",
+        "setPremiereEdition": "2003",
+        "setType": "Type-5"
+    },
+    "Livre-79": {
+        "setSlug": "Pars_vite_et_reviens_tard",
+        "setTitre": "Pars vite et reviens tard",
+        "setTitreOriginal": "Pars vite et reviens tard",
+        "setAuteur": "Fred Vargas",
+        "setPremiereEdition": "2004",
+        "setType": "Type-5"
+    },
+    "Livre-80": {
+        "setSlug": "Sparkling_Cyanide",
+        "setTitre": "Meutre au champagne",
+        "setTitreOriginal": "Sparkling Cyanide",
+        "setAuteur": "Agatha Christie",
+        "setPremiereEdition": "1947",
+        "setType": "Type-5"
+    },
+    "Livre-81": {
+        "setSlug": "Warum_Krieg",
+        "setTitre": "Pourquoi la guerre ?",
+        "setTitreOriginal": "Warum Krieg?",
+        "setAuteur": "Albert Einstein & Sigmund Freud",
+        "setPremiereEdition": "2011",
+        "setType": "Type-10",
+        "setPhoto": "Photo-233"
+    },
+    "Livre-82": {
+        "setSlug": "Mini_guide_du_citoyen",
+        "setTitre": "Mini guide du citoyen",
+        "setTitreOriginal": "Mini guide du citoyen",
+        "setAuteur": "Sylvie Furois",
+        "setPremiereEdition": "2002",
+        "setType": "Type-6",
+        "setPhoto": "Photo-237"
+    },
+    "Livre-83": {
+        "setSlug": "Quicampoix_le_roi_des_petits_pois",
+        "setTitre": "Quicampoix, le roi des petits pois",
+        "setTitreOriginal": "Quicampoix, le roi des petits pois",
+        "setAuteur": "Lydie Petit",
+        "setPremiereEdition": "2000",
+        "setType": "Type-3"
+    },
+    "Livre-84": {
+        "setSlug": "Rapunzel",
+        "setTitre": "Raiponce et autres contes",
+        "setTitreOriginal": "Rapunzel",
+        "setAuteur": "Jacob et Wilhelm Grimm",
+        "setPremiereEdition": "2011",
+        "setType": "Type-1"
+    },
+    "Livre-85": {
+        "setSlug": "The_Grapes_of_Wrath",
+        "setTitre": "Les raisins de la colère",
+        "setTitreOriginal": "The Grapes of Wrath",
+        "setAuteur": "John Steinbeck",
+        "setPremiereEdition": "1947",
+        "setType": "Type-5"
+    },
+    "Livre-86": {
+        "setSlug": "Sacre_silence",
+        "setTitre": "Sacré silence",
+        "setTitreOriginal": "Sacré silence",
+        "setAuteur": "Philippe Dorin",
+        "setPremiereEdition": "1997",
+        "setType": "Type-8"
+    },
+    "Livre-87": {
+        "setSlug": "Le_bourreau_de_la_pleine_lune",
+        "setTitre": "Le bourreau de la pleine lune",
+        "setTitreOriginal": "Le bourreau de la pleine lune",
+        "setAuteur": "Michel Honaker",
+        "setPremiereEdition": "2003",
+        "setType": "Type-5"
+    },
+    "Livre-88": {
+        "setSlug": "Lancelot_les_chevaliers_de_la_table_ronde",
+        "setTitre": "Lancelot, les chevaliers de la table ronde",
+        "setTitreOriginal": "Lancelot, les chevaliers de la table ronde",
+        "setAuteur": "Anne-Catherine Vivet-remy",
+        "setPremiereEdition": "2003",
+        "setType": "Type-5"
+    },
+    "Livre-89": {
+        "setSlug": "Toine_et_autres_contes_normands",
+        "setTitre": "Toine et autres contes normands",
+        "setTitreOriginal": "Toine et autres contes normands",
+        "setAuteur": "Maupassant",
+        "setPremiereEdition": "2007",
+        "setType": "Type-1"
+    },
+    "Livre-90": {
+        "setSlug": "Le_cid",
+        "setTitre": "Le cid",
+        "setTitreOriginal": "Le cid",
+        "setAuteur": "Corneille",
+        "setPremiereEdition": "1999",
+        "setType": "Type-8"
+    },
+    "Livre-91": {
+        "setSlug": "La_Venus_d-Ille",
+        "setTitre": "La Vénus d'Ille",
+        "setTitreOriginal": "La Vénus d'Ille",
+        "setAuteur": "Mérimée",
+        "setPremiereEdition": "1999",
+        "setType": "Type-3"
+    },
+    "Livre-92": {
+        "setSlug": "Un_amour_potache",
+        "setTitre": "Un amour potache",
+        "setTitreOriginal": "Un amour potache",
+        "setAuteur": "Gordi et Zidou",
+        "setPremiereEdition": "2001",
+        "setType": "Type-4",
+        "setSaga": "Saga-13",
+        "setTome": "6",
+        "setPhoto": "Photo-228"
+    },
+    "Livre-93": {
+        "setSlug": "Vivement_les_vacances_!",
+        "setTitre": "Vivement les vacances !",
+        "setTitreOriginal": "Vivement les vacances !",
+        "setAuteur": "Gordi et Zidou",
+        "setPremiereEdition": "2001",
+        "setType": "Type-4",
+        "setSaga": "Saga-13",
+        "setTome": "7",
+        "setPhoto": "Photo-229"
+    },
+    "Livre-94": {
+        "setSlug": "Punis_pour_le_meilleur_et_pour_le_pire",
+        "setTitre": "Punis pour le meilleur et pour le pire",
+        "setTitreOriginal": "Punis pour le meilleur et pour le pire",
+        "setAuteur": "Gordi et Zidou",
+        "setPremiereEdition": "2002",
+        "setType": "Type-4",
+        "setSaga": "Saga-13",
+        "setTome": "8",
+        "setPhoto": "Photo-230"
+    },
+    "Livre-95": {
+        "setSlug": "280_de_Q.I._!",
+        "setTitre": "280 de Q.I. !",
+        "setTitreOriginal": "280 de Q.I. !",
+        "setAuteur": "Gordi et Zidou",
+        "setPremiereEdition": "2006",
+        "setType": "Type-4",
+        "setSaga": "Saga-13",
+        "setTome": "12",
+        "setPhoto": "Photo-231"
+    },
+    "Livre-96": {
+        "setSlug": "Dites-moi_tout_!",
+        "setTitre": "Dites-moi tout !",
+        "setTitreOriginal": "Dites-moi tout !",
+        "setAuteur": "Bedu et Cauvin",
+        "setPremiereEdition": "1994",
+        "setType": "Type-4",
+        "setSaga": "Saga-14",
+        "setTome": "2",
+        "setPhoto": "Photo-205"
+    },
+    "Livre-97": {
+        "setSlug": "Je_vous_ecoute_!",
+        "setTitre": "Je vous écoute !",
+        "setTitreOriginal": "Je vous écoute !",
+        "setAuteur": "Bedu et Cauvin",
+        "setPremiereEdition": "1995",
+        "setType": "Type-4",
+        "setSaga": "Saga-14",
+        "setTome": "3",
+        "setPhoto": "Photo-206"
+    },
+    "Livre-98": {
+        "setSlug": "J-ai_pas_le_moral_!",
+        "setTitre": "J'ai pas le moral !",
+        "setTitreOriginal": "J'ai pas le moral !",
+        "setAuteur": "Bedu et Cauvin",
+        "setPremiereEdition": "1996",
+        "setType": "Type-4",
+        "setSaga": "Saga-14",
+        "setTome": "4",
+        "setPhoto": "Photo-207"
+    },
+    "Livre-99": {
+        "setSlug": "Et_a_part_ca",
+        "setTitre": "Et à part ça ?",
+        "setTitreOriginal": "Et à part ça ?",
+        "setAuteur": "Bedu et Cauvin",
+        "setPremiereEdition": "2002",
+        "setType": "Type-4",
+        "setSaga": "Saga-14",
+        "setTome": "10",
+        "setPhoto": "Photo-208"
+    },
+    "Livre-100": {
+        "setSlug": "Je_suis_moche_!",
+        "setTitre": "Je suis moche !",
+        "setTitreOriginal": "Je suis moche !",
+        "setAuteur": "Bedu et Cauvin",
+        "setPremiereEdition": "2005",
+        "setType": "Type-4",
+        "setSaga": "Saga-14",
+        "setTome": "12",
+        "setPhoto": "Photo-209"
+    },
+    "Livre-101": {
+        "setSlug": "Vous_disiez",
+        "setTitre": "Vous disiez ?",
+        "setTitreOriginal": "Vous disiez ?",
+        "setAuteur": "Bedu et Cauvin",
+        "setPremiereEdition": "2005",
+        "setType": "Type-4",
+        "setSaga": "Saga-14",
+        "setTome": "13",
+        "setPhoto": "Photo-210"
+    },
+    "Livre-102": {
+        "setSlug": "Je_m-aime_!",
+        "setTitre": "Je m'aime !",
+        "setTitreOriginal": "Je m'aime !",
+        "setAuteur": "Bedu et Cauvin",
+        "setPremiereEdition": "2008",
+        "setType": "Type-4",
+        "setSaga": "Saga-14",
+        "setTome": "15",
+        "setPhoto": "Photo-211"
+    },
+    "Livre-103": {
+        "setSlug": "James_Blondes_007",
+        "setTitre": "James Blondes 007",
+        "setTitreOriginal": "James Blondes 007",
+        "setAuteur": "Gaby et Dzack",
+        "setPremiereEdition": "2007",
+        "setType": "Type-4",
+        "setSaga": "Saga-15",
+        "setTome": "7",
+        "setPhoto": "Photo-218"
+    },
+    "Livre-104": {
+        "setSlug": "Des_gars_des_eaux",
+        "setTitre": "Des gars des eaux",
+        "setTitreOriginal": "Des gars des eaux",
+        "setAuteur": "Cazenove et Stedo",
+        "setPremiereEdition": "2003",
+        "setType": "Type-4",
+        "setSaga": "Saga-16",
+        "setTome": "1",
+        "setPhoto": "Photo-212"
+    },
+    "Livre-105": {
+        "setSlug": "Hommes_au_foyer",
+        "setTitre": "Hommes au foyer",
+        "setTitreOriginal": "Hommes au foyer",
+        "setAuteur": "Cazenove et Stedo",
+        "setPremiereEdition": "2003",
+        "setType": "Type-4",
+        "setSaga": "Saga-16",
+        "setTome": "2",
+        "setPhoto": "Photo-213"
+    },
+    "Livre-106": {
+        "setSlug": "Le_feu_de_l-amour",
+        "setTitre": "Le feu de l'amour",
+        "setTitreOriginal": "Le feu de l'amour",
+        "setAuteur": "Cazenove et Stedo",
+        "setPremiereEdition": "2004",
+        "setType": "Type-4",
+        "setSaga": "Saga-16",
+        "setTome": "3",
+        "setPhoto": "Photo-214"
+    },
+    "Livre-107": {
+        "setSlug": "Potes_au_feu",
+        "setTitre": "Potes au feu",
+        "setTitreOriginal": "Potes au feu",
+        "setAuteur": "Cazenove et Stedo",
+        "setPremiereEdition": "2005",
+        "setType": "Type-4",
+        "setSaga": "Saga-16",
+        "setTome": "4",
+        "setPhoto": "Photo-215"
+    },
+    "Livre-108": {
+        "setSlug": "Hommes_des_casernes",
+        "setTitre": "Hommes des casernes",
+        "setTitreOriginal": "Hommes des casernes",
+        "setAuteur": "Cazenove et Stedo",
+        "setPremiereEdition": "2006",
+        "setType": "Type-4",
+        "setSaga": "Saga-16",
+        "setTome": "5",
+        "setPhoto": "Photo-216"
+    },
+    "Livre-109": {
+        "setSlug": "Un_homme_et_une_flamme",
+        "setTitre": "Un homme et une flamme",
+        "setTitreOriginal": "Un homme et une flamme",
+        "setAuteur": "Cazenove et Stedo",
+        "setPremiereEdition": "2007",
+        "setType": "Type-4",
+        "setSaga": "Saga-16",
+        "setTome": "6",
+        "setPhoto": "Photo-217"
+    },
+    "Livre-110": {
+        "setSlug": "Le_fil_qui_chante",
+        "setTitre": "Le fil qui chante",
+        "setTitreOriginal": "Le fil qui chante",
+        "setAuteur": "Morris et Goscinny",
+        "setPremiereEdition": "1977",
+        "setType": "Type-4",
+        "setSaga": "Saga-17",
+        "setTome": "71",
+        "setPhoto": "Photo-225"
+    },
+    "Livre-111": {
+        "setSlug": "La_belle_province",
+        "setTitre": "La belle province",
+        "setTitreOriginal": "La belle province",
+        "setAuteur": "Ache et Cerra",
+        "setPremiereEdition": "2004",
+        "setType": "Type-4",
+        "setSaga": "Saga-17",
+        "setTome": "1",
+        "setPhoto": "Photo-226"
+    },
+    "Livre-112": {
+        "setSlug": "Ma_Dalton",
+        "setTitre": "Ma Dalton",
+        "setTitreOriginal": "Ma Dalton",
+        "setAuteur": "Morris et Goscinny",
+        "setPremiereEdition": "1971",
+        "setType": "Type-4",
+        "setSaga": "Saga-17",
+        "setTome": "7",
+        "setPhoto": "Photo-221"
+    },
+    "Livre-113": {
+        "setSlug": "La_fiancee_de_Lucky_Luke",
+        "setTitre": "La fiancée de Lucky Luke",
+        "setTitreOriginal": "La fiancée de Lucky Luke",
+        "setAuteur": "Morris et Vidal",
+        "setPremiereEdition": "1985",
+        "setType": "Type-4",
+        "setSaga": "Saga-17",
+        "setTome": "90",
+        "setPhoto": "Photo-222"
+    },
+    "Livre-114": {
+        "setSlug": "L-amnesie_des_Dalton",
+        "setTitre": "L'amnésie des Dalton",
+        "setTitreOriginal": "L'amnésie des Dalton",
+        "setAuteur": "Morris, Fauche et Leturgie",
+        "setPremiereEdition": "2003",
+        "setType": "Type-4",
+        "setSaga": "Saga-17",
+        "setTome": "29",
+        "setPhoto": "Photo-223"
+    },
+    "Livre-115": {
+        "setSlug": "Marcel_Dalton",
+        "setTitre": "Marcel Dalton",
+        "setTitreOriginal": "Marcel Dalton",
+        "setAuteur": "Morris et De Groot",
+        "setPremiereEdition": "1998",
+        "setType": "Type-4",
+        "setSaga": "Saga-17",
+        "setTome": "38",
+        "setPhoto": "Photo-224"
+    },
+    "Livre-116": {
+        "setSlug": "Arsene_Lupin_l-aiguille_creuse",
+        "setTitre": "Arsène Lupin: l'aiguille creuse",
+        "setTitreOriginal": "Arsène Lupin: l'aiguille creuse",
+        "setAuteur": "Maurice Leblanc",
+        "setPremiereEdition": "1964",
+        "setType": "Type-5"
+    },
+    "Livre-117": {
+        "setSlug": "Phedre",
+        "setTitre": "Phèdre",
+        "setTitreOriginal": "Phèdre",
+        "setAuteur": "Platon",
+        "setPremiereEdition": "2012",
+        "setType": "Type-8"
+    },
+    "Livre-118": {
+        "setSlug": "La_bete_humaine",
+        "setTitre": "La bête humaine",
+        "setTitreOriginal": "La bête humaine",
+        "setAuteur": "Zola",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5"
+    },
+    "Livre-119": {
+        "setSlug": "Les_fausses_confidences",
+        "setTitre": "Les fausses confidences",
+        "setTitreOriginal": "Les fausses confidences",
+        "setAuteur": "Marivaux",
+        "setPremiereEdition": "2012",
+        "setType": "Type-8"
+    },
+    "Livre-120": {
+        "setSlug": "Romances_sans_paroles",
+        "setTitre": "Romances sans paroles",
+        "setTitreOriginal": "Romances sans paroles",
+        "setAuteur": "Verlaine",
+        "setPremiereEdition": "2012",
+        "setType": "Type-9"
+    },
+    "Livre-121": {
+        "setSlug": "Lettre_persannes",
+        "setTitre": "Lettre persannes",
+        "setTitreOriginal": "Lettre persannes",
+        "setAuteur": "Montesquieu",
+        "setPremiereEdition": "1995",
+        "setType": "Type-5"
+    },
+    "Livre-122": {
+        "setSlug": "Memoires_d-outre-tombe_livre_I_a_V",
+        "setTitre": "Mémoires d'outre-tombe livre I a V",
+        "setTitreOriginal": "Mémoires d'outre-tombe livre I a V",
+        "setAuteur": "Chateaubriand",
+        "setPremiereEdition": "1997",
+        "setType": "Type-5"
+    },
+    "Livre-123": {
+        "setSlug": "Les_Choephores_-_les_Eumenides",
+        "setTitre": "Les Choéphores - les Euménides",
+        "setTitreOriginal": "Les Choéphores - les Euménides",
+        "setAuteur": "Eschyle",
+        "setPremiereEdition": "-458",
+        "setType": "Type-8"
+    },
+    "Livre-124": {
+        "setSlug": "Britannicus",
+        "setTitre": "Britannicus",
+        "setTitreOriginal": "Britannicus",
+        "setAuteur": "Racine",
+        "setPremiereEdition": "2006",
+        "setType": "Type-8"
+    },
+    "Livre-125": {
+        "setSlug": "L-ile_des_esclaves",
+        "setTitre": "L'île des esclaves",
+        "setTitreOriginal": "L'île des esclaves",
+        "setAuteur": "Marivaux",
+        "setPremiereEdition": "2006",
+        "setType": "Type-8"
+    },
+    "Livre-126": {
+        "setSlug": "Georges_Dandin",
+        "setTitre": "Georges Dandin",
+        "setTitreOriginal": "Georges Dandin",
+        "setAuteur": "Molière",
+        "setPremiereEdition": "2007",
+        "setType": "Type-8"
+    },
+    "Livre-127": {
+        "setSlug": "Hernani",
+        "setTitre": "Hernani",
+        "setTitreOriginal": "Hernani",
+        "setAuteur": "Victor Hugo",
+        "setPremiereEdition": "2006",
+        "setType": "Type-8"
+    },
+    "Livre-128": {
+        "setSlug": "Le_tartuffe",
+        "setTitre": "Le tartuffe",
+        "setTitreOriginal": "Le tartuffe",
+        "setAuteur": "Molière",
+        "setPremiereEdition": "2006",
+        "setType": "Type-8"
+    },
+    "Livre-129": {
+        "setSlug": "Dom_Juan",
+        "setTitre": "Dom Juan",
+        "setTitreOriginal": "Dom Juan",
+        "setAuteur": "Molière",
+        "setPremiereEdition": "2006",
+        "setType": "Type-8"
+    },
+    "Livre-130": {
+        "setSlug": "Les_pilleurs_de_sarcophages",
+        "setTitre": "Les pilleurs de sarcophages",
+        "setTitreOriginal": "Les pilleurs de sarcophages",
+        "setAuteur": "Odile Weulersse",
+        "setPremiereEdition": "2003",
+        "setType": "Type-5"
+    },
+    "Livre-131": {
+        "setSlug": "Les_cinq_ecus_de_Bretagne",
+        "setTitre": "Les cinq écus de Bretagne",
+        "setTitreOriginal": "Les cinq écus de Bretagne",
+        "setAuteur": "Évelyne Brisou-Pellen",
+        "setPremiereEdition": "2004",
+        "setType": "Type-5"
+    },
+    "Livre-132": {
+        "setSlug": "Les_portes_de_Vannes",
+        "setTitre": "Les portes de Vannes",
+        "setTitreOriginal": "Les portes de Vannes",
+        "setAuteur": "Évelyne Brisou-Pellen",
+        "setPremiereEdition": "2005",
+        "setType": "Type-5"
+    },
+    "Livre-133": {
+        "setSlug": "Le_fantome_de_la_salle_de_bains",
+        "setTitre": "Le fantôme de la salle de bains",
+        "setTitreOriginal": "Le fantôme de la salle de bains",
+        "setAuteur": "Gudule",
+        "setPremiereEdition": "2006",
+        "setType": "Type-5",
+        "setSaga": "Saga-18",
+        "setPhoto": "Photo-1106"
+    },
+    "Livre-134": {
+        "setSlug": "Un_requin_dans_la_piscine",
+        "setTitre": "Un requin dans la piscine",
+        "setTitreOriginal": "Un requin dans la piscine",
+        "setAuteur": "Gudule",
+        "setPremiereEdition": "2006",
+        "setType": "Type-5",
+        "setSaga": "Saga-18",
+        "setPhoto": "Photo-1107"
+    },
+    "Livre-135": {
+        "setSlug": "Le_dentiste_est_un_vampire",
+        "setTitre": "Le dentiste est un vampire",
+        "setTitreOriginal": "Le dentiste est un vampire",
+        "setAuteur": "Gudule",
+        "setPremiereEdition": "2006",
+        "setType": "Type-5",
+        "setSaga": "Saga-18",
+        "setPhoto": "Photo-1105"
+    },
+    "Livre-136": {
+        "setSlug": "Sangoku",
+        "setTitre": "Sangoku",
+        "setTitreOriginal": "Sangoku",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1985",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "1",
+        "setPhoto": "Photo-1059"
+    },
+    "Livre-137": {
+        "setSlug": "Kamehameha",
+        "setTitre": "Kaméhaméha",
+        "setTitreOriginal": "Kaméhaméha",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1986",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "2",
+        "setPhoto": "Photo-1060"
+    },
+    "Livre-138": {
+        "setSlug": "L-Initiation",
+        "setTitre": "L'Initiation",
+        "setTitreOriginal": "L'Initiation",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1986",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "3",
+        "setPhoto": "Photo-1061"
+    },
+    "Livre-139": {
+        "setSlug": "Le_Tournoi",
+        "setTitre": "Le Tournoi",
+        "setTitreOriginal": "Le Tournoi",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1986",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "4",
+        "setPhoto": "Photo-1062"
+    },
+    "Livre-140": {
+        "setSlug": "L-Ultime_combat",
+        "setTitre": "L'Ultime combat",
+        "setTitreOriginal": "L'Ultime combat",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1987",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "5",
+        "setPhoto": "Photo-1063"
+    },
+    "Livre-141": {
+        "setSlug": "L-Empire_du_ruban_rouge",
+        "setTitre": "L'Empire du ruban rouge",
+        "setTitreOriginal": "L'Empire du ruban rouge",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1987",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "6",
+        "setPhoto": "Photo-1064"
+    },
+    "Livre-142": {
+        "setSlug": "Le_Grand_defi",
+        "setTitre": "Le Grand défi",
+        "setTitreOriginal": "Le Grand défi",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1988",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "11",
+        "setPhoto": "Photo-1069"
+    },
+    "Livre-143": {
+        "setSlug": "Les_Forces_du_mal",
+        "setTitre": "Les Forces du mal",
+        "setTitreOriginal": "Les Forces du mal",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1988",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "12",
+        "setPhoto": "Photo-1070"
+    },
+    "Livre-144": {
+        "setSlug": "L-Empire_du_chaos",
+        "setTitre": "L'Empire du chaos",
+        "setTitreOriginal": "L'Empire du chaos",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1988",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "13",
+        "setPhoto": "Photo-1071"
+    },
+    "Livre-145": {
+        "setSlug": "Le_Demon",
+        "setTitre": "Le Démon",
+        "setTitreOriginal": "Le Démon",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1988",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "14",
+        "setPhoto": "Photo-1072"
+    },
+    "Livre-146": {
+        "setSlug": "Les_Saiyens",
+        "setTitre": "Les Saïyens",
+        "setTitreOriginal": "Les Saïyens",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1989",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "17",
+        "setPhoto": "Photo-1075"
+    },
+    "Livre-147": {
+        "setSlug": "Vegeta",
+        "setTitre": "Végéta",
+        "setTitreOriginal": "Végéta",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1989",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "19",
+        "setPhoto": "Photo-1077"
+    },
+    "Livre-148": {
+        "setSlug": "Yajirobe",
+        "setTitre": "Yajirobe",
+        "setTitreOriginal": "Yajirobe",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1990",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "20",
+        "setPhoto": "Photo-1078"
+    },
+    "Livre-149": {
+        "setSlug": "Monsieur_Freezer",
+        "setTitre": "Monsieur Freezer",
+        "setTitreOriginal": "Monsieur Freezer",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1990",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "21",
+        "setPhoto": "Photo-1079"
+    },
+    "Livre-150": {
+        "setSlug": "Zabon_et_Doria",
+        "setTitre": "Zabon et Doria",
+        "setTitreOriginal": "Zabon et Doria",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1990",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "22",
+        "setPhoto": "Photo-1080"
+    },
+    "Livre-151": {
+        "setSlug": "Recoom_et_Guldo",
+        "setTitre": "Recoom et Guldo",
+        "setTitreOriginal": "Recoom et Guldo",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1990",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "23",
+        "setPhoto": "Photo-1081"
+    },
+    "Livre-152": {
+        "setSlug": "Piccolo",
+        "setTitre": "Piccolo",
+        "setTitreOriginal": "Piccolo",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1991",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "25",
+        "setPhoto": "Photo-1083"
+    },
+    "Livre-153": {
+        "setSlug": "Le_Petit_Dende",
+        "setTitre": "Le Petit Dende",
+        "setTitreOriginal": "Le Petit Dende",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1991",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "26",
+        "setPhoto": "Photo-1084"
+    },
+    "Livre-154": {
+        "setSlug": "Le_Super_Saiyen",
+        "setTitre": "Le Super Saïyen",
+        "setTitreOriginal": "Le Super Saïyen",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1991",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "27",
+        "setPhoto": "Photo-1085"
+    },
+    "Livre-155": {
+        "setSlug": "Les_Androides",
+        "setTitre": "Les Androïdes",
+        "setTitreOriginal": "Les Androïdes",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1992",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "29",
+        "setPhoto": "Photo-1087"
+    },
+    "Livre-156": {
+        "setSlug": "Reunification",
+        "setTitre": "Réunification",
+        "setTitreOriginal": "Réunification",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1992",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "30",
+        "setPhoto": "Photo-1088"
+    },
+    "Livre-157": {
+        "setSlug": "Cell",
+        "setTitre": "Cell",
+        "setTitreOriginal": "Cell",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1992",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "31",
+        "setPhoto": "Photo-1089"
+    },
+    "Livre-158": {
+        "setSlug": "Transformation_ultime",
+        "setTitre": "Transformation ultime",
+        "setTitreOriginal": "Transformation ultime",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1992",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "32",
+        "setPhoto": "Photo-1090"
+    },
+    "Livre-159": {
+        "setSlug": "Le_Defi",
+        "setTitre": "Le Défi",
+        "setTitreOriginal": "Le Défi",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1992",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "33",
+        "setPhoto": "Photo-1091"
+    },
+    "Livre-160": {
+        "setSlug": "Le_Combat_final_de_Sangoku",
+        "setTitre": "Le Combat final de Sangoku",
+        "setTitreOriginal": "Le Combat final de Sangoku",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1993",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "34",
+        "setPhoto": "Photo-1092"
+    },
+    "Livre-161": {
+        "setSlug": "L-Adieu_de_Sangoku",
+        "setTitre": "L'Adieu de Sangoku",
+        "setTitreOriginal": "L'Adieu de Sangoku",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1993",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "35",
+        "setPhoto": "Photo-1093"
+    },
+    "Livre-162": {
+        "setSlug": "Un_Nouveau_heros",
+        "setTitre": "Un Nouveau héros",
+        "setTitreOriginal": "Un Nouveau héros",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1993",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "36",
+        "setPhoto": "Photo-1094"
+    },
+    "Livre-163": {
+        "setSlug": "Kaio_Shin",
+        "setTitre": "Kaïo Shin",
+        "setTitreOriginal": "Kaïo Shin",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1994",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "37",
+        "setPhoto": "Photo-1095"
+    },
+    "Livre-164": {
+        "setSlug": "Le_Sorcier_Babidi",
+        "setTitre": "Le Sorcier Babidi",
+        "setTitreOriginal": "Le Sorcier Babidi",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1994",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "38",
+        "setPhoto": "Photo-1096"
+    },
+    "Livre-165": {
+        "setSlug": "Boo",
+        "setTitre": "Boo",
+        "setTitreOriginal": "Boo",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1994",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "39",
+        "setPhoto": "Photo-1097"
+    },
+    "Livre-166": {
+        "setSlug": "La_Fusion",
+        "setTitre": "La Fusion",
+        "setTitreOriginal": "La Fusion",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1995",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "40",
+        "setPhoto": "Photo-1098"
+    },
+    "Livre-167": {
+        "setSlug": "Super_Gotenks",
+        "setTitre": "Super Gotenks",
+        "setTitreOriginal": "Super Gotenks",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1995",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "41",
+        "setPhoto": "Photo-1099"
+    },
+    "Livre-168": {
+        "setSlug": "La_Victoire",
+        "setTitre": "La Victoire",
+        "setTitreOriginal": "La Victoire",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1995",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "42",
+        "setPhoto": "Photo-1100"
+    },
+    "Livre-169": {
+        "setSlug": "His_Dark_Materials_Integrale",
+        "setTitre": "A la croisée des mondes: l'Intégrale",
+        "setTitreOriginal": "His Dark Materials: Integrale",
+        "setAuteur": "Philip Pullman",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setSaga": "Saga-7",
+        "setPhoto": "Photo-168"
+    },
+    "Livre-170": {
+        "setSlug": "Shatter_Me",
+        "setTitre": "Ne me touche pas",
+        "setTitreOriginal": "Shatter Me",
+        "setAuteur": "Tahereh Mafi",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-20",
+        "setTome": "1",
+        "setPhoto": "Photo-198"
+    },
+    "Livre-171": {
+        "setSlug": "Unravel_Me",
+        "setTitre": "Ne m'échappe pas",
+        "setTitreOriginal": "Unravel Me",
+        "setAuteur": "Tahereh Mafi",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setSaga": "Saga-20",
+        "setTome": "2",
+        "setPhoto": "Photo-199"
+    },
+    "Livre-172": {
+        "setSlug": "Ignite_Me",
+        "setTitre": "Ne m'abandonne pas",
+        "setTitreOriginal": "Ignite Me",
+        "setAuteur": "Tahereh Mafi",
+        "setPremiereEdition": "2014",
+        "setType": "Type-5",
+        "setSaga": "Saga-20",
+        "setTome": "3",
+        "setPhoto": "Photo-200"
+    },
+    "Livre-173": {
+        "setSlug": "The_5th_Wave",
+        "setTitre": "La cinquième vague",
+        "setTitreOriginal": "The 5th Wave",
+        "setAuteur": "Rick Yancey",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1113"
+    },
+    "Livre-174": {
+        "setSlug": "Kaleb",
+        "setTitre": "Kaleb",
+        "setTitreOriginal": "Kaleb",
+        "setAuteur": "Myra Eljundir",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5"
+    },
+    "Livre-175": {
+        "setSlug": "Book_1_Born_Wicked",
+        "setTitre": "Livre 2",
+        "setTitreOriginal": "Book 1: Born Wicked",
+        "setAuteur": "Jessica Spotswood",
+        "setPremiereEdition": "2014",
+        "setType": "Type-5",
+        "setSaga": "Saga-24",
+        "setTome": "2",
+        "setPhoto": "Photo-203"
+    },
+    "Livre-176": {
+        "setSlug": "Les_Autodafeurs_2",
+        "setTitre": "Les Autodafeurs 2",
+        "setTitreOriginal": "Les Autodafeurs 2",
+        "setAuteur": "Marine Carteron",
+        "setPremiereEdition": "2014",
+        "setType": "Type-5"
+    },
+    "Livre-177": {
+        "setSlug": "City_of_Bones",
+        "setTitre": "La Cité des Ténèbres",
+        "setTitreOriginal": "City of Bones",
+        "setAuteur": "Cassandra Clarre",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-21",
+        "setTome": "1",
+        "setPhoto": "Photo-1108"
+    },
+    "Livre-178": {
+        "setSlug": "Le_Sceptre_maudit",
+        "setTitre": "Le Sceptre maudit",
+        "setTitreOriginal": "Le Sceptre maudit",
+        "setAuteur": "Sophie Audouin-Mamikonian",
+        "setPremiereEdition": "2005",
+        "setType": "Type-5",
+        "setSaga": "Saga-105",
+        "setTome": "3"
+    },
+    "Livre-179": {
+        "setSlug": "La_princesse_de_Cleves",
+        "setTitre": "La princesse de Clèves",
+        "setTitreOriginal": "La princesse de Clèves",
+        "setAuteur": "Madame de Lafayette",
+        "setPremiereEdition": "1999",
+        "setType": "Type-5"
+    },
+    "Livre-180": {
+        "setSlug": "La_civilisation_ma_mere_!...",
+        "setTitre": "La civilisation, ma mère !...",
+        "setTitreOriginal": "La civilisation, ma mère !...",
+        "setAuteur": "Driss Chraibi",
+        "setPremiereEdition": "1972",
+        "setType": "Type-5"
+    },
+    "Livre-181": {
+        "setSlug": "La_Promesse_de_l-aube",
+        "setTitre": "La Promesse de l'aube",
+        "setTitreOriginal": "La Promesse de l'aube",
+        "setAuteur": "Romain Gary",
+        "setPremiereEdition": "1980",
+        "setType": "Type-5"
+    },
+    "Livre-182": {
+        "setSlug": "Tristan_et_Iseult",
+        "setTitre": "Tristan et Iseult",
+        "setTitreOriginal": "Tristan et Iseult",
+        "setAuteur": "Inconnu",
+        "setPremiereEdition": "2003",
+        "setType": "Type-1"
+    },
+    "Livre-183": {
+        "setSlug": "L-odyssee_extraits",
+        "setTitre": "L'odyssée (extraits)",
+        "setTitreOriginal": "L'odyssée (extraits)",
+        "setAuteur": "Homère",
+        "setPremiereEdition": "2006",
+        "setType": "Type-5"
+    },
+    "Livre-184": {
+        "setSlug": "Hannah_Montana_01_petits_secrets_entre_amis",
+        "setTitre": "Hannah Montana 01: petits secrêts entre amis",
+        "setTitreOriginal": "Hannah Montana 01: petits secrêts entre amis",
+        "setAuteur": "Beth Beechwood",
+        "setPremiereEdition": "2008",
+        "setType": "Type-5",
+        "setSaga": "Saga-22",
+        "setTome": "1"
+    },
+    "Livre-185": {
+        "setSlug": "Hannah_Montana_03_chasse-croise",
+        "setTitre": "Hannah Montana 03: chassé-croisé",
+        "setTitreOriginal": "Hannah Montana 03: chassé-croisé",
+        "setAuteur": "Laurie Mcelroy",
+        "setPremiereEdition": "2008",
+        "setType": "Type-5",
+        "setSaga": "Saga-22",
+        "setTome": "3"
+    },
+    "Livre-186": {
+        "setSlug": "Hannah_Montana_06_amoureuse",
+        "setTitre": "Hannah Montana 06: amoureuse",
+        "setTitreOriginal": "Hannah Montana 06: amoureuse",
+        "setAuteur": "Beth Beechwood",
+        "setPremiereEdition": "2008",
+        "setType": "Type-5",
+        "setSaga": "Saga-22",
+        "setTome": "6"
+    },
+    "Livre-187": {
+        "setSlug": "Hannah_Montana_09_au_top!",
+        "setTitre": "Hannah Montana 09: au top!",
+        "setTitreOriginal": "Hannah Montana 09: au top!",
+        "setAuteur": "M.C. King",
+        "setPremiereEdition": "2009",
+        "setType": "Type-5",
+        "setSaga": "Saga-22",
+        "setTome": "9"
+    },
+    "Livre-188": {
+        "setSlug": "Hannah_Montana_15_un_peu_beaucoup..._a_la_folie!",
+        "setTitre": "Hannah Montana 15: un peu, beaucoup... à la folie!",
+        "setTitreOriginal": "Hannah Montana 15: un peu, beaucoup... à la folie!",
+        "setAuteur": "M.C. King",
+        "setPremiereEdition": "2010",
+        "setType": "Type-5",
+        "setSaga": "Saga-22",
+        "setTome": "15"
+    },
+    "Livre-189": {
+        "setSlug": "Au_bonheur_des_dames",
+        "setTitre": "Au bonheur des dames",
+        "setTitreOriginal": "Au bonheur des dames",
+        "setAuteur": "Zola",
+        "setPremiereEdition": "1980",
+        "setType": "Type-5"
+    },
+    "Livre-190": {
+        "setSlug": "Cinq_histoires_d-amour_et_de_chevalerie",
+        "setTitre": "Cinq histoires d'amour et de chevalerie",
+        "setTitreOriginal": "Cinq histoires d'amour et de chevalerie",
+        "setAuteur": "Marie de France",
+        "setPremiereEdition": "2012",
+        "setType": "Type-1"
+    },
+    "Livre-191": {
+        "setSlug": "Arthur_Rimbaud_le_voleur_de_feu",
+        "setTitre": "Arthur Rimbaud, le voleur de feu",
+        "setTitreOriginal": "Arthur Rimbaud, le voleur de feu",
+        "setAuteur": "Sarah Cohen-Scali",
+        "setPremiereEdition": "2001",
+        "setType": "Type-5"
+    },
+    "Livre-192": {
+        "setSlug": "Le_malade_imaginaire",
+        "setTitre": "Le malade imaginaire",
+        "setTitreOriginal": "Le malade imaginaire",
+        "setAuteur": "Molière",
+        "setPremiereEdition": "2002",
+        "setType": "Type-8"
+    },
+    "Livre-193": {
+        "setSlug": "Ame_Nochi_Hare_1",
+        "setTitre": "Rendez vous sous la pluie 1",
+        "setTitreOriginal": "Ame Nochi Hare 1",
+        "setAuteur": "Bikke",
+        "setPremiereEdition": "2009",
+        "setType": "Type-2"
+    },
+    "Livre-194": {
+        "setSlug": "Ame_Nochi_Hare_2",
+        "setTitre": "Rendez vous sous la pluie 2",
+        "setTitreOriginal": "Ame Nochi Hare 2",
+        "setAuteur": "Bikke",
+        "setPremiereEdition": "2009",
+        "setType": "Type-2"
+    },
+    "Livre-195": {
+        "setSlug": "L-enfant_et_la_foret",
+        "setTitre": "L'enfant et la forêt",
+        "setTitreOriginal": "L'enfant et la forêt",
+        "setAuteur": "Jean-Côme Noguès",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5"
+    },
+    "Livre-196": {
+        "setSlug": "Neuf_contes",
+        "setTitre": "Neuf contes",
+        "setTitreOriginal": "Neuf contes",
+        "setAuteur": "Charles Perrault",
+        "setPremiereEdition": "2011",
+        "setType": "Type-1"
+    },
+    "Livre-197": {
+        "setSlug": "Manga_le_messie",
+        "setTitre": "Manga le messie",
+        "setTitreOriginal": "Manga le messie",
+        "setAuteur": "Hidenori Kumai",
+        "setPremiereEdition": "2008",
+        "setType": "Type-2"
+    },
+    "Livre-198": {
+        "setSlug": "Manga_la_metamorphose",
+        "setTitre": "Manga la métamorphose",
+        "setTitreOriginal": "Manga la métamorphose",
+        "setAuteur": "Kozumi Shinozawa",
+        "setPremiereEdition": "2009",
+        "setType": "Type-2"
+    },
+    "Livre-199": {
+        "setSlug": "Manga_la_mutinerie",
+        "setTitre": "Manga la mutinerie",
+        "setTitreOriginal": "Manga la mutinerie",
+        "setAuteur": "Ryo Azumi",
+        "setPremiereEdition": "2010",
+        "setType": "Type-2"
+    },
+    "Livre-200": {
+        "setSlug": "Manga_les_messagers",
+        "setTitre": "Manga les messagers",
+        "setTitreOriginal": "Manga les messagers",
+        "setAuteur": "Ryo Azumi",
+        "setPremiereEdition": "2012",
+        "setType": "Type-2"
+    },
+    "Livre-201": {
+        "setSlug": "Totally_spies_1chapeau_mesdemoiselles",
+        "setTitre": "Totally spies 1:chapeau, mesdemoiselles",
+        "setTitreOriginal": "Totally spies 1:chapeau, mesdemoiselles",
+        "setAuteur": "Grisseaux et Delahayre",
+        "setPremiereEdition": "2005",
+        "setType": "Type-4",
+        "setSaga": "Saga-23",
+        "setTome": "1",
+        "setPhoto": "Photo-219"
+    },
+    "Livre-202": {
+        "setSlug": "Totally_spies_2_people_academy",
+        "setTitre": "Totally spies 2: people academy",
+        "setTitreOriginal": "Totally spies 2: people academy",
+        "setAuteur": "Grisseaux et Delahayre",
+        "setPremiereEdition": "2006",
+        "setType": "Type-4",
+        "setSaga": "Saga-23",
+        "setTome": "2",
+        "setPhoto": "Photo-220"
+    },
+    "Livre-203": {
+        "setSlug": "Asterix_aux_jeux_olympiques_l-album_du_film",
+        "setTitre": "Astérix aux jeux olympiques, l'album du film",
+        "setTitreOriginal": "Astérix aux jeux olympiques, l'album du film",
+        "setAuteur": "Marlène Soreda",
+        "setPremiereEdition": "2008",
+        "setType": "Type-4",
+        "setPhoto": "Photo-227"
+    },
+    "Livre-204": {
+        "setSlug": "Contes_d-animaux",
+        "setTitre": "Contes d'animaux",
+        "setTitreOriginal": "Contes d'animaux",
+        "setAuteur": "Divers",
+        "setPremiereEdition": "2008",
+        "setType": "Type-1"
+    },
+    "Livre-205": {
+        "setSlug": "The_Lion_King",
+        "setTitre": "Le roi lion",
+        "setTitreOriginal": "The Lion King",
+        "setAuteur": "Divers",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5"
+    },
+    "Livre-206": {
+        "setSlug": "Tangled",
+        "setTitre": "Raiponce",
+        "setTitreOriginal": "Tangled",
+        "setAuteur": "Divers",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5"
+    },
+    "Livre-207": {
+        "setSlug": "Cars",
+        "setTitre": "Cars",
+        "setTitreOriginal": "Cars",
+        "setAuteur": "Divers",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5"
+    },
+    "Livre-208": {
+        "setSlug": "Le_dico_des_filles_2008",
+        "setTitre": "Le dico des filles 2008",
+        "setTitreOriginal": "Le dico des filles 2008",
+        "setAuteur": "Sophie Cluzel",
+        "setPremiereEdition": "2008",
+        "setType": "Type-6",
+        "setPhoto": "Photo-236"
+    },
+    "Livre-209": {
+        "setSlug": "Le_grand_mechant_betisier",
+        "setTitre": "Le grand méchant bêtisier",
+        "setTitreOriginal": "Le grand méchant bêtisier",
+        "setAuteur": "Jerome Duhamel",
+        "setPremiereEdition": "1991",
+        "setType": "Type-6",
+        "setPhoto": "Photo-235"
+    },
+    "Livre-210": {
+        "setSlug": "Un_prenom_pour_la_vie",
+        "setTitre": "Un prénom pour la vie",
+        "setTitreOriginal": "Un prénom pour la vie",
+        "setAuteur": "Pierre Le Rouzic",
+        "setPremiereEdition": "1978",
+        "setType": "Type-6",
+        "setPhoto": "Photo-238"
+    },
+    "Livre-211": {
+        "setSlug": "King_Arthur",
+        "setTitre": "Le roi Arthur",
+        "setTitreOriginal": "King Arthur",
+        "setAuteur": "Michael Morpurgo",
+        "setPremiereEdition": "1998",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1114"
+    },
+    "Livre-212": {
+        "setSlug": "Micromegas_et_autres_contes",
+        "setTitre": "Micromégas et autres contes",
+        "setTitreOriginal": "Micromégas et autres contes",
+        "setAuteur": "Voltaires",
+        "setPremiereEdition": "1999",
+        "setType": "Type-1"
+    },
+    "Livre-213": {
+        "setSlug": "9_histoires_extraordinaires",
+        "setTitre": "9 histoires extraordinaires",
+        "setTitreOriginal": "9 histoires extraordinaires",
+        "setAuteur": "Divers",
+        "setPremiereEdition": "2016",
+        "setType": "Type-3"
+    },
+    "Livre-214": {
+        "setSlug": "Dans_les_forets_de_Siberie",
+        "setTitre": "Dans les forêts de Sibérie",
+        "setTitreOriginal": "Dans les forêts de Sibérie",
+        "setAuteur": "Sylvain Tesson",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5"
+    },
+    "Livre-215": {
+        "setSlug": "Il_Gattopardo",
+        "setTitre": "Le guépard",
+        "setTitreOriginal": "Il Gattopardo",
+        "setAuteur": "Guiseppe Tomasi di lampedusa",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5"
+    },
+    "Livre-216": {
+        "setSlug": "Le_visiteur",
+        "setTitre": "Le visiteur",
+        "setTitreOriginal": "Le visiteur",
+        "setAuteur": "Eric-Emmanuel Schmitt",
+        "setPremiereEdition": "2002",
+        "setType": "Type-5"
+    },
+    "Livre-217": {
+        "setSlug": "Le_ventre_de_l-atlantique",
+        "setTitre": "Le ventre de l'atlantique",
+        "setTitreOriginal": "Le ventre de l'atlantique",
+        "setAuteur": "Fatou Diome",
+        "setPremiereEdition": "2003",
+        "setType": "Type-5"
+    },
+    "Livre-218": {
+        "setSlug": "Le_livre_du_temps",
+        "setTitre": "Le livre du temps",
+        "setTitreOriginal": "Le livre du temps",
+        "setAuteur": "Carina Rozenfeld",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-30",
+        "setTome": "3",
+        "setPhoto": "Photo-1110"
+    },
+    "Livre-219": {
+        "setSlug": "Golem",
+        "setTitre": "Golem",
+        "setTitreOriginal": "Golem",
+        "setAuteur": "Elvire, Lorris et Marie-Aude Murail",
+        "setPremiereEdition": "2010",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1111"
+    },
+    "Livre-220": {
+        "setSlug": "Titeuf_-_Ah_ouas_d-accord...",
+        "setTitre": "Titeuf - Ah ouas, d'accord...",
+        "setTitreOriginal": "Titeuf - Ah ouas, d'accord...",
+        "setAuteur": "Zep",
+        "setPremiereEdition": "2003",
+        "setType": "Type-5",
+        "setSaga": "Saga-29"
+    },
+    "Livre-221": {
+        "setSlug": "Titeuf_-_pourquoi_moi",
+        "setTitre": "Titeuf - pourquoi moi ?",
+        "setTitreOriginal": "Titeuf - pourquoi moi ?",
+        "setAuteur": "Zep",
+        "setPremiereEdition": "2001",
+        "setType": "Type-5",
+        "setSaga": "Saga-29"
+    },
+    "Livre-222": {
+        "setSlug": "Titeuf_-_c-est_po_malin",
+        "setTitre": "Titeuf - c'est po malin",
+        "setTitreOriginal": "Titeuf - c'est po malin",
+        "setAuteur": "Zep",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5",
+        "setSaga": "Saga-29"
+    },
+    "Livre-223": {
+        "setSlug": "Titeuf_-_c-est_po_une_vie",
+        "setTitre": "Titeuf - c'est po une vie",
+        "setTitreOriginal": "Titeuf - c'est po une vie",
+        "setAuteur": "Zep",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5",
+        "setSaga": "Saga-29"
+    },
+    "Livre-224": {
+        "setSlug": "Titeuf_-_meme_po_mal",
+        "setTitre": "Titeuf - même po mal",
+        "setTitreOriginal": "Titeuf - même po mal",
+        "setAuteur": "Zep",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5",
+        "setSaga": "Saga-29"
+    },
+    "Livre-225": {
+        "setSlug": "The_Curse_of_the_Black_Pearl",
+        "setTitre": "La malédiction du Black Pearl",
+        "setTitreOriginal": "The Curse of the Black Pearl",
+        "setAuteur": "Irène Trimble",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setSaga": "Saga-28",
+        "setTome": "1",
+        "setPhoto": "Photo-1419"
+    },
+    "Livre-226": {
+        "setSlug": "Dead_Man-s_Chest",
+        "setTitre": "Le secret du coffre maudit",
+        "setTitreOriginal": "Dead Man's Chest",
+        "setAuteur": "Katherine Quenot",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setSaga": "Saga-28",
+        "setTome": "2",
+        "setPhoto": "Photo-1420"
+    },
+    "Livre-227": {
+        "setSlug": "At_World-s_End",
+        "setTitre": "Jusqu'au bout du monde",
+        "setTitreOriginal": "At World's End",
+        "setAuteur": "Katherine Quenot",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setSaga": "Saga-28",
+        "setTome": "3",
+        "setPhoto": "Photo-1421"
+    },
+    "Livre-228": {
+        "setSlug": "Kid_Paddle_-_jurassic_noeufnoeuf",
+        "setTitre": "Kid Paddle - jurassic noeufnoeuf ",
+        "setTitreOriginal": "Kid Paddle - jurassic noeufnoeuf",
+        "setAuteur": "Claude Carré",
+        "setPremiereEdition": "2005",
+        "setType": "Type-5",
+        "setSaga": "Saga-27"
+    },
+    "Livre-229": {
+        "setSlug": "Kid_Paddle_-_meduse_beach",
+        "setTitre": "Kid Paddle - méduse beach",
+        "setTitreOriginal": "Kid Paddle - méduse beach",
+        "setAuteur": "Claude Carré",
+        "setPremiereEdition": "2005",
+        "setType": "Type-5",
+        "setSaga": "Saga-27"
+    },
+    "Livre-230": {
+        "setSlug": "Kid_Paddle_-_train-train_fantome",
+        "setTitre": "Kid Paddle - train-train fantôme",
+        "setTitreOriginal": "Kid Paddle - train-train fantôme",
+        "setAuteur": "Claude Carré",
+        "setPremiereEdition": "2004",
+        "setType": "Type-5",
+        "setSaga": "Saga-27"
+    },
+    "Livre-231": {
+        "setSlug": "Kid_Paddle_-_les_evades_de_la_colo",
+        "setTitre": "Kid Paddle - les évades de la colo",
+        "setTitreOriginal": "Kid Paddle - les évades de la colo",
+        "setAuteur": "Claude Carré",
+        "setPremiereEdition": "2004",
+        "setType": "Type-5",
+        "setSaga": "Saga-27"
+    },
+    "Livre-232": {
+        "setSlug": "Kid_Paddle_-_menace_arachnide",
+        "setTitre": "Kid Paddle - menace arachnide",
+        "setTitreOriginal": "Kid Paddle - menace arachnide",
+        "setAuteur": "Claude Carré",
+        "setPremiereEdition": "2004",
+        "setType": "Type-5",
+        "setSaga": "Saga-27"
+    },
+    "Livre-233": {
+        "setSlug": "Kid_Paddle_-_mission_quasiment_impossible",
+        "setTitre": "Kid Paddle - mission quasiment impossible",
+        "setTitreOriginal": "Kid Paddle - mission quasiment impossible",
+        "setAuteur": "Claude Carré",
+        "setPremiereEdition": "2004",
+        "setType": "Type-5",
+        "setSaga": "Saga-27"
+    },
+    "Livre-234": {
+        "setSlug": "Kid_Paddle_-_lapin-garou",
+        "setTitre": "Kid Paddle - lapin-garou",
+        "setTitreOriginal": "Kid Paddle - lapin-garou",
+        "setAuteur": "Claude Carré",
+        "setPremiereEdition": "2005",
+        "setType": "Type-5",
+        "setSaga": "Saga-27"
+    },
+    "Livre-235": {
+        "setSlug": "La_dame_aux_camelias",
+        "setTitre": "La dame aux camélias",
+        "setTitreOriginal": "La dame aux camélias",
+        "setAuteur": "Alexandre Dumas fils",
+        "setPremiereEdition": "1983",
+        "setType": "Type-5"
+    },
+    "Livre-236": {
+        "setSlug": "Nouvelles_naturalistes_des_soirees_de_Medan",
+        "setTitre": "Nouvelles naturalistes des soirées de Médan",
+        "setTitreOriginal": "Nouvelles naturalistes des soirées de Médan",
+        "setAuteur": "Zola, Maupassant, Huysmans",
+        "setPremiereEdition": "2006",
+        "setType": "Type-3"
+    },
+    "Livre-237": {
+        "setSlug": "Le_bal_de_Sceaux",
+        "setTitre": "Le bal de Sceaux",
+        "setTitreOriginal": "Le bal de Sceaux",
+        "setAuteur": "Balzac",
+        "setPremiereEdition": "2001",
+        "setType": "Type-5"
+    },
+    "Livre-238": {
+        "setSlug": "Book_2_Star_Cursed",
+        "setTitre": "Livre 3",
+        "setTitreOriginal": "Book 2: Star Cursed",
+        "setAuteur": "Jessica Spotswood",
+        "setPremiereEdition": "2015",
+        "setType": "Type-5",
+        "setSaga": "Saga-24",
+        "setTome": "3",
+        "setPhoto": "Photo-204"
+    },
+    "Livre-239": {
+        "setSlug": "The_Cursed_Child",
+        "setTitre": "Harry Potter et l'enfant maudit",
+        "setTitreOriginal": "The Cursed Child",
+        "setAuteur": "Jack Thorne",
+        "setPremiereEdition": "2016",
+        "setType": "Type-8",
+        "setSaga": "Saga-26",
+        "setTome": "8",
+        "setPhoto": "Photo-1409"
+    },
+    "Livre-240": {
+        "setSlug": "The_Colour_of_Magic",
+        "setTitre": "La Huitième Couleur",
+        "setTitreOriginal": "The Colour of Magic",
+        "setAuteur": "Terry Pratchett",
+        "setPremiereEdition": "1996",
+        "setType": "Type-5",
+        "setSaga": "Saga-103",
+        "setTome": "1",
+        "setPhoto": "Photo-201"
+    },
+    "Livre-241": {
+        "setSlug": "Den_of_Thieves",
+        "setTitre": "L'antre des voleurs",
+        "setTitreOriginal": "Den of Thieves",
+        "setAuteur": "David Chandler",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-102",
+        "setTome": "1",
+        "setPhoto": "Photo-37"
+    },
+    "Livre-242": {
+        "setSlug": "Essai_sur_les_donnees_immediates_de_la_conscience_chapitre_2",
+        "setTitre": "Essai sur les données immédiates de la conscience : chapitre 2",
+        "setTitreOriginal": "Essai sur les données immédiates de la conscience : chapitre 2",
+        "setAuteur": "Bergson",
+        "setPremiereEdition": "2013",
+        "setType": "Type-10",
+        "setPhoto": "Photo-232"
+    },
+    "Livre-243": {
+        "setSlug": "Sylvie",
+        "setTitre": "Sylvie",
+        "setTitreOriginal": "Sylvie",
+        "setAuteur": "Nerval",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5"
+    },
+    "Livre-244": {
+        "setSlug": "Mrs_Dolloway",
+        "setTitre": "Mrs Dolloway",
+        "setTitreOriginal": "Mrs Dolloway",
+        "setAuteur": "Virginia Woolf",
+        "setPremiereEdition": "1994",
+        "setType": "Type-5"
+    },
+    "Livre-245": {
+        "setSlug": "La_femme_parfaite_est_une_connasse",
+        "setTitre": "La femme parfaite est une connasse",
+        "setTitreOriginal": "La femme parfaite est une connasse",
+        "setAuteur": "Anne-Sophie Girard et Marie-Aldine Girard",
+        "setPremiereEdition": "2013",
+        "setType": "Type-11",
+        "setPhoto": "Photo-182"
+    },
+    "Livre-246": {
+        "setSlug": "La_femme_parfaite_est_une_connasse_2_le_retour",
+        "setTitre": "La femme parfaite est une connasse 2: le retour",
+        "setTitreOriginal": "La femme parfaite est une connasse 2: le retour",
+        "setAuteur": "Anne-Sophie Girard et Marie-Aldine Girard",
+        "setPremiereEdition": "2014",
+        "setType": "Type-11",
+        "setPhoto": "Photo-183"
+    },
+    "Livre-247": {
+        "setSlug": "The_Magicians-_Guild",
+        "setTitre": "La guilde des magiciens",
+        "setTitreOriginal": "The Magicians' Guild",
+        "setAuteur": "Trudi Canavan",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setSaga": "Saga-25",
+        "setTome": "1",
+        "setPhoto": "Photo-34"
+    },
+    "Livre-248": {
+        "setSlug": "The_Novice",
+        "setTitre": "La novice",
+        "setTitreOriginal": "The Novice",
+        "setAuteur": "Trudi Canavan",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setSaga": "Saga-25",
+        "setTome": "2",
+        "setPhoto": "Photo-35"
+    },
+    "Livre-249": {
+        "setSlug": "The_High_Lord",
+        "setTitre": "Le haut seigneur",
+        "setTitreOriginal": "The High Lord",
+        "setAuteur": "Trudi Canavan",
+        "setPremiereEdition": "2008",
+        "setType": "Type-5",
+        "setSaga": "Saga-25",
+        "setTome": "3",
+        "setPhoto": "Photo-36"
+    },
+    "Livre-250": {
+        "setSlug": "United_As_One",
+        "setTitre": "Tous pour un",
+        "setTitreOriginal": "United As One",
+        "setAuteur": "Pittacus Lore",
+        "setPremiereEdition": "2017",
+        "setType": "Type-5",
+        "setSaga": "Saga-11",
+        "setTome": "7",
+        "setPhoto": "Photo-181"
+    },
+    "Livre-251": {
+        "setSlug": "Book_3_Sister-s_Fate",
+        "setTitre": "Livre 1",
+        "setTitreOriginal": "Book 3: Sister's Fate",
+        "setAuteur": "Jessica Spotswood",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setSaga": "Saga-24",
+        "setTome": "1",
+        "setPhoto": "Photo-202"
+    },
+    "Livre-252": {
+        "setSlug": "The_Bro_Code",
+        "setTitre": "Le Bro Code",
+        "setTitreOriginal": "The Bro Code",
+        "setAuteur": "Barney Stinson er Matt Kuhn",
+        "setPremiereEdition": "2012",
+        "setType": "Type-11",
+        "setPhoto": "Photo-825"
+    },
+    "Livre-253": {
+        "setSlug": "Parlons_peu_parlons_culture",
+        "setTitre": "Parlons peu, parlons culture",
+        "setTitreOriginal": "Parlons peu, parlons culture",
+        "setAuteur": "Maud Bettina-Marie et Juliette Tresanini",
+        "setPremiereEdition": "2017",
+        "setType": "Type-11",
+        "setPhoto": "Photo-826"
+    },
+    "Livre-254": {
+        "setSlug": "Maitre_Kaio",
+        "setTitre": "Maître Kaïo",
+        "setTitreOriginal": "Maître Kaïo",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1989",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "18",
+        "setPhoto": "Photo-1076"
+    },
+    "Livre-255": {
+        "setSlug": "Le_Capitaine_Ginue",
+        "setTitre": "Le Capitaine Ginue",
+        "setTitreOriginal": "Le Capitaine Ginue",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1991",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "24",
+        "setPhoto": "Photo-1082"
+    },
+    "Livre-256": {
+        "setSlug": "Trunks",
+        "setTitre": "Trunks",
+        "setTitreOriginal": "Trunks",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1991",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "28",
+        "setPhoto": "Photo-1086"
+    },
+    "Livre-257": {
+        "setSlug": "La_setta_degli_assassini",
+        "setTitre": "La Secte des assassins",
+        "setTitreOriginal": "La setta degli assassini",
+        "setAuteur": "Licia Troisi",
+        "setPremiereEdition": "2006",
+        "setType": "Type-5",
+        "setSaga": "Saga-5",
+        "setTome": "1",
+        "setPhoto": "Photo-1101"
+    },
+    "Livre-258": {
+        "setSlug": "Le_due_guerriere",
+        "setTitre": "Les Deux Combattantes",
+        "setTitreOriginal": "Le due guerriere",
+        "setAuteur": "Licia Troisi",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setSaga": "Saga-5",
+        "setTome": "2",
+        "setPhoto": "Photo-1102"
+    },
+    "Livre-259": {
+        "setSlug": "Un_nuovo_regno",
+        "setTitre": "Un nouveau règne",
+        "setTitreOriginal": "Un nuovo regno",
+        "setAuteur": "Licia Troisi",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setSaga": "Saga-5",
+        "setTome": "3",
+        "setPhoto": "Photo-1103"
+    },
+    "Livre-260": {
+        "setSlug": "Integrale",
+        "setTitre": "Intégrale",
+        "setTitreOriginal": "Integrale",
+        "setAuteur": "Licia Troisi",
+        "setPremiereEdition": "2017",
+        "setType": "Type-5",
+        "setSaga": "Saga-6",
+        "setPhoto": "Photo-1104"
+    },
+    "Livre-261": {
+        "setSlug": "The_Maze_Runner",
+        "setTitre": "Le Labyrinthe",
+        "setTitreOriginal": "The Maze Runner",
+        "setAuteur": "James Dashner",
+        "setPremiereEdition": "2009",
+        "setType": "Type-5",
+        "setSaga": "Saga-93",
+        "setTome": "1",
+        "setPhoto": "Photo-1416"
+    },
+    "Livre-262": {
+        "setSlug": "The_Scorch_Trials",
+        "setTitre": "La Terre brûlée",
+        "setTitreOriginal": "The Scorch Trials",
+        "setAuteur": "James Dashner",
+        "setPremiereEdition": "2010",
+        "setType": "Type-5",
+        "setSaga": "Saga-93",
+        "setTome": "2",
+        "setPhoto": "Photo-1417"
+    },
+    "Livre-263": {
+        "setSlug": "The_Death_Cure",
+        "setTitre": "Le Remède mortel",
+        "setTitreOriginal": "The Death Cure",
+        "setAuteur": "James Dashner",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setSaga": "Saga-93",
+        "setTome": "3",
+        "setPhoto": "Photo-1418"
+    },
+    "Livre-264": {
+        "setSlug": "The_Magician-s_Apprentice",
+        "setTitre": "L'Apprentie du magicien",
+        "setTitreOriginal": "The Magician's Apprentice",
+        "setAuteur": "Trudi Canavan",
+        "setPremiereEdition": "2009",
+        "setType": "Type-5",
+        "setTome": "1",
+        "setPhoto": "Photo-1121"
+    },
+    "Livre-265": {
+        "setSlug": "Awake_at_Dawn",
+        "setTitre": "Soupçons",
+        "setTitreOriginal": "Awake at Dawn",
+        "setAuteur": "C. C. Hunter",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setSaga": "Saga-3",
+        "setTome": "2",
+        "setPhoto": "Photo-1117"
+    },
+    "Livre-266": {
+        "setSlug": "Taken_at_Dusk",
+        "setTitre": "Illusions",
+        "setTitreOriginal": "Taken at Dusk",
+        "setAuteur": "C. C. Hunter",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-3",
+        "setTome": "3",
+        "setPhoto": "Photo-1118"
+    },
+    "Livre-267": {
+        "setSlug": "Whispers_at_Moonrise",
+        "setTitre": "Frémissements",
+        "setTitreOriginal": "Whispers at Moonrise",
+        "setAuteur": "C. C. Hunter",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-3",
+        "setTome": "4",
+        "setPhoto": "Photo-1119"
+    },
+    "Livre-268": {
+        "setSlug": "City_of_Ashes",
+        "setTitre": "La Cité des Cendres",
+        "setTitreOriginal": "City of Ashes",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2008",
+        "setType": "Type-5",
+        "setSaga": "Saga-21",
+        "setTome": "2",
+        "setPhoto": "Photo-1399"
+    },
+    "Livre-269": {
+        "setSlug": "Eldest",
+        "setTitre": "L'Aîné",
+        "setTitreOriginal": "Eldest",
+        "setAuteur": "Christopher Paolini",
+        "setPremiereEdition": "2005",
+        "setType": "Type-5",
+        "setSaga": "Saga-72",
+        "setTome": "2",
+        "setPhoto": "Photo-1411"
+    },
+    "Livre-270": {
+        "setSlug": "Brisingr",
+        "setTitre": "Brisingr",
+        "setTitreOriginal": "Brisingr",
+        "setAuteur": "Christopher Paolini",
+        "setPremiereEdition": "2008",
+        "setType": "Type-5",
+        "setSaga": "Saga-72",
+        "setTome": "3",
+        "setPhoto": "Photo-1412"
+    },
+    "Livre-271": {
+        "setSlug": "Inheritance",
+        "setTitre": "L'Héritage",
+        "setTitreOriginal": "Inheritance",
+        "setAuteur": "Christopher Paolini",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setSaga": "Saga-72",
+        "setTome": "4",
+        "setPhoto": "Photo-1413"
+    },
+    "Livre-272": {
+        "setSlug": "Aide-memoire_JAVA",
+        "setTitre": "Aide-mémoire JAVA",
+        "setTitreOriginal": "Aide-mémoire JAVA",
+        "setAuteur": "Vincent Granet & Jean-Pierre Regourd",
+        "setPremiereEdition": "2015",
+        "setType": "Type-6"
+    },
+    "Livre-273": {
+        "setSlug": "Concevez_votre_site_WEB_avec_PHP_et_MySQL",
+        "setTitre": "Concevez votre site WEB avec PHP et MySQL",
+        "setTitreOriginal": "Concevez votre site WEB avec PHP et MySQL",
+        "setAuteur": "Mathieu Nebra",
+        "setPremiereEdition": "2017",
+        "setType": "Type-6"
+    },
+    "Livre-274": {
+        "setSlug": "The_Summoner",
+        "setTitre": "L'invocateur",
+        "setTitreOriginal": "The Summoner",
+        "setAuteur": "Gail Z. Martin",
+        "setPremiereEdition": "2009",
+        "setType": "Type-5",
+        "setSaga": "Saga-74",
+        "setTome": "1",
+        "setPhoto": "Photo-1424"
+    },
+    "Livre-275": {
+        "setSlug": "Calendar_Girl_January",
+        "setTitre": "Calendar Girl: Janvier",
+        "setTitreOriginal": "Calendar Girl: January",
+        "setAuteur": "Audrey Carlan",
+        "setPremiereEdition": "2015",
+        "setType": "Type-5",
+        "setSaga": "Saga-76",
+        "setTome": "1",
+        "setPhoto": "Photo-1414"
+    },
+    "Livre-276": {
+        "setSlug": "Calendar_Girl_February",
+        "setTitre": "Calendar Girl: Février",
+        "setTitreOriginal": "Calendar Girl: February",
+        "setAuteur": "Audrey Carlan",
+        "setPremiereEdition": "2015",
+        "setType": "Type-5",
+        "setSaga": "Saga-76",
+        "setTome": "2",
+        "setPhoto": "Photo-1415"
+    },
+    "Livre-277": {
+        "setSlug": "Lies",
+        "setTitre": "Mensonges",
+        "setTitreOriginal": "Lies",
+        "setAuteur": "Michael Grant",
+        "setPremiereEdition": "2010",
+        "setType": "Type-5",
+        "setSaga": "Saga-12",
+        "setTome": "3",
+        "setPhoto": "Photo-1398"
+    },
+    "Livre-278": {
+        "setSlug": "La_missione_di_Sennar",
+        "setTitre": "La Mission de Sennar",
+        "setTitreOriginal": "La missione di Sennar",
+        "setAuteur": "Licia Troisi",
+        "setPremiereEdition": "2004",
+        "setType": "Type-5",
+        "setSaga": "Saga-4",
+        "setTome": "2",
+        "setPhoto": "Photo-173"
+    },
+    "Livre-279": {
+        "setSlug": "Il_talismano_del_potere",
+        "setTitre": "Le Talisman du pouvoir",
+        "setTitreOriginal": "Il talismano del potere",
+        "setAuteur": "Licia Troisi",
+        "setPremiereEdition": "2005",
+        "setType": "Type-5",
+        "setSaga": "Saga-4",
+        "setTome": "3",
+        "setPhoto": "Photo-174"
+    },
+    "Livre-280": {
+        "setSlug": "City_of_Glass",
+        "setTitre": "La Cité de Verre",
+        "setTitreOriginal": "City of Glass",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2010",
+        "setType": "Type-5",
+        "setSaga": "Saga-21",
+        "setTome": "3",
+        "setPhoto": "Photo-1400"
+    },
+    "Livre-281": {
+        "setSlug": "Clockwork_Angel",
+        "setTitre": "L'Ange Mécanique",
+        "setTitreOriginal": "Clockwork Angel",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-80",
+        "setTome": "1",
+        "setPhoto": "Photo-1403"
+    },
+    "Livre-282": {
+        "setSlug": "Clockwork_Prince",
+        "setTitre": "Le Prince Mécanique",
+        "setTitreOriginal": "Clockwork Prince",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2014",
+        "setType": "Type-5",
+        "setSaga": "Saga-80",
+        "setTome": "2",
+        "setPhoto": "Photo-1404"
+    },
+    "Livre-283": {
+        "setSlug": "Lady_Midnight",
+        "setTitre": "La Princesse de la Nuit",
+        "setTitreOriginal": "Lady Midnight",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2017",
+        "setType": "Type-5",
+        "setSaga": "Saga-79",
+        "setTome": "1",
+        "setPhoto": "Photo-1401"
+    },
+    "Livre-284": {
+        "setSlug": "Lord_of_Shadows",
+        "setTitre": "Le Prince des Ténèbres",
+        "setTitreOriginal": "Lord of Shadows",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2018",
+        "setType": "Type-5",
+        "setSaga": "Saga-79",
+        "setTome": "2",
+        "setPhoto": "Photo-1402"
+    },
+    "Livre-285": {
+        "setSlug": "The_Legacies",
+        "setTitre": "Les Héritages",
+        "setTitreOriginal": "The Legacies",
+        "setAuteur": "Pittacus Lore",
+        "setPremiereEdition": "2018",
+        "setType": "Type-5",
+        "setSaga": "Saga-11",
+        "setTome": "8",
+        "setPhoto": "Photo-1397"
+    },
+    "Livre-286": {
+        "setSlug": "Madame_Connasse_se_lache_!",
+        "setTitre": "Madame Connasse se lâche !",
+        "setTitreOriginal": "Madame Connasse se lâche !",
+        "setAuteur": "Madame Connasse",
+        "setPremiereEdition": "2017",
+        "setType": "Type-11",
+        "setPhoto": "Photo-1406"
+    },
+    "Livre-287": {
+        "setSlug": "Madame_Connasse_se_lache_vraiment_!",
+        "setTitre": "Madame Connasse se lâche vraiment !",
+        "setTitreOriginal": "Madame Connasse se lâche vraiment !",
+        "setAuteur": "Madame Connasse",
+        "setPremiereEdition": "2018",
+        "setType": "Type-11",
+        "setPhoto": "Photo-1407"
+    },
+    "Livre-288": {
+        "setSlug": "Its_About_Love",
+        "setTitre": "It’s About Love",
+        "setTitreOriginal": "It’s About Love",
+        "setAuteur": "Steven Camden",
+        "setPremiereEdition": "2015",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1408"
+    },
+    "Livre-289": {
+        "setSlug": "Wit-ch_Star",
+        "setTitre": "L'Étoile de la Sor'cière",
+        "setTitreOriginal": "Wit'ch Star",
+        "setAuteur": "James Clemens",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-94",
+        "setTome": "5",
+        "setPhoto": "Photo-194"
+    },
+    "Livre-290": {
+        "setSlug": "Born_at_Midnight",
+        "setTitre": "Attirances",
+        "setTitreOriginal": "Born at Midnight",
+        "setAuteur": "C. C. Hunter",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setSaga": "Saga-3",
+        "setTome": "1",
+        "setPhoto": "Photo-1116"
+    },
+    "Livre-291": {
+        "setSlug": "Chosen_at_Nightfall",
+        "setTitre": "Crépuscule",
+        "setTitreOriginal": "Chosen at Nightfall",
+        "setAuteur": "C. C. Hunter",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setSaga": "Saga-3",
+        "setTome": "5",
+        "setPhoto": "Photo-1120"
+    },
+    "Livre-292": {
+        "setSlug": "Plague",
+        "setTitre": "L'Épidémie",
+        "setTitreOriginal": "Plague",
+        "setAuteur": "Michael Grant",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setSaga": "Saga-12",
+        "setTome": "4",
+        "setPhoto": "Photo-1433"
+    },
+    "Livre-293": {
+        "setSlug": "Fear",
+        "setTitre": "La Peur",
+        "setTitreOriginal": "Fear",
+        "setAuteur": "Michael Grant",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-12",
+        "setTome": "5",
+        "setPhoto": "Photo-1434"
+    },
+    "Livre-294": {
+        "setSlug": "Light",
+        "setTitre": "La Lumière",
+        "setTitreOriginal": "Light",
+        "setAuteur": "Michael Grant",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setSaga": "Saga-12",
+        "setTome": "6",
+        "setPhoto": "Photo-1435"
+    },
+    "Livre-295": {
+        "setSlug": "See_Me",
+        "setTitre": "See Me",
+        "setTitreOriginal": "See Me",
+        "setAuteur": "Nicholas Sparks",
+        "setPremiereEdition": "2015",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1436"
+    },
+    "Livre-296": {
+        "setSlug": "La_Naissance_des_Dieux",
+        "setTitre": "La Naissance des Dieux",
+        "setTitreOriginal": "La Naissance des Dieux",
+        "setAuteur": "Luc Ferry",
+        "setPremiereEdition": "2007",
+        "setType": "Type-4",
+        "setSaga": "Saga-82",
+        "setTome": "9",
+        "setPhoto": "Photo-1440"
+    },
+    "Livre-297": {
+        "setSlug": "Promethee_et_la_Boite_de_Pandore",
+        "setTitre": "Prométhée et la Boîte de Pandore",
+        "setTitreOriginal": "Prométhée et la Boîte de Pandore",
+        "setAuteur": "Luc Ferry",
+        "setPremiereEdition": "2017",
+        "setType": "Type-4",
+        "setSaga": "Saga-82",
+        "setTome": "2",
+        "setPhoto": "Photo-1443"
+    },
+    "Livre-298": {
+        "setSlug": "Persee_et_la_Gorgone_Meduse",
+        "setTitre": "Persée et la Gorgone Meduse",
+        "setTitreOriginal": "Persée et la Gorgone Meduse",
+        "setAuteur": "Luc Ferry",
+        "setPremiereEdition": "2017",
+        "setType": "Type-4",
+        "setSaga": "Saga-82",
+        "setTome": "6",
+        "setPhoto": "Photo-1442"
+    },
+    "Livre-299": {
+        "setSlug": "Oedipe",
+        "setTitre": "Oedipe",
+        "setTitreOriginal": "Oedipe",
+        "setAuteur": "Luc Ferry",
+        "setPremiereEdition": "2017",
+        "setType": "Type-4",
+        "setSaga": "Saga-82",
+        "setTome": "11",
+        "setPhoto": "Photo-1441"
+    },
+    "Livre-300": {
+        "setSlug": "Premieres_Armes",
+        "setTitre": "Premières Armes",
+        "setTitreOriginal": "Premières Armes",
+        "setAuteur": "Luc Ferry",
+        "setPremiereEdition": "2018",
+        "setType": "Type-4",
+        "setSaga": "Saga-82",
+        "setTome": "1",
+        "setPhoto": "Photo-1438"
+    },
+    "Livre-301": {
+        "setSlug": "Le_Voyage_de_l-Argo",
+        "setTitre": "Le Voyage de l'Argo",
+        "setTitreOriginal": "Le Voyage de l'Argo",
+        "setAuteur": "Luc Ferry",
+        "setPremiereEdition": "2018",
+        "setType": "Type-4",
+        "setSaga": "Saga-82",
+        "setTome": "2",
+        "setPhoto": "Photo-1439"
+    },
+    "Livre-302": {
+        "setSlug": "L-homme_parfait_est_une_connasse",
+        "setTitre": "L'homme parfait est une connasse",
+        "setTitreOriginal": "L'homme parfait est une connasse",
+        "setAuteur": "Anne-Sophie Girard et Marie-Aldine Girard",
+        "setPremiereEdition": "2018",
+        "setType": "Type-11",
+        "setPhoto": "Photo-1480"
+    },
+    "Livre-303": {
+        "setSlug": "Dear_John",
+        "setTitre": "Dear John",
+        "setTitreOriginal": "Dear John",
+        "setAuteur": "Nicholas Sparks",
+        "setPremiereEdition": "2006",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1497"
+    },
+    "Livre-304": {
+        "setSlug": "Safe_Haven",
+        "setTitre": "Safe Haven",
+        "setTitreOriginal": "Safe Haven",
+        "setAuteur": "Nicholas Sparks",
+        "setPremiereEdition": "2010",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1498"
+    },
+    "Livre-305": {
+        "setSlug": "The_Best_of_Me",
+        "setTitre": "The Best of Me",
+        "setTitreOriginal": "The Best of Me",
+        "setAuteur": "Nicholas Sparks",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1499"
+    },
+    "Livre-306": {
+        "setSlug": "The_Notebook",
+        "setTitre": "The Notebook",
+        "setTitreOriginal": "The Notebook",
+        "setAuteur": "Nicholas Sparks",
+        "setPremiereEdition": "1996",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1500"
+    },
+    "Livre-307": {
+        "setSlug": "If_I_Stay",
+        "setTitre": "If I Stay",
+        "setTitreOriginal": "If I Stay",
+        "setAuteur": "Gayle Forman",
+        "setPremiereEdition": "2009",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1501"
+    },
+    "Livre-308": {
+        "setSlug": "The_Longest_Ride",
+        "setTitre": "The Longest Ride",
+        "setTitreOriginal": "The Longest Ride",
+        "setAuteur": "Nicholas Sparks",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1502"
+    },
+    "Livre-309": {
+        "setSlug": "Where_She_Went",
+        "setTitre": "Where She Went",
+        "setTitreOriginal": "Where She Went",
+        "setAuteur": "Gayle Forman",
+        "setPremiereEdition": "2010",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1503"
+    },
+    "Livre-310": {
+        "setSlug": "City_of_Fallen_Angels",
+        "setTitre": "La Cité des anges déchus",
+        "setTitreOriginal": "City of Fallen Angels",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setSaga": "Saga-21",
+        "setTome": "4",
+        "setPhoto": "Photo-1504"
+    },
+    "Livre-311": {
+        "setSlug": "City_of_Lost_Souls",
+        "setTitre": "La Cité des âmes perdues",
+        "setTitreOriginal": "City of Lost Souls",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-21",
+        "setTome": "5",
+        "setPhoto": "Photo-1505"
+    },
+    "Livre-312": {
+        "setSlug": "Fried_Green_Tomatoes_at_the_Whistle_Stop_Cafe",
+        "setTitre": "Beignets de Tomates Vertes",
+        "setTitreOriginal": "Fried Green Tomatoes at the Whistle Stop Cafe",
+        "setAuteur": "Fannie Flagg",
+        "setPremiereEdition": "1987",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1506"
+    },
+    "Livre-313": {
+        "setSlug": "La_Pomme_de_Discorde",
+        "setTitre": "La Pomme de Discorde",
+        "setTitreOriginal": "La Pomme de Discorde",
+        "setAuteur": "Luc Ferry",
+        "setPremiereEdition": "2016",
+        "setType": "Type-4",
+        "setSaga": "Saga-107",
+        "setTome": "1",
+        "setPhoto": "Photo-1507"
+    },
+    "Livre-314": {
+        "setSlug": "La_Guerre_des_Dieux",
+        "setTitre": "La Guerre des Dieux",
+        "setTitreOriginal": "La Guerre des Dieux",
+        "setAuteur": "Luc Ferry",
+        "setPremiereEdition": "2017",
+        "setType": "Type-4",
+        "setSaga": "Saga-107",
+        "setTome": "2",
+        "setPhoto": "Photo-1508"
+    },
+    "Livre-315": {
+        "setSlug": "La_chute_de_Troie",
+        "setTitre": "La chute de Troie",
+        "setTitreOriginal": "La chute de Troie",
+        "setAuteur": "Luc Ferry",
+        "setPremiereEdition": "2018",
+        "setType": "Type-4",
+        "setSaga": "Saga-107",
+        "setTome": "3",
+        "setPhoto": "Photo-1509"
+    },
+    "Livre-316": {
+        "setSlug": "Feito-sutei_naito_11",
+        "setTitre": "Fate\/stay night 11",
+        "setTitreOriginal": "Feito\/sutei naito 11",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2009",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "11",
+        "setPhoto": "Photo-1520"
+    },
+    "Livre-317": {
+        "setSlug": "Feito-sutei_naito_12",
+        "setTitre": "Fate\/stay night 12",
+        "setTitreOriginal": "Feito\/sutei naito 12",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2010",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "12",
+        "setPhoto": "Photo-1521"
+    },
+    "Livre-318": {
+        "setSlug": "Feito-sutei_naito_13",
+        "setTitre": "Fate\/stay night 13",
+        "setTitreOriginal": "Feito\/sutei naito 13",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2010",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "13",
+        "setPhoto": "Photo-1522"
+    },
+    "Livre-319": {
+        "setSlug": "Feito-sutei_naito_15",
+        "setTitre": "Fate\/stay night 15",
+        "setTitreOriginal": "Feito\/sutei naito 15",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2011",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "15",
+        "setPhoto": "Photo-1524"
+    },
+    "Livre-320": {
+        "setSlug": "Feito-sutei_naito_16",
+        "setTitre": "Fate\/stay night 16",
+        "setTitreOriginal": "Feito\/sutei naito 16",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2011",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "16",
+        "setPhoto": "Photo-1525"
+    },
+    "Livre-321": {
+        "setSlug": "Feito-sutei_naito_17",
+        "setTitre": "Fate\/stay night 17",
+        "setTitreOriginal": "Feito\/sutei naito 17",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2011",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "17",
+        "setPhoto": "Photo-1526"
+    },
+    "Livre-322": {
+        "setSlug": "Feito-sutei_naito_18",
+        "setTitre": "Fate\/stay night 18",
+        "setTitreOriginal": "Feito\/sutei naito 18",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2012",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "18",
+        "setPhoto": "Photo-1527"
+    },
+    "Livre-323": {
+        "setSlug": "Feito-sutei_naito_19",
+        "setTitre": "Fate\/stay night 19",
+        "setTitreOriginal": "Feito\/sutei naito 19",
+        "setAuteur": "Datto Nishiwaki",
+        "setPremiereEdition": "2012",
+        "setType": "Type-2",
+        "setSaga": "Saga-85",
+        "setTome": "19",
+        "setPhoto": "Photo-1528"
+    },
+    "Livre-324": {
+        "setSlug": "Mar_1",
+        "setTitre": "Mär 1",
+        "setTitreOriginal": "Mär 1",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2003",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "1",
+        "setPhoto": "Photo-1556"
+    },
+    "Livre-325": {
+        "setSlug": "Mar_2",
+        "setTitre": "Mär 2",
+        "setTitreOriginal": "Mär 2",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2003",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "2",
+        "setPhoto": "Photo-1557"
+    },
+    "Livre-326": {
+        "setSlug": "Mar_3",
+        "setTitre": "Mär 3",
+        "setTitreOriginal": "Mär 3",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2003",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "3",
+        "setPhoto": "Photo-1558"
+    },
+    "Livre-327": {
+        "setSlug": "Mar_4",
+        "setTitre": "Mär 4",
+        "setTitreOriginal": "Mär 4",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2004",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "4",
+        "setPhoto": "Photo-1559"
+    },
+    "Livre-328": {
+        "setSlug": "Mar_5",
+        "setTitre": "Mär 5",
+        "setTitreOriginal": "Mär 5",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2004",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "5",
+        "setPhoto": "Photo-1560"
+    },
+    "Livre-329": {
+        "setSlug": "Mar_6",
+        "setTitre": "Mär 6",
+        "setTitreOriginal": "Mär 6",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2004",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "6",
+        "setPhoto": "Photo-1561"
+    },
+    "Livre-330": {
+        "setSlug": "Mar_7",
+        "setTitre": "Mär 7",
+        "setTitreOriginal": "Mär 7",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2004",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "7",
+        "setPhoto": "Photo-1562"
+    },
+    "Livre-331": {
+        "setSlug": "Mar_8",
+        "setTitre": "Mär 8",
+        "setTitreOriginal": "Mär 8",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2004",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "8",
+        "setPhoto": "Photo-1563"
+    },
+    "Livre-332": {
+        "setSlug": "Mar_9",
+        "setTitre": "Mär 9",
+        "setTitreOriginal": "Mär 9",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2005",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "9",
+        "setPhoto": "Photo-1564"
+    },
+    "Livre-333": {
+        "setSlug": "Mar_10",
+        "setTitre": "Mär 10",
+        "setTitreOriginal": "Mär 10",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2005",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "10",
+        "setPhoto": "Photo-1565"
+    },
+    "Livre-334": {
+        "setSlug": "Mar_11",
+        "setTitre": "Mär 11",
+        "setTitreOriginal": "Mär 11",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2005",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "11",
+        "setPhoto": "Photo-1566"
+    },
+    "Livre-335": {
+        "setSlug": "Mar_12",
+        "setTitre": "Mär 12",
+        "setTitreOriginal": "Mär 12",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2005",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "12",
+        "setPhoto": "Photo-1567"
+    },
+    "Livre-336": {
+        "setSlug": "Mar_13",
+        "setTitre": "Mär 13",
+        "setTitreOriginal": "Mär 13",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2006",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "13",
+        "setPhoto": "Photo-1568"
+    },
+    "Livre-337": {
+        "setSlug": "Mar_14",
+        "setTitre": "Mär 14",
+        "setTitreOriginal": "Mär 14",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2006",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "14",
+        "setPhoto": "Photo-1569"
+    },
+    "Livre-338": {
+        "setSlug": "Mar_15",
+        "setTitre": "Mär 15",
+        "setTitreOriginal": "Mär 15",
+        "setAuteur": "Nobuyuki Anzai",
+        "setPremiereEdition": "2006",
+        "setType": "Type-2",
+        "setSaga": "Saga-86",
+        "setTome": "15",
+        "setPhoto": "Photo-1570"
+    },
+    "Livre-339": {
+        "setSlug": "-Trashtalk",
+        "setTitre": "#Trashtalk",
+        "setTitreOriginal": "#Trashtalk",
+        "setAuteur": "So Press",
+        "setPremiereEdition": "2018",
+        "setType": "Type-6",
+        "setPhoto": "Photo-1571"
+    },
+    "Livre-340": {
+        "setSlug": "Red_Eyes_Sword_Zero_-_Akame_ga_Kill_!_Tome_01",
+        "setTitre": "Red Eyes Sword Zero - Akame ga Kill ! Tome 01",
+        "setTitreOriginal": "Red Eyes Sword Zero - Akame ga Kill ! Tome 01",
+        "setAuteur": "Takahiro",
+        "setPremiereEdition": "2010",
+        "setType": "Type-2",
+        "setSaga": "Saga-89",
+        "setTome": "1",
+        "setPhoto": "Photo-1533"
+    },
+    "Livre-341": {
+        "setSlug": "Red_Eyes_Sword_Zero_-_Akame_ga_Kill_!_Tome_02",
+        "setTitre": "Red Eyes Sword Zero - Akame ga Kill ! Tome 02",
+        "setTitreOriginal": "Red Eyes Sword Zero - Akame ga Kill ! Tome 02",
+        "setAuteur": "Takahiro",
+        "setPremiereEdition": "2011",
+        "setType": "Type-2",
+        "setSaga": "Saga-89",
+        "setTome": "2",
+        "setPhoto": "Photo-1534"
+    },
+    "Livre-342": {
+        "setSlug": "Red_Eyes_Sword_Zero_-_Akame_ga_Kill_!_Tome_03",
+        "setTitre": "Red Eyes Sword Zero - Akame ga Kill ! Tome 03",
+        "setTitreOriginal": "Red Eyes Sword Zero - Akame ga Kill ! Tome 03",
+        "setAuteur": "Takahiro",
+        "setPremiereEdition": "2011",
+        "setType": "Type-2",
+        "setSaga": "Saga-89",
+        "setTome": "3",
+        "setPhoto": "Photo-1535"
+    },
+    "Livre-343": {
+        "setSlug": "Red_Eyes_Sword_Zero_-_Akame_ga_Kill_!_Tome_04",
+        "setTitre": "Red Eyes Sword Zero - Akame ga Kill ! Tome 04",
+        "setTitreOriginal": "Red Eyes Sword Zero - Akame ga Kill ! Tome 04",
+        "setAuteur": "Takahiro",
+        "setPremiereEdition": "2012",
+        "setType": "Type-2",
+        "setSaga": "Saga-89",
+        "setTome": "4",
+        "setPhoto": "Photo-1532"
+    },
+    "Livre-344": {
+        "setSlug": "Red_Eyes_Sword_Zero_-_Akame_ga_Kill_!_Tome_05",
+        "setTitre": "Red Eyes Sword Zero - Akame ga Kill ! Tome 05",
+        "setTitreOriginal": "Red Eyes Sword Zero - Akame ga Kill ! Tome 05",
+        "setAuteur": "Takahiro",
+        "setPremiereEdition": "2012",
+        "setType": "Type-2",
+        "setSaga": "Saga-89",
+        "setTome": "5",
+        "setPhoto": "Photo-1607"
+    },
+    "Livre-345": {
+        "setSlug": "Red_Eyes_Sword_Zero_-_Akame_ga_Kill_!_Tome_06",
+        "setTitre": "Red Eyes Sword Zero - Akame ga Kill ! Tome 06",
+        "setTitreOriginal": "Red Eyes Sword Zero - Akame ga Kill ! Tome 06",
+        "setAuteur": "Takahiro",
+        "setPremiereEdition": "2012",
+        "setType": "Type-2",
+        "setSaga": "Saga-89",
+        "setTome": "6",
+        "setPhoto": "Photo-1608"
+    },
+    "Livre-346": {
+        "setSlug": "Red_Eyes_Sword_Zero_-_Akame_ga_Kill_!_Tome_07",
+        "setTitre": "Red Eyes Sword Zero - Akame ga Kill ! Tome 07",
+        "setTitreOriginal": "Red Eyes Sword Zero - Akame ga Kill ! Tome 07",
+        "setAuteur": "Takahiro",
+        "setPremiereEdition": "2013",
+        "setType": "Type-2",
+        "setSaga": "Saga-89",
+        "setTome": "7",
+        "setPhoto": "Photo-1609"
+    },
+    "Livre-347": {
+        "setSlug": "Red_Eyes_Sword_Zero_-_Akame_ga_Kill_!_Tome_08",
+        "setTitre": "Red Eyes Sword Zero - Akame ga Kill ! Tome 08",
+        "setTitreOriginal": "Red Eyes Sword Zero - Akame ga Kill ! Tome 08",
+        "setAuteur": "Takahiro",
+        "setPremiereEdition": "2013",
+        "setType": "Type-2",
+        "setSaga": "Saga-89",
+        "setTome": "8",
+        "setPhoto": "Photo-1610"
+    },
+    "Livre-348": {
+        "setSlug": "Red_Eyes_Sword_Zero_-_Akame_ga_Kill_!_Tome_09",
+        "setTitre": "Red Eyes Sword Zero - Akame ga Kill ! Tome 09",
+        "setTitreOriginal": "Red Eyes Sword Zero - Akame ga Kill ! Tome 09",
+        "setAuteur": "Takahiro",
+        "setPremiereEdition": "2014",
+        "setType": "Type-2",
+        "setSaga": "Saga-89",
+        "setTome": "9",
+        "setPhoto": "Photo-1611"
+    },
+    "Livre-349": {
+        "setSlug": "Diners_express_en_rentrant_du_boulot",
+        "setTitre": "Diners express en rentrant du boulot",
+        "setTitreOriginal": "Diners express en rentrant du boulot",
+        "setAuteur": "Divers",
+        "setPremiereEdition": "2018",
+        "setType": "Type-6",
+        "setPhoto": "Photo-1623"
+    },
+    "Livre-350": {
+        "setSlug": "La_mythologie_grecque",
+        "setTitre": "La mythologie grecque",
+        "setTitreOriginal": "La mythologie grecque",
+        "setAuteur": "Hélène Montardre",
+        "setPremiereEdition": "2011",
+        "setType": "Type-12",
+        "setPhoto": "Photo-1624"
+    },
+    "Livre-351": {
+        "setSlug": "Pilates_Le_corps_en_mouvement",
+        "setTitre": "Pilates: Le corps en mouvement",
+        "setTitreOriginal": "Pilates: Le corps en mouvement",
+        "setAuteur": "Alycea Ungaro",
+        "setPremiereEdition": "2017",
+        "setType": "Type-13",
+        "setPhoto": "Photo-1625"
+    },
+    "Livre-352": {
+        "setSlug": "Patients_casse-couilles_-_Fous_rires_aux_urgences",
+        "setTitre": "Patients casse-couilles - Fous rires aux urgences",
+        "setTitreOriginal": "Patients casse-couilles - Fous rires aux urgences",
+        "setAuteur": "Sonia Camay",
+        "setPremiereEdition": "2019",
+        "setType": "Type-11",
+        "setPhoto": "Photo-1626"
+    },
+    "Livre-353": {
+        "setSlug": "Les_dieux_de_l-Egypte",
+        "setTitre": "Les dieux de l'Égypte",
+        "setTitreOriginal": "Les dieux de l'Égypte",
+        "setAuteur": "Claude Traunecker",
+        "setPremiereEdition": "2019",
+        "setType": "Type-12",
+        "setPhoto": "Photo-1627"
+    },
+    "Livre-354": {
+        "setSlug": "Celtic_Myths",
+        "setTitre": "Mythes celtiques",
+        "setTitreOriginal": "Celtic Myths",
+        "setAuteur": "Miranda jane Green",
+        "setPremiereEdition": "1995",
+        "setType": "Type-12",
+        "setPhoto": "Photo-1628"
+    },
+    "Livre-355": {
+        "setSlug": "Petit_livre_-_Le_solfege_en_5_minutes_par_jour",
+        "setTitre": "Petit livre - Le solfège en 5 minutes par jour",
+        "setTitreOriginal": "Petit livre - Le solfège en 5 minutes par jour",
+        "setAuteur": "Frédéric Rouyer",
+        "setPremiereEdition": "2017",
+        "setType": "Type-6",
+        "setPhoto": "Photo-1629"
+    },
+    "Livre-356": {
+        "setSlug": "Le_livre_de_java_premier_langage",
+        "setTitre": "Le livre de java premier langage",
+        "setTitreOriginal": "Le livre de java premier langage",
+        "setAuteur": "Anne Tasso",
+        "setPremiereEdition": "2017",
+        "setType": "Type-6",
+        "setPhoto": "Photo-1630"
+    },
+    "Livre-357": {
+        "setSlug": "Vampire_Academy",
+        "setTitre": "Soeurs de sang",
+        "setTitreOriginal": "Vampire Academy",
+        "setAuteur": "Richelle Mead",
+        "setPremiereEdition": "2016",
+        "setType": "Type-5",
+        "setSaga": "Saga-91",
+        "setTome": "1",
+        "setPhoto": "Photo-1632"
+    },
+    "Livre-358": {
+        "setSlug": "The_Darkest_Minds",
+        "setTitre": "Les Insoumis \/ Darkest Minds: Rébellion",
+        "setTitreOriginal": "The Darkest Minds",
+        "setAuteur": "Alexandra Bracken",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-92",
+        "setTome": "1",
+        "setPhoto": "Photo-1664"
+    },
+    "Livre-359": {
+        "setSlug": "Never_Fade",
+        "setTitre": "Le chemin de la vérité \/ Darkest Minds 2: Le chemin de la vérité",
+        "setTitreOriginal": "Never Fade",
+        "setAuteur": "Alexandra Bracken",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setSaga": "Saga-92",
+        "setTome": "2",
+        "setPhoto": "Photo-1665"
+    },
+    "Livre-360": {
+        "setSlug": "In_the_Afterlight",
+        "setTitre": "Dénouement",
+        "setTitreOriginal": "In the Afterlight",
+        "setAuteur": "Alexandra Bracken",
+        "setPremiereEdition": "2014",
+        "setType": "Type-5",
+        "setSaga": "Saga-92",
+        "setTome": "3",
+        "setPhoto": "Photo-1666"
+    },
+    "Livre-361": {
+        "setSlug": "The_Darkest_Legacy",
+        "setTitre": "Héritage",
+        "setTitreOriginal": "The Darkest Legacy",
+        "setAuteur": "Alexandra Bracken",
+        "setPremiereEdition": "2018",
+        "setType": "Type-5",
+        "setSaga": "Saga-92",
+        "setTome": "4",
+        "setPhoto": "Photo-1667"
+    },
+    "Livre-362": {
+        "setSlug": "Queen_of_Air_and_Darkness_-_Part_1",
+        "setTitre": "La Reine de l'air et des ombres - Partie 1",
+        "setTitreOriginal": "Queen of Air and Darkness - Part 1",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2019",
+        "setType": "Type-5",
+        "setSaga": "Saga-79",
+        "setTome": "3",
+        "setPhoto": "Photo-1668"
+    },
+    "Livre-363": {
+        "setSlug": "Queen_of_Air_and_Darkness_-_Part_2",
+        "setTitre": "La Reine de l'air et des ombres - Partie 2",
+        "setTitreOriginal": "Queen of Air and Darkness - Part 2",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2019",
+        "setType": "Type-5",
+        "setSaga": "Saga-79",
+        "setTome": "4",
+        "setPhoto": "Photo-1669"
+    },
+    "Livre-364": {
+        "setSlug": "Clockwork_Princess",
+        "setTitre": "La Princesse mécanique",
+        "setTitreOriginal": "Clockwork Princess",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2013",
+        "setType": "Type-5",
+        "setSaga": "Saga-80",
+        "setTome": "3",
+        "setPhoto": "Photo-1670"
+    },
+    "Livre-365": {
+        "setSlug": "City_of_Heavenly_Fire",
+        "setTitre": "La Cité du feu sacré",
+        "setTitreOriginal": "City of Heavenly Fire",
+        "setAuteur": "Cassandra Clare",
+        "setPremiereEdition": "2014",
+        "setType": "Type-5",
+        "setSaga": "Saga-21",
+        "setTome": "6",
+        "setPhoto": "Photo-1671"
+    },
+    "Livre-366": {
+        "setSlug": "Harry_Potter_and_the\r\nPhilosopher-s_Stone",
+        "setTitre": "Harry Potter à l'école des sorciers",
+        "setTitreOriginal": "Harry Potter and the\r\nPhilosopher's Stone",
+        "setAuteur": "J.K. Rowling",
+        "setPremiereEdition": "1997",
+        "setType": "Type-5",
+        "setSaga": "Saga-26",
+        "setTome": "1",
+        "setPhoto": "Photo-1672"
+    },
+    "Livre-367": {
+        "setSlug": "Harry_Potter_and_the_Prisoner_of_Azkaban",
+        "setTitre": "Harry Potter et le Prisonnier d'Azkaban",
+        "setTitreOriginal": "Harry Potter and the Prisoner of Azkaban",
+        "setAuteur": "J.K. Rowling",
+        "setPremiereEdition": "1999",
+        "setType": "Type-5",
+        "setSaga": "Saga-26",
+        "setTome": "3",
+        "setPhoto": "Photo-1674"
+    },
+    "Livre-368": {
+        "setSlug": "Harry_Potter_and_the_Goblet_of_Fire",
+        "setTitre": "Harry Potter et la Coupe de feu",
+        "setTitreOriginal": "Harry Potter and the Goblet of Fire",
+        "setAuteur": "J.K. Rowling",
+        "setPremiereEdition": "2000",
+        "setType": "Type-5",
+        "setSaga": "Saga-26",
+        "setTome": "4",
+        "setPhoto": "Photo-1675"
+    },
+    "Livre-369": {
+        "setSlug": "Harry_Potter_and_the_Order_of_the_Phoenix",
+        "setTitre": "Harry Potter et l'Ordre du phénix",
+        "setTitreOriginal": "Harry Potter and the Order of the Phoenix",
+        "setAuteur": "J.K. Rowling",
+        "setPremiereEdition": "2003",
+        "setType": "Type-5",
+        "setSaga": "Saga-26",
+        "setTome": "5",
+        "setPhoto": "Photo-1676"
+    },
+    "Livre-370": {
+        "setSlug": "Harry_Potter_and_the_Half-Blood_Prince",
+        "setTitre": "Harry Potter et le Prince de sang-mêlé",
+        "setTitreOriginal": "Harry Potter and the Half-Blood Prince",
+        "setAuteur": "J.K. Rowling",
+        "setPremiereEdition": "2005",
+        "setType": "Type-5",
+        "setSaga": "Saga-26",
+        "setTome": "6",
+        "setPhoto": "Photo-1677"
+    },
+    "Livre-371": {
+        "setSlug": "Harry_Potter_and_the_Deathly_Hallows",
+        "setTitre": "Harry Potter et les Reliques de la Mort",
+        "setTitreOriginal": "Harry Potter and the Deathly Hallows",
+        "setAuteur": "J.K. Rowling",
+        "setPremiereEdition": "2007",
+        "setType": "Type-5",
+        "setSaga": "Saga-26",
+        "setTome": "7",
+        "setPhoto": "Photo-1678"
+    },
+    "Livre-372": {
+        "setSlug": "Madame_connasse_clashe_les_mecs",
+        "setTitre": "Madame connasse clashe les mecs",
+        "setTitreOriginal": "Madame connasse clashe les mecs",
+        "setAuteur": "Madame Connasse",
+        "setPremiereEdition": "2019",
+        "setType": "Type-11",
+        "setPhoto": "Photo-1686"
+    },
+    "Livre-373": {
+        "setSlug": "Madame_connasse_clashe_les_filles",
+        "setTitre": "Madame connasse clashe les filles",
+        "setTitreOriginal": "Madame connasse clashe les filles",
+        "setAuteur": "Madame Connasse",
+        "setPremiereEdition": "2019",
+        "setType": "Type-11",
+        "setPhoto": "Photo-1687"
+    },
+    "Livre-374": {
+        "setSlug": "Restore_me",
+        "setTitre": "Crois en moi",
+        "setTitreOriginal": "Restore me",
+        "setAuteur": "Tahereh Mafi",
+        "setPremiereEdition": "2018",
+        "setType": "Type-5",
+        "setSaga": "Saga-20",
+        "setTome": "4",
+        "setPhoto": "Photo-1688"
+    },
+    "Livre-375": {
+        "setSlug": "Midnight_Hour",
+        "setTitre": "Frissons",
+        "setTitreOriginal": "Midnight Hour",
+        "setAuteur": "C. C. Hunter",
+        "setPremiereEdition": "2018",
+        "setType": "Type-5",
+        "setSaga": "Saga-3",
+        "setTome": "6",
+        "setPhoto": "Photo-1711"
+    },
+    "Livre-376": {
+        "setSlug": "Strange_Case_of_Dr_Jekyll_and_Mr_Hyde",
+        "setTitre": "L'Étrange Cas du docteur Jekyll et de M. Hyde",
+        "setTitreOriginal": "Strange Case of Dr Jekyll and Mr Hyde",
+        "setAuteur": "Robert Louis Stevenson",
+        "setPremiereEdition": "1886",
+        "setType": "Type-5",
+        "setPhoto": "Photo-1690"
+    },
+    "Livre-377": {
+        "setSlug": "The_Fork_the_Witch_and_the_Worm",
+        "setTitre": "La Fourchette, la Sorcière et le Dragon",
+        "setTitreOriginal": "The Fork, the Witch, and the Worm",
+        "setAuteur": "Christopher Paolini",
+        "setPremiereEdition": "2018",
+        "setType": "Type-5",
+        "setSaga": "Saga-95",
+        "setTome": "1",
+        "setPhoto": "Photo-1715"
+    },
+    "Livre-378": {
+        "setSlug": "Reborn",
+        "setTitre": "Métamorphose",
+        "setTitreOriginal": "Reborn",
+        "setAuteur": "C. C. Hunter",
+        "setPremiereEdition": "2014",
+        "setType": "Type-5",
+        "setSaga": "Saga-96",
+        "setTome": "1",
+        "setPhoto": "Photo-1716"
+    },
+    "Livre-379": {
+        "setSlug": "Eternal",
+        "setTitre": "Alliance",
+        "setTitreOriginal": "Eternal",
+        "setAuteur": "C. C. Hunter",
+        "setPremiereEdition": "2014",
+        "setType": "Type-5",
+        "setSaga": "Saga-96",
+        "setTome": "2",
+        "setPhoto": "Photo-1717"
+    },
+    "Livre-380": {
+        "setSlug": "Unspoken",
+        "setTitre": "Délivrance",
+        "setTitreOriginal": "Unspoken",
+        "setAuteur": "C. C. Hunter",
+        "setPremiereEdition": "2015",
+        "setType": "Type-5",
+        "setSaga": "Saga-96",
+        "setTome": "3",
+        "setPhoto": "Photo-1718"
+    },
+    "Livre-381": {
+        "setSlug": "Premiere_saison_partie_1",
+        "setTitre": "Première saison, partie 1",
+        "setTitreOriginal": "Première saison, partie 1",
+        "setAuteur": "John Lang",
+        "setPremiereEdition": "2015",
+        "setType": "Type-4",
+        "setSaga": "Saga-97",
+        "setTome": "1",
+        "setPhoto": "Photo-1719"
+    },
+    "Livre-382": {
+        "setSlug": "Premiere_saison_partie_2",
+        "setTitre": "Première saison, partie 2",
+        "setTitreOriginal": "Première saison, partie 2",
+        "setAuteur": "John Lang",
+        "setPremiereEdition": "2015",
+        "setType": "Type-4",
+        "setSaga": "Saga-97",
+        "setTome": "2",
+        "setPhoto": "Photo-1720"
+    },
+    "Livre-383": {
+        "setSlug": "Monster",
+        "setTitre": "Monster",
+        "setTitreOriginal": "Monster",
+        "setAuteur": "Michael Grant",
+        "setPremiereEdition": "2017",
+        "setType": "Type-5",
+        "setSaga": "Saga-104",
+        "setTome": "1",
+        "setPhoto": "Photo-1722"
+    },
+    "Livre-384": {
+        "setSlug": "Villain",
+        "setTitre": "Monster - Livre 2",
+        "setTitreOriginal": "Villain",
+        "setAuteur": "Michael Grant",
+        "setPremiereEdition": "2018",
+        "setType": "Type-5",
+        "setSaga": "Saga-104",
+        "setTome": "2",
+        "setPhoto": "Photo-1723"
+    },
+    "Livre-385": {
+        "setSlug": "The_Playbook_Suit_Up_Score_Chicks_Be_Awesome",
+        "setTitre": "Le Playbook : 75 techniques de drague",
+        "setTitreOriginal": "The Playbook: Suit Up, Score Chicks, Be Awesome",
+        "setAuteur": "Barney Stinson et Matt Kuhn",
+        "setPremiereEdition": "2011",
+        "setType": "Type-11",
+        "setPhoto": "Photo-1732"
+    },
+    "Livre-386": {
+        "setSlug": "La_Menace",
+        "setTitre": "La Menace",
+        "setTitreOriginal": "La Menace",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1987",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "7",
+        "setPhoto": "Photo-1065"
+    },
+    "Livre-387": {
+        "setSlug": "Le_Duel",
+        "setTitre": "Le Duel",
+        "setTitreOriginal": "Le Duel",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1987",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "8",
+        "setPhoto": "Photo-1066"
+    },
+    "Livre-388": {
+        "setSlug": "Sangohan",
+        "setTitre": "Sangohan",
+        "setTitreOriginal": "Sangohan",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1987",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "9",
+        "setPhoto": "Photo-1067"
+    },
+    "Livre-389": {
+        "setSlug": "Le_Miracule",
+        "setTitre": "Le Miraculé",
+        "setTitreOriginal": "Le Miraculé",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1987",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "10",
+        "setPhoto": "Photo-1068"
+    },
+    "Livre-390": {
+        "setSlug": "Chi-chi",
+        "setTitre": "Chi-chi",
+        "setTitreOriginal": "Chi-chi",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1988",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "15",
+        "setPhoto": "Photo-1073"
+    },
+    "Livre-391": {
+        "setSlug": "L-Heritier",
+        "setTitre": "L'Héritier",
+        "setTitreOriginal": "L'Héritier",
+        "setAuteur": "Akira Toriyama",
+        "setPremiereEdition": "1989",
+        "setType": "Type-2",
+        "setSaga": "Saga-19",
+        "setTome": "16",
+        "setPhoto": "Photo-1074"
+    },
+    "Livre-392": {
+        "setSlug": "Le_nuove_avventure_di_Nihal_1",
+        "setTitre": "Les nouvelles Aventures de Nihal 1",
+        "setTitreOriginal": "Le nuove avventure di Nihal 1",
+        "setAuteur": "Licia Troisi \/ Roberto Recchioni",
+        "setPremiereEdition": "2011",
+        "setType": "Type-4",
+        "setSaga": "Saga-100",
+        "setTome": "1",
+        "setPhoto": "Photo-1736"
+    },
+    "Livre-393": {
+        "setSlug": "Le_nuove_avventure_di_Nihal_2",
+        "setTitre": "Les nouvelles Aventures de Nihal 2",
+        "setTitreOriginal": "Le nuove avventure di Nihal 2",
+        "setAuteur": "Licia Troisi \/ Roberto Recchioni",
+        "setPremiereEdition": "2011",
+        "setType": "Type-4",
+        "setSaga": "Saga-100",
+        "setTome": "2",
+        "setPhoto": "Photo-1739"
+    },
+    "Livre-394": {
+        "setSlug": "Android_-_Guide_de_developpement_d-applications_Java_pour_Smartphones_et_Tablettes_4eme_edition",
+        "setTitre": "Android - Guide de développement d'applications Java pour Smartphones et Tablettes, 4ème édition",
+        "setTitreOriginal": "Android - Guide de développement d'applications Java pour Smartphones et Tablettes, 4ème édition",
+        "setAuteur": "Sylvain Hébuterne",
+        "setPremiereEdition": "2018",
+        "setType": "Type-6",
+        "setPhoto": "Photo-1740"
+    },
+    "Livre-395": {
+        "setSlug": "Darkness_becomes_her",
+        "setTitre": "Le noir lui va si bien",
+        "setTitreOriginal": "Darkness becomes her",
+        "setAuteur": "Kelly Keaton",
+        "setPremiereEdition": "2011",
+        "setType": "Type-5",
+        "setSaga": "Saga-101",
+        "setTome": "1",
+        "setPhoto": "Photo-1750"
+    },
+    "Livre-396": {
+        "setSlug": "A_beautiful_evil",
+        "setTitre": "Belle et Mortelle",
+        "setTitreOriginal": "A beautiful evil",
+        "setAuteur": "Kelly Keaton",
+        "setPremiereEdition": "2012",
+        "setType": "Type-5",
+        "setSaga": "Saga-101",
+        "setTome": "2",
+        "setPhoto": "Photo-1751"
+    }
+}

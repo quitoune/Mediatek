@@ -1,0 +1,21 @@
+{% if acteurFilms is empty %}
+	<div class="col-12 text-center">
+		{% if acteur.sexe %}Elle {% else %}Il {% endif %}
+		n'a joué dans aucun film que vous possédez.
+	</div>
+{% else %}
+    {% for acteurFilm in acteurFilms %}
+    	<div class="col-img">
+			<div class="img-elt">
+        		<a href="{{ path('film_afficher', {'slug': acteurFilm.film.slug}) }}">
+            		{{ image(acteurFilm.film) | raw }}<br>
+            		{% if acteurFilm.role is not null %} {{ acteurFilm.role }}<br> {% endif %}
+            		{{ acteurFilm.principal | roleActeurFilm }}
+            	</a>
+        	</div>
+        </div>
+    {% endfor %}
+    <div class="col-12 text-center">
+    	{% include 'app/ajax_pagination.html.twig' %}
+    </div>
+{% endif %}

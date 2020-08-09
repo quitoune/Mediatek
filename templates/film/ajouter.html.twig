@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Film - Ajout {% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div class="shadow-sm p-3 mb-5 bg-white rounded border">
+        <div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.titre) }}
+            </div>
+        	<div class="col-sm">
+                {{ form_row(form.titre_original) }}
+            </div>
+    	</div>
+    	
+        <div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.realisateur) }}
+            </div>
+        	<div class="col-sm">
+                {{ form_row(form.annee) }}
+            </div>
+    	</div>
+    	
+        <div class="row">
+        	<div class="col-sm w-100">
+                {{ form_row(form.saga) }}
+            </div>
+        	<div class="col-sm">
+                {{ form_row(form.volet) }}
+            </div>
+    	</div>
+    	
+        <div class="row">
+        	<div class="col-sm w-100">
+                {{ form_row(form.duree) }}
+            </div>
+        	<div class="col-sm w-100">
+                {{ form_row(form.categories) }}
+            </div>
+    	</div>
+        
+        <div class="row text-center center-item">
+            {{ form_row(form.save) }}
+        </div>
+    </div>
+    
+    {{ form_rest(form) }}
+    {{ form_errors(form) }}
+    {{ form_end(form) }}
+    
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#film_saga").select2();
+			$("#film_categories").select2({
+				multiple: true
+			});
+		});
+	</script>
+{% endblock %}

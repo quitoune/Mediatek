@@ -1,0 +1,17 @@
+{% if invites is empty %}
+	<div class="col-12 text-center">
+		Aucun invité n'est renseigné pour cette saison.
+	</div>
+{% else %}
+		{% for invite in invites %}
+			<div class="col-img">
+				<div class="img-elt">
+					<a href="{{ path('acteur_afficher', {'slug': invite.acteur.slug}) }}">
+    				    {{ image(invite.acteur) | raw }}
+    				    {% if invite.role is not null %}<br>{{ invite.role }}{% endif %}
+    				</a>
+				</div>
+			</div>
+        {% endfor %}
+        </table>
+{% endif %}
