@@ -54,7 +54,7 @@ class Film
     private $volet;
     
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Categorie", inversedBy="films")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Categorie", mappedBy="films")
      */
     private $categories;
     
@@ -126,7 +126,7 @@ class Film
         return $this->titre_original;
     }
 
-    public function setTitreOriginal(?string $titre_original): self
+    public function setTitreOriginal(string $titre_original): self
     {
         $this->titre_original = $titre_original;
 
@@ -203,6 +203,7 @@ class Film
     {
         if (!$this->categories->contains($category)) {
             $this->categories[] = $category;
+            $category->addFilm($this);
         }
 
         return $this;
@@ -212,6 +213,7 @@ class Film
     {
         if ($this->categories->contains($category)) {
             $this->categories->removeElement($category);
+            $category->removeFilm($this);
         }
 
         return $this;

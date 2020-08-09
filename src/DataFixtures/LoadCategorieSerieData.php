@@ -7,7 +7,7 @@ use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
-class LoadFilmCategorieData extends Fixture implements DependentFixtureInterface, ContainerAwareInterface
+class LoadCategorieSerieData extends Fixture implements DependentFixtureInterface, ContainerAwareInterface
 {
     private $container;
     
@@ -19,17 +19,17 @@ class LoadFilmCategorieData extends Fixture implements DependentFixtureInterface
     public function load(ObjectManager $manager)
     {
         $file  = str_replace("\\", "/", $this->container->getParameter('fixtures_dir'));
-        $file .= "film_categorie.json";
-        $filmPersonnesArray = json_decode(file_get_contents($file), true);
-        foreach ($filmPersonnesArray as $name => $objet) {
-            $film = $this->getReference($name);
+        $file .= "categorie_serie.json";
+        $seriePersonnesArray = json_decode(file_get_contents($file), true);
+        foreach ($seriePersonnesArray as $name => $objet) {
+            $categorie = $this->getReference($name);
             
             foreach ($objet as $val) {
-                $categorie = $this->getReference($val);
-                $film->addCategory($categorie);
+                $serie = $this->getReference($val);
+                $categorie->addSerie($serie);
             }
             
-            $manager->persist($film);
+            $manager->persist($categorie);
         }
         $manager->flush();
     }
@@ -37,8 +37,8 @@ class LoadFilmCategorieData extends Fixture implements DependentFixtureInterface
     public function getDependencies()
     {
         return array(
-            LoadFilmData::class,
-            LoadCategorieData::class
+            LoadCategorieData::class,
+            LoadSerieData::class
         );
     }
 }

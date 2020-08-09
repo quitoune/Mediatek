@@ -34,12 +34,6 @@ class LoadLivreData extends Fixture implements DependentFixtureInterface, Contai
                         $val = $this->getReference($val);
                         $livre->{$key}($val);
                         break;
-                    case 'addCategory':
-                        foreach($val as $value){
-                            $val = $this->getReference($value);
-                            $livre->{$key}($val);
-                        }
-                        break;
                     default :
                         $livre->{$key}($val);
                         break;
@@ -57,8 +51,7 @@ class LoadLivreData extends Fixture implements DependentFixtureInterface, Contai
         return array(
             LoadPhotoData::class,
             LoadTypeData::class,
-            LoadSagaData::class,
-            LoadCategorieData::class
+            LoadSagaData::class
         );
     }
 }

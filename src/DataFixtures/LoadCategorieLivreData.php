@@ -7,7 +7,7 @@ use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
-class LoadLivreCategorieData extends Fixture implements DependentFixtureInterface, ContainerAwareInterface
+class LoadCategorieLivreData extends Fixture implements DependentFixtureInterface, ContainerAwareInterface
 {
     private $container;
     
@@ -19,17 +19,17 @@ class LoadLivreCategorieData extends Fixture implements DependentFixtureInterfac
     public function load(ObjectManager $manager)
     {
         $file  = str_replace("\\", "/", $this->container->getParameter('fixtures_dir'));
-        $file .= "livre_categorie.json";
+        $file .= "categorie_livre.json";
         $livrePersonnesArray = json_decode(file_get_contents($file), true);
         foreach ($livrePersonnesArray as $name => $objet) {
-            $livre = $this->getReference($name);
+            $categorie = $this->getReference($name);
             
             foreach ($objet as $val) {
-                $categorie = $this->getReference($val);
-                $livre->addCategory($categorie);
+                $livre = $this->getReference($val);
+                $categorie->addLivre($livre);
             }
             
-            $manager->persist($livre);
+            $manager->persist($categorie);
         }
         $manager->flush();
     }
@@ -37,8 +37,8 @@ class LoadLivreCategorieData extends Fixture implements DependentFixtureInterfac
     public function getDependencies()
     {
         return array(
-            LoadLivreData::class,
-            LoadCategorieData::class
+            LoadCategorieData::class,
+            LoadLivreData::class
         );
     }
 }

@@ -54,9 +54,9 @@ class Serie
     private $terminee;
     
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Categorie", inversedBy="series")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Categorie", mappedBy="series")
      */
-    private $categorie;
+    private $categories;
     
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Saga", inversedBy="series")
@@ -81,6 +81,7 @@ class Serie
 
     public function __construct()
     {
+        $this->categories = new ArrayCollection();
         $this->saisons = new ArrayCollection();
         $this->personnes = new ArrayCollection();
     }
@@ -184,14 +185,30 @@ class Serie
         return $this;
     }
 
-    public function getCategorie(): ?Categorie
+    /**
+     * @return Collection|Categorie[]
+     */
+    public function getCategories(): Collection
     {
-        return $this->categorie;
+        return $this->categories;
     }
 
-    public function setCategorie(?Categorie $categorie): self
+    public function addCategory(Categorie $category): self
     {
-        $this->categorie = $categorie;
+        if (!$this->categories->contains($category)) {
+            $this->categories[] = $category;
+            $category->addSeries($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCategory(Categorie $category): self
+    {
+        if ($this->categories->contains($category)) {
+            $this->categories->removeElement($category);
+            $category->removeSeries($this);
+        }
 
         return $this;
     }

@@ -6,7 +6,6 @@
 		"setNombreEpisode": 171,
 		"setNombreSaison": 8,
 		"setTerminee": true,
-		"setCategorie": "Categorie-8",
 		"setPhoto": "Photo-17",
 		"setAnnee": 2009
 	},
@@ -17,7 +16,6 @@
 		"setNombreEpisode": 92,
 		"setNombreSaison": 5,
 		"setTerminee": true,
-		"setCategorie": "Categorie-8",
 		"setPhoto": "Photo-18",
 		"setAnnee": 2013
 	},
@@ -28,7 +26,6 @@
 		"setNombreEpisode": 287,
 		"setNombreSaison": 13,
 		"setTerminee": false,
-		"setCategorie": "Categorie-8",
 		"setPhoto": "Photo-19",
 		"setAnnee": 2005
 	}

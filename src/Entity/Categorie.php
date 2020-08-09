@@ -29,17 +29,17 @@ class Categorie
     private $objet;
     
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Serie", mappedBy="categorie")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Serie", inversedBy="categories")
      */
     private $series;
     
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Livre", mappedBy="categories")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Livre", inversedBy="categories")
      */
     private $livres;
     
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Film", mappedBy="categories")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Film", inversedBy="categories")
      */
     private $films;
 
@@ -66,10 +66,6 @@ class Categorie
 
         return $this;
     }
-    
-    public function getNomComplet(){
-        return $this->nom;
-    }
 
     public function getObjet(): ?int
     {
@@ -91,24 +87,19 @@ class Categorie
         return $this->series;
     }
 
-    public function addSeries(Serie $series): self
+    public function addSerie(Serie $series): self
     {
         if (!$this->series->contains($series)) {
             $this->series[] = $series;
-            $series->setCategorie($this);
         }
 
         return $this;
     }
 
-    public function removeSerie(Serie $series): self
+    public function removeSeries(Serie $series): self
     {
         if ($this->series->contains($series)) {
             $this->series->removeElement($series);
-            // set the owning side to null (unless already changed)
-            if ($series->getCategorie() === $this) {
-                $series->setCategorie(null);
-            }
         }
 
         return $this;
@@ -126,7 +117,6 @@ class Categorie
     {
         if (!$this->livres->contains($livre)) {
             $this->livres[] = $livre;
-            $livre->addCategory($this);
         }
 
         return $this;
@@ -136,7 +126,6 @@ class Categorie
     {
         if ($this->livres->contains($livre)) {
             $this->livres->removeElement($livre);
-            $livre->removeCategory($this);
         }
 
         return $this;
@@ -154,7 +143,6 @@ class Categorie
     {
         if (!$this->films->contains($film)) {
             $this->films[] = $film;
-            $film->addCategory($this);
         }
 
         return $this;
@@ -164,7 +152,6 @@ class Categorie
     {
         if ($this->films->contains($film)) {
             $this->films->removeElement($film);
-            $film->removeCategory($this);
         }
 
         return $this;

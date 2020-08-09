@@ -49,7 +49,7 @@ class Livre
     private $type;
     
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Categorie", inversedBy="livres")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Categorie", mappedBy="livres")
      */
     private $categories;
     
@@ -119,7 +119,7 @@ class Livre
         return $this->titre_original;
     }
 
-    public function setTitreOriginal(?string $titre_original): self
+    public function setTitreOriginal(string $titre_original): self
     {
         $this->titre_original = $titre_original;
 
@@ -196,6 +196,7 @@ class Livre
     {
         if (!$this->categories->contains($category)) {
             $this->categories[] = $category;
+            $category->addLivre($this);
         }
 
         return $this;
@@ -205,6 +206,7 @@ class Livre
     {
         if ($this->categories->contains($category)) {
             $this->categories->removeElement($category);
+            $category->removeLivre($this);
         }
 
         return $this;

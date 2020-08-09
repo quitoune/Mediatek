@@ -99,4 +99,24 @@ class ActeurFilmRepository extends ServiceEntityRepository
         }
         return $query;
     }
+    
+    /**
+     * récupération des saisons d'un acteur rangé par date de sortie du film
+     *
+     * @param int $acteur_id
+     * @return \Doctrine\ORM\Query
+     */
+    public function getActeurByRole(int $film_id, int $principal)
+    {
+        return $this->createQueryBuilder('af')
+        ->innerJoin('af.acteur', 'a')
+        ->andWhere('af.film = :film')
+        ->andWhere('af.principal = :principal')
+        ->setParameter('film', $film_id)
+        ->setParameter('principal', $principal)
+        ->orderBy('a.nom')
+        ->addOrderBy('a.prenom')
+        ->getQuery()
+        ->getResult();
+    }
 }

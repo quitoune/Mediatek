@@ -33,12 +33,6 @@ class LoadFilmData extends Fixture implements DependentFixtureInterface, Contain
                         $val = $this->getReference($val);
                         $film->{$key}($val);
                         break;
-                    case 'addCategory':
-                        foreach($val as $value){
-                            $val = $this->getReference($value);
-                            $film->{$key}($val);
-                        }
-                        break;
                     default :
                         $film->{$key}($val);
                         break;
@@ -55,8 +49,7 @@ class LoadFilmData extends Fixture implements DependentFixtureInterface, Contain
     {
         return array(
             LoadPhotoData::class,
-            LoadSagaData::class,
-            LoadCategorieData::class
+            LoadSagaData::class
         );
     }
 }
