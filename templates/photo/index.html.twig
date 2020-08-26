@@ -6,6 +6,9 @@
 	<div class="card text-center">
         <div class="card-header text-left">
             {{ pagination.total }} photo{% if pagination.total > 1 %}s{% endif %} {% if pagination.nbr_page > 0 %} - Page {{ pagination.page }} / {{ pagination.nbr_page }} {% endif %}
+            {% if is_granted("ROLE_UTILISATEUR") or is_granted("ROLE_SUPER_ADMIN") %}
+                {{ ajouter(path('photo_ajouter'), "ajouter") | raw }}
+            {% endif %}
         </div>
         <div class="card-body">
         	<div class="row">

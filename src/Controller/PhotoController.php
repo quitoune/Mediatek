@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Photo;
 use App\Form\PhotoType;
+use Symfony\Component\Form\FormError;
 
 class PhotoController extends AppController
 {
@@ -93,6 +94,65 @@ class PhotoController extends AppController
             'form' => $form->createView(),
             'photo' => $photo,
             'page' => $page,
+            'paths' => $paths
+        ));
+    }
+    
+    /**
+     * Formulaire d'ajout d'une photo
+     *
+     * @Route("/photo/ajouter", name="photo_ajouter")
+     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * 
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
+    public function ajouter(Request $request)
+    {
+        $photo = new Photo();
+        
+        $form = $this->createForm(PhotoType::class, $photo, array(
+            'add' => true
+        ));
+        
+        $form->handleRequest($request);
+        
+        if ($form->isSubmitted()){
+            
+            $file = $request->files->get('photo')['chemin'];
+            $nom = $request->request->all()['photo']['nom'];
+            $fileName = $this->uploadFile($file, $nom);
+            
+            if ($fileName) {
+                $photo->setChemin($fileName);
+            } else {
+                $form->addError(new FormError("L'image n'est pas au format autorisé (" . implode(', ', AppController::FORMAT_IMAGE) . ")."));
+            }
+        
+            if($form->isValid()) {
+                $photo = $form->getData();
+                
+                $manager = $this->getDoctrine()->getManager();
+                $manager->persist($photo);
+                $manager->flush();
+                
+                return $this->redirectToRoute('photo_liste');
+            }
+        }
+        
+        $paths = array(
+            'home' => $this->homeURL(),
+            'urls' => array(
+                $this->generateUrl('photo_liste', array(
+                    'page' => 1
+                )) => 'Galerie de photos'
+            ),
+            'active' => "Ajout d'une photo"
+        );
+        
+        return $this->render('photo/ajouter.html.twig', array(
+            'form' => $form->createView(),
+            'photo' => $photo,
             'paths' => $paths
         ));
     }

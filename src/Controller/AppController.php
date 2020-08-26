@@ -19,6 +19,7 @@ use App\Entity\Saga;
 use App\Entity\Saison;
 use App\Entity\Serie;
 use App\Entity\Type;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class AppController extends Controller
 {
@@ -47,6 +48,18 @@ class AppController extends Controller
         'ROLE_SUPER_ADMIN' => 'Super administratreur',
         'ROLE_ADMIN' => 'Administrateur',
         'ROLE_UTILISATEUR' => 'Utilisateur'
+    );
+    
+    /**
+     * Formats acceptés pour les images
+     *
+     * @var array
+     */
+    const FORMAT_IMAGE = array(
+        'jpg',
+        'jpeg',
+        'png',
+        'gif'
     );
 
     /**
@@ -202,7 +215,7 @@ class AppController extends Controller
                 $repository = $this->getDoctrine()->getRepository(Personne::class);
                 break;
             case 'Photo':
-                $repository = $this->getDoctrine()->getRepository(Photo::class);
+                return $slug;
                 break;
             case 'Saga':
                 $repository = $this->getDoctrine()->getRepository(Saga::class);
@@ -239,5 +252,54 @@ class AppController extends Controller
             }
         }
         return $slug . "_0";
+    }
+    
+    /**
+     * 
+     * @param UploadedFile $file
+     * @param string $name
+     */
+    function uploadFile(UploadedFile $file, string $name){
+        $extension = strtolower($file->getClientOriginalExtension());
+        if (! in_array($extension, self::FORMAT_IMAGE)) {
+            return false;
+        }
+        
+        $fileName = $this->createSlug($name, "Photo") . "." . $extension;
+        
+        $directory = $this->getParameter('pictures_dir') . "photo/";
+        if (! file_exists($directory)) {
+            mkdir($directory);
+        }
+        $file->move($directory, $fileName);
+        
+        return $fileName;
+    }
+    
+    /**
+     * Retrait des accents et des caractères spéciaux
+     *
+     * @param string $str
+     * @param string $encoding
+     * @return string
+     */
+    public function cleanText(string $str, string $encoding = 'utf-8')
+    {
+        // transformer les caractères accentués en entités HTML
+        $str = htmlentities($str, ENT_NOQUOTES, $encoding);
+        
+        // remplacer les entités HTML pour avoir juste le premier caractères non accentués
+        $str = preg_replace('#&([A-za-z])(?:acute|grave|cedil|circ|orn|ring|slash|th|tilde|uml);#', '\1', $str);
+        
+        // Remplacer les ligatures tel que : , Æ ...
+        $str = preg_replace('#&([A-za-z]{2})(?:lig);#', '\1', $str);
+        // Supprimer tout le reste
+        $str = preg_replace('#&[^;]+;#', '', $str);
+        
+        // retrait des caractères spéciaux
+        $str = preg_replace("/(\\|\^|\.|\$|\||\(|\)|\[|\]|\*|\+|\?|\{|\}|\,|\=)/", '', $str);
+        $str = preg_replace("/\d/", '_', $str);
+        
+        return $str;
     }
 }
