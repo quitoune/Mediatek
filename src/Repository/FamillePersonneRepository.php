@@ -37,7 +37,8 @@ class FamillePersonneRepository extends ServiceEntityRepository
         $queryPers = 'SELECT P.id, P.nom, P.prenom, P.username
                     FROM personne as P
                     INNER JOIN famille_personne as FP ON P.id = FP.personne_id
-                    WHERE FP.famille_id IN (' . implode(', ', $familles) . ')';
+                    WHERE FP.famille_id IN (' . implode(', ', $familles) . ')
+                    ORDER BY P.username';
         
         $stmt = $this->getEntityManager()->getConnection()->prepare($queryPers);
         $stmt->execute();
@@ -51,7 +52,8 @@ class FamillePersonneRepository extends ServiceEntityRepository
         $queryLieux = 'SELECT L.id, L.nom
                     FROM lieu as L
                     INNER JOIN famille_lieu as FL ON L.id = FL.lieu_id
-                    WHERE FL.famille_id IN (' . implode(', ', $familles) . ')';
+                    WHERE FL.famille_id IN (' . implode(', ', $familles) . ')
+                    ORDER BY L.nom';
         
         $stmt = $this->getEntityManager()->getConnection()->prepare($queryLieux);
         $stmt->execute();

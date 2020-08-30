@@ -1,13 +1,17 @@
 <?php
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Film;
 use App\Entity\Acteur;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\FilmType;
+use App\Entity\Lieu;
+use App\Entity\Format;
+use App\Entity\Personne;
+use App\Entity\FilmPersonne;
 
 class FilmController extends AppController
 {
@@ -15,7 +19,7 @@ class FilmController extends AppController
      * Liste des films
      *
      * @Route("/film/liste/{page}", name="film_liste")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -59,6 +63,7 @@ class FilmController extends AppController
     /**
      *
      * @Route("/film/{slug}/afficher/{page}", name="film_afficher")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Film $film
      * @param int $page
@@ -86,7 +91,7 @@ class FilmController extends AppController
      * Formulaire d'ajout d'un film
      *
      * @Route("/film/ajouter", name="film_ajouter")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
@@ -106,12 +111,61 @@ class FilmController extends AppController
             $slug = $this->createSlug($film->getTitreOriginal(), 'Film');
             $film->setSlug($slug);
             
+            $filmPersonnes = $request->request->all()['film']['filmPersonnes'];
+            foreach($filmPersonnes as $filmPersonne){
+                $repo_lieu = $this->getDoctrine()->getRepository(Lieu::class);
+                $repo_format = $this->getDoctrine()->getRepository(Format::class);
+                $repo_pers = $this->getDoctrine()->getRepository(Personne::class);
+                
+                $film_personne = new FilmPersonne();
+                
+                $format = $repo_format->findOneBy(array(
+                    'id' => $filmPersonne['format']
+                ));
+                
+                $lieu = $repo_lieu->findOneBy(array(
+                    'id' => $filmPersonne['lieu']
+                ));
+                
+                $personne = $repo_pers->findOneBy(array(
+                    'id' => $filmPersonne['personne']
+                ));
+                
+                $film_personne->setLieu($lieu);
+                $film_personne->setFormat($format);
+                $film_personne->setPersonne($personne);
+                if($filmPersonne['date_achat']['day'] && $filmPersonne['date_achat']['month'] && $filmPersonne['date_achat']['year']){
+                    $date  = $filmPersonne['date_achat']['year'] . "-";
+                    $date .= ($filmPersonne['date_achat']['month'] < 10 ? "0" : "") . $filmPersonne['date_achat']['month'] . "-";
+                    $date .= ($filmPersonne['date_achat']['day'] < 10 ? "0" : "") . $filmPersonne['date_achat']['day'];
+                    $film_personne->setDateAchat(new \DateTime($date));
+                }
+                $film_personne->setFilm($film);
+                $manager->persist($film_personne);
+            }
+            
             $manager->persist($film);
             $manager->flush();
             
             return $this->redirectToRoute('film_afficher', array(
                 'slug' => $film->getSlug()
             ));
+        }
+        
+        $personnes = array();
+        foreach ($session->get('personnes') as $pers){
+            $personnes[$pers['id']] = $pers['username'];
+        }
+        
+        $forms = $this->getDoctrine()->getRepository(Format::class)->getFormatsForMovies();
+        $formats = array();
+        foreach($forms as $format){
+            $formats[$format->getId()] = $format->getNom();
+        }
+        
+        $lieux = array();
+        foreach ($session->get('lieux') as $lieu){
+            $lieux[$lieu['id']] = $lieu['nom'];
         }
         
         $paths = array(
@@ -123,6 +177,9 @@ class FilmController extends AppController
         
         return $this->render('film/ajouter.html.twig', array(
             'form' => $form->createView(),
+            'personnes' => json_encode($personnes, JSON_UNESCAPED_UNICODE),
+            'formats' => json_encode($formats, JSON_UNESCAPED_UNICODE),
+            'lieux' => json_encode($lieux, JSON_UNESCAPED_UNICODE),
             'paths' => $paths
         ));
     }
@@ -131,7 +188,7 @@ class FilmController extends AppController
      * Formulaire de modification d'un film
      *
      * @Route("/film/{slug}/modifier/{page}", name="film_modifier")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
@@ -178,7 +235,7 @@ class FilmController extends AppController
      * Formulaire de suppression d'un film
      *
      * @Route("/film/supprimer/{slug}", name="film_supprimer")
-     * @Security("is_granted('ROLE_SUPER_ADMIN')")
+     * @IsGranted("ROLE_SUPER_ADMIN")
      *
      * @param Film $film
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
@@ -206,6 +263,7 @@ class FilmController extends AppController
     /**
      *
      * @Route("/film_acteur/{slug}/afficher/{page}", name="film_afficher_pour_acteur")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Acteur $acteur
      * @param int $page

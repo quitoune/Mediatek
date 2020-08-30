@@ -1,9 +1,9 @@
 <?php
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Saga;
 use App\Form\SagaType;
 
@@ -14,7 +14,7 @@ class SagaController extends AppController
      * Liste des sagas
      *
      * @Route("/saga/liste/{page}", name="saga_liste")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -54,6 +54,7 @@ class SagaController extends AppController
      * Affichage d'une saga
      *
      * @Route("/saga/{slug}/afficher/{page}", name="saga_afficher")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Saga $saga
      * @param int $page
@@ -82,7 +83,7 @@ class SagaController extends AppController
      * Formulaire d'ajout d'une saga
      *
      * @Route("/saga/ajouter", name="saga_ajouter")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param int $page
@@ -133,7 +134,7 @@ class SagaController extends AppController
      * Formulaire de modification d'un saga
      *
      * @Route("/saga/modifier/{id}/{page}", name="saga_modifier")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Saga $saga
@@ -185,7 +186,7 @@ class SagaController extends AppController
      * Formulaire de suppression d'une saga
      *
      * @Route("/saga/supprimer/{slug}", name="saga_supprimer")
-     * @Security("is_granted('ROLE_SUPER_ADMIN')")
+     * @IsGranted("ROLE_SUPER_ADMIN")
      *
      * @param Saga $saga
      * @return \Symfony\Component\HttpFoundation\RedirectResponse

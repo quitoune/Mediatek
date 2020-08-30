@@ -1,9 +1,9 @@
 <?php
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Format;
 use App\Form\FormatType;
 
@@ -13,7 +13,7 @@ class FormatController extends AppController
      * Liste des formats
      *
      * @Route("/format/liste/{page}", name="format_liste")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -53,7 +53,7 @@ class FormatController extends AppController
      * Formulaire d'ajout d'un format
      *
      * @Route("/format/ajouter", name="format_ajouter")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
@@ -93,7 +93,7 @@ class FormatController extends AppController
      * Formulaire de modification d'un format
      *
      * @Route("/format/modifier/{id}/{page}", name="format_modifier")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Format $format
@@ -140,7 +140,7 @@ class FormatController extends AppController
      * Formulaire de suppression d'un format
      *
      * @Route("/format/supprimer/{id}", name="format_supprimer")
-     * @Security("is_granted('ROLE_SUPER_ADMIN')")
+     * @IsGranted("ROLE_SUPER_ADMIN")
      * 
      * @param Format $format
      * @return \Symfony\Component\HttpFoundation\RedirectResponse

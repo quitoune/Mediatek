@@ -1,9 +1,9 @@
 <?php
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Serie;
 use App\Form\SerieType;
 use App\Entity\Saison;
@@ -15,7 +15,7 @@ class SerieController extends AppController
      * Liste des séries
      *
      * @Route("/serie/liste/{page}", name="serie_liste")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -55,6 +55,7 @@ class SerieController extends AppController
      * Affichage d'une série
      *
      * @Route("/serie/{slug}/afficher/{page}", name="serie_afficher")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Serie $serie
      * @param int $page
@@ -83,6 +84,7 @@ class SerieController extends AppController
      * Ajouter d'une série
      *
      * @Route("/serie/ajouter/{page}", name="serie_ajouter")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param int $page
@@ -149,6 +151,7 @@ class SerieController extends AppController
      * Ajouter d'une série
      *
      * @Route("/serie/{slug}/modifier/{page}", name="serie_modifier")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param int $page
@@ -200,7 +203,7 @@ class SerieController extends AppController
      * Formulaire de suppression d'une série
      *
      * @Route("/serie/supprimer/{slug}", name="serie_supprimer")
-     * @Security("is_granted('ROLE_SUPER_ADMIN')")
+     * @IsGranted("ROLE_SUPER_ADMIN")
      *
      * @param Saison $saison
      * @return \Symfony\Component\HttpFoundation\RedirectResponse

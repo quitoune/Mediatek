@@ -1,9 +1,9 @@
 <?php
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Type;
 use App\Form\TypeType;
 
@@ -13,7 +13,7 @@ class TypeController extends AppController
      * Liste des types
      *
      * @Route("/type/liste/{page}", name="type_liste")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -53,7 +53,7 @@ class TypeController extends AppController
      * Formulaire d'ajout d'un type
      *
      * @Route("/type/ajouter", name="type_ajouter")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
@@ -93,7 +93,7 @@ class TypeController extends AppController
      * Formulaire de modification d'un type
      *
      * @Route("/type/modifier/{id}/{page}", name="type_modifier")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Type $type
@@ -140,7 +140,7 @@ class TypeController extends AppController
      * Formulaire de suppression d'un type
      *
      * @Route("/type/supprimer/{id}", name="type_supprimer")
-     * @Security("is_granted('ROLE_SUPER_ADMIN')")
+     * @IsGranted("ROLE_SUPER_ADMIN")
      *
      * @param Type $type
      * @return \Symfony\Component\HttpFoundation\RedirectResponse

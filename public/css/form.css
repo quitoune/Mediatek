@@ -266,3 +266,26 @@ input[type=radio] {
 .enable {
 	display: none;
 }
+
+.collection {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.collection .row > div {
+	padding: 0px;
+}
+
+.collection .w-100 .select2.select2-container.select2-container--default {
+    width: 95%!important;
+}
+
+.collection .form-control {
+	width: 95%;
+}
+
+.collection hr {
+	width: 80%;
+    background-color: #ff80c0;
+    border-top-width: 2px;
+}

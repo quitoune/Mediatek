@@ -1,9 +1,9 @@
 <?php
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Saison;
 use App\Entity\ActeurSaison;
 use App\Entity\Serie;
@@ -16,7 +16,7 @@ class SaisonController extends AppController
      * Liste des saisons
      *
      * @Route("/saison/liste/{page}", name="saison_liste")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -60,6 +60,7 @@ class SaisonController extends AppController
      * Affichage d'une saison
      *
      * @Route("/saison/{slug}/afficher/{page}", name="saison_afficher")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Saison $saison
      * @param int $page
@@ -96,7 +97,7 @@ class SaisonController extends AppController
      * Formulaire d'ajout d'une saison
      *
      * @Route("/saison/ajouter/{page}", name="saison_ajouter")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param int $page
@@ -148,7 +149,7 @@ class SaisonController extends AppController
      * Formulaire de modification d'une saison
      *
      * @Route("/saison/{slug}/modifier/{page}", name="saison_modifier")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Saison $saison
@@ -201,7 +202,7 @@ class SaisonController extends AppController
      * Formulaire de suppression d'une saison
      *
      * @Route("/saison/supprimer/{slug}", name="saison_supprimer")
-     * @Security("is_granted('ROLE_SUPER_ADMIN')")
+     * @IsGranted("ROLE_SUPER_ADMIN")
      *
      * @param Saison $saison
      * @return \Symfony\Component\HttpFoundation\RedirectResponse

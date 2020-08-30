@@ -37,5 +37,5 @@ security:
         # - { path: ^/profile, roles: ROLE_USER }
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     role_hierarchy:
-       ROLE_UTILISATEUR : ROLE_UTILISATEUR
-       ROLE_ADMIN: [ROLE_UTILISATEUR, ROLE_ALLOWED_TO_SWITCH]
+       ROLE_ADMIN: ROLE_UTILISATEUR
+       ROLE_SUPER_ADMIN: ROLE_ADMIN

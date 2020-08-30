@@ -40,6 +40,15 @@
                 {{ form_row(form.categories) }}
             </div>
     	</div>
+    	
+    	<hr>
+    	
+    	<div id="livrePersonnes">
+    		<div class="row">
+    			<div class="col-sm-9">Propriétaires</div>
+    			<div class="col-sm-3 addElement"><i class="fas fa-plus"></i></div>
+    		</div>
+    	</div>
         
         <div class="row text-center center-item">
             {{ form_row(form.save) }}
@@ -52,12 +61,26 @@
     
 {% endblock %}
 
+{% block script %}
+	<script src="{{ asset('js/collection.js') }}"></script>
+{% endblock %}
+
 {% block javascripts %}
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#livre_type, #livre_saga").select2();
 			$("#livre_categories").select2({
 				multiple: true
+			});
+			
+			var personnes = JSON.parse('{{ personnes }}'.replace(/&quot;/g, '"'));
+			var lieux = JSON.parse('{{ lieux }}'.replace(/&quot;/g, '"'));
+			var formats = JSON.parse('{{ formats }}'.replace(/&quot;/g, '"'));
+			
+			 var index = 0;
+			 
+			 $(".addElement").click(function(){
+				index = addNewLivreLivrePersonne(index, personnes, lieux, formats);
 			});
 		});
 	</script>

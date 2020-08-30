@@ -1,9 +1,9 @@
 <?php
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Personne;
 use App\Form\PersonneType;
 use App\Entity\LivrePersonne;
@@ -17,7 +17,7 @@ class PersonneController extends AppController
      * Liste des membres
      *
      * @Route("/personne/liste/{page}", name="personne_liste")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -131,6 +131,7 @@ class PersonneController extends AppController
      * Page Mon Compte
      *
      * @Route("/personne/{username}/afficher", name="personne_afficher")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Personne $personne
      * @return \Symfony\Component\HttpFoundation\Response
@@ -193,6 +194,7 @@ class PersonneController extends AppController
      * Modifier un utilisateur
      *
      * @Route("/personne/{username}/modifier/{page}", name="personne_modifier")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Personne $personne

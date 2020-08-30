@@ -1,12 +1,16 @@
 <?php
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Livre;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\LivreType;
+use App\Entity\Personne;
+use App\Entity\Format;
+use App\Entity\LivrePersonne;
+use App\Entity\Lieu;
 
 class LivreController extends AppController
 {
@@ -15,7 +19,7 @@ class LivreController extends AppController
      * Liste des livres
      *
      * @Route("/livre/liste/{page}", name="livre_liste")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -84,7 +88,7 @@ class LivreController extends AppController
      * Formulaire d'ajout d'un livre
      *
      * @Route("/livre/ajouter", name="livre_ajouter")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
@@ -103,6 +107,40 @@ class LivreController extends AppController
             
             $slug = $this->createSlug($livre->getTitreOriginal(), 'Livre');
             $livre->setSlug($slug);
+            
+            $livrePersonnes = $request->request->all()['livre']['livrePersonnes'];
+            foreach($livrePersonnes as $livrePersonne){
+                $repo_lieu = $this->getDoctrine()->getRepository(Lieu::class);
+                $repo_format = $this->getDoctrine()->getRepository(Format::class);
+                $repo_pers = $this->getDoctrine()->getRepository(Personne::class);
+                
+                $livre_personne = new LivrePersonne();
+                
+                $format = $repo_format->findOneBy(array(
+                    'id' => $livrePersonne['format']
+                ));
+                
+                $lieu = $repo_lieu->findOneBy(array(
+                    'id' => $livrePersonne['lieu']
+                ));
+                
+                $personne = $repo_pers->findOneBy(array(
+                    'id' => $livrePersonne['personne']
+                ));
+                
+                $livre_personne->setLieu($lieu);
+                $livre_personne->setFormat($format);
+                $livre_personne->setPersonne($personne);
+                if($livrePersonne['date_achat']['day'] && $livrePersonne['date_achat']['month'] && $livrePersonne['date_achat']['year']){
+                    $date  = $livrePersonne['date_achat']['year'] . "-";
+                    $date .= ($livrePersonne['date_achat']['month'] < 10 ? "0" : "") . $livrePersonne['date_achat']['month'] . "-";
+                    $date .= ($livrePersonne['date_achat']['day'] < 10 ? "0" : "") . $livrePersonne['date_achat']['day'];
+                    $livre_personne->setDateAchat(new \DateTime($date));
+                }
+                $livre_personne->setIsbn($livrePersonne['isbn']);
+                $livre_personne->setLivre($livre);
+                $manager->persist($livre_personne);
+            }
 
             $manager->persist($livre);
             $manager->flush();
@@ -110,6 +148,22 @@ class LivreController extends AppController
             return $this->redirectToRoute('livre_afficher', array(
                 'slug' => $livre->getSlug()
             ));
+        }
+        
+        $personnes = array();
+        foreach ($session->get('personnes') as $pers){
+            $personnes[$pers['id']] = $pers['username'];
+        }
+        
+        $forms = $this->getDoctrine()->getRepository(Format::class)->getFormatsForBooks();
+        $formats = array();
+        foreach($forms as $format){
+            $formats[$format->getId()] = $format->getNom();
+        }
+        
+        $lieux = array();
+        foreach ($session->get('lieux') as $lieu){
+            $lieux[$lieu['id']] = $lieu['nom'];
         }
 
         $paths = array(
@@ -121,6 +175,9 @@ class LivreController extends AppController
 
         return $this->render('livre/ajouter.html.twig', array(
             'form' => $form->createView(),
+            'personnes' => json_encode($personnes, JSON_UNESCAPED_UNICODE),
+            'formats' => json_encode($formats, JSON_UNESCAPED_UNICODE),
+            'lieux' => json_encode($lieux, JSON_UNESCAPED_UNICODE),
             'paths' => $paths
         ));
     }
@@ -129,7 +186,7 @@ class LivreController extends AppController
      * Formulaire de modification d'un livre
      *
      * @Route("/livre/{slug}/modifier/{page}", name="livre_modifier")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
@@ -176,7 +233,7 @@ class LivreController extends AppController
      * Formulaire de suppression d'un livre
      *
      * @Route("/livre/supprimer/{slug}", name="livre_supprimer")
-     * @Security("is_granted('ROLE_SUPER_ADMIN')")
+     * @IsGranted("ROLE_SUPER_ADMIN")
      *
      * @param Livre $livre
      * @return \Symfony\Component\HttpFoundation\RedirectResponse

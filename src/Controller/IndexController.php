@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Personne;
 use App\Entity\Film;
 use App\Entity\Photo;
@@ -13,9 +13,10 @@ use App\Entity\Episode;
 class IndexController extends AppController
 {
     /**
-     *
      * @Route("/", name="index")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
+     * 
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function index()
     {

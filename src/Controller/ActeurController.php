@@ -2,12 +2,11 @@
 
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Acteur;
 use App\Form\ActeurType;
-use App\Entity\Nationalite;
 
 class ActeurController extends AppController
 {
@@ -15,7 +14,7 @@ class ActeurController extends AppController
      * Liste des acteurs
      *
      * @Route("/acteur/liste/{page}", name="acteur_liste")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -57,6 +56,7 @@ class ActeurController extends AppController
      * Affichage d'un acteur
      *
      * @Route("/acteur/{slug}/afficher/{page}", name="acteur_afficher")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Acteur $acteur
      * @param int $page
@@ -85,7 +85,7 @@ class ActeurController extends AppController
     * Formulaire d'ajout d'un acteur
     *
     * @Route("/acteur/ajouter/{page}", name="acteur_ajouter")
-    * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+    * @IsGranted("ROLE_UTILISATEUR")
     *
     * @param Request $request
     * @param int $page
@@ -136,7 +136,7 @@ class ActeurController extends AppController
      * Formulaire de modification d'un acteur
      *
      * @Route("/acteur/{slug}/modifier/{page}", name="acteur_modifier")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Acteur $acteur
@@ -188,7 +188,7 @@ class ActeurController extends AppController
      * Formulaire de suppression d'un acteur
      *
      * @Route("/acteur/supprimer/{slug}", name="acteur_supprimer")
-     * @Security("is_granted('ROLE_SUPER_ADMIN')")
+     * @IsGranted("ROLE_SUPER_ADMIN")
      *
      * @param Acteur $acteur
      * @return \Symfony\Component\HttpFoundation\RedirectResponse

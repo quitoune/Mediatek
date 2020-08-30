@@ -220,8 +220,8 @@ function addNewSerieSaisons(index) {
 	
 	var select = '<div id="serie_saisons_' + index + '" class="collection">';
 	select += '<div class="row">';
-	select += '<div class="col-sm-3">';
 	
+	select += '<div class="col-sm-3">';
 	select += '<input type="text" id="' + start_id + 'nom" name="' + start_name + '[nom]" class="form-control">';
 	select += '</div>';
 	
@@ -241,6 +241,105 @@ function addNewSerieSaisons(index) {
 	select += '</div>';
 	
 	$("#serie_saisons").append(select.replace(/INDEX/g, index));
+	
+	index++;
+	
+	return index;
+}
+
+function addNewLivreLivrePersonne(index, personnes, lieux, formats){
+	var start_id = "livre_livrePersonnes_INDEX_";
+	var start_name = "livre[livrePersonnes][INDEX]";
+	
+	var select = '<div id="livre_livrePersonnes_' + index + '" class="collection">';
+	
+	select += '<hr class="hr_collection">';
+	
+	select += '<div class="row">';
+	
+	select += '<div class="col-sm-4 w-100">';
+	select += createInputSelect(start_id + "personne", start_name + "[personne]", "Membre", personnes);
+	select += '</div>';
+	
+	select += '<div class="col-sm-4 w-100">';
+	select += createInputSelect(start_id + "lieu", start_name + "[lieu]", "Lieu", lieux);
+	select += '</div>';
+	
+	select += '<div class="col-sm-4 w-100">';
+	select += createInputSelect(start_id + "format", start_name + "[format]", "Format", formats);
+	select += '</div>';
+	
+	select += '<div class="col-sm-4">';
+	select += createInputDate(start_id + "date_achat", start_name + "[date_achat]", "Date d'achat");
+	select += '</div>';
+	
+	select += '<div class="col-sm-5">';
+	select += '<div class="form-group">';
+	select += '<label for="' + start_id + 'isbn">ISBN</label>';
+	select += '<input type="text" id="' + start_id + 'isbn" name="' + start_name + '[isbn]" class="form-control">';
+	select += '</div>';
+	select += '</div>';
+	
+	select += '<div class="col-sm-3" style="padding: 35px;">';
+	select += '<span onclick="deleteElement(\'#livre_livrePersonnes_' + index + '\')" class="delete"><i class="fas fa-times"></i></span>';
+	select += '</div>';
+	
+	select += '</div>';
+	select += '</div>';
+	
+	
+	$("#livrePersonnes").append(select.replace(/INDEX/g, index));
+	
+	$("#livre_livrePersonnes_" + index + "_personne").select2();
+	$("#livre_livrePersonnes_" + index + "_lieu").select2();
+	$("#livre_livrePersonnes_" + index + "_format").select2();
+	$("#livre_livrePersonnes_" + index + "_date_achat select").select2();
+	
+	index++;
+	
+	return index;
+}
+
+function addNewFilmFilmPersonne(index, personnes, lieux, formats){
+	var start_id = "film_filmPersonnes_INDEX_";
+	var start_name = "film[filmPersonnes][INDEX]";
+	
+	var select = '<div id="film_lfilmPersonnes_' + index + '" class="collection">';
+	
+	select += '<hr class="hr_collection">';
+	
+	select += '<div class="row">';
+	
+	select += '<div class="col-sm-4 w-100">';
+	select += createInputSelect(start_id + "personne", start_name + "[personne]", "Membre", personnes);
+	select += '</div>';
+	
+	select += '<div class="col-sm-4 w-100">';
+	select += createInputSelect(start_id + "lieu", start_name + "[lieu]", "Lieu", lieux);
+	select += '</div>';
+	
+	select += '<div class="col-sm-4 w-100">';
+	select += createInputSelect(start_id + "format", start_name + "[format]", "Format", formats);
+	select += '</div>';
+	
+	select += '<div class="col-sm-4">';
+	select += createInputDate(start_id + "date_achat", start_name + "[date_achat]", "Date d'achat");
+	select += '</div>';
+	
+	select += '<div class="col-sm-3" style="padding: 35px;">';
+	select += '<span onclick="deleteElement(\'#film_filmPersonnes_' + index + '\')" class="delete"><i class="fas fa-times"></i></span>';
+	select += '</div>';
+	
+	select += '</div>';
+	select += '</div>';
+	
+	
+	$("#filmPersonnes").append(select.replace(/INDEX/g, index));
+	
+	$("#film_filmPersonnes_" + index + "_personne").select2();
+	$("#film_filmPersonnes_" + index + "_lieu").select2();
+	$("#film_filmPersonnes_" + index + "_format").select2();
+	$("#film_filmPersonnes_" + index + "_date_achat select").select2();
 	
 	index++;
 	

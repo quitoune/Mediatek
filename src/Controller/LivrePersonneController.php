@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Livre;
 use App\Entity\LivrePersonne;
@@ -12,6 +13,7 @@ class LivrePersonneController extends AppController
 {
     /**
      * @Route("/livre_personne", name="livre_personne")
+     * @IsGranted("ROLE_UTILISATEUR")
      */
     public function index()
     {
@@ -76,6 +78,7 @@ class LivrePersonneController extends AppController
      * Edition lien personne - livre depuis livre
      *
      * @Route("/livre_personne/{id}/ajax_editer_personne", name="ajax_livre_personne_editer_personne")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Livre $livre
@@ -111,6 +114,7 @@ class LivrePersonneController extends AppController
      * Suppression lien personne - livre depuis livre
      *
      * @Route("/livre_personne/{id}/ajax_supprimer_personne", name="ajax_livre_personne_supprimer_personne")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param LivrePersonne $livrePersonne
      * @return \Symfony\Component\HttpFoundation\JsonResponse

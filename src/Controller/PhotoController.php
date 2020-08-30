@@ -2,9 +2,9 @@
 
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Photo;
 use App\Form\PhotoType;
 use Symfony\Component\Form\FormError;
@@ -15,7 +15,7 @@ class PhotoController extends AppController
      * Liste des photos
      *
      * @Route("/photo/liste/{page}", name="photo_liste")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -55,7 +55,7 @@ class PhotoController extends AppController
      * Formulaire de modification d'une photo
      *
      * @Route("/photo/modifier/{id}/{page}", name="photo_modifier")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Photo $photo
@@ -102,7 +102,7 @@ class PhotoController extends AppController
      * Formulaire d'ajout d'une photo
      *
      * @Route("/photo/ajouter", name="photo_ajouter")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      * 
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response

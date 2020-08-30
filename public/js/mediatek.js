@@ -89,3 +89,66 @@ function deleteAjax(url, url_base, id_bloc){
         }
     });
 }
+
+function createNumberDropdown(id, name, start, end, defaut, step){
+	if(step === undefined){
+		step = 1;
+	}
+	
+	if(defaut === undefined){
+		defaut = true;
+	}
+	
+	var select = '<select id="' + id + '" name="' + name + '" class="form-control">';
+	if(defaut){
+		select += '<option value=""></option>';
+	}
+	for(var i = start; i <= end; i += step){
+		select += '<option value="' + i + '">' + addZero(i) +'</option>';
+	}
+	select += '</select>';
+	
+	return select;
+}
+
+function createInputDate(id, name, label){
+	var input = '<fieldset class="form-group">';
+	input += "<legend class=\"col-form-label\">" + label + "</legend>";
+	input += '<div id="' + id + '" class="form-inline">';
+	input += '<div class="sr-only">';
+	input += '<label class="" for="' + id + '_year">Year</label>';
+	input += '<label class="" for="' + id + '_month">Month</label>';
+	input += '<label class="" for="' + id + '_day">Day</label>';
+	input += '</div>';
+
+	input += createNumberDropdown(id + '_year', name + '[day]', 1, 31);
+	input += '/';
+	input += createNumberDropdown(id + '_month', name + '[month]', 1, 12);
+	input += '/';
+	input += createNumberDropdown(id + '_day', name + '[year]', 1900, 2020);
+	
+	input += '</div>';
+	input += '</fieldset>';
+	
+	return input;
+}
+
+function createInputSelect(id, name, label, array){
+	var input = '<div class="form-group">';
+	input += '<label for="' + id + '">' + label + '</label>';
+	input += '<select id="' + id + '" name="' + name + '" class="form-group">';
+	jQuery.each(array, function(index, value){
+		input += '<option value="' + index + '">' + value + '</option>';
+	});
+	input += '</select>';
+	input += '</div>';
+	
+	return input;
+}
+
+function addZero(value){
+	if(0 < value && value < 10){
+		return ("0" + value).slice(-2);
+	}
+	return value;
+}

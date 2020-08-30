@@ -214,9 +214,6 @@ class AppController extends Controller
             case 'Personne':
                 $repository = $this->getDoctrine()->getRepository(Personne::class);
                 break;
-            case 'Photo':
-                return $slug;
-                break;
             case 'Saga':
                 $repository = $this->getDoctrine()->getRepository(Saga::class);
                 break;
@@ -256,6 +253,40 @@ class AppController extends Controller
     
     /**
      * 
+     * @param string $texte
+     * @return string
+     */
+    public function createFileName(string $texte, string $extension){
+        $chemin = htmlentities($texte, ENT_NOQUOTES, "utf-8" );
+        
+        $chemin = preg_replace('#&([A-za-z])(?:acute|cedil|caron|circ|grave|orn|ring|slash|th|tilde|uml);#', '\1', $chemin);
+        $chemin = preg_replace('#&([A-za-z]{2})(?:lig);#', '\1', $chemin);
+        $chemin = preg_replace('#&[^;]+;#', '', $chemin);
+        
+        $chemin = str_replace(array("/", "\\", "'", "#"), '-', $chemin);
+        $chemin = str_replace(array("?", ",", "(", ")",":", "[", "]", '"'), '', $chemin);
+        $chemin = trim($chemin);
+        $chemin = implode("_", explode(' ', $chemin));
+        
+        $repository = $this->getDoctrine()->getRepository(Photo::class);
+        $object = $repository->findOneBy(array('chemin' => $chemin . "." . $extension));
+        
+        if(is_null($object)){
+            return $chemin . "." . $extension;
+        } else {
+            for($i = 1; $i <= 1000; $i++){
+                $object = $repository->findOneBy(array('chemin' => $chemin . "_" . $i . "." . $extension));
+                if(is_null($object)){
+                    return $chemin . "_" . $i . "." . $extension;
+                }
+            }
+        }
+        
+        return $chemin . "_0" . "." . $extension;
+    }
+    
+    /**
+     * 
      * @param UploadedFile $file
      * @param string $name
      */
@@ -265,7 +296,7 @@ class AppController extends Controller
             return false;
         }
         
-        $fileName = $this->createSlug($name, "Photo") . "." . $extension;
+        $fileName = $this->createFileName($name, $extension);
         
         $directory = $this->getParameter('pictures_dir') . "photo/";
         if (! file_exists($directory)) {

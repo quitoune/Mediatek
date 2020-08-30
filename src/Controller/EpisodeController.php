@@ -1,8 +1,8 @@
 <?php
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use App\Entity\Episode;
 use App\Entity\Saison;
 use Symfony\Component\HttpFoundation\Session\Session;
@@ -17,7 +17,7 @@ class EpisodeController extends AppController
      * Liste des épisodes
      *
      * @Route("/episode/liste/{page}", name="episode_liste")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -62,6 +62,7 @@ class EpisodeController extends AppController
      * Affichage d'un épisode
      *
      * @Route("/episode/{slug}/afficher/{page}", name="episode_afficher")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Episode $episode
      * @param int $page
@@ -90,7 +91,7 @@ class EpisodeController extends AppController
      * Formulaire d'ajout d'un épisode
      *
      * @Route("/episode/ajouter/{page}", name="episode_ajouter")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param int $page
@@ -141,7 +142,7 @@ class EpisodeController extends AppController
      * Formulaire de modification d'un épisode
      *
      * @Route("/episode/{slug}/modifier/{page}", name="episode_modifier")
-     * @Security("is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEUR')")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Episode $episode
@@ -193,7 +194,7 @@ class EpisodeController extends AppController
      * Formulaire de suppression d'un episode
      *
      * @Route("/episode/supprimer/{slug}", name="episode_supprimer")
-     * @Security("is_granted('ROLE_SUPER_ADMIN')")
+     * @IsGranted("ROLE_SUPER_ADMIN")
      *
      * @param Episode $episode
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
@@ -216,6 +217,8 @@ class EpisodeController extends AppController
      * Affichage des épisodes d'une saison
      *
      * @Route("/episode/{slug}/afficher_saison", name="episode_saison_afficher")
+     * @IsGranted("ROLE_UTILISATEUR")
+     * 
      * @param Saison $saison
      * @return \Symfony\Component\HttpFoundation\Response
      */

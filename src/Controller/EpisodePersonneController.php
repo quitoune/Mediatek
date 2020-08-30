@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Saison;
 use App\Entity\Episode;
@@ -18,6 +19,7 @@ class EpisodePersonneController extends AppController
     /**
      *
      * @Route("/episode_personne", name="episode_personne")
+     * @IsGranted("ROLE_UTILISATEUR")
      */
     public function index()
     {
@@ -30,6 +32,7 @@ class EpisodePersonneController extends AppController
      * Affichage des propriétaires d'un épisode
      *
      * @Route("/episode_personne/{slug}/afficher_pour_episode", name="personne_pour_episode")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Episode $episode
      * @return \Symfony\Component\HttpFoundation\Response
@@ -46,6 +49,7 @@ class EpisodePersonneController extends AppController
      * Ajout d'un propriétaire à un épisode
      *
      * @Route("/episode_personne/{slug}/ajax_ajouter_personne", name="ajax_episode_personne_ajouter_personne")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Episode $episode
@@ -84,6 +88,7 @@ class EpisodePersonneController extends AppController
      * Edition lien personne - épisode depuis épisode
      *
      * @Route("/episode_personne/{id}/ajax_editer_personne", name="ajax_episode_personne_editer_personne")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Episode $episode
@@ -119,6 +124,7 @@ class EpisodePersonneController extends AppController
      * Suppression lien personne - épisode depuis épisode
      *
      * @Route("/episode_personne/{id}/ajax_supprimer_personne", name="ajax_episode_personne_supprimer_personne")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param EpisodePersonne $episodePersonne
      * @return \Symfony\Component\HttpFoundation\JsonResponse
@@ -138,6 +144,7 @@ class EpisodePersonneController extends AppController
      * Ajout d'un propriétaire à tous les épisodes d'une saison
      *
      * @Route("/episode_personne/{slug}/ajax_ajouter_depuis_saison", name="ajax_ajouter_depuis_saison")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Saison $saison

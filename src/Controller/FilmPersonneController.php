@@ -2,16 +2,18 @@
 
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Film;
-use Symfony\Component\HttpFoundation\Request;
 use App\Entity\FilmPersonne;
 use App\Form\FilmPersonneType;
+use Symfony\Component\HttpFoundation\Request;
 
 class FilmPersonneController extends AppController
 {
     /**
      * @Route("/film_personne", name="film_personne")
+     * @IsGranted("ROLE_UTILISATEUR")
      */
     public function index()
     {
@@ -39,6 +41,7 @@ class FilmPersonneController extends AppController
      * Ajout d'un propriétaire à un film
      *
      * @Route("/film_personne/{slug}/ajax_ajouter_personne", name="ajax_film_personne_ajouter_personne")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Film $film
@@ -76,6 +79,7 @@ class FilmPersonneController extends AppController
      * Edition lien personne - film depuis film
      *
      * @Route("/film_personne/{id}/ajax_editer_personne", name="ajax_film_personne_editer_personne")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Request $request
      * @param Film $film
@@ -111,6 +115,7 @@ class FilmPersonneController extends AppController
      * Suppression lien personne - film depuis film
      *
      * @Route("/film_personne/{id}/ajax_supprimer_personne", name="ajax_film_personne_supprimer_personne")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param FilmPersonne $filmPersonne
      * @return \Symfony\Component\HttpFoundation\JsonResponse

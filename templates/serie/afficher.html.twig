@@ -35,7 +35,11 @@
     				</tr>
     				<tr>
         				<th>Catégorie</th>
-        				<td align=center>{{ serie.categorie.nom }}</td>
+        				<td align=center>
+        					{% for categorie in serie.categories %}
+    							{{ categorie.nom }}
+    						{% endfor %}
+        				</td>
     				</tr>
     				<tr>
         				<th>Nombre de saisons</th>

@@ -2,11 +2,10 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Avatar;
 
-class AvatarController extends AbstractController
+class AvatarController extends AppController
 {
     /**
      * @Route("/avatar", name="avatar")
