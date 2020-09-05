@@ -49,14 +49,19 @@ class Livre
     private $type;
     
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Categorie", mappedBy="livres")
-     */
-    private $categories;
-    
-    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Saga", inversedBy="livres")
      */
     private $saga;
+    
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $tome;
+    
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
     
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Photo", inversedBy="livres", cascade={"persist"})
@@ -64,9 +69,9 @@ class Livre
     private $photo;
     
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\ManyToMany(targetEntity="App\Entity\Categorie", mappedBy="livres")
      */
-    private $tome;
+    private $categories;
     
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\LivrePersonne", mappedBy="livre", cascade={"persist"})
@@ -172,6 +177,18 @@ class Livre
         return $this;
     }
 
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
     public function getType(): ?Type
     {
         return $this->type;
@@ -180,6 +197,30 @@ class Livre
     public function setType(?Type $type): self
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    public function getSaga(): ?Saga
+    {
+        return $this->saga;
+    }
+
+    public function setSaga(?Saga $saga): self
+    {
+        $this->saga = $saga;
+
+        return $this;
+    }
+
+    public function getPhoto(): ?Photo
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(?Photo $photo): self
+    {
+        $this->photo = $photo;
 
         return $this;
     }
@@ -208,30 +249,6 @@ class Livre
             $this->categories->removeElement($category);
             $category->removeLivre($this);
         }
-
-        return $this;
-    }
-
-    public function getSaga(): ?Saga
-    {
-        return $this->saga;
-    }
-
-    public function setSaga(?Saga $saga): self
-    {
-        $this->saga = $saga;
-
-        return $this;
-    }
-
-    public function getPhoto(): ?Photo
-    {
-        return $this->photo;
-    }
-
-    public function setPhoto(?Photo $photo): self
-    {
-        $this->photo = $photo;
 
         return $this;
     }

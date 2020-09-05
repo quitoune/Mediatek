@@ -6,7 +6,7 @@
     {{ form_start(form) }}
     <div class="shadow-sm p-3 mb-5 bg-white rounded border">
         <div class="row">
-        	<div class="col-sm w-100">
+        	<div class="col-sm-6 w-100">
                 {{ form_row(form.saison) }}
             </div>
     	</div>
@@ -35,6 +35,12 @@
             </div>
         	<div class="col-sm">
                 {{ form_row(form.premiere_diffusion) }}
+            </div>
+    	</div>
+    	
+        <div class="row">
+        	<div class="col-sm">
+                {{ form_row(form.description) }}
             </div>
     	</div>
         

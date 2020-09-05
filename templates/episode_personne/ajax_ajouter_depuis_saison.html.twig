@@ -70,7 +70,7 @@
             		</select>
             		<select id="episode_personne_date_achat_year" name="episode_personne[date_achat][year]" class="form-control">
             			<option value=""></option>
-            			{% for i in 1902..2020 %}
+            			{% for i in date_debut..date_fin %}
             				<option value="{{ i }}">{{ i }}</option>
             			{% endfor %}
             		</select>

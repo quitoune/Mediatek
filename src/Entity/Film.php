@@ -49,24 +49,29 @@ class Film
     private $annee;
     
     /**
-     * @ORM\Column(type="smallint", nullable=true)
-     */
-    private $volet;
-    
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Categorie", mappedBy="films")
-     */
-    private $categories;
-    
-    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Saga", inversedBy="films")
      */
     private $saga;
     
     /**
+     * @ORM\Column(type="smallint", nullable=true)
+     */
+    private $volet;
+    
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
+    
+    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Photo", inversedBy="films", cascade={"persist"})
      */
     private $photo;
+    
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Categorie", mappedBy="films")
+     */
+    private $categories;
     
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\FilmPersonne", mappedBy="film", cascade={"persist"})
@@ -191,30 +196,14 @@ class Film
         return $this;
     }
 
-    /**
-     * @return Collection|Categorie[]
-     */
-    public function getCategories(): Collection
+    public function getDescription(): ?string
     {
-        return $this->categories;
+        return $this->description;
     }
 
-    public function addCategory(Categorie $category): self
+    public function setDescription(?string $description): self
     {
-        if (!$this->categories->contains($category)) {
-            $this->categories[] = $category;
-            $category->addFilm($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCategory(Categorie $category): self
-    {
-        if ($this->categories->contains($category)) {
-            $this->categories->removeElement($category);
-            $category->removeFilm($this);
-        }
+        $this->description = $description;
 
         return $this;
     }
@@ -239,6 +228,34 @@ class Film
     public function setPhoto(?Photo $photo): self
     {
         $this->photo = $photo;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Categorie[]
+     */
+    public function getCategories(): Collection
+    {
+        return $this->categories;
+    }
+
+    public function addCategory(Categorie $category): self
+    {
+        if (!$this->categories->contains($category)) {
+            $this->categories[] = $category;
+            $category->addFilm($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCategory(Categorie $category): self
+    {
+        if ($this->categories->contains($category)) {
+            $this->categories->removeElement($category);
+            $category->removeFilm($this);
+        }
 
         return $this;
     }

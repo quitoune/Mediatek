@@ -15,6 +15,7 @@ use App\Repository\CategorieRepository;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use App\Entity\Photo;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class LivreType extends AbstractType
 {
@@ -54,22 +55,8 @@ class LivreType extends AbstractType
                     ->andWhere('c.objet IN (0,1)')
                     ->orderBy('c.nom');
             }
-        ));
-
-//         $builder->add('photo', PhotoType::class, array(
-//             'add' => true,
-//             'label' => 'Photo',
-//             'required' => false,
-//             'avec_bouton' => false
-//         ));
-
-        $builder->add('photo', EntityType::class, array(
-            'class' => Photo::class,
-            'required' => false,
-            'choice_label' => 'nom'
-        ));
-            
-        $builder->add('saga', EntityType::class, array(
+        ))
+            ->add('saga', EntityType::class, array(
             'class' => Saga::class,
             'required' => false,
             'choice_label' => 'nom',
@@ -78,11 +65,25 @@ class LivreType extends AbstractType
                     ->orderBy('s.nom');
             }
         ))
+            ->add('description', TextareaType::class)
             ->add('save', SubmitType::class, array(
             'label' => 'Enregistrer',
             'attr' => array(
                 'class' => 'btn btn-media'
             )
+        ));
+
+//         $builder->add('photo', PhotoType::class, array(
+//         'add' => true,
+//         'label' => 'Photo',
+//         'required' => false,
+//         'avec_bouton' => false
+//         ));
+
+        $builder->add('photo', EntityType::class, array(
+            'class' => Photo::class,
+            'required' => false,
+            'choice_label' => 'nom'
         ));
     }
 

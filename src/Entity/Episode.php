@@ -60,6 +60,11 @@ class Episode
     private $saison;
     
     /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
+    
+    /**
      * @ORM\OneToMany(targetEntity="App\Entity\EpisodePersonne", mappedBy="episode")
      */
     private $episodePersonnes;
@@ -109,7 +114,7 @@ class Episode
         return $this->titre_original;
     }
 
-    public function setTitreOriginal(?string $titre_original): self
+    public function setTitreOriginal(string $titre_original): self
     {
         $this->titre_original = $titre_original;
 
@@ -170,6 +175,18 @@ class Episode
     public function setDuree(int $duree): self
     {
         $this->duree = $duree;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

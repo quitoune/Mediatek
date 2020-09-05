@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use App\Entity\Saison;
 use App\Repository\SaisonRepository;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class EpisodeType extends AbstractType
 {
@@ -47,20 +48,22 @@ class EpisodeType extends AbstractType
                 'min' => 0
             )
         ))
-        ->add('saison', EntityType::class, array(
+            ->add('saison', EntityType::class, array(
             'class' => Saison::class,
             'label' => 'Série / Saison',
-            'choice_label' => function(Saison $saison){
+            'choice_label' => function (Saison $saison) {
                 return 'Saison ' . $saison->getNumeroSaison();
             },
-            'group_by' => function(Saison $saison){
-                return $saison->getSerie()->getTitreOriginal();
+            'group_by' => function (Saison $saison) {
+                return $saison->getSerie()
+                    ->getTitreOriginal();
             },
             'query_builder' => function (SaisonRepository $sr) {
-            return $sr->createQueryBuilder('s')
-            ->orderBy('s.numero_saison');
+                return $sr->createQueryBuilder('s')
+                    ->orderBy('s.numero_saison');
             }
         ))
+            ->add('description', TextareaType::class)
             ->add('save', SubmitType::class, array(
             'label' => $options['label_submit'],
             'attr' => array(

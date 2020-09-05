@@ -13,6 +13,7 @@ use App\Repository\SagaRepository;
 use App\Entity\Categorie;
 use App\Repository\CategorieRepository;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class FilmType extends AbstractType
 {
@@ -23,24 +24,24 @@ class FilmType extends AbstractType
             ->add('titre_original')
             ->add('realisateur', TextType::class, array(
             'label' => 'Réalisateur'
-            ))
+        ))
             ->add('annee', IntegerType::class, array(
-                'label' => 'Année',
-                'attr' => array(
-                    'min' => 1900,
-                    'max' => 2100
-                )
-            ))
+            'label' => 'Année',
+            'attr' => array(
+                'min' => 1900,
+                'max' => 2100
+            )
+        ))
             ->add('duree', IntegerType::class, array(
-                'label' => 'Durée (min)',
-                'attr' => array(
-                    'min' => 0,
-                    'max' => 1000
-                )
-            ))
+            'label' => 'Durée (min)',
+            'attr' => array(
+                'min' => 0,
+                'max' => 1000
+            )
+        ))
             ->add('volet', IntegerType::class, array(
-                'required' => false
-            ))
+            'required' => false
+        ))
             ->add('saga', EntityType::class, array(
             'class' => Saga::class,
             'choice_label' => 'nom',
@@ -69,6 +70,7 @@ class FilmType extends AbstractType
                     ->orderBy('c.nom');
             }
         ))
+            ->add('description', TextareaType::class)
             ->add('save', SubmitType::class, array(
             'label' => $options['label_submit'],
             'attr' => array(

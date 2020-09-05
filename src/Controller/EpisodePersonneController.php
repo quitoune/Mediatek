@@ -12,7 +12,6 @@ use App\Entity\Lieu;
 use App\Entity\Personne;
 use App\Entity\Saison;
 use App\Entity\Format;
-use Symfony\Component\Validator\Constraints\Date;
 
 class EpisodePersonneController extends AppController
 {
@@ -196,7 +195,7 @@ class EpisodePersonneController extends AppController
      * @param Request $request
      * @param Saison $saison
      */
-    public function ajouterDepuisSaison(Request $request, Saison $saison)
+    public function ajouterDepuisSaison(SessionInterface $session, Request $request, Saison $saison)
     {
         $repo_lieu = $this->getDoctrine()->getRepository(Lieu::class);
         $repo_format = $this->getDoctrine()->getRepository(Format::class);
@@ -227,7 +226,7 @@ class EpisodePersonneController extends AppController
                 $episodePersonne->setLieu($lieu);
                 if ($all['date_achat']['day'] && $all['date_achat']['month'] && $all['date_achat']['year']) {
                     $date = $all['date_achat']['year'] . "-" . $all['date_achat']['month'] . "-" . $all['date_achat']['day'];
-                    $episodePersonne->setDateAchat(new Date($date));
+                    $episodePersonne->setDateAchat(new \DateTime($date));
                 }
 
                 $manager->persist($episodePersonne);
@@ -240,28 +239,33 @@ class EpisodePersonneController extends AppController
             ));
         }
 
-        $personnes = $repo_pers->createQueryBuilder('personne')
-            ->orderBy('personne.nom')
-            ->addOrderBy('personne.prenom')
-            ->getQuery()
-            ->getResult();
+        $personnes = array();
+        $lieux = array();
+        
+        $repo_lieu = $this->getDoctrine()->getRepository(Lieu::class);
+        $repo_pers = $this->getDoctrine()->getRepository(Personne::class);
+        
+        foreach ($session->get('personnes') as $personne) {
+            $personnes[] = $repo_pers->findOneBy(array(
+                'id' => $personne["id"]
+            ));
+        }
+        
+        foreach ($session->get('lieux') as $lieu) {
+            $lieux[] = $repo_lieu->findOneBy(array(
+                'id' => $lieu["id"]
+            ));
+        }
 
-        $formats = $repo_format->createQueryBuilder('format')
-            ->andWhere('format.objet IN (0,2)')
-            ->orderBy('format.nom')
-            ->getQuery()
-            ->getResult();
-
-        $lieux = $repo_lieu->createQueryBuilder('lieu')
-            ->orderBy('lieu.nom')
-            ->getQuery()
-            ->getResult();
+        $formats = $repo_format->getFormatsForMovies();
 
         return $this->render('episode_personne/ajax_ajouter_depuis_saison.html.twig', array(
             'personnes' => $personnes,
             'formats' => $formats,
             'saison' => $saison,
-            'lieux' => $lieux
+            'lieux' => $lieux,
+            'date_debut' => date("Y") - 15,
+            'date_fin' => date("Y")
         ));
     }
 }
