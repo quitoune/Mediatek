@@ -3,15 +3,16 @@ namespace App\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\Saison;
 use App\Entity\Episode;
 use App\Entity\EpisodePersonne;
 use App\Form\EpisodePersonneType;
 use Symfony\Component\HttpFoundation\Request;
-use App\Entity\Format;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Entity\Lieu;
-use Symfony\Component\Validator\Constraints\Date;
 use App\Entity\Personne;
+use App\Entity\Saison;
+use App\Entity\Format;
+use Symfony\Component\Validator\Constraints\Date;
 
 class EpisodePersonneController extends AppController
 {
@@ -32,16 +33,22 @@ class EpisodePersonneController extends AppController
      * Affichage des propriétaires d'un épisode
      *
      * @Route("/episode_personne/{slug}/afficher_pour_episode", name="personne_pour_episode")
-     * @IsGranted("ROLE_UTILISATEUR")
      *
+     * @param SessionInterface $session
      * @param Episode $episode
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function afficherProprios(Episode $episode)
+    public function afficherProprios(SessionInterface $session, Episode $episode)
     {
+        $repo = $this->getDoctrine()->getRepository(EpisodePersonne::class);
+        $personnes = array();
+        foreach ($session->get('personnes') as $personne) {
+            $personnes[] = $personne["id"];
+        }
+
         return $this->render('episode_personne/afficher_proprios_episode.html.twig', array(
             'episode' => $episode,
-            'episodePersonnes' => $episode->getEpisodePersonnes()
+            'episodePersonnes' => $repo->getEpisodePersonnes($episode->getId(), $personnes)
         ));
     }
 
@@ -51,23 +58,43 @@ class EpisodePersonneController extends AppController
      * @Route("/episode_personne/{slug}/ajax_ajouter_personne", name="ajax_episode_personne_ajouter_personne")
      * @IsGranted("ROLE_UTILISATEUR")
      *
+     * @param SessionInterface $session
      * @param Request $request
      * @param Episode $episode
      * @return \Symfony\Component\HttpFoundation\JsonResponse|\Symfony\Component\HttpFoundation\Response
      */
-    public function ajouterDepuisEpisode(Request $request, Episode $episode)
+    public function ajouterDepuisEpisode(SessionInterface $session, Request $request, Episode $episode)
     {
         $episodePersonne = new EpisodePersonne();
         $episodePersonne->setEpisode($episode);
 
+        $select_personne = array();
+        $select_lieu = array();
+
+        $repo_lieu = $this->getDoctrine()->getRepository(Lieu::class);
+        $repo_pers = $this->getDoctrine()->getRepository(Personne::class);
+
+        foreach ($session->get('personnes') as $personne) {
+            $select_personne[] = $repo_pers->findOneBy(array(
+                'id' => $personne["id"]
+            ));
+        }
+
+        foreach ($session->get('lieux') as $lieu) {
+            $select_lieu[] = $repo_lieu->findOneBy(array(
+                'id' => $lieu["id"]
+            ));
+        }
+
         $form = $this->createForm(EpisodePersonneType::class, $episodePersonne, array(
-            'avec_episode' => false
+            'avec_episode' => false,
+            'select_personne' => $select_personne,
+            'select_lieu' => $select_lieu
         ));
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $episodePersonne = $form->getData();
 
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($episodePersonne);
@@ -90,20 +117,40 @@ class EpisodePersonneController extends AppController
      * @Route("/episode_personne/{id}/ajax_editer_personne", name="ajax_episode_personne_editer_personne")
      * @IsGranted("ROLE_UTILISATEUR")
      *
+     * @param SessionInterface $session
      * @param Request $request
-     * @param Episode $episode
+     * @param EpisodePersonne $episodePersonne
      * @return \Symfony\Component\HttpFoundation\JsonResponse|\Symfony\Component\HttpFoundation\Response
      */
-    public function editerDepuisEpisode(Request $request, EpisodePersonne $episodePersonne)
+    public function editerDepuisEpisode(SessionInterface $session, Request $request, EpisodePersonne $episodePersonne)
     {
+        $select_personne = array();
+        $select_lieu = array();
+
+        $repo_lieu = $this->getDoctrine()->getRepository(Lieu::class);
+        $repo_pers = $this->getDoctrine()->getRepository(Personne::class);
+
+        foreach ($session->get('personnes') as $personne) {
+            $select_personne[] = $repo_pers->findOneBy(array(
+                'id' => $personne["id"]
+            ));
+        }
+
+        foreach ($session->get('lieux') as $lieu) {
+            $select_lieu[] = $repo_lieu->findOneBy(array(
+                'id' => $lieu["id"]
+            ));
+        }
+
         $form = $this->createForm(EpisodePersonneType::class, $episodePersonne, array(
-            'avec_episode' => false
+            'avec_episode' => false,
+            'select_personne' => $select_personne,
+            'select_lieu' => $select_lieu
         ));
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $episodePersonne = $form->getData();
 
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($episodePersonne);
@@ -178,11 +225,11 @@ class EpisodePersonneController extends AppController
                 $episodePersonne->setEpisode($episode);
                 $episodePersonne->setFormat($format);
                 $episodePersonne->setLieu($lieu);
-                if($all['date_achat']['day'] && $all['date_achat']['month'] && $all['date_achat']['year']){
+                if ($all['date_achat']['day'] && $all['date_achat']['month'] && $all['date_achat']['year']) {
                     $date = $all['date_achat']['year'] . "-" . $all['date_achat']['month'] . "-" . $all['date_achat']['day'];
                     $episodePersonne->setDateAchat(new Date($date));
                 }
-                
+
                 $manager->persist($episodePersonne);
             }
 

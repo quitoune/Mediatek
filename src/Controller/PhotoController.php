@@ -118,7 +118,6 @@ class PhotoController extends AppController
         $form->handleRequest($request);
         
         if ($form->isSubmitted()){
-            
             $file = $request->files->get('photo')['chemin'];
             $nom = $request->request->all()['photo']['nom'];
             $fileName = $this->uploadFile($file, $nom);
@@ -154,6 +153,21 @@ class PhotoController extends AppController
             'form' => $form->createView(),
             'photo' => $photo,
             'paths' => $paths
+        ));
+    }
+    
+    /**
+     * Affichage d'une photo
+     *
+     * @Route("/photo/afficher/{id}", name="photo_afficher")
+     * @IsGranted("ROLE_UTILISATEUR")
+     * 
+     * @param Photo $photo
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
+    function afficher(Photo $photo){
+        return $this->render('photo/afficher.html.twig', array(
+            'photo' => $photo
         ));
     }
 }

@@ -51,4 +51,20 @@ class EpisodePersonneRepository extends ServiceEntityRepository
         ->getQuery()
         ->getSingleScalarResult();
     }
+    
+    /**
+     * Renvoie, pour un épisode, donné la liste des propriétaires parmi les personnes données
+     * 
+     * @param int $episode
+     * @param array $personnes
+     * @return mixed|\Doctrine\DBAL\Driver\Statement|array|NULL
+     */
+    public function getEpisodePersonnes(int $episode, array $personnes)
+    {
+        return $this->createQueryBuilder('ep')
+        ->andWhere('ep.episode = ' . $episode)
+        ->andWhere('ep.personne IN (' . implode(",", $personnes) . ')')
+        ->getQuery()
+        ->getResult();
+    }
 }

@@ -15,6 +15,7 @@ function Ajax(url, id_done, callback, loading, method){
 	if(!is_defined(loading)){
 		loading = 'html';
 	}
+//    $(loading).showLoading();
 	
 	if(!is_defined(method)){
 		method = 'GET';
@@ -151,4 +152,24 @@ function addZero(value){
 		return ("0" + value).slice(-2);
 	}
 	return value;
+}
+
+function readURL(input, id) {
+	if (input.files && input.files[0]) {
+		$('#' + id + '_nom').val(input.files[0].name);
+		$("label[for=" + id + "]").html(input.files[0].name);
+		var reader = new FileReader();
+		
+		reader.onload = function(e) {
+			$('img[data-id=' + id + ']').show();
+			$('img[data-id=' + id + ']').attr('src', e.target.result);
+		}
+		
+		reader.readAsDataURL(input.files[0]); // convert to base64 string
+	} else {
+		$('img[data-id=' + id + ']').hide();
+		$('img[data-id=' + id + ']').attr('src', '');
+		$('#' + id + '_nom').val('');
+		$("label[for=" + id + "]").html("Choisir la photo");
+	}
 }

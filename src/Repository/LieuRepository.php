@@ -99,4 +99,17 @@ class LieuRepository extends ServiceEntityRepository
         }
         return $query;
     }
+    
+    /**
+     *
+     * @param array $lieux
+     * @return mixed|\Doctrine\DBAL\Driver\Statement|array|NULL
+     */
+    public function getLieuxAvecId(array $lieux){
+        return $this->createQueryBuilder('l')
+        ->andWhere('l.id IN (' . implode(",", $lieux) . ')')
+        ->addOrderBy('l.nom', 'ASC')
+        ->getQuery()
+        ->getResult();
+    }
 }

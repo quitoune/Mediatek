@@ -51,4 +51,20 @@ class FilmPersonneRepository extends ServiceEntityRepository
         ->getQuery()
         ->getSingleScalarResult();
     }
+    
+    /**
+     * Renvoie, pour un film, donné la liste des propriétaires parmi les personnes données
+     * 
+     * @param int $film
+     * @param array $personnes
+     * @return mixed|\Doctrine\DBAL\Driver\Statement|array|NULL
+     */
+    public function getFilmPersonnes(int $film, array $personnes)
+    {
+        return $this->createQueryBuilder('fp')
+        ->andWhere('fp.film = ' . $film)
+        ->andWhere('fp.personne IN (' . implode(",", $personnes) . ')')
+        ->getQuery()
+        ->getResult();
+    }
 }

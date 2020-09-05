@@ -24,19 +24,23 @@ class PhotoType extends AbstractType
             ));
         }
         
-        $builder->add('nom')
-        ->add('save', SubmitType::class, array(
-            'label' => $options['label_submit'],
-            'attr' => array(
-                'class' => 'btn btn-media'
-            )
-        ));
+        $builder->add('nom');
+        
+        if($options['avec_bouton']){
+            $builder->add('save', SubmitType::class, array(
+                'label' => $options['label_submit'],
+                'attr' => array(
+                    'class' => 'btn btn-media'
+                )
+            ));
+        }
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
             'add' => false,
+            'avec_bouton' => true,
             'data_class' => Photo::class,
             'label_submit' => 'Enregistrer',
             'allow_extra_fields' => true

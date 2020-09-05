@@ -19,9 +19,11 @@
 						<span id="edit_pers_{{ filmPersonne.id }}" class="link">
 							<span class="oi oi-pencil"></span>
 						</span>
-						<span id="delete_pers_{{ filmPersonne.id }}" class="link">
-							<span class="oi oi-x"></span>
-						</span>
+						{% if is_granted('ROLE_ADMIN') or filmPersonne.personne.id == app.user.id %}
+							<span id="delete_pers_{{ filmPersonne.id }}" class="link">
+								<span class="oi oi-x"></span>
+							</span>
+						{% endif %}
 					</td>
 				{% endif %}
 			</tr>

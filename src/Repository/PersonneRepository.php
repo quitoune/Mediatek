@@ -121,4 +121,19 @@ class PersonneRepository extends ServiceEntityRepository
         
         return $stmt->fetchAll();
     }
+    
+    /**
+     * 
+     * @param array $personnes
+     * @return mixed|\Doctrine\DBAL\Driver\Statement|array|NULL
+     */
+    public function getPersonnesAvecId(array $personnes){
+        return $this->createQueryBuilder('p')
+        ->andWhere('p.id IN (' . implode(",", $personnes) . ')')
+        ->addOrderBy('p.nom', 'ASC')
+        ->addOrderBy('p.prenom', 'ASC')
+        ->addOrderBy('p.username', 'ASC')
+        ->getQuery()
+        ->getResult();
+    }
 }

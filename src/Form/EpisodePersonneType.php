@@ -6,16 +6,14 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use App\Entity\Personne;
-use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
-use App\Entity\Lieu;
-use App\Repository\LieuRepository;
 use App\Entity\Episode;
 use App\Repository\EpisodeRepository;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use App\Repository\PersonneRepository;
 use App\Entity\Format;
 use App\Repository\FormatRepository;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use App\Entity\Personne;
+use App\Entity\Lieu;
 
 class EpisodePersonneType extends AbstractType
 {
@@ -25,13 +23,13 @@ class EpisodePersonneType extends AbstractType
         if ($options['avec_personne']) {
             $builder->add('personne', EntityType::class, array(
                 'class' => Personne::class,
-                'query_builder' => function (PersonneRepository $pr) {
-                    return $pr->createQueryBuilder('personne')
-                        ->orderBy('personne.nom')
-                        ->addOrderBy('personne.prenom');
-                },
-                'choice_label' => function (Personne $personne) {
-                    return $personne->getPrenom() . ' ' . $personne->getNom();
+                'choices' => $options['select_personne'],
+                'choice_label' => function (Personne $p) {
+                    if (! is_null($p->getNom()) && ! is_null($p->getPrenom())) {
+                        return $p->getPrenom() . " " . $p->getNom();
+                    } else {
+                        return $p->getUsername();
+                    }
                 }
             ));
         }
@@ -45,30 +43,39 @@ class EpisodePersonneType extends AbstractType
             },
             'choice_label' => 'nom'
         ))
-            ->add('date_achat', BirthdayType::class, array(
-            'required' => false,
+            ->add('date_achat', DateType::class, array(
             'label' => "Date d'achat",
             'widget' => 'choice',
+            'required' => false,
+            'years' => range(date('Y') - 15, date('Y')),
             'format' => 'ddMMyyyy'
         ))
             ->add('lieu', EntityType::class, array(
             'class' => Lieu::class,
-            'query_builder' => function (LieuRepository $lr) {
-                return $lr->createQueryBuilder('lieu')
-                    ->orderBy('lieu.nom');
-            },
+            'choices' => $options['select_lieu'],
             'choice_label' => 'nom'
         ));
 
         if ($options['avec_episode']) {
-            $builder->add('episode', EntityType::class, array(
-                'class' => Episode::class,
-                'query_builder' => function (EpisodeRepository $fr) {
-                    return $fr->createQueryBuilder('episode')
-                        ->orderBy('episode.titre_original');
-                },
-                'choice_label' => ($options['vo'] ? 'titre_original' : 'titre')
-            ));
+            if ($options['titre_vo']) {
+                $builder->add('episode', EntityType::class, array(
+                    'class' => Episode::class,
+                    'query_builder' => function (EpisodeRepository $fr) {
+                        return $fr->createQueryBuilder('episode')
+                            ->orderBy('episode.titre_original');
+                    },
+                    'choice_label' => 'titre_original'
+                ));
+            } else {
+                $builder->add('episode', EntityType::class, array(
+                    'class' => Episode::class,
+                    'query_builder' => function (EpisodeRepository $fr) {
+                        return $fr->createQueryBuilder('episode')
+                            ->orderBy('episode.titre');
+                    },
+                    'choice_label' => 'titre'
+                ));
+            }
         }
 
         if ($options['avec_save']) {
@@ -87,9 +94,11 @@ class EpisodePersonneType extends AbstractType
             'data_class' => EpisodePersonne::class,
             'label_submit' => 'Valider',
             'avec_save' => true,
+            'select_personne' => array(),
+            'select_lieu' => array(),
             'avec_personne' => true,
             'avec_episode' => true,
-            'vo' => true
+            'titre_vo' => true
         ));
     }
 }

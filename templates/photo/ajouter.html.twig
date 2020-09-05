@@ -5,13 +5,20 @@
 {% block body %}
     {{ form_start(form) }}
     <div class="shadow-sm p-3 mb-5 bg-white rounded border">
-        <div class="row">
-        	<div class="col-sm">
-        		{{ form_row(form.chemin) }}
-        	</div>
-        	<div class="col-sm">
-                {{ form_row(form.nom) }}
-            </div>
+    	<div class="row">
+	    	<div class="col-sm">
+		        <div class="row">
+		        	<div class="col-sm-12">
+		        		{{ form_row(form.chemin) }}
+		        	</div>
+		        	<div class="col-sm-12">
+		                {{ form_row(form.nom) }}
+		            </div>
+		    	</div>
+	    	</div>
+	    	<div class="col-sm">
+	    		<img data-id="photo_chemin" style="display: none">
+	    	</div>
     	</div>
         
         <div class="row text-center center-item">
@@ -23,4 +30,18 @@
     {{ form_errors(form) }}
     {{ form_end(form) }}
     
+{% endblock %}
+
+{% block script %}
+	<script src="{{ asset('js/collection.js') }}"></script>
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#photo_chemin").change(function() {
+				readURL(this, "photo_chemin");
+			});
+		});
+	</script>
 {% endblock %}

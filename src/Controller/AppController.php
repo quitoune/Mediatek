@@ -256,7 +256,12 @@ class AppController extends Controller
      * @param string $texte
      * @return string
      */
-    public function createFileName(string $texte, string $extension){
+    public function createFileName(string $texte, string $extension = ""){
+        if($extension == ""){
+            $extension = preg_match("#\.(jpg|jpeg|gif|png)#i", $texte);
+            $texte = str_replace($extension, "", $texte);
+        }
+        
         $chemin = htmlentities($texte, ENT_NOQUOTES, "utf-8" );
         
         $chemin = preg_replace('#&([A-za-z])(?:acute|cedil|caron|circ|grave|orn|ring|slash|th|tilde|uml);#', '\1', $chemin);

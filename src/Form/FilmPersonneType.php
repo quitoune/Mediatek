@@ -5,17 +5,15 @@ use App\Entity\FilmPersonne;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use App\Entity\Film;
 use App\Repository\FilmRepository;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use App\Entity\Format;
 use App\Repository\FormatRepository;
-use App\Entity\Lieu;
-use App\Repository\LieuRepository;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use App\Entity\Personne;
-use App\Repository\PersonneRepository;
+use App\Entity\Lieu;
 
 class FilmPersonneType extends AbstractType
 {
@@ -23,19 +21,15 @@ class FilmPersonneType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         if ($options['avec_personne']) {
-            // $builder->add('personne', ChoiceType::class, array(
-            // 'choice_label' => 'username',
-            // 'choices' => $options['select_personne']
-            // ));
             $builder->add('personne', EntityType::class, array(
                 'class' => Personne::class,
-                'query_builder' => function (PersonneRepository $pr) {
-                    return $pr->createQueryBuilder('personne')
-                        ->orderBy('personne.nom')
-                        ->addOrderBy('personne.prenom');
-                },
-                'choice_label' => function (Personne $personne) {
-                    return $personne->getPrenom() . ' ' . $personne->getNom();
+                'choices' => $options['select_personne'],
+                'choice_label' => function (Personne $p) {
+                    if (! is_null($p->getNom()) && ! is_null($p->getPrenom())) {
+                        return $p->getPrenom() . " " . $p->getNom();
+                    } else {
+                        return $p->getUsername();
+                    }
                 }
             ));
         }
@@ -49,34 +43,39 @@ class FilmPersonneType extends AbstractType
             },
             'choice_label' => 'nom'
         ))
-            ->add('date_achat', BirthdayType::class, array(
+            ->add('date_achat', DateType::class, array(
             'label' => "Date d'achat",
-            'required' => false,
             'widget' => 'choice',
+            'required' => false,
+            'years' => range(date('Y') - 15, date('Y')),
             'format' => 'ddMMyyyy'
         ))
             ->add('lieu', EntityType::class, array(
             'class' => Lieu::class,
-            'query_builder' => function (LieuRepository $lr) {
-                return $lr->createQueryBuilder('lieu')
-                    ->orderBy('lieu.nom');
-            },
+            'choices' => $options['select_lieu'],
             'choice_label' => 'nom'
         ));
-        // ->add('lieu', ChoiceType::class, array(
-        // 'choice_label' => 'nom',
-        // 'choices' => $options['select_lieu']
-        // ));
 
         if ($options['avec_film']) {
-            $builder->add('film', EntityType::class, array(
-                'class' => Film::class,
-                'query_builder' => function (FilmRepository $fr) {
-                    return $fr->createQueryBuilder('film')
-                        ->orderBy('film.titre');
-                },
-                'choice_label' => 'titre'
-            ));
+            if ($options['titre_vo']) {
+                $builder->add('film', EntityType::class, array(
+                    'class' => Film::class,
+                    'query_builder' => function (FilmRepository $fr) {
+                        return $fr->createQueryBuilder('film')
+                            ->orderBy('film.titre_original');
+                    },
+                    'choice_label' => 'titre_original'
+                ));
+            } else {
+                $builder->add('film', EntityType::class, array(
+                    'class' => Film::class,
+                    'query_builder' => function (FilmRepository $fr) {
+                        return $fr->createQueryBuilder('film')
+                            ->orderBy('film.titre');
+                    },
+                    'choice_label' => 'titre'
+                ));
+            }
         }
 
         if ($options['avec_save']) {
@@ -98,7 +97,8 @@ class FilmPersonneType extends AbstractType
             'select_personne' => array(),
             'select_lieu' => array(),
             'avec_personne' => true,
-            'avec_film' => true
+            'avec_film' => true,
+            'titre_vo' => true
         ));
     }
 }

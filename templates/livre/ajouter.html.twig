@@ -43,6 +43,18 @@
     	
     	<hr>
     	
+    	<div class="row">
+    		<div class="col-sm w-100">
+        		{{ form_row(form.photo) }}
+        	</div>
+    		<div class="col-sm" style="text-align: center;">
+    			<!-- img data-id="livre_photo" style="display: none;" -->
+    			<div id="livre_photo_apercu"></div>
+    		</div>
+    	</div>
+    	
+    	<hr>
+    	
     	<div id="livrePersonnes">
     		<div class="row">
     			<div class="col-sm-9">Propriétaires</div>
@@ -68,7 +80,7 @@
 {% block javascripts %}
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#livre_type, #livre_saga").select2();
+			$("#livre_type, #livre_saga, #livre_photo").select2();
 			$("#livre_categories").select2({
 				multiple: true
 			});
@@ -81,6 +93,21 @@
 			 
 			 $(".addElement").click(function(){
 				index = addNewLivreLivrePersonne(index, personnes, lieux, formats);
+			});
+
+			$("#livre_photo_chemin").change(function() {
+				readURL(this, "livre_photo");
+			});
+			
+			$("#livre_photo").parent().find("legend").hide();
+			$("#livre_photo").on('change', function(){
+				if($(this).val()){
+					var url ="/photo/afficher/" + $(this).val();
+					var id_done = "#livre_photo_apercu";
+					Ajax(url, id_done, undefined, "#livre_photo_apercu");
+				} else {
+					$("#livre_photo_apercu").html("");
+				}
 			});
 		});
 	</script>

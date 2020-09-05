@@ -10,13 +10,11 @@ use App\Entity\Livre;
 use App\Repository\LivreRepository;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use App\Entity\Format;
 use App\Repository\FormatRepository;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use App\Entity\Personne;
-use App\Repository\PersonneRepository;
 use App\Entity\Lieu;
-use App\Repository\LieuRepository;
 
 class LivrePersonneType extends AbstractType
 {
@@ -29,19 +27,15 @@ class LivrePersonneType extends AbstractType
         ));
 
         if ($options['avec_personne']) {
-            // $builder->add('personne', ChoiceType::class, array(
-            // 'choice_label' => 'username',
-            // 'choices' => $options['select_personne']
-            // ));
             $builder->add('personne', EntityType::class, array(
                 'class' => Personne::class,
-                'query_builder' => function (PersonneRepository $pr) {
-                    return $pr->createQueryBuilder('personne')
-                        ->orderBy('personne.nom')
-                        ->addOrderBy('personne.prenom');
-                },
-                'choice_label' => function (Personne $personne) {
-                    return $personne->getPrenom() . ' ' . $personne->getNom();
+                'choices' => $options['select_personne'],
+                'choice_label' => function (Personne $p) {
+                    if (! is_null($p->getNom()) && ! is_null($p->getPrenom())) {
+                        return $p->getPrenom() . " " . $p->getNom();
+                    } else {
+                        return $p->getUsername();
+                    }
                 }
             ));
         }
@@ -55,34 +49,39 @@ class LivrePersonneType extends AbstractType
             },
             'choice_label' => 'nom'
         ))
-            ->add('date_achat', BirthdayType::class, array(
+            ->add('date_achat', DateType::class, array(
             'label' => "Date d'achat",
             'widget' => 'choice',
             'required' => false,
+            'years' => range(date('Y') - 15, date('Y')),
             'format' => 'ddMMyyyy'
         ))
             ->add('lieu', EntityType::class, array(
             'class' => Lieu::class,
-            'query_builder' => function (LieuRepository $lr) {
-                return $lr->createQueryBuilder('lieu')
-                    ->orderBy('lieu.nom');
-            },
+            'choices' => $options['select_lieu'],
             'choice_label' => 'nom'
         ));
-        // ->add('lieu', ChoiceType::class, array(
-        // 'choice_label' => 'nom',
-        // 'choices' => $options['select_lieu']
-        // ));
 
         if ($options['avec_livre']) {
-            $builder->add('livre', EntityType::class, array(
-                'class' => Livre::class,
-                'query_builder' => function (LivreRepository $lr) {
-                    return $lr->createQueryBuilder('livre')
-                        ->orderBy('livre.nom');
-                },
-                'choice_label' => 'nom'
-            ));
+            if ($options['titre_vo']) {
+                $builder->add('livre', EntityType::class, array(
+                    'class' => Livre::class,
+                    'query_builder' => function (LivreRepository $lr) {
+                        return $lr->createQueryBuilder('livre')
+                            ->orderBy('livre.titre_original');
+                    },
+                    'choice_label' => 'titre_original'
+                ));
+            } else {
+                $builder->add('livre', EntityType::class, array(
+                    'class' => Livre::class,
+                    'query_builder' => function (LivreRepository $lr) {
+                        return $lr->createQueryBuilder('livre')
+                            ->orderBy('livre.titre');
+                    },
+                    'choice_label' => 'titre'
+                ));
+            }
         }
 
         if ($options['avec_save']) {
@@ -104,7 +103,8 @@ class LivrePersonneType extends AbstractType
             'select_personne' => array(),
             'select_lieu' => array(),
             'avec_personne' => true,
-            'avec_livre' => true
+            'avec_livre' => true,
+            'titre_vo' => true
         ));
     }
 }

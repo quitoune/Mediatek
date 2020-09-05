@@ -51,4 +51,20 @@ class LivrePersonneRepository extends ServiceEntityRepository
         ->getQuery()
         ->getSingleScalarResult();
     }
+    
+    /**
+     * Renvoie, pour un livre donné, la liste des propriétaires parmi les personnes données
+     * 
+     * @param int $livre
+     * @param array $personnes
+     * @return mixed|\Doctrine\DBAL\Driver\Statement|array|NULL
+     */
+    public function getLivrePersonnes(int $livre, array $personnes)
+    {
+        return $this->createQueryBuilder('lp')
+        ->andWhere('lp.livre = ' . $livre)
+        ->andWhere('lp.personne IN (' . implode(",", $personnes) . ')')
+        ->getQuery()
+        ->getResult();
+    }
 }

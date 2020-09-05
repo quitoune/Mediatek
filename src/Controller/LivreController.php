@@ -11,6 +11,8 @@ use App\Entity\Personne;
 use App\Entity\Format;
 use App\Entity\LivrePersonne;
 use App\Entity\Lieu;
+use Symfony\Component\Form\FormError;
+use App\Entity\Photo;
 
 class LivreController extends AppController
 {
@@ -101,53 +103,74 @@ class LivreController extends AppController
 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-
+        if ($form->isSubmitted()) {
+            $file = $request->files->get('livre')['photo']['chemin'];
+            $nom = $request->request->all()['livre']['photo']['nom'];
+            $fileName = $this->uploadFile($file, $nom);
+            
+            $photo = new Photo();
+            
             $manager = $this->getDoctrine()->getManager();
             
-            $slug = $this->createSlug($livre->getTitreOriginal(), 'Livre');
-            $livre->setSlug($slug);
-            
-            $livrePersonnes = $request->request->all()['livre']['livrePersonnes'];
-            foreach($livrePersonnes as $livrePersonne){
-                $repo_lieu = $this->getDoctrine()->getRepository(Lieu::class);
-                $repo_format = $this->getDoctrine()->getRepository(Format::class);
-                $repo_pers = $this->getDoctrine()->getRepository(Personne::class);
+            if ($fileName) {
+                $photo->setChemin($fileName);
+                $photo->setNom($nom);
                 
-                $livre_personne = new LivrePersonne();
+                $livre->setPhoto($photo);
                 
-                $format = $repo_format->findOneBy(array(
-                    'id' => $livrePersonne['format']
-                ));
-                
-                $lieu = $repo_lieu->findOneBy(array(
-                    'id' => $livrePersonne['lieu']
-                ));
-                
-                $personne = $repo_pers->findOneBy(array(
-                    'id' => $livrePersonne['personne']
-                ));
-                
-                $livre_personne->setLieu($lieu);
-                $livre_personne->setFormat($format);
-                $livre_personne->setPersonne($personne);
-                if($livrePersonne['date_achat']['day'] && $livrePersonne['date_achat']['month'] && $livrePersonne['date_achat']['year']){
-                    $date  = $livrePersonne['date_achat']['year'] . "-";
-                    $date .= ($livrePersonne['date_achat']['month'] < 10 ? "0" : "") . $livrePersonne['date_achat']['month'] . "-";
-                    $date .= ($livrePersonne['date_achat']['day'] < 10 ? "0" : "") . $livrePersonne['date_achat']['day'];
-                    $livre_personne->setDateAchat(new \DateTime($date));
-                }
-                $livre_personne->setIsbn($livrePersonne['isbn']);
-                $livre_personne->setLivre($livre);
-                $manager->persist($livre_personne);
+                $manager->persist($photo);
+            } else {
+                $form->addError(new FormError("L'image n'est pas au format autorisé (" . implode(', ', AppController::FORMAT_IMAGE) . ")."));
             }
-
-            $manager->persist($livre);
-            $manager->flush();
-
-            return $this->redirectToRoute('livre_afficher', array(
-                'slug' => $livre->getSlug()
-            ));
+            
+            if($form->isValid()) {
+                
+                $slug = $this->createSlug($livre->getTitreOriginal(), 'Livre');
+                $livre->setSlug($slug);
+                
+                if(isset($request->request->all()['livre']['livrePersonnes'])){
+                    $livrePersonnes = $request->request->all()['livre']['livrePersonnes'];
+                    foreach($livrePersonnes as $livrePersonne){
+                        $repo_lieu = $this->getDoctrine()->getRepository(Lieu::class);
+                        $repo_format = $this->getDoctrine()->getRepository(Format::class);
+                        $repo_pers = $this->getDoctrine()->getRepository(Personne::class);
+                        
+                        $livre_personne = new LivrePersonne();
+                        
+                        $format = $repo_format->findOneBy(array(
+                            'id' => $livrePersonne['format']
+                        ));
+                        
+                        $lieu = $repo_lieu->findOneBy(array(
+                            'id' => $livrePersonne['lieu']
+                        ));
+                        
+                        $personne = $repo_pers->findOneBy(array(
+                            'id' => $livrePersonne['personne']
+                        ));
+                        
+                        $livre_personne->setLieu($lieu);
+                        $livre_personne->setFormat($format);
+                        $livre_personne->setPersonne($personne);
+                        if($livrePersonne['date_achat']['day'] && $livrePersonne['date_achat']['month'] && $livrePersonne['date_achat']['year']){
+                            $date  = $livrePersonne['date_achat']['year'] . "-";
+                            $date .= ($livrePersonne['date_achat']['month'] < 10 ? "0" : "") . $livrePersonne['date_achat']['month'] . "-";
+                            $date .= ($livrePersonne['date_achat']['day'] < 10 ? "0" : "") . $livrePersonne['date_achat']['day'];
+                            $livre_personne->setDateAchat(new \DateTime($date));
+                        }
+                        $livre_personne->setIsbn($livrePersonne['isbn']);
+                        $livre_personne->setLivre($livre);
+                        $manager->persist($livre_personne);
+                    }
+                }
+    
+                $manager->persist($livre);
+                $manager->flush();
+    
+                return $this->redirectToRoute('livre_afficher', array(
+                    'slug' => $livre->getSlug()
+                ));
+            }
         }
         
         $personnes = array();

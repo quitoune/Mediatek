@@ -38,7 +38,7 @@ class FamillePersonneRepository extends ServiceEntityRepository
                     FROM personne as P
                     INNER JOIN famille_personne as FP ON P.id = FP.personne_id
                     WHERE FP.famille_id IN (' . implode(', ', $familles) . ')
-                    ORDER BY P.username';
+                    ORDER BY P.nom, P.prenom, P.username';
         
         $stmt = $this->getEntityManager()->getConnection()->prepare($queryPers);
         $stmt->execute();

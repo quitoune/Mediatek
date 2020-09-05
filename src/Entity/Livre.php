@@ -59,7 +59,7 @@ class Livre
     private $saga;
     
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Photo", inversedBy="livres")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Photo", inversedBy="livres", cascade={"persist"})
      */
     private $photo;
     

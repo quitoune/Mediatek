@@ -14,6 +14,7 @@ use App\Repository\SagaRepository;
 use App\Repository\CategorieRepository;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use App\Entity\Photo;
 
 class LivreType extends AbstractType
 {
@@ -55,6 +56,19 @@ class LivreType extends AbstractType
             }
         ));
 
+//         $builder->add('photo', PhotoType::class, array(
+//             'add' => true,
+//             'label' => 'Photo',
+//             'required' => false,
+//             'avec_bouton' => false
+//         ));
+
+        $builder->add('photo', EntityType::class, array(
+            'class' => Photo::class,
+            'required' => false,
+            'choice_label' => 'nom'
+        ));
+            
         $builder->add('saga', EntityType::class, array(
             'class' => Saga::class,
             'required' => false,
