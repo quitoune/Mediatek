@@ -113,6 +113,8 @@ function createNumberDropdown(id, name, start, end, defaut, step){
 }
 
 function createInputDate(id, name, label){
+	var date = (new Date()).getFullYear();
+	
 	var input = '<fieldset class="form-group">';
 	input += "<legend class=\"col-form-label\">" + label + "</legend>";
 	input += '<div id="' + id + '" class="form-inline">';
@@ -126,7 +128,7 @@ function createInputDate(id, name, label){
 	input += '/';
 	input += createNumberDropdown(id + '_month', name + '[month]', 1, 12);
 	input += '/';
-	input += createNumberDropdown(id + '_day', name + '[year]', 1900, 2020);
+	input += createNumberDropdown(id + '_day', name + '[year]', date - 15, date);
 	
 	input += '</div>';
 	input += '</fieldset>';

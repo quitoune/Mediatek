@@ -163,7 +163,7 @@ class CategorieController extends AppController
         
         $series = $categorie->getSeries();
         foreach ($series as $serie){
-            $categorie->removeSerie($serie);
+            $categorie->removeSeries($serie);
         }
         
         $manager->persist($categorie);

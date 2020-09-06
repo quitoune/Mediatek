@@ -151,6 +151,15 @@ class SagaController extends AppController
             $type = $form->getData();
 
             $manager = $this->getDoctrine()->getManager();
+            
+            $supp = "";
+            if (! is_null($saga->getSaga())) {
+                $supp = $saga->getSaga()->getSlug() . "-";
+            }
+            
+            $slug = $this->createSlug($supp . $saga->getNom(), 'Saga', "", $saga->getId());
+            $saga->setSlug($slug);
+            
             $manager->persist($type);
             $manager->flush();
 
@@ -215,6 +224,21 @@ class SagaController extends AppController
 
                 $manager->persist($sousSaga);
             }
+        }
+        
+        foreach ($saga->getFilms() as $film){
+            $film->setSaga(NULL);
+            $manager->persist($film);
+        }
+        
+        foreach ($saga->getSeries() as $serie){
+            $serie->setSaga(NULL);
+            $manager->persist($serie);
+        }
+        
+        foreach ($saga->getLivres() as $livre){
+            $livre->setSaga(NULL);
+            $manager->persist($livre);
         }
 
         $manager->remove($saga);

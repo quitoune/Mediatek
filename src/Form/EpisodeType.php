@@ -63,7 +63,9 @@ class EpisodeType extends AbstractType
                     ->orderBy('s.numero_saison');
             }
         ))
-            ->add('description', TextareaType::class)
+            ->add('description', TextareaType::class, array(
+            'required' => false
+        ))
             ->add('save', SubmitType::class, array(
             'label' => $options['label_submit'],
             'attr' => array(

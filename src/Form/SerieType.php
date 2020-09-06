@@ -25,8 +25,8 @@ class SerieType extends AbstractType
         ))
             ->add('titre_original')
             ->add('annee', IntegerType::class, array(
-                'label' => 'Année'
-            ))
+            'label' => 'Année'
+        ))
             ->add('nombre_saison', IntegerType::class, array(
             'label' => 'Nombre de saisons'
         ))
@@ -36,11 +36,13 @@ class SerieType extends AbstractType
             ->add('terminee', YesNoType::class, array(
             'label' => 'Série terminée ?'
         ))
-            ->add('categorie', EntityType::class, array(
+            ->add('categories', EntityType::class, array(
             'class' => Categorie::class,
             'choice_label' => 'nom',
+            'multiple' => true,
+            'by_reference' => false,
             'query_builder' => function (CategorieRepository $cr) {
-            return $cr->createQueryBuilder('c')
+                return $cr->createQueryBuilder('c')
                     ->andWhere('c.objet IN (0,2)')
                     ->orderBy('c.nom');
             }

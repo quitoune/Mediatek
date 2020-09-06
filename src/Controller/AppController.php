@@ -168,7 +168,7 @@ class AppController extends Controller
      * @param string $supp
      * @return string
      */
-    public function createSlug(string $texte, string $type, $supp = ""){
+    public function createSlug(string $texte, string $type, string $supp = "", int $id = 0){
         $slug = htmlentities($texte, ENT_NOQUOTES, "utf-8" );
         
         $slug = preg_replace('#&([A-za-z])(?:acute|cedil|caron|circ|grave|orn|ring|slash|th|tilde|uml);#', '\1', $slug);
@@ -232,18 +232,18 @@ class AppController extends Controller
         }
         
         $object = $repository->findOneBy(array('slug' => $slug));
-        if(is_null($object)){
+        if(is_null($object) || $object->getId() == $id){
             return $slug;
         } else {
             if($supp){
                 $object = $repository->findOneBy(array('slug' => $slug . "_(" . $supp . ")"));
-                if(is_null($object)){
+                if(is_null($object) || $object->getId() == $id){
                     return $slug . "_(" . $supp . ")";
                 }
             }
             for($i = 1; $i <= 1000; $i++){
                 $object = $repository->findOneBy(array('slug' => $slug . "_" . $i));
-                if(is_null($object)){
+                if(is_null($object) || $object->getId() == $id){
                     return $slug . "_" . $i;
                 }
             }

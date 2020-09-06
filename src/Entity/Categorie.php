@@ -66,6 +66,11 @@ class Categorie
 
         return $this;
     }
+    
+    public function getNomComplet(): ?string
+    {
+        return $this->nom;
+    }
 
     public function getObjet(): ?int
     {
@@ -87,7 +92,7 @@ class Categorie
         return $this->series;
     }
 
-    public function addSerie(Serie $series): self
+    public function addSeries(Serie $series): self
     {
         if (!$this->series->contains($series)) {
             $this->series[] = $series;

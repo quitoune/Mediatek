@@ -61,6 +61,7 @@ class FilmType extends AbstractType
             'choice_label' => 'nom',
             'multiple' => true,
             'required' => false,
+            'by_reference' => false,
             'attr' => array(
                 'class' => 'multiple'
             ),
@@ -70,7 +71,9 @@ class FilmType extends AbstractType
                     ->orderBy('c.nom');
             }
         ))
-            ->add('description', TextareaType::class)
+            ->add('description', TextareaType::class, array(
+            'required' => false
+        ))
             ->add('save', SubmitType::class, array(
             'label' => $options['label_submit'],
             'attr' => array(

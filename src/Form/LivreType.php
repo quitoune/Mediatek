@@ -47,6 +47,7 @@ class LivreType extends AbstractType
             'choice_label' => 'nom',
             'multiple' => true,
             'required' => false,
+            'by_reference' => false,
             'attr' => array(
                 'class' => 'multiple'
             ),
@@ -65,7 +66,9 @@ class LivreType extends AbstractType
                     ->orderBy('s.nom');
             }
         ))
-            ->add('description', TextareaType::class)
+            ->add('description', TextareaType::class, array(
+            'required' => false
+        ))
             ->add('save', SubmitType::class, array(
             'label' => 'Enregistrer',
             'attr' => array(
@@ -73,12 +76,12 @@ class LivreType extends AbstractType
             )
         ));
 
-//         $builder->add('photo', PhotoType::class, array(
-//         'add' => true,
-//         'label' => 'Photo',
-//         'required' => false,
-//         'avec_bouton' => false
-//         ));
+        // $builder->add('photo', PhotoType::class, array(
+        // 'add' => true,
+        // 'label' => 'Photo',
+        // 'required' => false,
+        // 'avec_bouton' => false
+        // ));
 
         $builder->add('photo', EntityType::class, array(
             'class' => Photo::class,
