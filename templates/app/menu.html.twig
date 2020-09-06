@@ -55,7 +55,7 @@
               			Bonjour {{ app.user.username }}
             		</a>
             		<div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
-            			<a class="dropdown-item" href="{{ path('personne_liste') }}"><span class="oi oi-person"></span> Annuaire</a>
+            			<a class="dropdown-item" href="{{ path('annuaire', { 'role': role(app.user.roles) }) }}"><span class="oi oi-person"></span> Annuaire</a>
             			{% if is_granted("ROLE_ADMIN") %}
                         	<a class="dropdown-item" href="{{ path('lieu') }}"><span class="oi oi-basket"></span> Lieux</a>
                         	<a class="dropdown-item" href="{{ path('famille') }}"><span class="oi oi-people"></span> Familles</a>

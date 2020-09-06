@@ -9,6 +9,7 @@ use App\Form\PersonneType;
 use App\Entity\LivrePersonne;
 use App\Entity\FilmPersonne;
 use App\Entity\EpisodePersonne;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class PersonneController extends AppController
 {
@@ -16,36 +17,63 @@ class PersonneController extends AppController
     /**
      * Liste des membres
      *
-     * @Route("/personne/liste/{page}", name="personne_liste")
+     * @Route("/personne/liste/{role}/{page}", name="annuaire")
      * @IsGranted("ROLE_UTILISATEUR")
      *
+     * @param SessionInterface $session
      * @param int $page
+     * @param string $role
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function index(int $page = 1)
+    public function index(SessionInterface $session, int $page = 1, string $role)
     {
         $repository = $this->getDoctrine()->getRepository(Personne::class);
 
-        $params = array(
-            'repository' => 'Personne',
-            'orderBy' => array(
-                'Personne.nom' => 'ASC',
-                'Personne.prenom' => 'ASC',
-                'Personne.username' => 'ASC'
-            )
-        );
+        $personnes = array();
+        foreach ($session->get('personnes') as $pers) {
+            $personnes[] = $pers["id"];
+        }
+
+        switch ($role) {
+            case 'super_admin':
+                $params = array(
+                    'repository' => 'Personne',
+                    'orderBy' => array(
+                        'Personne.nom' => 'ASC',
+                        'Personne.prenom' => 'ASC',
+                        'Personne.username' => 'ASC'
+                    )
+                );
+                break;
+            case 'admin':
+            case 'utilisateur':
+                $params = array(
+                    'repository' => 'Personne',
+                    'condition' => array(
+                        'Personne.id IN (' . implode(', ', $personnes) . ')'
+                    ),
+                    'orderBy' => array(
+                        'Personne.nom' => 'ASC',
+                        'Personne.prenom' => 'ASC',
+                        'Personne.username' => 'ASC'
+                    )
+                );
+                break;
+        }
         $personnes = $repository->findAllElements($page, self::MAX_RESULT, $params);
 
         $pagination = array(
             'page' => $page,
-            'route' => 'personne_liste',
+            'route' => 'annuaire',
             'nbr_page' => ceil($personnes['total'] / self::MAX_RESULT),
             'total' => $personnes['total'],
-            'route_params' => array()
+            'route_params' => array(
+                'role' => $role
+            )
         );
 
         $paths = array(
-            'active' => 'Épisodes'
+            'active' => 'Annuaire'
         );
 
         return $this->render('personne/index.html.twig', array(
@@ -54,7 +82,7 @@ class PersonneController extends AppController
             'paths' => $paths
         ));
     }
-    
+
     /**
      *
      * @Route("/inscription", name="inscription")
@@ -65,30 +93,31 @@ class PersonneController extends AppController
     public function inscription(Request $request)
     {
         $personne = new Personne();
-        
+
         $form = $this->createForm(PersonneType::class, $personne, array(
             'avec_username' => true
         ));
-        
+
         $form->handleRequest($request);
-        
+
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->pre($request->request->all());die;
+            $this->pre($request->request->all());
+            die();
             $personne = $form->getData();
-            
+
             $manager = $this->getDoctrine()->getManager();
-            
+
             $manager->persist($personne);
             $manager->flush();
-            
+
             return $this->redirectToRoute('index');
         }
-        
+
         return $this->render('personne/inscription.html.twig', array(
             'form' => $form->createView()
         ));
     }
-    
+
     /**
      *
      * @Route("/inscription/inscription_famille/{cas}/{clef}", name="inscription_famille")
@@ -98,7 +127,7 @@ class PersonneController extends AppController
      */
     public function inscription_famille(int $cas, string $clef = "")
     {
-        switch($cas){
+        switch ($cas) {
             case 1:
                 return $this->render('personne/inscription_ajout_famille.html.twig');
                 break;
@@ -107,7 +136,7 @@ class PersonneController extends AppController
                 break;
         }
     }
-    
+
     /**
      *
      * @Route("/inscription/inscription_lieu/{clef}", name="inscription_lieu")
@@ -117,7 +146,7 @@ class PersonneController extends AppController
      */
     public function inscription_lieu(int $cas)
     {
-        switch($cas){
+        switch ($cas) {
             case 1:
                 return $this->render('personne/inscription_ajout_famille.html.twig');
                 break;
@@ -157,7 +186,7 @@ class PersonneController extends AppController
             ->groupBy('FilmPersonne.film')
             ->getQuery()
             ->getResult());
-        
+
         $nbr_episode = count($this->getDoctrine()
             ->getRepository(EpisodePersonne::class)
             ->createQueryBuilder('EpisodePersonne')

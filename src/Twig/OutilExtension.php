@@ -30,6 +30,10 @@ class OutilExtension extends ImageExtension
             new TwigFunction('derniersAchats', array(
                 $this,
                 'afficherDerniersAchats'
+            )),
+            new TwigFunction('role', array(
+                $this,
+                'role'
             ))
         );
     }
@@ -157,5 +161,14 @@ class OutilExtension extends ImageExtension
         }
         
         return $table;
+    }
+    
+    /**
+     * 
+     * @param array $array
+     * @return string
+     */
+    public function role(array $array){
+        return strtolower(str_replace("ROLE_", "", implode(", ", $array)));
     }
 }

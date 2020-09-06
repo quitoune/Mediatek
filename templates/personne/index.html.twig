@@ -1,14 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Épisodes{% endblock %}
+{% block title %}Annuaire{% endblock %}
 
 {% block body %}
 	<div class="card text-center">
         <div class="card-header text-left">
             {{ pagination.total }} épisode{% if pagination.total > 1 %}s{% endif %} {% if pagination.nbr_page > 0 %} - Page {{ pagination.page }} / {{ pagination.nbr_page }} {% endif %}
-            {#% if is_granted('ROLE_UTILISATEUR') %}
-	            {{ ajouter(path('episode_ajouter'), "float-right marg-r-2") | raw }}
-	        {% endif %#}
         </div>
         <div class="card-body">
         	{% if personnes is empty %}
@@ -17,21 +14,22 @@
             	<table class="table table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th>ID</th>
-                            <th>Pseudo</th>
-                            <th>Nom</th>
+                            <th></th>
+                            <th>Membres</th>
+                            <th>Email</th>
+                            <th>Adresse</th>
                         </tr>
                     </thead>
                     <tbody>
                     	{% for personne in personnes %}
                             <tr>
-                                <td>{{ personne.id }}</td>
+                                <td>{{ avatar(personne, "img-fluid shadow-sm img-thumbnail avatar") | raw }}</td>
                                 <td>
-                                	<a href="{{ path('personne_afficher', {'username': personne.username}) }}">
-                                        {{ personne.username }}
-                                    </a>
+                                	{{ personne.prenom }} {{ personne.nom }}<br>
+                                    ({{ personne.username }})
                                 </td>
-                                <td>{{ personne.prenom }} {{ personne.nom }}</td>
+                                <td>{{ personne.email }}</td>
+                                <td>{{ personne.lieu.adresse | raw }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>
