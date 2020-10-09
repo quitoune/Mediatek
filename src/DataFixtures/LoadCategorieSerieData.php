@@ -26,7 +26,7 @@ class LoadCategorieSerieData extends Fixture implements DependentFixtureInterfac
             
             foreach ($objet as $val) {
                 $serie = $this->getReference($val);
-                $categorie->addSerie($serie);
+                $categorie->addSeries($serie);
             }
             
             $manager->persist($categorie);
