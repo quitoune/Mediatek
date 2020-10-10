@@ -9,6 +9,10 @@ use App\Entity\Personne;
 
 class ImageExtension extends AbstractExtension
 {
+    const default_folder = "/image/appli/";
+    const avatar_folder = "/image/avatar/";
+    const image_folder = "/image/photo/";
+    
     public function getFunctions(): array
     {
         return array(
@@ -42,7 +46,7 @@ class ImageExtension extends AbstractExtension
     {
         $nom = "";
         $chemin = "";
-        $folder = "photo";
+        $folder = self::image_folder;
         $classe = (new \ReflectionClass($element))->getShortName();
         
         switch($classe){
@@ -52,7 +56,7 @@ class ImageExtension extends AbstractExtension
                 break;
             case 'Episode':
                 if(is_null($element->getSaison()->getPhoto())){
-                    $folder = "appli";
+                    $folder = self::default_folder;
                     $chemin = 'default-picture.png';
                     $nom = $element->getTitreComplet($vo);
                 } else {
@@ -62,7 +66,7 @@ class ImageExtension extends AbstractExtension
                 break;
             default:
                 if(is_null($element->getPhoto())){
-                    $folder = "appli";
+                    $folder = self::default_folder;
                     switch ($classe){
                         case 'Acteur':
                         case 'Personne':
@@ -107,7 +111,7 @@ class ImageExtension extends AbstractExtension
         if (preg_match("/^(http|https)/", $chemin)) {
             return '<img src="' . $chemin . '" class="' . $classe . '" />';
         }
-        return '<img src="/image/' . $folder . '/' . $chemin . '" title ="' . $nom . '" class="' . $classe . '" />';
+        return '<img src="' . $folder . $chemin . '" title ="' . $nom . '" class="' . $classe . '" />';
     }
     
     /**
@@ -121,10 +125,10 @@ class ImageExtension extends AbstractExtension
     {
         $nom = "";
         $chemin = "";
-        $folder = "avatar";
+        $folder = self::avatar_folder;
         
         if(is_null($personne->getAvatar())){
-            $folder = "appli";
+            $folder = self::default_folder;
             $chemin = 'default-picture.png';
             $nom = $personne->getNomComplet();
         } else {
@@ -133,7 +137,7 @@ class ImageExtension extends AbstractExtension
         }
         $nom = str_replace('"', "'", $nom);
         
-        return '<img src="/image/' . $folder . '/' . $chemin . '" title ="' . $nom . '" class="' . $classe . '" />';
+        return '<img src="' . $folder . $chemin . '" title ="' . $nom . '" class="' . $classe . '" />';
     }
     
     /**
@@ -153,7 +157,7 @@ class ImageExtension extends AbstractExtension
         }
         if(method_exists($objet, "getPhoto") ){
             $tooltip .= '<span class="tooltipimg">';
-            $tooltip .= '<img src="/image/photo/' . $objet->getPhoto()->getChemin() . '">';
+            $tooltip .= '<img src="' . self::image_folder . $objet->getPhoto()->getChemin() . '">';
             $tooltip .= '</span>';
         }
         $tooltip .= '</a>';
