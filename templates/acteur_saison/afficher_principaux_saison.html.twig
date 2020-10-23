@@ -6,7 +6,7 @@
 		{% for principal in principaux %}
 			<div class="col-img">
         		<div class="img-elt">
-    				<a href="{{ path('acteur_afficher', {'slug': principal.acteur.slug}) }}">
+    				<a href="{{ path('acteur_afficher', {'slug': principal.acteur.slug}) | decode }}">
     				    {{ image(principal.acteur) | raw }}
     				    {% if principal.role is not null %}<br>{{ principal.role }}{% endif %}
     				</a>

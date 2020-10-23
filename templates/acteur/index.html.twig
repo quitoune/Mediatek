@@ -18,7 +18,7 @@
             		{% for acteur in acteurs %}
                         <div class="col-img">
                             <div class="img-elt">
-                            	<a href="{{ path('acteur_afficher', {'slug': acteur.slug, 'page': pagination.page}) }}">
+                            	<a href="{{ path('acteur_afficher', {'slug': acteur.slug, 'page': pagination.page}) | decode }}">
         						    {{ image(acteur) | raw }}<br>
         						    {{ acteur.nomComplet }}
         						</a>

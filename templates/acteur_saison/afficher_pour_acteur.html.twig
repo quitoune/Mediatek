@@ -7,7 +7,7 @@
     {% for acteurSaison in acteurSaisons %}
     	<div class="col-img">
     		<div class="img-elt">
-        		<a href="{{ path('saison_afficher', {'slug': acteurSaison.saison.slug}) }}">
+        		<a href="{{ path('saison_afficher', {'slug': acteurSaison.saison.slug}) | decode }}">
             		{{ image(acteurSaison.saison, app.session.get('user')['episode_vo']) | raw }}<br>
             		{% if acteurSaison.role is not null %} {{ acteurSaison.role }}<br> {% endif %}
             		{{ acteurSaison.principal | roleActeurSaison }}

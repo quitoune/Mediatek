@@ -6,7 +6,7 @@
 		{% for recurrent in recurrents %}
 			<div class="col-img">
         		<div class="img-elt">
-        			<a href="{{ path('acteur_afficher', {'slug': recurrent.acteur.slug}) }}">
+        			<a href="{{ path('acteur_afficher', {'slug': recurrent.acteur.slug}) | decode }}">
     				    {{ image(recurrent.acteur) | raw }}
     				    {% if recurrent.role is not null %}<br>{{ recurrent.role }}{% endif %}
     				</a>

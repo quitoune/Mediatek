@@ -7,7 +7,7 @@
     {% for acteurFilm in acteurFilms %}
     	<div class="col-img">
 			<div class="img-elt">
-        		<a href="{{ path('film_afficher', {'slug': acteurFilm.film.slug}) }}">
+        		<a href="{{ path('film_afficher', {'slug': acteurFilm.film.slug}) | decode }}">
             		{{ image(acteurFilm.film) | raw }}<br>
             		{% if acteurFilm.role is not null %} {{ acteurFilm.role }}<br> {% endif %}
             		{{ acteurFilm.principal | roleActeurFilm }}
