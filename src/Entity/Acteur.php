@@ -180,6 +180,15 @@ class Acteur
 
         return $this;
     }
+    
+    public function getAnneeNaissance(): ?int
+    {
+        if(is_null($this->date_naissance)){
+            return null;
+        } else {
+            return $this->date_naissance->format('Y');
+        }
+    }
 
     public function getDateDeces(): ?\DateTimeInterface
     {

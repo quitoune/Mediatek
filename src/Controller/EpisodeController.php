@@ -109,8 +109,10 @@ class EpisodeController extends AppController
             $episode = $form->getData();
 
             $manager = $this->getDoctrine()->getManager();
-            $titre_complet = $episode->getTitreComplet($this->get('session')->get('user')['episode_vo']);
-            $slug = $this->createSlug($titre_complet, 'Episode');
+            $slug = $this->createSlug($episode->getTitreOriginal(), 'Episode', array(
+                $episode->getSaison()->getSerie()->getSlug(),
+                'Saison_' . $episode->getSaison()->getNumeroSaison()
+            ));
             $episode->setSlug($slug);
 
             $manager->persist($episode);
@@ -137,7 +139,7 @@ class EpisodeController extends AppController
             'paths' => $paths
         ));
     }
-    
+
     /**
      * Formulaire de modification d'un épisode
      *
@@ -152,22 +154,22 @@ class EpisodeController extends AppController
     public function modifier(Request $request, Session $session, Episode $episode, int $page = 1)
     {
         $form = $this->createForm(EpisodeType::class, $episode);
-        
+
         $form->handleRequest($request);
-        
+
         if ($form->isSubmitted() && $form->isValid()) {
             $episode = $form->getData();
-            
+
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($episode);
             $manager->flush();
-            
+
             return $this->redirectToRoute('episode_afficher', array(
                 'slug' => $episode->getSlug(),
                 'page' => $page
             ));
         }
-        
+
         $paths = array(
             'home' => $this->homeURL(),
             'urls' => array(
@@ -181,7 +183,7 @@ class EpisodeController extends AppController
             ),
             'active' => 'Modification' . $this->getIdNom($episode, 'episode')
         );
-        
+
         return $this->render('episode/modifier.html.twig', array(
             'form' => $form->createView(),
             'episode' => $episode,
@@ -189,7 +191,7 @@ class EpisodeController extends AppController
             'paths' => $paths
         ));
     }
-    
+
     /**
      * Formulaire de suppression d'un episode
      *
@@ -199,17 +201,18 @@ class EpisodeController extends AppController
      * @param Episode $episode
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
-    public function supprimer(Episode $episode){
+    public function supprimer(Episode $episode)
+    {
         $manager = $this->getDoctrine()->getManager();
-        
+
         $episodePersonnes = $episode->getEpisodePersonnes();
-        foreach($episodePersonnes as $episodePersonne){
+        foreach ($episodePersonnes as $episodePersonne) {
             $manager->remove($episodePersonne);
         }
-        
+
         $manager->remove($episode);
         $manager->flush();
-        
+
         return $this->redirectToRoute('episode_liste');
     }
 
@@ -218,7 +221,7 @@ class EpisodeController extends AppController
      *
      * @Route("/episode/{slug}/afficher_saison", name="episode_saison_afficher")
      * @IsGranted("ROLE_UTILISATEUR")
-     * 
+     *
      * @param Saison $saison
      * @return \Symfony\Component\HttpFoundation\Response
      */

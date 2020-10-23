@@ -108,40 +108,42 @@ class FilmController extends AppController
             
             $manager = $this->getDoctrine()->getManager();
             
-            $slug = $this->createSlug($film->getTitreOriginal(), 'Film');
+            $slug = $this->createSlug($film->getTitreOriginal(), 'Film', $film->getAnnee());
             $film->setSlug($slug);
             
-            $filmPersonnes = $request->request->all()['film']['filmPersonnes'];
-            foreach($filmPersonnes as $filmPersonne){
-                $repo_lieu = $this->getDoctrine()->getRepository(Lieu::class);
-                $repo_format = $this->getDoctrine()->getRepository(Format::class);
-                $repo_pers = $this->getDoctrine()->getRepository(Personne::class);
-                
-                $film_personne = new FilmPersonne();
-                
-                $format = $repo_format->findOneBy(array(
-                    'id' => $filmPersonne['format']
-                ));
-                
-                $lieu = $repo_lieu->findOneBy(array(
-                    'id' => $filmPersonne['lieu']
-                ));
-                
-                $personne = $repo_pers->findOneBy(array(
-                    'id' => $filmPersonne['personne']
-                ));
-                
-                $film_personne->setLieu($lieu);
-                $film_personne->setFormat($format);
-                $film_personne->setPersonne($personne);
-                if($filmPersonne['date_achat']['day'] && $filmPersonne['date_achat']['month'] && $filmPersonne['date_achat']['year']){
-                    $date  = $filmPersonne['date_achat']['year'] . "-";
-                    $date .= ($filmPersonne['date_achat']['month'] < 10 ? "0" : "") . $filmPersonne['date_achat']['month'] . "-";
-                    $date .= ($filmPersonne['date_achat']['day'] < 10 ? "0" : "") . $filmPersonne['date_achat']['day'];
-                    $film_personne->setDateAchat(new \DateTime($date));
+            if(isset($request->request->all()['film']['filmPersonnes'])){
+                $filmPersonnes = $request->request->all()['film']['filmPersonnes'];
+                foreach($filmPersonnes as $filmPersonne){
+                    $repo_lieu = $this->getDoctrine()->getRepository(Lieu::class);
+                    $repo_format = $this->getDoctrine()->getRepository(Format::class);
+                    $repo_pers = $this->getDoctrine()->getRepository(Personne::class);
+                    
+                    $film_personne = new FilmPersonne();
+                    
+                    $format = $repo_format->findOneBy(array(
+                        'id' => $filmPersonne['format']
+                    ));
+                    
+                    $lieu = $repo_lieu->findOneBy(array(
+                        'id' => $filmPersonne['lieu']
+                    ));
+                    
+                    $personne = $repo_pers->findOneBy(array(
+                        'id' => $filmPersonne['personne']
+                    ));
+                    
+                    $film_personne->setLieu($lieu);
+                    $film_personne->setFormat($format);
+                    $film_personne->setPersonne($personne);
+                    if($filmPersonne['date_achat']['day'] && $filmPersonne['date_achat']['month'] && $filmPersonne['date_achat']['year']){
+                        $date  = $filmPersonne['date_achat']['year'] . "-";
+                        $date .= ($filmPersonne['date_achat']['month'] < 10 ? "0" : "") . $filmPersonne['date_achat']['month'] . "-";
+                        $date .= ($filmPersonne['date_achat']['day'] < 10 ? "0" : "") . $filmPersonne['date_achat']['day'];
+                        $film_personne->setDateAchat(new \DateTime($date));
+                    }
+                    $film_personne->setFilm($film);
+                    $manager->persist($film_personne);
                 }
-                $film_personne->setFilm($film);
-                $manager->persist($film_personne);
             }
             
             $manager->persist($film);

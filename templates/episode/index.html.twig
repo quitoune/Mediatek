@@ -27,7 +27,7 @@
                             <tr>
                                 <td>{{ episode.id }}</td>
                                 <td>
-                                	<a href="{{ path('episode_afficher', {'slug': episode.slug}) }}">
+                                	<a href="{{ path('episode_afficher', {'slug': episode.slug}) | decode }}">
                                         {{ titre(episode, app.session.get('user')['episode_vo']) }}
                                     </a>
                                 </td>

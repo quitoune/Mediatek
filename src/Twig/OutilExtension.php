@@ -16,6 +16,10 @@ class OutilExtension extends ImageExtension
             new TwigFilter('ouiNon', array(
                 $this,
                 'getOuiNon'
+            )),
+            new TwigFilter('decode', array(
+                $this,
+                'decode'
             ))
         );
     }
@@ -170,5 +174,13 @@ class OutilExtension extends ImageExtension
      */
     public function role(array $array){
         return strtolower(str_replace("ROLE_", "", implode(", ", $array)));
+    }
+    
+    /**
+     * 
+     * @param string $url
+     */
+    public function decode(string $url){
+        return urldecode($url);
     }
 }

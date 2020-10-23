@@ -125,7 +125,7 @@ class LivreController extends AppController
             
             if($form->isValid()) {
                 
-                $slug = $this->createSlug($livre->getTitreOriginal(), 'Livre');
+                $slug = $this->createSlug($livre->getTitreOriginal(), 'Livre', $livre->getPremiereEdition());
                 $livre->setSlug($slug);
                 
                 if(isset($request->request->all()['livre']['livrePersonnes'])){

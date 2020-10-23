@@ -18,7 +18,7 @@
             		{% for serie in series %}
                         <div class="col-img">
                             <div class="img-elt">
-                            	<a href="{{ path('serie_afficher', {'slug': serie.slug, 'page': pagination.page}) }}">
+                            	<a href="{{ path('serie_afficher', {'slug': serie.slug, 'page': pagination.page}) | decode }}">
         						    {{ image(serie, app.session.get('user')['episode_vo']) | raw }}<br>
         						    {{ titre(serie, app.session.get('user')['episode_vo']) }}
         						</a>

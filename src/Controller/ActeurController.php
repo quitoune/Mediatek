@@ -104,7 +104,7 @@ class ActeurController extends AppController
             
             $manager = $this->getDoctrine()->getManager();
             
-            $slug = $this->createSlug($acteur->getNomComplet(), 'Acteur');
+            $slug = $this->createSlug($acteur->getNomComplet(), 'Acteur', $acteur->getAnneeNaissance());
             $acteur->setSlug($slug);
             
             $manager->persist($acteur);

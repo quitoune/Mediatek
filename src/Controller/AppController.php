@@ -20,6 +20,7 @@ use App\Entity\Saison;
 use App\Entity\Serie;
 use App\Entity\Type;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class AppController extends Controller
 {
@@ -168,17 +169,8 @@ class AppController extends Controller
      * @param string $supp
      * @return string
      */
-    public function createSlug(string $texte, string $type, string $supp = "", int $id = 0){
-        $slug = htmlentities($texte, ENT_NOQUOTES, "utf-8" );
-        
-        $slug = preg_replace('#&([A-za-z])(?:acute|cedil|caron|circ|grave|orn|ring|slash|th|tilde|uml);#', '\1', $slug);
-        $slug = preg_replace('#&([A-za-z]{2})(?:lig);#', '\1', $slug);
-        $slug = preg_replace('#&[^;]+;#', '', $slug);
-        
-        $slug = str_replace(array("/", "\\", "'", "#"), '-', $slug);
-        $slug = str_replace(array("?", ",", "(", ")",":", "[", "]", '"'), '', $slug);
-        $slug = trim($slug);
-        $slug = implode("_", explode(' ', $slug));
+    public function createSlug(string $texte, string $type, $supp = "", int $id = 0){
+        $slug = $this->cleanTextForSlug($texte);
         
         switch(ucwords($type)){
             case 'Acteur':
@@ -235,7 +227,16 @@ class AppController extends Controller
         if(is_null($object) || $object->getId() == $id){
             return $slug;
         } else {
-            if($supp){
+            if(is_array($supp)){
+                $prefix = "";
+                foreach($supp as $pref){
+                    $prefix .= $pref . "-";
+                    $object = $repository->findOneBy(array('slug' => $prefix . $slug));
+                    if(is_null($object) || $object->getId() == $id){
+                        return $prefix . $slug;
+                    }
+                }
+            } else if($supp){
                 $object = $repository->findOneBy(array('slug' => $slug . "_(" . $supp . ")"));
                 if(is_null($object) || $object->getId() == $id){
                     return $slug . "_(" . $supp . ")";
@@ -312,6 +313,22 @@ class AppController extends Controller
         return $fileName;
     }
     
+    public function cleanTextForSlug(string $texte)
+    {
+        $slug = htmlentities($texte, ENT_NOQUOTES, "utf-8" );
+        
+        $slug = preg_replace('#&([A-za-z])(?:acute|cedil|caron|circ|grave|orn|ring|slash|th|tilde|uml);#', '\1', $slug);
+        $slug = preg_replace('#&([A-za-z]{2})(?:lig);#', '\1', $slug);
+        $slug = preg_replace('#&[^;]+;#', '', $slug);
+        
+        $slug = str_replace(array("/", "\\", "'", "#"), '-', $slug);
+        $slug = str_replace(array("?", ",", "(", ")",":", "[", "]", '"'), '', $slug);
+        $slug = trim($slug);
+        $slug = implode("_", explode(' ', $slug));
+        
+        return $slug;
+    }
+    
     /**
      * Retrait des accents et des caractères spéciaux
      *
@@ -337,5 +354,10 @@ class AppController extends Controller
         $str = preg_replace("/\d/", '_', $str);
         
         return $str;
+    }
+    
+    protected function redirectToRoute(string $route, array $parameters = [], int $status = 302): RedirectResponse
+    {
+        return $this->redirect(urldecode($this->generateUrl($route, $parameters)), $status);
     }
 }

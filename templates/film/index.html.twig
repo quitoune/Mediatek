@@ -18,7 +18,7 @@
                     {% for film in films %}
                 		<div class="col-img">
                 			<div class="img-elt">
-                    			<a href="{{ path('film_afficher', {'slug': film.slug, 'page': pagination.page}) }}">
+                    			<a href="{{ path('film_afficher', {'slug': film.slug, 'page': pagination.page}) | decode }}">
                     			    {{ image(film) | raw }}<br>
                     			    {{ titre(film, app.session.get('user')['film_vo']) }}
                     			</a>

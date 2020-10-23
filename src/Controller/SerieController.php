@@ -119,7 +119,7 @@ class SerieController extends AppController
                 }
             }
 
-            $slug = $this->createSlug($serie->getTitreOriginal(), 'Serie');
+            $slug = $this->createSlug($serie->getTitreOriginal(), 'Serie', $serie->getAnnee());
             $serie->setSlug($slug);
 
             $manager->persist($serie);
