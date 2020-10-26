@@ -117,7 +117,7 @@ class SaisonController extends AppController
 
             $manager = $this->getDoctrine()->getManager();
             
-            $slug = $this->createSlug($saison->getNomComplet(1), 'Saison');
+            $slug = $this->createSlug($saison->getSerie()->getSlug() . '-Saison_' . $saison->getNumeroSaison(), 'Saison');
             $saison->setSlug($slug);
 
             $manager->persist($saison);

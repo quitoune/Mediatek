@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Acteur;
 use App\Entity\Avatar;
@@ -22,7 +22,7 @@ use App\Entity\Type;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-class AppController extends Controller
+class AppController extends AbstractController
 {
 
     const MAX_RESULT = 20;
@@ -322,7 +322,7 @@ class AppController extends Controller
         $slug = preg_replace('#&[^;]+;#', '', $slug);
         
         $slug = str_replace(array("/", "\\", "'", "#"), '-', $slug);
-        $slug = str_replace(array("?", ",", "(", ")",":", "[", "]", '"'), '', $slug);
+        $slug = str_replace(array("?", ",", ":", "[", "]", '"'), '', $slug);
         $slug = trim($slug);
         $slug = implode("_", explode(' ', $slug));
         

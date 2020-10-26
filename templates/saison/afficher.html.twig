@@ -22,7 +22,7 @@
     				<tr>
         				<th>Série</th>
         				<td align=center>
-            				<a href="{{ path('serie_afficher', {'slug': saison.serie.slug}) }}">
+            				<a href="{{ path('serie_afficher', {'slug': saison.serie.slug}) | decode }}">
             				    {{ titre(saison.serie, app.session.get('user')['episode_vo']) }}
             				</a>
         				</td>

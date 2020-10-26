@@ -17,9 +17,7 @@
         		{% else %}
             		{% for photo in photos %}
                         <div class="col-img">
-    						<a href="{{ path('photo_modifier', {'id': photo.id, 'page': pagination.page}) }}">
-    						    {{ image(photo) | raw }}
-    						</a>
+    						{{ image(photo) | raw }}
                         </div>
                     {% endfor %}
                 {% endif %}

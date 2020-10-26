@@ -129,7 +129,7 @@ class ImageExtension extends AbstractExtension
         
         if(is_null($personne->getAvatar())){
             $folder = self::default_folder;
-            $chemin = 'default-picture.png';
+            $chemin = 'user_default_picture.png';
             $nom = $personne->getNomComplet();
         } else {
             $chemin = $personne->getAvatar()->getChemin();

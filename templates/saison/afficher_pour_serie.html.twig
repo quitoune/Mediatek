@@ -1,7 +1,7 @@
 {% for saison in serie.saisons %}
 	<div class="col-img">
 		<div class="img-elt">
-    		<a href="{{ path('saison_afficher', {'slug': saison.slug}) }}">
+    		<a href="{{ path('saison_afficher', {'slug': saison.slug}) | decode }}">
         		{{ image(saison) | raw }}<br>
         		Saison {{ saison.numeroSaison }}
         	</a>

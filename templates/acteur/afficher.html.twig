@@ -112,15 +112,15 @@
 {% block javascripts %}
     <script type="text/javascript">
         $(document).ready(function(){
-        	Ajax("{{ path('film_pour_acteur', {'slug': acteur.slug}) }}", "#films");
-        	Ajax("{{ path('saison_pour_acteur', {'slug': acteur.slug}) }}", "#saisons");
+        	Ajax("{{ path('film_pour_acteur', {'slug': acteur.slug}) | decode }}", "#films");
+        	Ajax("{{ path('saison_pour_acteur', {'slug': acteur.slug}) | decode }}", "#saisons");
         	$("#edit_films").click(function(){
         		$("html").showLoading();
-            	Ajax("{{ path('ajax_editer_films_acteur', {'slug': acteur.slug}) }}", "#modal_acteur");
+            	Ajax("{{ path('ajax_editer_films_acteur', {'slug': acteur.slug}) | decode }}", "#modal_acteur");
             });
         	$("#edit_saisons").click(function(){
         		$("html").showLoading();
-            	Ajax("{{ path('ajax_editer_saisons_acteur', {'slug': acteur.slug}) }}", "#modal_acteur");
+            	Ajax("{{ path('ajax_editer_saisons_acteur', {'slug': acteur.slug}) |decode }}", "#modal_acteur");
             });
         });
     </script>

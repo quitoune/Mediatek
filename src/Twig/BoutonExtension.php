@@ -44,7 +44,7 @@ class BoutonExtension extends AbstractExtension
      */
     public function boutonAjouter(string $path, string $classe = "", string $title = "")
     {
-        $bouton = '<a href="' . $path . '" ';
+        $bouton = '<a href="' . urldecode($path) . '" ';
         
         if($classe){
             $bouton .= 'class="' . $classe . '" ';
@@ -71,7 +71,7 @@ class BoutonExtension extends AbstractExtension
      */
     public function boutonModifier(string $path, string $classe = "", string $title = "")
     {
-        $bouton = '<a href="' . $path . '" ';
+        $bouton = '<a href="' . urldecode($path) . '" ';
         
         if($classe){
             $bouton .= 'class="' . $classe . '" ';
@@ -98,7 +98,7 @@ class BoutonExtension extends AbstractExtension
      */
     public function boutonSupprimer(string $path, string $classe = "", string $title = "")
     {
-        $bouton = '<a href="' . $path . '" ';
+        $bouton = '<a href="' . urldecode($path) . '" ';
         
         if($classe){
             $bouton .= 'class="' . $classe . '" ';
