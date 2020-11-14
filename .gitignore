@@ -52,3 +52,9 @@
 /.web-server-pid
 src/DataFixtures/database/*
 public/image/*
+
+#eclipse
+.settings/*
+.buildpath
+.project
+.buildpath

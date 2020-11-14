@@ -120,6 +120,7 @@ class ActeurFilmController extends AppController
     /**
      *
      * @Route("/acteur_film/{slug}/ajax_editer_films_acteur", name="ajax_editer_films_acteur")
+     * @IsGranted("ROLE_UTILISATEUR")
      *
      * @param Acteur $acteur
      * @return \Symfony\Component\HttpFoundation\Response
@@ -210,6 +211,7 @@ class ActeurFilmController extends AppController
     
     /**
      * @Route("/acteur_film/{slug}/ajax_editer_acteurs_film", name="ajax_editer_acteurs_film")
+     * @IsGranted("ROLE_UTILISATEUR")
      * 
      * @param Request $request
      * @param Film $film
